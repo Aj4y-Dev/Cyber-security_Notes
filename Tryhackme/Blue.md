@@ -1,15 +1,13 @@
 Network enumeration:
 
 ```
+~$ nmap -sCV --script vuln 10.49.135.240
 PORT      STATE SERVICE            VERSION
 135/tcp   open  msrpc              Microsoft Windows RPC
 139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
-445/tcp   open  microsoft-ds       Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+445/tcp   open  microsoft-ds       Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
 3389/tcp  open  ssl/ms-wbt-server?
-|_ssl-date: 2026-01-30T02:31:26+00:00; 0s from scanner time.
-| ssl-cert: Subject: commonName=Jon-PC
-| Not valid before: 2026-01-29T02:29:06
-|_Not valid after:  2026-07-31T02:29:06
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
 49152/tcp open  msrpc              Microsoft Windows RPC
 49153/tcp open  msrpc              Microsoft Windows RPC
 49154/tcp open  msrpc              Microsoft Windows RPC
@@ -18,26 +16,25 @@ PORT      STATE SERVICE            VERSION
 Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-| smb-security-mode:
-|   account_used: guest
-|   authentication_level: user
-|   challenge_response: supported
-|_  message_signing: disabled (dangerous, but default)
-| smb-os-discovery:
-|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
-|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
-|   Computer name: Jon-PC
-|   NetBIOS computer name: JON-PC\x00
-|   Workgroup: WORKGROUP\x00
-|_  System time: 2026-01-29T20:31:20-06:00
-| smb2-security-mode:
-|   2:1:0:
-|_    Message signing enabled but not required
-|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 0a:b5:32:31:0c:d1 (unknown)
-|_clock-skew: mean: 1h29m59s, deviation: 2h59m59s, median: 0s
-| smb2-time:
-|   date: 2026-01-30T02:31:21
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+| smb-vuln-ms17-010:
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
 |_  start_date: 2026-01-30T02:29:05
 ```
+
 
 
