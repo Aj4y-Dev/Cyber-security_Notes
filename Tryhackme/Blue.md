@@ -36,5 +36,14 @@ Host script results:
 |_  start_date: 2026-01-30T02:29:05
 ```
 
+now searching for the cve in metasploit:
+
+```
+msf > search ms17-010
+
+0   exploit/windows/smb/ms17_010_eternalblue       2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+
+
+```
 
 
