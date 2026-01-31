@@ -59,5 +59,25 @@ OAuth provider **does not verify client properly**
 Example:
 
 - Client ID is public
-    
 - No client secret validation
+
+
+6. Email Trust Issues (OAuth Account Takeover)
+
+### Classic CTF bug 🔥
+
+App trusts:
+
+`email = user@gmail.com`
+
+but ignores:
+
+- `email_verified = false`
+
+### Attack
+
+- OAuth provider allows unverified emails
+    
+- Create account with victim’s email
+    
+- Login → account takeover
