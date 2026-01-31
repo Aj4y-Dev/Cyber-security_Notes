@@ -99,5 +99,4 @@ Modify:
 ### Impact
 
 - Access private data
-    
 - Privilege escalation
