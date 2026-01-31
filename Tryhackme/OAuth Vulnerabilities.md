@@ -76,8 +76,6 @@ but ignores:
 
 ### Attack
 
-- OAuth provider allows unverified emails
-    
+- OAuth provider allows unverified emailsP
 - Create account with victim’s email
-    
 - Login → account takeover
