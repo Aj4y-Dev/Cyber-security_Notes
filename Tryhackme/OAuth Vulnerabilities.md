@@ -100,3 +100,15 @@ Modify:
 
 - Access private data
 - Privilege escalation
+
+## OAuth in CTFs – how to approach 🧪
+
+### Checklist
+
+✔ Inspect **/callback** endpoint  
+✔ Modify `redirect_uri`  
+✔ Remove / change `state`  
+✔ Replay auth codes  
+✔ Inspect JSON user info  
+✔ Check email verification  
+✔ Look at scopes
