@@ -61,11 +61,3 @@ Example:
 - Client ID is public
     
 - No client secret validation
-    
-
-### Attack
-
-- Register malicious app
-    
-- Steal authorization codes
-    
