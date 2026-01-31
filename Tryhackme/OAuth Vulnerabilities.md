@@ -79,3 +79,25 @@ but ignores:
 - OAuth provider allows unverified emailsP
 - Create account with victim’s email
 - Login → account takeover
+
+## . Scope Manipulation
+
+### Bug
+
+Client asks for **more scopes than needed**
+
+### Attack
+
+Modify:
+
+`scope=profile`
+
+→
+
+`scope=profile email admin`
+
+### Impact
+
+- Access private data
+    
+- Privilege escalation
