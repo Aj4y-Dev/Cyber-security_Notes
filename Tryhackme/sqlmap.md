@@ -1,1 +1,5 @@
 SQLMap is an automated tool for detecting and exploiting SQL injection vulnerabilities in web applications. It simplifies the process of identifying these vulnerabilities.
+
+some flags:
+
+-u = URL flag
