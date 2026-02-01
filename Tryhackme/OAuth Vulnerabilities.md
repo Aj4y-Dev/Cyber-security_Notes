@@ -21,11 +21,4 @@ Vulnerabilities happen due to **bad implementation**, not OAuth itself.
     
 6. **Email Trust Issues**  
     → App trusts email without checking `email_verified` → account takeover.
-    
-7. **Scope Manipulation**  
-    → Attacker requests higher privileges than intended.
-    
-8. **Implicit Flow Issues**  
-    → Access token in URL → easy to steal (XSS, browser history).
-    
 
