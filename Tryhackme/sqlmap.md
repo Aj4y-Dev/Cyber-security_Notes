@@ -2,6 +2,7 @@ SQLMap is an automated tool for detecting and exploiting SQL injection vulnerabi
 
 some flags:
 
+```
 -u = URL flag
 --dbs = grab all available database
 --tables = grab all available tables
@@ -10,4 +11,6 @@ some flags:
 --dump-all = dump everything sqlmap can
 -D = database
 -T = table
---he
+--help = help menu for sqlmap
+```
+
