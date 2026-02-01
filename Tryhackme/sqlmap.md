@@ -1,4 +1,4 @@
-SQLMap is an automated tool for detecting and exploiting SQL injection vulnerabilities in web applications. It simplifies the process of identifying these vulnerabilities.
+sqlmap is an automated tool for detecting and exploiting SQL injection vulnerabilities in web applications. It simplifies the process of identifying these vulnerabilities.
 
 some flags:
 
@@ -52,5 +52,11 @@ Table: thomas
 +---------------------+------------+----------
 | 09/09/2024          | Thomas THM | testing |    
 +---------------------+------------+---------+
+```
+
+However, unlike the URL used for testing above, you can also use POST-based testing, where the application sends data in the request's body instead of the URL. Examples of this could be login forms, registration forms, etc.
+
+```
+user@ubuntu:~$ sqlmap -r intercepted_request.txt     
 ```
 
