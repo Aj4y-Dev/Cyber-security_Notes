@@ -34,19 +34,4 @@ Vulnerabilities happen due to **bad implementation**, not OAuth itself.
 
 Auth code can be used **multiple times**
 
-### Attack
-
-- Capture auth code
-- Replay it
-- Get tokens again
-
-### Impact
-
-- Session hijacking
-- Token duplication
-
-### Hint
-
-Look for:
-
 
