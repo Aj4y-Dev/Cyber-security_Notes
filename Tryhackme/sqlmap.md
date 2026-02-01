@@ -6,3 +6,5 @@ some flags:
 --dbs = grab all available database
 --tables = grab all available tables
 --dump = grab all data inside table
+--columns = grab all columns
+--dump-all = 
