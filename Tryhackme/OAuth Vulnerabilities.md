@@ -28,10 +28,4 @@ Vulnerabilities happen due to **bad implementation**, not OAuth itself.
 8. **Implicit Flow Issues**  
     → Access token in URL → easy to steal (XSS, browser history).
     
-## 3. Authorization Code Reuse
-
-### Bug
-
-Auth code can be used **multiple times**
-
 
