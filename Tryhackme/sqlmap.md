@@ -7,4 +7,7 @@ some flags:
 --tables = grab all available tables
 --dump = grab all data inside table
 --columns = grab all columns
---dump-all = 
+--dump-all = dump everything sqlmap can
+-D = database
+-T = table
+--he
