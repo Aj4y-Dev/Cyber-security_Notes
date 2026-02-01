@@ -50,16 +50,3 @@ Auth code can be used **multiple times**
 Look for:
 
 
-## 5. Improper Client Validation
-
-### Bug
-
-OAuth provider **does not verify client properly**
-
-Example:
-
-- Client ID is public
-- No client secret validation
-
-
-6. Email Trust Issues (OAuth Account Takeover)
