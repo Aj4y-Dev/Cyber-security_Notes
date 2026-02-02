@@ -75,3 +75,16 @@ SF::\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x2
 SF:0Bad\x20Request");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+
+then:
+
+```
+ajdev@rootbox:~$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -u http://facts.htb/FUZZ -fc 500
+
+js                      [Status: 200, Size: 1146, Words: 135, Lines: 10, Duration: 366ms]
+search                  [Status: 200, Size: 19187, Words: 3276, Lines: 272, Duration: 419ms]
+index                   [Status: 200, Size: 11113, Words: 1328, Lines: 125, Duration: 743ms]
+rss                     [Status: 200, Size: 183, Words: 20, Lines: 9, Duration: 871ms]
+ajax                    [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 867ms]
+
+```
