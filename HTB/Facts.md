@@ -81,5 +81,21 @@ then:
 ```
 ajdev@rootbox:~$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -u http://facts.htb/FUZZ -fc 500 -fw 1328
 
-
+js              [Status: 200, Size: 1146, Words: 135, Lines: 10, Duration: 496ms]
+admin                 [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 579ms]
+search       [Status: 200, Size: 19187, Words: 3276, Lines: 272, Duration: 676ms]
+.js             [Status: 200, Size: 1146, Words: 135, Lines: 10, Duration: 883ms]
+rss               [Status: 200, Size: 647, Words: 78, Lines: 13, Duration: 955ms]
+ajax                  [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 937ms]
+404            [Status: 200, Size: 4836, Words: 832, Lines: 115, Duration: 937ms]
+sitemap                [Status: 200, Size: 3508, Words: 424, Lines: 130, Duration: 482ms]
+post                    [Status: 200, Size: 11308, Words: 1414, Lines: 152, Duration: 645ms]
+captcha                 [Status: 200, Size: 5459, Words: 20, Lines: 18, Duration: 735ms]
+500                     [Status: 200, Size: 7918, Words: 1035, Lines: 115, Duration: 1698ms]
+robots                  [Status: 200, Size: 33, Words: 2, Lines: 1, Duration: 1781ms]
+welcome                 [Status: 200, Size: 11966, Words: 1481, Lines: 130, Duration: 1894ms]
+up                      [Status: 200, Size: 73, Words: 4, Lines: 1, Duration: 1572ms]
+400                     [Status: 200, Size: 6685, Words: 993, Lines: 115, Duration: 1797ms]
+json                    [Status: 200, Size: 2162, Words: 144, Lines: 1, Duration: 1722ms]
+.rss                    [Status: 200, Size: 647, Words: 78, Lines: 13, Duration: 1891ms]
 ```
