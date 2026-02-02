@@ -195,7 +195,8 @@ Copyright © 2015 - 2026 [Camaleon CMS.](https://camaleon.website/)
 
 Version 2.9.0
 
-found cve 
+found cve https://github.com/advisories/GHSA-rp28-mvq3-wf8j
+
 ```
 
 
