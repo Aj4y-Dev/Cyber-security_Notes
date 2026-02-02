@@ -1,6 +1,6 @@
 Session management is the process of managing these sessions and ensuring that they remain secure.
 
-### Session Management Lifecycle
+## Session Management Lifecycle
 
 ### **Session Creation**
 
@@ -15,7 +15,6 @@ Session management is the process of managing these sessions and ensuring that t
     - Identify the user
     - Check permissions
 - Weak handling here can allow **session hijacking or impersonation**.
-
 ### **Session Expiry**
 
 - Sessions must have a **time limit**.
