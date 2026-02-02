@@ -79,5 +79,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 then:
 
 ```
+ajdev@rootbox:~$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -u http://facts.htb/FUZZ -fc 500 -fw 1328
+
 
 ```
