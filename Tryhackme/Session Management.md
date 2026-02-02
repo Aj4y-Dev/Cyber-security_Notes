@@ -115,38 +115,26 @@ Authorization: Bearer <token>
 **Weak Session Values**
 
 - Session IDs are **guessable or predictable**.
-    
 - Example: Base64(username) as session ID.
-    
 - Leads to **session hijacking**.
-    
 
 **Controllable Session Values**
 
 - Common with **JWTs**.
-    
 - If signature isn’t verified or uses weak secrets → attacker can **forge tokens**.
-    
 - Results in **account takeover**.
-    
 
 **Session Fixation**
 
 - Session is created **before login** and **not rotated after login**.
-    
 - Attacker steals the pre-login session ID and waits for user to authenticate.
-    
 - Result: attacker gains the authenticated session.
-    
 
 **Insecure Session Transmission**
 
 - Session data exposed during redirects (e.g., SSO flows).
-    
 - Open or attacker-controlled redirects can **leak session info**.
-    
 - Leads to **session hijacking**.
-    
 
 ---
 
