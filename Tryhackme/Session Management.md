@@ -70,7 +70,7 @@ To understand the common vulnerabilities in session management, we first need to
 - Browser **automatically stores and sends** the cookie with every request.
 
 ```
-Set-Cookie header:
+#Set-Cookie header:
 
 Set-Cookie: session=12345;
 ```
