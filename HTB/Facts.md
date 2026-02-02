@@ -79,21 +79,5 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 then:
 
 ```
-ajdev@rootbox:~$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words-lowercase.txt -u http://facts.htb/FUZZ -fc 500
-
-js                      [Status: 200, Size: 1146, Words: 135, Lines: 10, Duration: 366ms]
-search                  [Status: 200, Size: 19187, Words: 3276, Lines: 272, Duration: 419ms]
-index                   [Status: 200, Size: 11113, Words: 1328, Lines: 125, Duration: 743ms]
-rss                     [Status: 200, Size: 183, Words: 20, Lines: 9, Duration: 871ms]
-ajax                    [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 867ms]
-inc                     [Status: 200, Size: 11110, Words: 1328, Lines: 125, Duration: 843ms]
-page                    [Status: 200, Size: 19593, Words: 3296, Lines: 282, Duration: 847ms]
-404                     [Status: 200, Size: 4836, Words: 832, Lines: 115, Duration: 972ms]
-en                      [Status: 200, Size: 11109, Words: 1328, Lines: 125, Duration: 874ms]
-sitemap                 [Status: 200, Size: 3508, Words: 424, Lines: 130, Duration: 1645ms]
-html                    [Status: 200, Size: 11113, Words: 1328, Lines: 125, Duration: 1095ms]
-cgi                     [Status: 200, Size: 11110, Words: 1328, Lines: 125, Duration: 1040ms]
-php                     [Status: 200, Size: 11110, Words: 1328, Lines: 125, Duration: 1038ms]
-post                    [Status: 200, Size: 11308, Words: 1414, Lines: 152, Duration: 1211ms]
 
 ```
