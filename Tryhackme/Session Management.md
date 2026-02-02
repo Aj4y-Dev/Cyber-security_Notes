@@ -106,3 +106,7 @@ Authorization: Bearer <token>
 | Vulnerable to CSRF      | CSRF mostly avoided       |
 | Domain-restricted       | Good for distributed apps |
 | Traditional web apps    | APIs, SPA, mobile apps    |
+
+---
+## Session Management Security
+
