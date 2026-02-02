@@ -26,6 +26,8 @@
     - **JWT (JSON Web Token)**
     - Sent in header:
 
-	```
-	Authorization: Bearer <JWT>
-	```
+```
+Authorization: Bearer <JWT>
+```
+
+Since cookies are not used, **developers control everything**, which can lead to **security mistakes** if not done properly.
