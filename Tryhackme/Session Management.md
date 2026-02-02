@@ -110,3 +110,82 @@ Authorization: Bearer <token>
 ---
 ## Session Management Security
 
+### **1. Session Creation Vulnerabilities**
+
+**Weak Session Values**
+
+- Session IDs are **guessable or predictable**.
+    
+- Example: Base64(username) as session ID.
+    
+- Leads to **session hijacking**.
+    
+
+**Controllable Session Values**
+
+- Common with **JWTs**.
+    
+- If signature isn’t verified or uses weak secrets → attacker can **forge tokens**.
+    
+- Results in **account takeover**.
+    
+
+**Session Fixation**
+
+- Session is created **before login** and **not rotated after login**.
+    
+- Attacker steals the pre-login session ID and waits for user to authenticate.
+    
+- Result: attacker gains the authenticated session.
+    
+
+**Insecure Session Transmission**
+
+- Session data exposed during redirects (e.g., SSO flows).
+    
+- Open or attacker-controlled redirects can **leak session info**.
+    
+- Leads to **session hijacking**.
+    
+
+---
+
+### **2. Session Tracking Vulnerabilities**
+
+**Authorisation Bypass**
+
+- App fails to properly check permissions tied to a session.
+
+Types:
+
+- **Vertical bypass** → user gains admin-level access
+- **Horizontal bypass** → user accesses _other users’ data_ (IDOR)
+
+Fix requires:
+
+- Verifying **user identity from session**
+- Matching user to requested data
+
+**Insufficient Logging**
+
+- Actions are not logged per session.
+- Makes incident investigation impossible.
+- Both **allowed and denied actions** must be logged.
+
+---
+### **3. Session Expiry Issues**
+
+- Sessions last **too long**.
+- Stolen sessions remain usable.
+- High-risk apps (banking) need **short lifetimes**.
+- Long sessions should check **location/IP changes** and invalidate if suspicious.
+
+---
+### **4. Session Termination Issues**
+
+- Logout does not invalidate session **server-side**.
+- Attacker keeps access even after user logs out.
+- For tokens:
+    - Use **blocklists**
+    - Allow users to **terminate all active sessions**
+- After **password reset**, all sessions should be killed.
