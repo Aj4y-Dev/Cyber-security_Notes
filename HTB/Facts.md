@@ -186,6 +186,11 @@ ajdev@rootbox:~$ curl -v http://facts.htb/ajax
 ```
 
 
+```
+# i create a user in the admin page
+```
+
+
 
 
 
