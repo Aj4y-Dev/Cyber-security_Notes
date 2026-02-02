@@ -64,3 +64,23 @@ To understand the common vulnerabilities in session management, we first need to
 - **Accountability → Session Logging**
     - All actions are logged with the session ID.
 
+### **Cookie-Based Sessions**
+
+- Server sends a session ID using `Set-Cookie`.
+- Browser **automatically stores and sends** the cookie with every request.
+- Security can be improved using cookie flags:
+    - **Secure** → only sent over HTTPS
+    - **HttpOnly** → not accessible via JavaScript (protects from XSS)
+    - **Expires** → defines cookie lifetime
+    - **SameSite** → helps prevent CSRF
+- **Main risks**:
+    - Vulnerable to **CSRF**
+    - If HttpOnly is missing → **XSS can steal cookies**
+
+### **Token-Based Sessions**
+
+- Server returns a **token** (often JWT) after login.
+- Token is stored in **LocalStorage**.
+- JavaScript must manually attach it to requests using:
+`
+`
