@@ -98,7 +98,6 @@ up                  [Status: 200, Size: 73, Words: 4, Lines: 1, Duration: 1572ms
 400           [Status: 200, Size: 6685, Words: 993, Lines: 115, Duration: 1797ms]
 json            [Status: 200, Size: 2162, Words: 144, Lines: 1, Duration: 1722ms]
 .rss             [Status: 200, Size: 647, Words: 78, Lines: 13, Duration: 1891ms]
-422                     [Status: 200, Size: 8380, Words: 1063, Lines: 115, Duration: 1791ms]
-
+422          [Status: 200, Size: 8380, Words: 1063, Lines: 115, Duration: 1791ms]
 ```
 
