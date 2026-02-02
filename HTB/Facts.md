@@ -141,6 +141,11 @@ ajdev@rootbox:~$ curl -v http://facts.htb/ajax
 * Connection #0 to host facts.htb left intact
 ```
 
+```
+# http://facts.htb/captcha is just a image & http://facts.htb/robots shows 
+
+```
+
 
 
 
