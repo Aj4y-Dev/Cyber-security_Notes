@@ -145,6 +145,11 @@ ajdev@rootbox:~$ curl -v http://facts.htb/ajax
 # http://facts.htb/captcha is just a image & http://facts.htb/robots shows Sitemap: http://facts.htb/sitemap
 
 # http://facts.htb/up is just a green whole screen
+```
+
+```
+# think found something in http://facts.htb/json
+
 
 ```
 
