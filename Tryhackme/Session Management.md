@@ -177,3 +177,4 @@ Fix requires:
     - Use **blocklists**
     - Allow users to **terminate all active sessions**
 - After **password reset**, all sessions should be killed.
+
