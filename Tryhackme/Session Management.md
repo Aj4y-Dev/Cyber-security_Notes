@@ -55,3 +55,12 @@ To understand the common vulnerabilities in session management, we first need to
 - Critical for **incident response & forensics**.
 - Missing logs = attacker activity goes unnoticed.
 
+## **IAAA + Session Management (Big Picture)**
+
+- **Authentication → Session Creation**
+    - Valid login generates a session ID.
+- **Authorisation → Session Tracking**
+    - Every request checks permissions using the session.
+- **Accountability → Session Logging**
+    - All actions are logged with the session ID.
+
