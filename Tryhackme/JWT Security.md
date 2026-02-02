@@ -87,57 +87,35 @@ http://MACHINE_IP/api/v1.0/exampleX?username=Y
 ### 1. What is a JWT
 
 - **Self-contained token** used to securely transmit session information.
-    
 - **Open standard**: can be used by any developer or library.
-    
 - Can be verified without server-side session storage (stateless authentication).
-    
 
 ---
-
 ### 2. JWT Structure
 
 A JWT consists of **three Base64Url-encoded parts**, separated by dots:
 
 1. **Header**
-    
     - Contains the **token type** (usually JWT)
-        
     - Contains the **signing algorithm** (e.g., HS256, RS256)
-        
 2. **Payload**
-    
     - Contains **claims** (pieces of information about an entity)
-        
     - **Registered claims**: predefined by the JWT standard
-        
     - **Public & private claims**: defined by developers
-        
 3. **Signature**
-    
     - Verifies token authenticity
-        
     - Created using the **algorithm specified in the header**
-        
     - Ensures payload and header are **not tampered with**
-        
 
 ---
-
 ### 3. JWT Signing Algorithms
 
 1. **None**
-    
     - No signature
-        
     - JWT claims cannot be verified
-        
     - Not secure
-        
 2. **Symmetric (e.g., HS256)**
-    
     - Uses **same secret key** for signing and verification
-        
     - Signature = Hash(header + payload + secret)
     - All parties must know the secret
 3. **Asymmetric (e.g., RS256)**
@@ -154,3 +132,4 @@ A JWT consists of **three Base64Url-encoded parts**, separated by dots:
     - Client can use it on multiple applications
     - Each application verifies signature → trusts the claims
 - JWTs are **stateless**: server doesn’t need to store sessions.
+
