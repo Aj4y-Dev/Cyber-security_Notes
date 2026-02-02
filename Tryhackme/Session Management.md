@@ -5,13 +5,9 @@ Session management is the process of managing these sessions and ensuring that t
 ### **Session Creation**
 
 - A session can be created **before login** (to track users) or **after login** (authenticated session).
-    
 - After successful login, the server gives the user a **session ID/token**.
-    
 - This session ID represents the user’s identity and permissions.
-    
 - If session IDs are predictable or poorly generated → **session fixation/hijacking risk**.
-
 ### **Session Tracking**
 
 - The session ID is sent with **every request** (usually via cookies).
@@ -31,3 +27,4 @@ Session management is the process of managing these sessions and ensuring that t
 - Happens when a user **logs out manually**.
 - Session should be invalidated immediately, even if it hasn’t expired.
 - Poor termination allows **persistent unauthorized access**.
+
