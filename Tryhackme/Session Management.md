@@ -68,6 +68,8 @@ To understand the common vulnerabilities in session management, we first need to
 
 - Server sends a session ID using `Set-Cookie`.
 - Browser **automatically stores and sends** the cookie with every request.
+
+
 - Security can be improved using cookie flags:
     - **Secure** → only sent over HTTPS
     - **HttpOnly** → not accessible via JavaScript (protects from XSS)
@@ -83,4 +85,19 @@ To understand the common vulnerabilities in session management, we first need to
 - Token is stored in **LocalStorage**.
 - JavaScript must manually attach it to requests using:
 `
-`
+```
+Authorization: Bearer <token>
+```
+
+- No automatic browser protections → **developer must secure it properly**.
+- **Main risks**:
+    - Vulnerable to **XSS** (tokens can be stolen from LocalStorage)
+    - Poor validation → token tampering
+
+| Cookie-Based            | Token-Based               |
+| ----------------------- | ------------------------- |
+| Auto-sent by browser    | Manually added via JS     |
+| Built-in security flags | No enforced protections   |
+| Vulnerable to CSRF      | CSRF mostly avoided       |
+| Domain-restricted       | Good for distributed apps |
+| Traditional web apps    | APIs, SPA, mobile apps    |
