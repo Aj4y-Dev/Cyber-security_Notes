@@ -54,3 +54,31 @@ Since cookies are not used, **developers control everything**, which can lead to
 ### 6. API Authentication Credentials
 
 - Credentials are sent in JSON format:
+
+```
+{
+  "username": "user",
+  "password": "passwordX"
+}
+```
+- `X` changes based on the example number.
+
+---
+### 7. cURL Usage
+
+**Login (POST request):**
+
+```
+curl -H "Content-Type: application/json" \
+-X POST \
+-d '{ "username":"user", "password":"passwordX" }' \
+http://MACHINE_IP/api/v1.0/exampleX
+```
+
+Access protected resource (GET request):
+
+```
+curl -H "Authorization: Bearer <JWT>" \
+http://MACHINE_IP/api/v1.0/exampleX?username=Y
+```
+
