@@ -81,4 +81,5 @@ Access protected resource (GET request):
 curl -H "Authorization: Bearer <JWT>" \
 http://MACHINE_IP/api/v1.0/exampleX?username=Y
 ```
+---
 
