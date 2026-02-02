@@ -69,6 +69,11 @@ To understand the common vulnerabilities in session management, we first need to
 - Server sends a session ID using `Set-Cookie`.
 - Browser **automatically stores and sends** the cookie with every request.
 
+```
+Set-Cookie header:
+
+Set-Cookie: session=12345;
+```
 
 - Security can be improved using cookie flags:
     - **Secure** → only sent over HTTPS
