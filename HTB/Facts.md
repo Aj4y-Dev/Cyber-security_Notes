@@ -107,3 +107,38 @@ json            [Status: 200, Size: 2162, Words: 144, Lines: 1, Duration: 1722ms
 Discover Amazing Trivia! Looking to learn something new while killing a little time? You’re in the right place! Explore a world of trivia, quirky knowledge, and surprising facts that will make ... September 07, 2025 21:57 January 08, 2026 15:41 http://facts.htb/welcome 2 http://facts.htb/assets/camaleon_cms/image-not-found-fc3c0e66dc61abf74010e63ef65a2e23c4cb40a3320408f2711f82fdc22b503f.png
 ```
 
+```
+# when i go to /ajax display nothing but using curl
+
+ajdev@rootbox:~$ curl -v http://facts.htb/ajax
+* Host facts.htb:80 was resolved.
+* IPv6: (none)
+* IPv4: 10.129.21.19
+*   Trying 10.129.21.19:80...
+* Connected to facts.htb (10.129.21.19) port 80
+> GET /ajax HTTP/1.1
+> Host: facts.htb
+> User-Agent: curl/8.5.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Server: nginx/1.26.3 (Ubuntu)
+< Date: Mon, 02 Feb 2026 12:09:17 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 0
+< Connection: keep-alive
+< x-frame-options: SAMEORIGIN
+< x-xss-protection: 0
+< x-content-type-options: nosniff
+< x-permitted-cross-domain-policies: none
+< referrer-policy: strict-origin-when-cross-origin
+< vary: Accept
+< cache-control: no-cache
+< set-cookie: _factsapp_session=lVo4srMSM3eJIqR05vEC4kv6R799iL06mL87eIoQ9HvCveIb8zQOsfESdLijWyi3%2BJ5nvMuByyWsXBJ8zSkVHAd%2B0DU0dYc8hSbnhm0ffdhhyMFiytbG9NaZgFZ8F4Uj4sWz5Cpx%2FlTaBJacgaxRyk3vb%2Bvd41BX29yS9IyerFZJAYAEeo0CwZ8%3D--kZ5nFmwbaAGb4Nim--78TdK%2BXUESR4s4I%2Br%2BLrdg%3D%3D; path=/; httponly; samesite=lax
+< x-request-id: 8daefcd3-e2da-4dca-854f-2d7d1992ac0f
+< x-runtime: 0.012077
+<
+* Connection #0 to host facts.htb left intact
+```
+
+
