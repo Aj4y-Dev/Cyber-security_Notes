@@ -187,8 +187,16 @@ ajdev@rootbox:~$ curl -v http://facts.htb/ajax
 
 
 ```
-# i create a user in the admin page
+# i create a user in the admin page and found
+
+Copyright © 2015 - 2026 [Camaleon CMS.](https://camaleon.website/)
+
+[See intro.](http://facts.htb/admin/dashboard#)
+
+Version 2.9.0
 ```
+
+
 
 
 
