@@ -25,6 +25,6 @@
 - Common standard:
     - **JWT (JSON Web Token)**
     - Sent in header:
-
-
+	```
+	Authorization: Bearer <JWT>
 	```
