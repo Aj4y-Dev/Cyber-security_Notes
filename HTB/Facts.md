@@ -197,6 +197,9 @@ Version 2.9.0
 
 found cve https://github.com/advisories/GHSA-rp28-mvq3-wf8j
 
+## CVE-2025-2304
+
+
 ```
 
 
