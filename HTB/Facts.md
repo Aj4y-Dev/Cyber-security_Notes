@@ -150,8 +150,42 @@ ajdev@rootbox:~$ curl -v http://facts.htb/ajax
 ```
 # think found something in http://facts.htb/json
 
-
+{
+  "id": 2,
+  "created_at": "2025-09-07T21:57:52.704Z",
+  "title": "Welcome",
+  "description": "Discover Amazing Trivia! Looking to learn something new while killing a little time? You’re in the right place! Explore a world of trivia, quirky knowledge, and surprising facts that will make ...",
+  "url": "http://facts.htb/welcome",
+  "slug": "welcome",
+  "thumb": "http://facts.htb/assets/camaleon_cms/image-not-found-fc3c0e66dc61abf74010e63ef65a2e23c4cb40a3320408f2711f82fdc22b503f.png",
+  "post_type_id": 7,
+  "updated_at": "2026-01-08T15:41:55.065Z",
+  "status": "published",
+  "post_parent": null,
+  "published_at": null,
+  "user_id": 1,
+  "post_order": 1,
+  "is_feature": false,
+  "content": "<header style=\"text-align: center; padding: 100px 20px;\"><!-- Logo --><img style=\"display: block; margin: 0 auto 40px;\" src=\"http://facts.htb/randomfacts/logopage.png\" alt=\"Facts Logo\" width=\"180\" height=\"140\" /><!-- Headline --><h1 style=\"font-size: 3.5rem; margin-bottom: 30px; color: #222;\">Discover Amazing Trivia!</h1><!-- Subheading --><p style=\"font-size: 1.5rem; max-width: 800px; margin: 0 auto 40px; line-height: 1.8; color: #444;\">Looking to learn something new while killing a little time? You&rsquo;re in the right place! Explore a world of trivia, quirky knowledge, and surprising facts that will make you say, <em>&ldquo;Wow, I never knew that!&rdquo;</em></p><!-- Call-to-action button --><a href=\"/animal-ejected\" class=\"btn\" style=\"display: inline-block; background-color: #ff6f61; color: #fff; font-size: 1.3rem; padding: 18px 40px; border-radius: 8px; text-decoration: none; transition: background-color 0.0s;\">Start Exploring</a></header>",
+  "visits": 246,
+  "urls": {
+    "en": "http://facts.htb/welcome"
+  },
+  "comments": [],
+  "fields": [],
+  "categories": [],
+  "tags": [],
+  "owner": {
+    "id": 1,
+    "username": "admin",
+    "name": "Administrator",
+    "avatar": "http://facts.htb/assets/camaleon_cms/admin/img/no_image-a044ea5fa02b42e28297797c3bd073a12314c541b1c014c2e18939e08262f495.jpg",
+    "url": "http://facts.htb/profile/1-administrator"
+  }
+}
 ```
+
+
 
 
 
