@@ -407,7 +407,7 @@ User trivia may run the following commands on facts:
 
 this mean trivia can run facter As root without password
 
-
+facter is a system information tool used by Puppet. - `facter` is written in **Ruby, It can load and execute Ruby code, It supports custom facts (plugins)
 ```
 
 
