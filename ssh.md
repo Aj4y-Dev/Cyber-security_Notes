@@ -24,5 +24,31 @@ chown -R ajay:ajay ~/.ssh
 Prevent Anyone from Modifying Keys (Strong Protection)
 
 ```
+sudo chattr +i ~/.ssh/authorized_keys
+```
+
+**Effect:**
+
+- File becomes **immutable**
+- Cannot be edited, deleted, or appended
+- Even **root** cannot modify it
+- SSH can still read → login works
+
+To edit later:
 
 ```
+sudo chattr -i ~/.ssh/authorized_keys
+```
+
+### What is NOT Possible
+
+- Cannot hide `authorized_keys` from **yourself** or **sshd**
+- Cannot make it unreadable (`chmod 000`) → SSH login will break
+
+Final Secure State
+
+```
+~/.ssh           → drwx------
+authorized_keys → -rw------- (immutable)
+```
+
