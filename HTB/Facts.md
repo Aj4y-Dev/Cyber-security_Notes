@@ -350,7 +350,56 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
 
+```
+now can get to ssh
 
+ajdev@rootbox:~/HTB/Facts$ ssh -i id_rsa trivia@facts.htb
+The authenticity of host 'facts.htb (10.129.23.188)' can't be established.
+ED25519 key fingerprint is SHA256:fygAnw6lqDbeHg2Y7cs39viVqxkQ6XKE0gkBD95fEzA.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:10: [hashed name]
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'facts.htb' (ED25519) to the list of known hosts.
+Enter passphrase for key 'id_rsa':
+Last login: Wed Jan 28 16:17:19 UTC 2026 from 10.10.14.4 on ssh
+Welcome to Ubuntu 25.04 (GNU/Linux 6.14.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Feb  3 10:29:47 AM UTC 2026
+
+  System load:           0.09
+  Usage of /:            71.7% of 7.28GB
+  Memory usage:          17%
+  Swap usage:            0%
+  Processes:             220
+  Users logged in:       1
+  IPv4 address for eth0: 10.129.23.188
+  IPv6 address for eth0: dead:beef::250:56ff:feb0:62c9
+
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+trivia@facts:~$ ls
+trivia@facts:~$ ls -la
+total 36
+drwxr-x--- 6 trivia trivia 4096 Jan 28 16:17 .
+drwxr-xr-x 4 root   root   4096 Jan  8 17:53 ..
+lrwxrwxrwx 1 root   root      9 Jan 26 11:40 .bash_history -> /dev/null
+-rw-r--r-- 1 trivia trivia  220 Aug 20  2024 .bash_logout
+-rw-r--r-- 1 trivia trivia 3900 Jan  8 18:19 .bashrc
+drwxrwxr-x 3 trivia trivia 4096 Jan  8 18:01 .bundle
+drwx------ 2 trivia trivia 4096 Jan  8 18:58 .cache
+drwxrwxr-x 3 trivia trivia 4096 Jan  8 17:52 .local
+-rw-r--r-- 1 trivia trivia  807 Aug 20  2024 .profile
+drwx------ 2 trivia trivia 4096 Feb  3 09:12 .ssh
+trivia@facts:~$
+```
 
 
 
