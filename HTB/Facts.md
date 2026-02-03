@@ -435,6 +435,8 @@ root@facts:~# ls
 minio-binaries  ministack  root.txt  snap
 root@facts:~# cat root.txt
 f4afc2f2e3d5b188080bb07b18dd922e
+
+`facter` is a Ruby‑based tool, and because the system allows you to run it with sudo without a password, you can make it load a Ruby script that executes a command as root.
 ```
 
 
