@@ -398,6 +398,12 @@ drwx------ 2 trivia trivia 4096 Jan  8 18:58 .cache
 drwxrwxr-x 3 trivia trivia 4096 Jan  8 17:52 .local
 -rw-r--r-- 1 trivia trivia  807 Aug 20  2024 .profile
 drwx------ 2 trivia trivia 4096 Feb  3 09:12 .ssh
+trivia@facts:~$ sudo -l
+Matching Defaults entries for trivia on facts:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User trivia may run the following commands on facts:
+    (ALL) NOPASSWD: /usr/bin/facter
 trivia@facts:~$
 ```
 
