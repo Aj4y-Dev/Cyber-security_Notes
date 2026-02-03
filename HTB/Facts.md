@@ -411,6 +411,8 @@ facter is a system information tool used by Puppet.facter is written in Ruby, It
 
 so If I can make facter execute Ruby code and I run facter with sudo, then my Ruby code runs as root.
 
+Resource[https://gtfobins.org/gtfobins/facter/]
+
 ```
 
 
