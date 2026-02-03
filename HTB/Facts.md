@@ -404,7 +404,10 @@ Matching Defaults entries for trivia on facts:
 
 User trivia may run the following commands on facts:
     (ALL) NOPASSWD: /usr/bin/facter
-trivia@facts:~$
+
+this mean trivia can run facter As root without password
+
+
 ```
 
 
