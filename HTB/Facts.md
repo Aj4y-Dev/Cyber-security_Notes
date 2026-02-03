@@ -423,7 +423,11 @@ Facter.add(:pwn) do
   end
 end
 
-and save it then 
+and save it then run this:
+
+trivia@facts:/tmp$ sudo facter -p --custom-dir=/tmp
+^[[D[2026-02-03 10:54:34.042144 ] ERROR Facter - Could not load puppet gem, got cannot load such file -- puppet
+
 ```
 
 
