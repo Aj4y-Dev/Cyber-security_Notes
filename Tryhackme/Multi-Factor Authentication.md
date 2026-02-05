@@ -435,3 +435,8 @@ The OTP leakage in the XHR (XMLHttpRequest) response typically happens due to po
 ---
 ### Logic Flaw or Insecure Coding?
 
+Instead of entering the OTP, the attacker might try to manipulate the URL or bypass the OTP step altogether. For example, the attacker might try to directly access the dashboard URL (e.g., `http://mfa.thm/labs/second/dashboard`) without completing the required authentication steps.
+
+![[Pasted image 20260205221058.png]]
+
+---
