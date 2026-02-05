@@ -440,3 +440,89 @@ Instead of entering the OTP, the attacker might try to manipulate the URL or byp
 ![[Pasted image 20260205221058.png]]
 
 ---
+### 2FA Failure Handling & Authentication Flow
+
+## Reverting to Initial Login After 2FA Failure
+
+In some applications, **failing the 2FA challenge** causes the system to redirect the user back to the **primary authentication step** (username and password).
+
+This behavior is usually **intentional** and part of the application’s security design to protect against OTP brute-force attacks.
+
+---
+
+## Why Applications Do This
+
+### 1. Session Invalidation
+
+- After a failed 2FA attempt, the application may:
+    
+    - Invalidate the current session
+        
+    - Destroy temporary authentication tokens
+        
+- This forces the user to:
+    
+    - Re-enter username and password
+        
+    - Restart the entire authentication flow
+        
+
+**Security Purpose**
+
+- Ensures the user is still legitimate
+    
+- Prevents attackers from repeatedly guessing OTPs using the same session
+
+---
+### 2. Rate-Limiting & Lockout Policies
+
+- Applications often track:
+    - Number of failed 2FA attempts
+    - Time window of failures
+- After exceeding a threshold:
+    - User is redirected to login
+    - Temporary lockout may occur
+
+**Security Purpose**
+
+- Limits brute-force feasibility
+- Increases attack cost and complexity
+
+---
+### 3. Security-Driven Redirection
+
+- Some systems enforce a **full reauthentication** after multiple 2FA failures
+- User must:
+    - Revalidate credentials
+    - Then attempt 2FA again
+
+**Security Purpose**
+
+- Ensures fresh authentication context
+- Reduces session abuse risks    
+
+---
+## Automation (Conceptual Understanding)
+
+Automation becomes relevant when **testing or evaluating** such protections because of how applications behave—not because protections are weak.
+### Why Automation Is Used (High-Level)
+
+#### Speed
+- Repeating login flows manually is slow
+- Automated processes handle repetitive actions faster
+#### Consistency
+
+- Automation:
+    - Reduces human error
+    - Ensures identical request patterns
+#### Recovering From Logouts
+
+- When applications reset sessions:
+    - Automation can restart the authentication flow automatically
+- Useful for **testing resilience**, not bypassing controls
+#### Customization
+
+- Custom scripts allow:
+    - Flexible request timing
+    - Variation in headers or environments
+- More adaptable than generic tools in **testing scenarios**
