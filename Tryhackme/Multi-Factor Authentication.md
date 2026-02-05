@@ -320,3 +320,6 @@ Common MFA combinations include:
 
 Attackers without the second factor **hit a hard stop**, even with valid credentials.
 
+---
+# MFA Weaknesses & Common OTP Vulnerabilities
+
