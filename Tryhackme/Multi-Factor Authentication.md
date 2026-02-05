@@ -449,28 +449,20 @@ In some applications, **failing the 2FA challenge** causes the system to redirec
 This behavior is usually **intentional** and part of the application’s security design to protect against OTP brute-force attacks.
 
 ---
-
 ## Why Applications Do This
 
 ### 1. Session Invalidation
 
 - After a failed 2FA attempt, the application may:
-    
     - Invalidate the current session
-        
     - Destroy temporary authentication tokens
-        
 - This forces the user to:
-    
     - Re-enter username and password
-        
     - Restart the entire authentication flow
-        
 
 **Security Purpose**
 
 - Ensures the user is still legitimate
-    
 - Prevents attackers from repeatedly guessing OTPs using the same session
 
 ---
@@ -526,3 +518,20 @@ Automation becomes relevant when **testing or evaluating** such protections beca
     - Flexible request timing
     - Variation in headers or environments
 - More adaptable than generic tools in **testing scenarios**
+
+in this challenge:
+
+```
+In real-life applications, the PIN code typically ranges from 0000 to 9999. We're only setting it to a lower value to save time brute-forcing it.
+
+php:
+
+function generateToken()
+{
+    $token = strval(rand(1250, 1350));
+
+    $_SESSION['token'] = $token;
+    return 'success';
+}
+```
+
