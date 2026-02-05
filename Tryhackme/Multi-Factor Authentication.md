@@ -339,18 +339,13 @@ The strength of a **One-Time Password (OTP)** depends entirely on how it is gene
 ### Security Impact
 
 - Attackers may **predict future OTPs**
-    
 - Reduces entropy, making OTPs guessable
-    
 - Breaks the core purpose of OTP security
-    
-
 ### Key Point
 
 OTP systems must use **cryptographically secure random number generation**.
 
 ---
-
 ## Application Leaking the 2FA Token
 
 Some applications unintentionally expose the OTP due to insecure implementation.
@@ -358,74 +353,47 @@ Some applications unintentionally expose the OTP due to insecure implementation.
 ### Common Causes
 
 - Insecure API endpoints
-    
 - Poor server-side logic
-    
 - Debug or development code left in production
-    
-
 ### Typical Scenario
 
 - User logs in successfully
-    
 - Application loads the 2FA page
-    
 - A background XHR/API request generates the OTP
-    
-- ❌ OTP is returned inside the HTTP response
-    
-
+- OTP is returned inside the HTTP response
 ### Security Impact
 
 - OTP becomes visible to the user (and attackers)
-    
 - MFA protection is effectively bypassed
-    
 
 ---
-
 ## Brute-Forcing the OTP
 
 OTPs are meant to be short-lived, but they can still be attacked if protections are weak.
-
 ### Problem
 
 - Unlimited OTP attempts allowed
-    
 - Short OTP length (e.g., 4–6 digits)
-    
-
 ### Security Impact
 
 - Given enough attempts, the OTP can be guessed
-    
 - Especially dangerous when combined with:
-    
     - Long OTP validity
-        
-    - No rate limiting
-        
+    - No rate limiting    
 
 ---
-
 ## Lack of Rate Limiting
 
 Rate limiting is critical for protecting OTP verification endpoints.
-
 ### Problem
 
 - Application allows unlimited OTP submissions
-    
 - No delays, lockouts, or attempt counters
-    
-
 ### Security Impact
 
 - Attackers can rapidly test many OTP values
 - Significantly increases success probability
 - Common and **valid bug bounty finding**
-
-Many HackerOne reports are accepted due to missing OTP rate limiting.
 
 ---
 ## Usage of Evilginx (MFA Phishing)
