@@ -420,3 +420,4 @@ This does **not break MFA itself**, but abuses:
 
 - User trust
 - Lack of phishing-resistant MFA (e.g., FIDO2)
+
