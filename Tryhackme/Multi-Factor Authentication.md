@@ -32,16 +32,17 @@ MFA reduces the risk of:
 ## MFA vs 2FA
 
 - **2FA (Two-Factor Authentication)** is a **subset** of MFA
-    
 - **MFA** = two **or more** authentication factors
-    
-- **2FA** = exactly **two** authentication factors
-    
+- **2FA** = exactly **two** authentication factors    
 
-👉 All 2FA is MFA, but not all MFA is 2FA.
+All 2FA is MFA, but not all MFA is 2FA.
 
 **Example**
-
 - Password + OTP → 2FA
-    
 - Password + fingerprint + smart card → MFA (not 2FA)
+
+---
+## Types of Authentication Factors
+
+MFA combines credentials from different categories:
+
