@@ -296,3 +296,27 @@ Examples of authentication methods:
 - Protects Electronic Health Records (EHRs)
 - Prevents unauthorized data modification or leakage
 
+---
+## MFA in Corporate IT
+
+Corporate environments face constant threats such as:
+
+- Data breaches
+- Espionage
+- Insider attacks
+- System sabotage
+### How MFA is Used in Corporate IT
+
+Common MFA combinations include:
+
+- **Something you know** → Corporate username & password
+- **Something you have** → Company-issued phone OTP
+- **Something you are** → Biometric verification
+### Security Benefits
+
+- Secures networks, databases, and cloud services
+- Reduces risk of account compromise
+- Protects business-critical assets
+
+Attackers without the second factor **hit a hard stop**, even with valid credentials.
+
