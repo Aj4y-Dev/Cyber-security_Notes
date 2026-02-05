@@ -424,6 +424,11 @@ This does **not break MFA itself**, but abuses:
 ---
 ### OTP Leakage
 
+The OTP leakage in the XHR (XMLHttpRequest) response typically happens due to poor implementation of the 2FA (Two-Factor Authentication) mechanism or insecure coding. Some common reasons why this happens are because of:
 
+**Server-Side Validation and Return of Sensitive Data**
+**Lack of Proper Security Practices**
+**Debugging Information Left in Production**
 
 ![[Pasted image 20260205215941.png]]
+
