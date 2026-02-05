@@ -63,7 +63,6 @@ Information the user memorizes.
 - Must be combined with other factors
 
 ---
-
 ### 2. Something You Have
 
 A physical or digital item the user possesses.
@@ -81,7 +80,6 @@ A physical or digital item the user possesses.
 - Commonly used in enterprise environments
 
 ---
-
 ### 3. Something You Are
 
 Biometric characteristics of the user.
@@ -99,7 +97,6 @@ Biometric characteristics of the user.
 - Not recommended as a standalone factor
 
 ---
-
 ### 4. Somewhere You Are
 
 Authentication based on location.
@@ -115,7 +112,6 @@ Authentication based on location.
 - Country-based login controls
 
 ---
-
 ### 5. Something You Do
 
 Behavior-based authentication.
@@ -131,7 +127,6 @@ Behavior-based authentication.
 - Complex and resource-intensive to implement
 
 ---
-
 ## Kinds of 2FA Mechanisms
 
 ### Time-Based One-Time Passwords (TOTP)
@@ -148,7 +143,6 @@ Behavior-based authentication.
 - Resistant to replay attacks
 
 ---
-
 ### Push Notifications
 
 - Login approval sent to registered device
@@ -162,7 +156,6 @@ Behavior-based authentication.
 - Example: Uber corporate account compromise
 
 ---
-
 ### SMS-Based OTP
 
 - Code sent via text message
@@ -180,7 +173,6 @@ Behavior-based authentication.
     - SS7 attacks
 
 ---
-
 ### Hardware Tokens
 
 - Physical devices (e.g., YubiKey)
@@ -193,20 +185,17 @@ Behavior-based authentication.
 - Very strong security
 
 ---
-
 ## Conditional Access
 
 Conditional access dynamically adjusts authentication requirements based on context.
 
 ---
-
 ### Location-Based Access
 
 - Trusted location → fewer checks
 - New location → additional authentication
 
 ---
-
 ### Time-Based Access
 
 - Working hours → standard login
