@@ -250,3 +250,49 @@ Key sectors using MFA extensively include:
 - Healthcare
 - Corporate IT
 
+---
+## MFA in Banking
+
+Banks process highly sensitive data, including:
+
+- Personal identification details
+- Financial information
+- Daily monetary transactions
+
+### How MFA is Used in Banking
+
+Banks typically implement MFA using:
+
+- **Something you know** → Password or PIN
+- **Something you have** → SMS OTP or authenticator app code
+### Security Benefits
+
+- Prevents unauthorized account access
+- Protects against fraud and cyber theft
+- Ensures transactions require multiple verifications
+
+Even if an attacker steals a password, **access is blocked without the second factor**.
+
+---
+## MFA in Healthcare
+
+Healthcare systems manage:
+
+- Patient records
+- Medical histories
+- Personal health information (PHI)
+
+Due to strict regulations (e.g., **HIPAA** in the US), MFA is essential.
+
+### How MFA is Used in Healthcare
+
+Examples of authentication methods:
+
+- **Something you have** → Security badge or smart card
+- **Something you are** → Fingerprint or biometric scan
+### Security Benefits
+
+- Restricts access to authorized personnel only
+- Protects Electronic Health Records (EHRs)
+- Prevents unauthorized data modification or leakage
+
