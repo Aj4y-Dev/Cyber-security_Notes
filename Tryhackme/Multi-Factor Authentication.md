@@ -166,43 +166,31 @@ Behavior-based authentication.
 ### SMS-Based OTP
 
 - Code sent via text message
-    
 
 **Pros**
 
 - Easy to use
-    
 - Widely adopted
-    
 
 **Cons**
 
 - Susceptible to:
-    
     - SIM swapping
-        
     - SMS interception
-        
     - SS7 attacks
-        
 
 ---
 
 ### Hardware Tokens
 
 - Physical devices (e.g., YubiKey)
-    
 - Generate OTP or use NFC/USB
-    
 
 **Advantages**
 
 - Works offline
-    
 - No battery or network required
-    
 - Very strong security
-    
 
 ---
 
@@ -215,9 +203,7 @@ Conditional access dynamically adjusts authentication requirements based on cont
 ### Location-Based Access
 
 - Trusted location → fewer checks
-    
 - New location → additional authentication
-    
 
 ---
 
