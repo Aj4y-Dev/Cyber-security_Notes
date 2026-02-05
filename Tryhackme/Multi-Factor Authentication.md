@@ -421,3 +421,6 @@ This does **not break MFA itself**, but abuses:
 - User trust
 - Lack of phishing-resistant MFA (e.g., FIDO2)
 
+---
+
+![[Pasted image 20260205215751.png]]
