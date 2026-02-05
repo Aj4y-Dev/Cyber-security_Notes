@@ -432,3 +432,6 @@ The OTP leakage in the XHR (XMLHttpRequest) response typically happens due to po
 
 ![[Pasted image 20260205215941.png]]
 
+---
+### Logic Flaw or Insecure Coding?
+
