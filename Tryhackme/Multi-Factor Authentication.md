@@ -210,82 +210,44 @@ Conditional access dynamically adjusts authentication requirements based on cont
 ### Time-Based Access
 
 - Working hours → standard login
-    
-- After hours → extra verification
-    
+- After hours → extra verification    
 
 ---
-
 ### Behavioral Analysis
 
 - Unusual activity triggers extra authentication
-    
 - Examples:
-    
     - Accessing unusual data
-        
     - Logging in at odd times
-        
 
 ---
-
 ### Device-Specific Access
 
 - Only approved devices allowed
-    
 - Personal or unknown devices may be blocked
-    
 
 ---
-
 ## Global Adoption & Regulations
 
 MFA adoption is increasing due to:
 
 - Proven effectiveness
-    
 - Regulatory pressure
-    
 
 **Key Regulations**
 
 - **GDPR** (Europe)
-    
 - **HIPAA** (USA – healthcare)
-    
-- **PCI-DSS** (payment systems)
-    
+- **PCI-DSS** (payment systems)    
 
 Many industries now **mandate MFA** for compliance.
 
 ---
-
 ## Real-World Breach Prevention
 
 Major breaches that could have been prevented with MFA:
 
 - **Equifax (2017)**
-    
 - **Target (2013)**
-    
-
----
-
-## Key Takeaways (CTF / Bug Bounty Perspective)
-
-- MFA significantly raises the attack cost
-    
-- Misconfigurations are common attack points
-    
-- MFA ≠ unbreakable security
-    
-- Always test:
-    
-    - MFA enforcement
-        
-    - Backup mechanisms
-        
-    - Session handling
-        
 
 ---
