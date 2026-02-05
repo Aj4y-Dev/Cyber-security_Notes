@@ -422,6 +422,8 @@ This does **not break MFA itself**, but abuses:
 - Lack of phishing-resistant MFA (e.g., FIDO2)
 
 ---
+### OTP Leakage
+
 
 
 ![[Pasted image 20260205215941.png]]
