@@ -655,3 +655,4 @@ Successfully bypassed 2FA with OTP: 1337
 
 then add the session cookies:
 
+![[Pasted image 20260205222531.png]]
