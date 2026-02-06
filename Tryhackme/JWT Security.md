@@ -158,3 +158,14 @@ ajdev@rootbox:~$ curl -H 'Content-Type: application/json' -X POST -d '{ "usernam
 ```
 
 ---
+### Signature validation Mistake
+
+The second common mistake with JWTs is not correctly verifying the signature. If the signature isn't correctly verified, a threat actor may be able to forge a valid JWT token to gain access to another user's account. 
+
+```
+# The Development Mistake
+
+```python
+payload = jwt.decode(token, options={'verify_signature': False})
+
+```
