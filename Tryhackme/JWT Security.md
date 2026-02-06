@@ -255,6 +255,11 @@ the development mistake: The issue occurs when a weak JWT secret is used. This c
 
 the fix: A secure secret value should be selected. As this value will be used in software and not by humans, a long, random string should be used for the secret.
 
+we can easily brutforce the secret key by using different seclist:
+
+![[Pasted image 20260206080610.png]]
+
+
 
 
 
