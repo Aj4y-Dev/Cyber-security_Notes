@@ -133,3 +133,7 @@ A JWT consists of **three Base64Url-encoded parts**, separated by dots:
     - Each application verifies signature → trusts the claims
 - JWTs are **stateless**: server doesn’t need to store sessions.
 
+---
+### Sensitive Information Disclosure
+
+In PHP, for example, you can use $SESSION['var']=data to store a value associated with the user's session. These values are not exposed client-side and can therefore only be recovered server-side. However, with tokens, the claims are exposed as the entire JWT is sent client-side. If the same development practice is followed, sensitive information can be disclosed.Some examples are seen on real applications:
