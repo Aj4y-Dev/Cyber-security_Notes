@@ -279,6 +279,35 @@ In vulnerable implementations, the JWT library may mistakenly use the public key
 
 This results in signature validation bypass, even though the application believes the token is securely signed.
 
+**The Development Mistake**
+
+The mistake in this example is similar to that of example 3 but a bit more complex. While the None algorithm is disallowed, the key issue stems from both symmetric and asymmetric signature algorithms being allowed, as shown in the example below:
+
+```
+payload = jwt.decode(token, self.secret, algorithms=["HS256", "HS384", "HS512", "RS256", "RS384", "RS512"])
+```
+
+Care should be given never to mix signature algorithms together as the secret parameter of the decode function can be confused between being a secret or a public key.
+
+**The Fix**
+
+While both types of signature algorithms can be allowed, a bit more logic is required to ensure that there is no confusion, as shown in the example below:
+
+```
+header = jwt.get_unverified_header(token)
+
+algorithm = header['alg']
+payload = ""
+
+if "RS" in algorithm:
+    payload = jwt.decode(token, self.public_key, algorithms=["RS256", "RS384", "RS512"])
+elif "HS" in algorithm:
+    payload = jwt.decode(token, self.secret, algorithms=["HS256", "HS384", "HS512"])
+
+username = payload['username']
+flag = self.db_lookup(username, "flag")
+```
+
 
 
 
