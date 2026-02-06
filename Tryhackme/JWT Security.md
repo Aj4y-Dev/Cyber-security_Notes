@@ -165,7 +165,18 @@ The second common mistake with JWTs is not correctly verifying the signature. If
 ```
 # The Development Mistake
 
-```python
 payload = jwt.decode(token, options={'verify_signature': False})
+
+# the fix
+
+payload = jwt.decode(token, self.secret, algorithms="HS256")
+```
+
+```
+ajdev@rootbox:~$ curl -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6InBhc3N3b3JkMSIsImFkbWluIjowLCJmbGFnIjoiVEhNezljYzAzOWNjLWQ4NWYtNDVkMS1hYzNiLTgxOGM4MzgzYTU2MH0ifQ.TkIH_A1zu1mu-zu6_9w_R4FUlYadkyjmXWyD5sqWd5U' http://10.49.170.207/api/v1.0/example2?username=user
+{
+  "message": "Welcome user, you are not an admin"
+}
+
 
 ```
