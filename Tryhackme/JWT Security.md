@@ -147,5 +147,14 @@ ajdev@rootbox:~$ curl -H 'Content-Type: application/json' -X POST -d '{ "usernam
   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6InBhc3N3b3JkMSIsImFkbWluIjowLCJmbGFnIjoiVEhNezljYzAzOWNjLWQ4NWYtNDVkMS1hYzNiLTgxOGM4MzgzYTU2MH0ifQ.TkIH_A1zu1mu-zu6_9w_R4FUlYadkyjmXWyD5sqWd5U"
 }
 
-# all the sen
+# all the sensitive information is in jwt:
+
+{
+  "username": "user",
+  "password": "password1",
+  "admin": 0,
+  "flag": "THM{9cc039cc-d85f-45d1-ac3b-818c8383a560}"
+}
 ```
+
+---
