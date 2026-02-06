@@ -271,6 +271,13 @@ ajdev@rootbox:~$ curl -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1
 ```
 
 ---
+### Signature Algorithm Confusion
+
+An algorithm confusion attack happens when a JWT system incorrectly allows switching between asymmetric and symmetric signing algorithms. For example, an application expects tokens signed with RS256 (asymmetric: public/private key), but accepts a token claiming HS256 (symmetric: shared secret).
+
+In vulnerable implementations, the JWT library may mistakenly use the public key as the HMAC secret when verifying an HS256 token. Since the public key is often publicly accessible, an attacker can use it as the secret key to forge a valid HS256 token with elevated privileges (e.g., admin access).
+
+This results in signature validation bypass, even though the application believes the token is securely signed.
 
 
 
