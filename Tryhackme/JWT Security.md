@@ -210,7 +210,22 @@ header = jwt.get_unverified_header(token)
 signature_algorithm = header['alg']
 
 payload = jwt.decode(token, self.secret, algorithms=signature_algorithm)
+
+However, when the threat actor specified `None` as the algorithm, signature verification is bypassed.[](https://pyjwt.readthedocs.io/en/stable/)
 ```
+
+**The Fix**
+
+```
+If multiple signature algorithms should be supported, the supported algorithms should be supplied to the decode function as an array list, as shown below:
+
+payload = jwt.decode(token, self.secret, algorithms=["HS256", "HS384", "HS512"])
+
+username = payload['username']
+flag = self.db_lookup(username, "flag")
+```
+
+
 
 
 
