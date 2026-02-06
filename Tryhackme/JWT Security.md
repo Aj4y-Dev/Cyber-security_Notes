@@ -200,6 +200,18 @@ ajdev@rootbox:~$ curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX
 
 Another common issue is a signature algorithm downgrade. JWTs support the `None` signing algorithm, which effectively means that no signature is used with the JWT. While this may sound silly, the idea behind this in the standard was for server-to-server communication, where the signature of the JWT was verified in an upstream process. Therefore, the second server would not be required to verify the signature. However, suppose the developers do not lock in the signature algorithm or, at the very least, deny the `None` algorithm. In that case, you can simply change the algorithm specified in your JWT as `None`, which would then cause the library used for signature verification to always return true, thus allowing you again to forge any claims within your token.
 
+**The Development Mistake**
+
+```
+Sometimes, developers want to ensure their implementation accepts several JWT signature verification algorithms.
+
+header = jwt.get_unverified_header(token)
+
+signature_algorithm = header['alg']
+
+payload = jwt.decode(token, self.secret, algorithms=signature_algorithm)
+```
+
 
 
 
