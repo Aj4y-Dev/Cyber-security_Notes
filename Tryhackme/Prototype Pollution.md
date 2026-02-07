@@ -84,21 +84,54 @@ Key point:
 ## Classes
 
 - Classes are **blueprints** for creating objects
-    
 - Allow creation of multiple similar objects
-    
 - Improve structure and readability
-    
 
 Key ideas:
 
 - `constructor()` initializes object properties
-    
 - `extends` enables inheritance
-    
 - `super()` calls the parent constructor
-    
 
 Important security note:
 
 > JavaScript classes are **syntactic sugar** — internally, they still use prototypes.
+
+---
+## Prototypes
+
+- Every JavaScript object has a **prototype**
+- Prototypes form a **prototype chain**
+- If a property isn’t found on an object, JS looks **up the prototype chain**
+
+Key concepts:
+
+- Prototypes act as shared templates
+- Methods defined on prototypes are shared across objects
+- Prototype-based behavior enables inheritance
+
+Security relevance:
+
+> If an attacker modifies a prototype, **all linked objects are affected**.
+
+---
+## Class vs Prototype
+
+### Classes
+
+- Structured and easier to understand
+    
+- Blueprint-style object creation
+    
+- Common in modern JavaScript
+    
+
+### Prototypes
+
+- More dynamic and flexible
+- Objects inherit directly from other objects
+- Can be modified at runtime
+
+Key takeaway:
+
+> Classes are built on top of prototypes — prototypes are the real engine.
