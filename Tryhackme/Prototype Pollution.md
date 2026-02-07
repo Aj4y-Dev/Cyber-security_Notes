@@ -357,3 +357,17 @@ Output:
 You've been hacked, I'm h4ck3r
 ```
 
+## Why This Is Dangerous
+
+Prototype pollution alone:
+
+- Modifies application behavior
+- Breaks trust assumptions
+
+Prototype pollution chained with:
+
+- **XSS** → arbitrary JS execution
+- **CSRF** → forced actions
+- **Auth logic** → privilege escalation
+
+---
