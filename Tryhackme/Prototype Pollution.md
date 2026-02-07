@@ -303,3 +303,9 @@ It was showing “prototype chain levels”, not actual objects named Prototype.
 #imp JavaScript inheritance is powerful but dangerous when user input can modify objects or prototypes. Understanding objects, classes, prototypes, and inheritance is **mandatory** before exploiting or mitigating prototype pollution.
 
 ---
+### What is Prototype Pollution?
+
+Prototype pollution is a vulnerability where an attacker **modifies a shared prototype**, causing malicious properties or methods to appear in **all objects that inherit from it**.
+
+In JavaScript, objects inherit behavior through prototypes. If an attacker gains the ability to modify a prototype, they can **globally affect application behavior**.
+
