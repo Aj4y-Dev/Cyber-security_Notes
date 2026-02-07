@@ -343,4 +343,17 @@ ben.__proto__ === personPrototype // true
 So this means:
 personPrototype.introduce = maliciousFunction;
 
+You are not modifying ben, you are modifying the shared prototype.
+
+console.log(ben.introduce());
+You've been hacked, I'm h4ck3r
+
+And now:
+
+let alice = Person("Alice");
+alice.introduce(); 
+
+Output:
+You've been hacked, I'm h4ck3r
 ```
+
