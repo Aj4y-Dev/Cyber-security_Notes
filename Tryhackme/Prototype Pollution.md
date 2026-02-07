@@ -143,6 +143,20 @@ Key concepts:
 - Methods defined on prototypes are shared across objects
 - Prototype-based behavior enables inheritance
 
+```
+let obj = {};
+
+console.log(obj.toString()); 
+
+# toString() is NOT inside obj.
+
+console.log(obj.hasOwnProperty("toString")); // false
+console.log(Object.prototype.hasOwnProperty("toString")); // true
+
+Prototype chain:
+obj → Object.prototype → null
+```
+
 Security relevance:
 
 > If an attacker modifies a prototype, **all linked objects are affected**.
