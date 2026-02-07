@@ -295,6 +295,9 @@ Final Mental Model:
 Object → Prototype → Prototype → Object.prototype
              ↑
        attacker modifies here
+
+# this does NOT mean there are always _two prototypes_.  
+It was showing “prototype chain levels”, not actual objects named Prototype.
 ```
 
 #imp JavaScript inheritance is powerful but dangerous when user input can modify objects or prototypes. Understanding objects, classes, prototypes, and inheritance is **mandatory** before exploiting or mitigating prototype pollution.
