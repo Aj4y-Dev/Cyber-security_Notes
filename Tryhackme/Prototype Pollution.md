@@ -233,6 +233,25 @@ console.log(adminUser.canLogin);  // true (inherited)
 - Cleaner syntax
 - Internally still prototype-based
 
+```
+class User {
+  isUser() {
+    return true;
+  }
+}
+
+class Admin extends User {
+  isAdmin() {
+    return true;
+  }
+}
+
+let a = new Admin();
+
+console.log(a.isAdmin()); // true
+console.log(a.isUser());  // true
+```
+
 Example concept:
 
 - `ContentCreatorProfile` inherits common properties from `UserProfile`
