@@ -330,11 +330,8 @@ The strength of a **One-Time Password (OTP)** depends entirely on how it is gene
 ### Problem
 
 - Predictable or poorly designed algorithms
-    
 - Use of weak or non-random seeds
-    
 - Repeating or patterned OTP values
-    
 
 ### Security Impact
 

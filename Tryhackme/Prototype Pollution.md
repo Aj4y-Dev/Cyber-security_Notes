@@ -155,3 +155,26 @@ Example concept:
 - `ContentCreatorProfile` inherits common properties from `UserProfile`
 - Adds its own properties like `posts` or `content`
 
+---
+## Inheritance
+
+Inheritance allows objects to **reuse properties and behaviors** from other objects.
+
+Two models in JavaScript:
+
+### Prototype-based Inheritance
+
+- Objects inherit from other objects
+- Implemented using `Object.create()`
+- Properties are resolved via prototype chain
+
+### Class-based Inheritance
+
+- Uses `class` and `extends`
+- Cleaner syntax
+- Internally still prototype-based
+
+Example concept:
+
+- `ContentCreatorProfile` inherits common properties from `UserProfile`
+- Adds its own properties like `posts` or `content`
