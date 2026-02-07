@@ -34,3 +34,20 @@ Example impact:
 - Denial of Service (DoS)
 - Remote Code Execution (in severe cases)
 - Data leakage or backend access
+
+---
+## Exploitation Techniques
+
+### Client-Side
+
+- DOM manipulation
+- XSS chaining
+- Modifying frontend logic (e.g., feature flags, role checks)
+### Server-Side
+
+- Polluting objects used in:
+    - Access control
+    - Template rendering
+    - Configuration objects
+- Can lead to privilege escalation or code execution
+
