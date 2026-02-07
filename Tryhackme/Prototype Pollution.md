@@ -120,12 +120,8 @@ Security relevance:
 ### Classes
 
 - Structured and easier to understand
-    
 - Blueprint-style object creation
-    
 - Common in modern JavaScript
-    
-
 ### Prototypes
 
 - More dynamic and flexible
@@ -135,3 +131,27 @@ Security relevance:
 Key takeaway:
 
 > Classes are built on top of prototypes — prototypes are the real engine.
+
+---
+## Inheritance
+
+Inheritance allows objects to **reuse properties and behaviors** from other objects.
+
+Two models in JavaScript:
+
+### Prototype-based Inheritance
+
+- Objects inherit from other objects
+- Implemented using `Object.create()`
+- Properties are resolved via prototype chain
+### Class-based Inheritance
+
+- Uses `class` and `extends`
+- Cleaner syntax
+- Internally still prototype-based
+
+Example concept:
+
+- `ContentCreatorProfile` inherits common properties from `UserProfile`
+- Adds its own properties like `posts` or `content`
+
