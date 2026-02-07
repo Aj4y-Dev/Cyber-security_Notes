@@ -80,3 +80,4 @@ CORS is a security mechanism that allows servers to specify which cross-origin r
 2. Server checks if origin is allowed.
 3. Server responds with **Access-Control-Allow-Origin** and other CORS headers.
 4. Browser allows or blocks access based on headers.
+
