@@ -215,6 +215,18 @@ Two models in JavaScript:
 - Implemented using `Object.create()`
 - Properties are resolved via prototype chain
 
+```
+let baseUser = {
+  role: "user",
+  canLogin: true
+};
+
+let adminUser = Object.create(baseUser);
+adminUser.role = "admin";
+
+console.log(adminUser.role);      // admin
+console.log(adminUser.canLogin);  // true (inherited)
+```
 ### Class-based Inheritance
 
 - Uses `class` and `extends`
