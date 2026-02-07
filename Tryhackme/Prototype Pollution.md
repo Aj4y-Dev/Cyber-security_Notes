@@ -334,8 +334,13 @@ Hi, I'm Ben.
 
 # The Attack (Prototype Pollution)
 ben.__proto__.introduce = function() {
-  console.log("You've been hacked, I'm Bob");
+  console.log("You've been hacked, I'm h4ck3r");
 };
 
+What this line REALLY does:
+ben.__proto__ === personPrototype // true
+
+So this means:
+personPrototype.introduce = maliciousFunction;
 
 ```
