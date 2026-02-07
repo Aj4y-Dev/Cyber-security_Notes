@@ -309,3 +309,21 @@ Prototype pollution is a vulnerability where an attacker **modifies a shared pro
 
 In JavaScript, objects inherit behavior through prototypes. If an attacker gains the ability to modify a prototype, they can **globally affect application behavior**.
 
+```
+let personPrototype = {
+  introduce: function() {
+    return `Hi, I'm ${this.name}.`;
+  }
+};
+
+function Person(name) {
+  let person = Object.create(personPrototype);
+  person.name = name;
+  return person;
+}
+
+Prototype chain:
+ben → personPrototype → Object.prototype → null
+
+
+```
