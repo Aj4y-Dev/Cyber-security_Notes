@@ -104,7 +104,27 @@ Key ideas:
 - `extends` enables inheritance
 - `super()` calls the parent constructor
 
+```
+class UserProfile {
+  greet() {
+    return "Hello user";
+  }
+}
 
+let u1 = new UserProfile();
+
+console.log(u1.greet()); // Hello user
+
+Now check where greet() actually lives:
+
+console.log(u1.hasOwnProperty("greet")); 
+// false → not inside u1
+
+console.log(UserProfile.prototype.hasOwnProperty("greet")); 
+// true → stored in prototype
+
+# Methods defined in classes live in the prototype, not the object.
+```
 
 Important security note:
 
