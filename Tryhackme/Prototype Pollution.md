@@ -325,5 +325,17 @@ function Person(name) {
 Prototype chain:
 ben → personPrototype → Object.prototype → null
 
+# Normal Object Creation
+let ben = Person('Ben');
+console.log(ben.introduce());
+
+result:
+Hi, I'm Ben.
+
+# The Attack (Prototype Pollution)
+ben.__proto__.introduce = function() {
+  console.log("You've been hacked, I'm Bob");
+};
+
 
 ```
