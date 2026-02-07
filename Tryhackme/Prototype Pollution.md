@@ -59,3 +59,46 @@ Example impact:
 - Avoid unsafe deep merge functions
 - Validate and sanitize user-controlled input
 - Keep libraries and frameworks updated
+
+---
+## JavaScript Basics for Understanding Prototype Pollution
+
+Before learning advanced attacks like **prototype pollution**, it’s important to understand how JavaScript handles **objects, classes, prototypes, and inheritance**, because prototype pollution abuses these exact concepts.
+
+## Objects
+
+- Objects are **containers for related data**
+- Stored as **key–value pairs**
+- Used to represent real-world entities (e.g., user profiles)
+
+Example concept:
+
+- A user object can store `name`, `age`, `followers`, `DoB`
+- Objects help organise and manage application data
+
+Key point:
+
+> Objects are the **core building blocks** of JavaScript applications.
+
+---
+## Classes
+
+- Classes are **blueprints** for creating objects
+    
+- Allow creation of multiple similar objects
+    
+- Improve structure and readability
+    
+
+Key ideas:
+
+- `constructor()` initializes object properties
+    
+- `extends` enables inheritance
+    
+- `super()` calls the parent constructor
+    
+
+Important security note:
+
+> JavaScript classes are **syntactic sugar** — internally, they still use prototypes.
