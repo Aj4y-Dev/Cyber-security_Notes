@@ -250,6 +250,9 @@ let a = new Admin();
 
 console.log(a.isAdmin()); // true
 console.log(a.isUser());  // true
+
+Under the hood:
+a → Admin.prototype → User.prototype → Object.prototype
 ```
 
 Example concept:
