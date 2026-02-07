@@ -37,7 +37,7 @@ SOP is a web security policy that controls how scripts and resources on one web 
 - **Any mismatch → Blocked**
 
 ---
-### **Cross-Origin Resource Sharing (CORS) – Summary**
+### **Cross-Origin Resource Sharing (CORS) 
 
 **Definition:**  
 CORS is a security mechanism that allows servers to specify which cross-origin requests are permitted. While **SOP** restricts access by default, CORS enables controlled exceptions via HTTP headers.
@@ -45,61 +45,38 @@ CORS is a security mechanism that allows servers to specify which cross-origin r
 **Purpose:**
 
 - Allows web pages to request resources from different domains safely.
-    
 - Browser enforces the policy by interpreting headers sent from the server.
-    
 
 **Key HTTP Headers in CORS:**
 
 1. **Access-Control-Allow-Origin:** Specifies allowed domains (cannot be `*` if credentials are used).
-    
 2. **Access-Control-Allow-Methods:** Lists permitted HTTP methods (GET, POST, etc.).
-    
 3. **Access-Control-Allow-Headers:** Specifies which request headers are allowed.
-    
 4. **Access-Control-Max-Age:** Caches preflight results for a set duration.
-    
 5. **Access-Control-Allow-Credentials:** Allows cookies or credentials; must specify an explicit domain, not `*`.
-    
 
 **Common Use Cases:**
 
 - APIs accessed from a different domain.
-    
 - Loading resources from CDNs (libraries, fonts).
-    
 - Web fonts shared across domains.
-    
 - Third-party widgets/plugins (social buttons, chatbots).
-    
 - Multi-domain authentication (SSO, OAuth tokens).
-    
 
 **Types of Requests:**
 
 1. **Simple Requests:**
-    
     - Methods: GET, HEAD, POST
-        
     - Content-Type: `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain`
-        
     - Sent directly; browser enforces CORS based on response headers.
-        
 2. **Preflight Requests:**
-    
     - Triggered when requests use other methods, custom headers, or non-simple content types.
-        
     - Browser sends an **OPTIONS** request first to check server permissions.
-        
     - Server responds with CORS headers to approve the actual request.
-        
 
 **CORS Request Process:**
 
 1. Browser sends request with **Origin** header.
-    
 2. Server checks if origin is allowed.
-    
 3. Server responds with **Access-Control-Allow-Origin** and other CORS headers.
-    
 4. Browser allows or blocks access based on headers.
