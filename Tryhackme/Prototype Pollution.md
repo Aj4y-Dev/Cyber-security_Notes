@@ -71,6 +71,17 @@ Before learning advanced attacks like **prototype pollution**, it’s important 
 - Stored as **key–value pairs**
 - Used to represent real-world entities (e.g., user profiles)
 
+```
+let user = {
+  name: "Ben S",
+  age: 25,
+  followers: 200
+};
+
+console.log(user.name);        // Ben S
+console.log(user.followers);  // 200
+```
+
 Example concept:
 
 - A user object can store `name`, `age`, `followers`, `DoB`
@@ -92,6 +103,8 @@ Key ideas:
 - `constructor()` initializes object properties
 - `extends` enables inheritance
 - `super()` calls the parent constructor
+
+
 
 Important security note:
 
@@ -195,3 +208,4 @@ This hierarchy allows:
 
 #imp JavaScript inheritance is powerful but dangerous when user input can modify objects or prototypes. Understanding objects, classes, prototypes, and inheritance is **mandatory** before exploiting or mitigating prototype pollution.
 
+---
