@@ -268,6 +268,21 @@ Example concept:
 3. Continues up the prototype chain
 4. Stops at `Object.prototype`
 
+```
+let innocentObject = {};
+
+console.log(innocentObject.isAdmin); // undefined
+
+// POLLUTION
+Object.prototype.isAdmin = true;
+
+let user1 = {};
+let user2 = {};
+
+console.log(user1.isAdmin); // true 😈
+console.log(user2.isAdmin); // true 😈
+```
+
 This hierarchy allows:
 
 - Code reuse
