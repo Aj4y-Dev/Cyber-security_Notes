@@ -178,3 +178,20 @@ Example concept:
 
 - `ContentCreatorProfile` inherits common properties from `UserProfile`
 - Adds its own properties like `posts` or `content`
+
+---
+## Prototype Chain (How Property Lookup Works)
+
+1. JavaScript checks the object itself
+2. If not found, checks its prototype
+3. Continues up the prototype chain
+4. Stops at `Object.prototype`
+
+This hierarchy allows:
+
+- Code reuse
+- Shared behavior
+- Flexible object design
+
+#imp JavaScript inheritance is powerful but dangerous when user input can modify objects or prototypes. Understanding objects, classes, prototypes, and inheritance is **mandatory** before exploiting or mitigating prototype pollution.
+
