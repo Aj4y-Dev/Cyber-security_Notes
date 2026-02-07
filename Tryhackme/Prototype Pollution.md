@@ -51,3 +51,11 @@ Example impact:
     - Configuration objects
 - Can lead to privilege escalation or code execution
 
+---
+## Mitigation Techniques
+
+- Block prototype-related keys (`__proto__`, `constructor`, `prototype`)
+- Use safe object creation (`Object.create(null)`)
+- Avoid unsafe deep merge functions
+- Validate and sanitize user-controlled input
+- Keep libraries and frameworks updated
