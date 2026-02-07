@@ -289,6 +289,14 @@ This hierarchy allows:
 - Shared behavior
 - Flexible object design
 
+```
+Final Mental Model:
+
+Object → Prototype → Prototype → Object.prototype
+             ↑
+       attacker modifies here
+```
+
 #imp JavaScript inheritance is powerful but dangerous when user input can modify objects or prototypes. Understanding objects, classes, prototypes, and inheritance is **mandatory** before exploiting or mitigating prototype pollution.
 
 ---
