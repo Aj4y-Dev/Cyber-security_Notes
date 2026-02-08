@@ -65,10 +65,6 @@ i think found some CVE-2025-49132 :
 ```
 
 ```
-i found some endpoint:
-
-GET /locales/locale.json?locale=en&namespace=auth&hash=test
-
-
+i found some endpoint
 
 ```
