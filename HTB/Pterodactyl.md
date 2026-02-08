@@ -62,5 +62,5 @@ panel           [Status: 200, Size: 1897, Words: 490, Lines: 36, Duration: 494ms
 i think found some CVE-2025-49132 :
 [https://nvd.nist.gov/vuln/detail/cve-2025-49132]
 [https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843]
-
 ```
+
