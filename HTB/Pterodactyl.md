@@ -49,5 +49,10 @@ Version 1.20.X
 ```
 
 ```
-# then i 
+# then i tried the subdaomain enumeration:
+
+~$ ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://pterodactyl.htb/ -H "Host: FUZZ.pterodactyl.htb" -fc 404 -fs 145
+
+panel           [Status: 200, Size: 1897, Words: 490, Lines: 36, Duration: 494ms]
 ```
+
