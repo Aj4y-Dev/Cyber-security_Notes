@@ -123,3 +123,32 @@ Access-Control-Allow-Origin: https://evil.com
 
 CORS is enforced by the **browser**, not the server.
 
+#### ACAO Configurations
+
+1. **Single Origin**:
+    - Configuration: `Access-Control-Allow-Origin: https://example.com`
+    - Implication: Only requests originating from `https://example.com` are allowed. This is a secure configuration, as it restricts access to a known, trusted origin.
+2. **Multiple Origins**:
+    - Configuration: Dynamically set based on a list of allowed origins.
+    - Implication: Allows requests from a specific set of origins. While this is more flexible than a single origin, it requires careful management to ensure that only trusted origins are included.
+3. **Wildcard Origin**:
+    - Configuration: `Access-Control-Allow-Origin: *`
+    - Implication: Permits requests from any origin. This is the least secure configuration and should be used cautiously. It's appropriate for publicly accessible resources that don't contain sensitive information.
+4. **With Credentials**:
+    - Configuration: `Access-Control-Allow-Origin` set to a specific origin (wildcards not allowed), along with `Access-Control-Allow-Credentials: true`
+    - Implication: Allows sending of credentials, such as cookies and HTTP authentication data, to be included in cross-origin requests. However, it's important to note that browsers will send cookies and authentication data without the Access-Control-Allow-Credentials header for simple requests like some GET and POST requests. For preflight requests that use methods other than GET/POST or custom headers, the Access-Control-Allow-Credentials header must be **true** for the browser to send credentials.
+
+## ACAO Decision Flow (Server Side)
+
+1. Check if request has an `Origin` header
+2. If no origin:
+    - Set `Access-Control-Allow-Origin: *`
+3. If origin exists:
+    - Check against allowed list
+4. If allowed:
+    - Set `Access-Control-Allow-Origin` to that origin
+5. If not allowed:
+    - Do not set ACAO → browser blocks access
+
+This is the **core logic behind CORS enforcement**.
+
