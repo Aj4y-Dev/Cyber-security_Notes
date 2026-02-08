@@ -98,3 +98,21 @@ By default:
 
 CORS relaxes this restriction **only when the server explicitly allows it**, using headers like ACAO.
 
+## How ACAO Works (Basic Flow)
+
+- Browser sends a request with an **Origin** header  
+    Example:
+
+```
+Origin: https://evil.com
+```
+
+- Server checks:
+    - Is this origin allowed?
+- If allowed:
+    - Server responds with:
+
+```
+Access-Control-Allow-Origin: https://evil.com
+```
+
