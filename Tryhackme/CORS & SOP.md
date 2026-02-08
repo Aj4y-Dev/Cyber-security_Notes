@@ -116,3 +116,10 @@ Origin: https://evil.com
 Access-Control-Allow-Origin: https://evil.com
 ```
 
+- Browser allows JavaScript access to the response
+- If **not allowed**:
+    - ACAO header is **missing**
+    - Browser blocks access (even if the server responded)
+
+CORS is enforced by the **browser**, not the server.
+
