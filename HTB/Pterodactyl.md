@@ -274,12 +274,8 @@ GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=database HTTP/1.1
 ```
 
 ```
-# so db user and password:
+GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=auth HTTP/1.1
 
-"database": "panel",
-"username": "pterodactyl",
-"password": "PteraPanel",
-"host": "127.0.0.1",
-"port": "3306"
+
 ```
 
