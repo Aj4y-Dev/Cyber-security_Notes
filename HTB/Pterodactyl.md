@@ -64,7 +64,7 @@ i think found some CVE-2025-49132 :
 [https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843]
 ```
 
-```
-i found some endpoint
+found some endpoint which is fissy:
 
-```
+![[Pasted image 20260208081639.png]]
+
