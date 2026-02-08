@@ -211,3 +211,8 @@ GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=app HTTP/1.1
 }
 ```
 
+```
+base64{{UaThTPQnUjrrK61o}}+Luk7P9o4hM+gl4UiMJqcbTSThY=
+
+
+```
