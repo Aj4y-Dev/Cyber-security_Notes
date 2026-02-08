@@ -318,6 +318,24 @@ GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=auth HTTP/1.1
 ```
 
 ```
+GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=hashing HTTP/1.1
 
+{
+  "../../config": {
+    "hashing": {
+      "driver": "bcrypt",
+      "bcrypt": {
+        "rounds": "10"
+      },
+      "argon": {
+        "memory": "65536",
+        "threads": "1",
+        "time": "4"
+      }
+    }
+  }
+}
 ```
+
+
 
