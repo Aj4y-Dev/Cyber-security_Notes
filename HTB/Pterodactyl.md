@@ -14,5 +14,33 @@ PORT   STATE SERVICE VERSION
 ```
 http://pterodactyl.htb/changelog.txt
 
+MonitorLand - CHANGELOG.txt
+======================================
 
+Version 1.20.X
+
+[Added] Main Website Deployment
+--------------------------------
+- Deployed the primary landing site for MonitorLand.
+- Implemented homepage, and link for Minecraft server.
+- Integrated site styling and dark-mode as primary.
+
+[Linked] Subdomain Configuration
+--------------------------------
+- Added DNS and reverse proxy routing for play.pterodactyl.htb.
+- Configured NGINX virtual host for subdomain forwarding.
+
+[Installed] Pterodactyl Panel v1.11.10
+--------------------------------------
+- Installed Pterodactyl Panel.
+- Configured environment:
+  - PHP with required extensions.
+  - MariaDB 11.8.3 backend.
+
+[Enhanced] PHP Capabilities
+-------------------------------------
+- Enabled PHP-FPM for smoother website handling on all domains.
+- Enabled PHP-PEAR for PHP package management.
+- Added temporary PHP debugging via phpinfo()
 ```
+
