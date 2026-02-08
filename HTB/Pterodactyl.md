@@ -68,3 +68,8 @@ found some endpoint which is fishy:
 
 ![[Pasted image 20260208081639.png]]
 
+```
+GET /locales/locale.json?locale=en&namespace=auth&hash=test HTTP/1.1
+
+
+```
