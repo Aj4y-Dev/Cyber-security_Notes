@@ -56,3 +56,6 @@ Version 1.20.X
 panel           [Status: 200, Size: 1897, Words: 490, Lines: 36, Duration: 494ms]
 ```
 
+```
+# then as i know the Installed Pterodactyl Panel 
+```
