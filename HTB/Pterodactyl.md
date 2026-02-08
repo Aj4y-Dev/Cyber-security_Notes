@@ -64,3 +64,11 @@ i think found some CVE-2025-49132 :
 [https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843]
 ```
 
+```
+i found some endpoint:
+
+GET /locales/locale.json?locale=en&namespace=auth&hash=test
+
+
+
+```
