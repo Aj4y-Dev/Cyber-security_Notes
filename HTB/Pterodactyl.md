@@ -97,5 +97,4 @@ GET /locales/locale.json?locale=en&namespace=auth&hash=test HTTP/1.1
 }
 ```
 
-after 2 hours [https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-49132.yaml]
-
+after 2 hours [Resource]https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-49132.yaml
