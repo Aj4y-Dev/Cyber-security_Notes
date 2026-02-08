@@ -82,22 +82,19 @@ CORS is a security mechanism that allows servers to specify which cross-origin r
 4. Browser allows or blocks access based on headers.
 
 ---
-## Access-Control-Allow-Origin (ACAO)
+# Access-Control-Allow-Origin (ACAO)
 
-## What is ACAO?
+### What is ACAO?
 
 **Access-Control-Allow-Origin (ACAO)** is an HTTP **response header** used in **CORS (Cross-Origin Resource Sharing)**.  
 It tells the browser **which origins are allowed** to access resources from the server.
 
 Without this header, browsers enforce the **Same-Origin Policy (SOP)** and block cross-origin access.
-
-## Why ACAO is Needed
-
+Why ACAO is Needed?
 By default:
 
 - A website can only access resources from **the same origin**
-    
-- Cross-origin requests are **blocked by the browser**
-    
+- Cross-origin requests are **blocked by the browser**    
 
 CORS relaxes this restriction **only when the server explicitly allows it**, using headers like ACAO.
+
