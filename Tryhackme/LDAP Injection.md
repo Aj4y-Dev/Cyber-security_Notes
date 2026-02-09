@@ -97,15 +97,16 @@ Wildcard Filter:
 
 Matches entries where `cn` **starts with J**.
 
-Logical Operators
+Logical Operators:
 
 LDAP supports:
 
 - **AND** → `&`
-    
 - **OR** → `|`
-    
 - **NOT** → `!`
-    
 
-### Complex Filter Example
+Complex Filter Example
+
+```
+(&(objectClass=user)(|(cn=John*)(cn=Jane*)))
+```
