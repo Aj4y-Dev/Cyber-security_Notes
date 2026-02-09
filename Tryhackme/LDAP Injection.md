@@ -39,33 +39,22 @@
     Knowing how to build LDAP queries is essential for **authentication systems**, **directory enumeration**, and **LDAP injection** scenarios in CTFs.
 
 ---
-## Components of an LDAP Search Query
+### Components of an LDAP Search Query
 
 An LDAP search query consists of the following parts:
 
 1. **Base DN (Distinguished Name)**
-    
     - Starting point of the search in the directory tree
-        
     - Example: `dc=ldap,dc=thm`
-        
 2. **Scope**  
     Defines how deep the search goes from the Base DN:
-    
     - `base` → search only the Base DN
-        
     - `one` → search only immediate children
-        
     - `sub` → search Base DN and **all descendants** (most common)
-        
 3. **Filter**
-    
     - Conditions entries must match to be returned
-        
     - Written using LDAP filter syntax
-        
 4. **Attributes**
-    
     - Specifies which attributes to return (e.g., `cn`, `mail`)
-        
     - If omitted, all attributes are returned
+
