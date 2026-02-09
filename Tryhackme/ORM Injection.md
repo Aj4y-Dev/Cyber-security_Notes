@@ -18,3 +18,14 @@
     - Bypass authentication or authorization
     - Extract or modify sensitive data
 
+---
+### ORM (Object-Relational Mapping)
+
+### Definition
+
+- **ORM** is a programming technique that **converts data between incompatible systems** using object-oriented programming (OOP).
+- It allows developers to interact with a database using the **programming language’s native syntax**, reducing the need for raw SQL.
+- Benefits:
+    - Simplifies complex data interactions
+    - Promotes **code reusability**
+    - Makes database access more intuitive
