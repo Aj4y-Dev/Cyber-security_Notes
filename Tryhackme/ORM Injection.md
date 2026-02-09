@@ -54,3 +54,5 @@ ORM acts as a **bridge** between the **object-oriented programming model** and t
 | **SQLAlchemy**       | Python        | Flexible ORM + SQL toolkit, allows raw SQL when needed                                                    |
 | **Entity Framework** | C#/.NET       | Works with domain-specific objects, reduces manual data-access code                                       |
 | **Active Record**    | Ruby on Rails | Follows Active Record pattern; each table = class, each row = instance, rich query & manipulation methods |
+
+---
