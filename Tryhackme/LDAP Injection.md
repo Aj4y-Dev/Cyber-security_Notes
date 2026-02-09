@@ -30,3 +30,10 @@
     - **Relative Distinguished Names (RDNs):** Individual levels within the hierarchy. Example: `cn=John Doe` (`cn` = Common Name)
     - **Attributes:** Properties of entries. Example: `mail=john@example.com`
 
+---
+### LDAP Search Queries
+
+- **Purpose:**  
+    LDAP search queries are used to **locate and retrieve information** stored in an LDAP directory.
+- **Why important:**  
+    Knowing how to build LDAP queries is essential for **authentication systems**, **directory enumeration**, and **LDAP injection** scenarios in CTFs.
