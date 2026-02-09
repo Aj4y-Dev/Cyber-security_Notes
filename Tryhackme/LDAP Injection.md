@@ -110,3 +110,19 @@ Complex Filter Example
 ```
 (&(objectClass=user)(|(cn=John*)(cn=Jane*)))
 ```
+
+Meaning:
+
+- Entry must be a **user**
+- AND the name must start with **John** OR **Jane**
+
+---
+## LDAP Network Access
+
+- **Port 389** → LDAP (plain / StartTLS)
+- **Port 636** → LDAPS (SSL/TLS)
+
+When LDAP is publicly accessible, it can be queried remotely.
+
+---
+
