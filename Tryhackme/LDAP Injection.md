@@ -62,3 +62,18 @@ An LDAP search query consists of the following parts:
 (base DN) (scope) (filter) (attributes)
 ```
 
+---
+## LDAP Filters & Syntax
+
+- Filters define **search conditions**
+- Defined in **RFC 4515**
+- Written inside parentheses
+### Common Operators
+
+|Operator|Meaning|
+|---|---|
+|`=`|Equality|
+|`=*`|Presence|
+|`>=`|Greater than|
+|`<=`|Less than|
+|`*`|Wildcard (any number of characters)|
