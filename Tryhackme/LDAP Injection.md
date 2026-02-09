@@ -77,3 +77,35 @@ An LDAP search query consists of the following parts:
 |`>=`|Greater than|
 |`<=`|Less than|
 |`*`|Wildcard (any number of characters)|
+
+---
+## Filter Examples
+
+Simple Filter:
+
+```
+(cn=John Doe)
+```
+
+Matches entries where `cn` is exactly **John Doe**.
+
+Wildcard Filter:
+
+```
+(cn=J*)
+```
+
+Matches entries where `cn` **starts with J**.
+
+Logical Operators
+
+LDAP supports:
+
+- **AND** → `&`
+    
+- **OR** → `|`
+    
+- **NOT** → `!`
+    
+
+### Complex Filter Example
