@@ -131,3 +131,9 @@ When LDAP is publicly accessible, it can be queried remotely.
 - Used to **query and modify** LDAP directories
 - Commonly used in **CTFs and real-world attacks** (LDAP Injection)
 
+Sample `ldapsearch` Command
+
+```
+ldapsearch -x -H ldap://MACHINE_IP:389 -b "dc=ldap,dc=thm" "(ou=People)"
+```
+
