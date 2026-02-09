@@ -58,3 +58,7 @@ An LDAP search query consists of the following parts:
     - Specifies which attributes to return (e.g., `cn`, `mail`)
     - If omitted, all attributes are returned
 
+```
+(base DN) (scope) (filter) (attributes)
+```
+
