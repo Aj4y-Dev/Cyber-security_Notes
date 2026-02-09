@@ -125,4 +125,9 @@ Meaning:
 When LDAP is publicly accessible, it can be queried remotely.
 
 ---
+## ldapsearch Tool
+
+- Part of the **OpenLDAP** suite
+- Used to **query and modify** LDAP directories
+- Commonly used in **CTFs and real-world attacks** (LDAP Injection)
 
