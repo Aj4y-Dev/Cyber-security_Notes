@@ -137,3 +137,11 @@ Sample `ldapsearch` Command
 ldapsearch -x -H ldap://MACHINE_IP:389 -b "dc=ldap,dc=thm" "(ou=People)"
 ```
 
+### Explanation:
+
+- `-x` → Simple authentication
+- `-H` → LDAP server URL
+- `-b` → Base DN
+- `"(ou=People)"` → Filter (search People OU)
+
+This query searches the LDAP directory under `dc=ldap,dc=thm` for entries belonging to the **People** organizational unit.
