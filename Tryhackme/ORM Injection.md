@@ -29,3 +29,18 @@
     - Simplifies complex data interactions
     - Promotes **code reusability**
     - Makes database access more intuitive
+
+---
+## ORM & Database Interconnectivity
+
+### Purpose of ORM
+
+ORM acts as a **bridge** between the **object-oriented programming model** and the **relational database model**.
+
+**Key Benefits:**
+
+1. **Reduce boilerplate code:** Automatically generates SQL queries from object operations
+2. **Increase productivity:** Focus on business logic, not database queries
+3. **Ensure consistency:** ORM frameworks handle database operations uniformly
+4. **Enhance maintainability:** Changes in the database schema reflect in the object model without extensive code modifications
+
