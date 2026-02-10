@@ -414,7 +414,7 @@ Response:
 
 ✔ Without `state`, OAuth flow integrity is broken
 
-## How `state` Works (Normal Flow)
+### How `state` Works (Normal Flow)
 
 1. Client generates a **random, unpredictable state value**
 2. Sends it with the authorization request
@@ -427,4 +427,29 @@ sent_state == received_state
 
 ✔ If they match → request is valid  
 ❌ If missing/mismatched → request is rejected
+
+##### Vulnerability: Missing or Weak `state`
+
+### Weak `state` Examples
+
+- Missing entirely
+- Static value (e.g., `state=state`)
+- Predictable values (1, 2, 3…)
+- Not validated on callback
+### Why This Is Dangerous
+
+- Authorization server cannot distinguish:
+    - Attacker’s OAuth request
+    - Victim’s OAuth request
+- Leads to **OAuth CSRF attacks**
+
+### Attack Concept (OAuth CSRF)
+
+Without `state`:
+
+- Attacker can reuse their own authorization code
+- Trick victim into executing OAuth callback
+- Victim unknowingly links attacker’s OAuth account
+
+✔ No user interaction required beyond clicking a link
 
