@@ -81,4 +81,27 @@ OAuth 2.0 defines **grant types** that specify how a client application obtains 
 - **Best choice for web applications**
 
 ---
+### 2. Implicit Grant
+
+- Designed for **browser-based and mobile apps**
+- Access token is returned **directly in the URL fragment**
+- No authorization code exchange
+- **Faster but less secure**
+- ❌ Access token exposed to browser and history
+- ❌ No refresh token support
+- **Now considered deprecated** in modern OAuth implementations
+
+---
+### 3. Resource Owner Password Credentials Grant
+
+- Used only for **highly trusted (first-party) applications**
+    
+- User provides **username and password directly to the client**
+    
+- Client exchanges credentials for an access token
+    
+- Simple and direct flow
+    
+- ❌ Less secure (credentials shared with client)
+- ❌ Not suitable for third-party apps
 
