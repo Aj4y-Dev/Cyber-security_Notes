@@ -112,3 +112,38 @@ OAuth 2.0 defines **grant types** that specify how a client application obtains 
 - **No user data exposure**
 
 ---
+## OAuth 2.0 Authorization Code Flow (Workflow Notes)
+
+OAuth 2.0 allows a user to log in to one application using another trusted application (OAuth provider) **without sharing passwords**.
+### Key Roles
+
+- **Resource Owner**: User (e.g., Tom)
+- **Client**: Third-party app requesting access (Bistro)
+- **Authorization Server**: OAuth provider handling login & consent (CoffeeShopApp)
+- **Resource Server**: Stores protected user data (CoffeeShopApp API)
+## High-Level OAuth Flow
+
+1. User requests login via OAuth
+2. Client redirects user to Authorization Server
+3. User logs in and gives consent
+4. Authorization Server returns **authorization code**
+5. Client exchanges code for **access token**
+6. Client uses access token to access protected resources
+
+---
+### Step-by-Step OAuth Workflow (CoffeeShopApp Example)
+
+### 1. Authorization Request
+
+- User visits **Bistro** and clicks _Login with OAuth_
+- Bistro redirects the user to **CoffeeShopApp (Authorization Server)**
+
+**Important parameters sent:**
+
+- `response_type=code` → expects authorization code
+- `client_id` → identifies Bistro app
+- `redirect_uri` → where user is sent after approval
+- `scope` → permissions requested
+- `state` → CSRF protection token
+
+✔ Purpose: Tell the authorization server **who is requesting access and what they want**
