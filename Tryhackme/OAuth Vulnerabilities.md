@@ -147,3 +147,32 @@ OAuth 2.0 allows a user to log in to one application using another trusted appli
 - `state` → CSRF protection token
 
 ✔ Purpose: Tell the authorization server **who is requesting access and what they want**
+
+---
+### 2. Authentication & User Consent
+
+- User logs in on CoffeeShopApp
+- Authorization server verifies credentials
+- User sees a **consent screen**
+- User allows or denies access
+
+✔ Purpose:
+
+- Authenticate the user
+- Get **explicit permission** before sharing data
+
+---
+### 3. Authorization Response
+
+- If user approves, authorization server redirects back to Bistro
+- Redirect contains:
+    - `code` → authorization code
+    - `state` → to verify request integrity
+
+```
+https://bistro.thm:8000/callback?code=AUTH_CODE&state=XYZ
+```
+
+✔ Authorization code is **temporary and single-use**
+
+---
