@@ -337,3 +337,17 @@ If `redirect_uri` validation is weak or misconfigured:
 - Access token compromise
 - Full account takeover
 
+### Attack Scenario (Concept)
+
+### Preconditions
+
+- Attacker controls a domain/subdomain listed or accepted in `redirect_uri`
+- OAuth server does not strictly validate redirect URI
+
+Attack Flow (Step-by-Step)
+
+### 1. Attacker Controls a Redirect Domain
+
+```
+http://dev.bistro.thm:8002/redirect_uri.html
+```
