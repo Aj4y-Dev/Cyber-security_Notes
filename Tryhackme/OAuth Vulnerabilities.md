@@ -301,7 +301,7 @@ Different frameworks use recognizable endpoint patterns:
 - Configuration details
 
 ---
-### OAuth Tokens & Redirect_URI Vulnerability
+### Stealing OAuth Tokens & Redirect_URI Vulnerability
 
 ### Role of Tokens in OAuth 2.0
 
@@ -403,4 +403,4 @@ Response:
 
 ---
 
-
+### 
