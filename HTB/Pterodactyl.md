@@ -351,6 +351,12 @@ after decrypt it:
   "mac": "620e0a00f214a65e770dcb1e8e4a96cef9947adcf292af64c02665d1e270c598",
   "tag": ""
 }7
-
-
 ```
+
+- **iv** → Initialization vector for AES‑256‑CBC. Used during encryption.
+- **value** → This is the **encrypted session data** (contains user_id and other session info).
+- **mac** → HMAC for integrity. Laravel checks this to prevent tampering.
+- **tag** → Not used for AES‑CBC, safe to ignore.
+
+**Important:** You **cannot just edit this JSON directly**. The real thing you need to modify is **inside the decrypted `value`**.
+
