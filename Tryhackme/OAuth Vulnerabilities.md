@@ -402,5 +402,15 @@ Response:
 ```
 
 ---
+### OAuth `state` Parameter & CSRF Vulnerability
 
-### 
+### Purpose of the `state` Parameter
+
+- The `state` parameter protects OAuth flows from **CSRF (Cross-Site Request Forgery)**
+- It binds:
+    - **Authorization request**
+    - **Authorization response**
+- Ensures the OAuth response belongs to the same user/session that initiated the request
+
+✔ Without `state`, OAuth flow integrity is broken
+
