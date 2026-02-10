@@ -389,3 +389,15 @@ Attacker-controlled page extracts the code:
 ✔ Victim does not notice the interception  
 ✔ Redirect happens very fast
 
+##### 5. Attacker Exchanges Code for Access Token
+
+Attacker uses the stolen code:
+
+```
+http://bistro.thm:8000/oauthdemo/callbackforflag/?code=VRIHINF366aUPSAgtNUAkdcA8h5mKD
+
+Response:
+
+
+```
+
