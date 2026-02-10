@@ -208,3 +208,35 @@ https://bistro.thm:8000/callback?code=AUTH_CODE&state=XYZ
 
 OAuth is commonly used for **third-party authentication and authorization**. Recognizing its presence is the first step in testing for OAuth-related vulnerabilities.
 
+### 1. Indicators of OAuth Usage
+
+### Login Page Clues
+
+- Look for login options such as:
+    - _Login with Google_
+    - _Login with Facebook_
+    - _Login with GitHub_
+- These buttons usually redirect users to an **external authorization server**
+- This redirection is a strong indicator that **OAuth is being used**
+
+✔ Rule of thumb:  
+If login redirects to another domain → **OAuth likely in use**
+
+---
+### 2. Detecting OAuth via Network Traffic
+
+### HTTP Redirect Analysis
+
+- Use browser DevTools or Burp Suite
+- Observe **302 / 301 redirects** during login
+### Common OAuth Parameters in URLs
+
+If the redirected URL contains these parameters, OAuth is almost certainly being used:
+
+- `response_type`
+- `client_id`
+- `redirect_uri`
+- `scope`
+- `state`
+### Example OAuth Authorization URL
+
