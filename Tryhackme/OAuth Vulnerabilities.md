@@ -336,3 +336,4 @@ If `redirect_uri` validation is weak or misconfigured:
 - Authorization code theft
 - Access token compromise
 - Full account takeover
+
