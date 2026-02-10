@@ -240,3 +240,40 @@ If the redirected URL contains these parameters, OAuth is almost certainly being
 - `state`
 ### Example OAuth Authorization URL
 
+```
+https://dev.coffee.thm/authorize?
+response_type=code
+&client_id=AppClientID
+&redirect_uri=https://dev.coffee.thm/callback
+&scope=profile
+&state=xyzSecure123
+```
+
+✔ These parameters define an OAuth authorization request
+
+---
+## 3. Identifying the OAuth Framework Used
+
+Knowing the framework helps predict **misconfigurations and known weaknesses**.
+
+### a) HTTP Headers & Responses
+
+- Inspect response headers and body
+- Look for:
+    - Framework names
+    - Comments or debug info
+    - Unique header values
+### b) Source Code Analysis
+
+If source code is accessible:
+
+- Search for keywords and imports such as:
+    - `django-oauth-toolkit`
+    - `oauthlib`
+    - `spring-security-oauth`
+    - `passport` (Node.js)
+
+✔ Framework names often appear in imports, configs, or comments
+
+
+
