@@ -64,3 +64,10 @@ As a pentester or a secure coder, it is essential to understand these concepts t
 - **Token Endpoint**
     - Exchange grant/refresh token → access token
 
+---
+## OAuth 2.0 Grant Types
+
+OAuth 2.0 defines **grant types** that specify how a client application obtains an **access token** to access protected resources.
+
+
+
