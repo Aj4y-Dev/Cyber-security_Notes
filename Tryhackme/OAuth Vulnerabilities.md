@@ -204,3 +204,7 @@ https://bistro.thm:8000/callback?code=AUTH_CODE&state=XYZ
 ✔ Access token is the **key** to protected resources
 
 ---
+### Identifying OAuth Usage in an Application
+
+OAuth is commonly used for **third-party authentication and authorization**. Recognizing its presence is the first step in testing for OAuth-related vulnerabilities.
+
