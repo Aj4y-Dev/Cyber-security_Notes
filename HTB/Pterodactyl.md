@@ -343,5 +343,14 @@ i know that this is cookie:
 
 pterodactyl_session=eyJpdiI6IjN6eUhaZndrTUtmVVM5d2xLMGdmNGc9PSIsInZhbHVlIjoidFpBalR4cndnYVBOb0Q3bUI4RlpzZmdvbyt5bzZkSmxpMDdmYjhWMWxULzRxM0N6Q24yNWdHeWlHSCtXNjNsNENSYkxQK0VEaThEZ3ZJa24za0RqaEVKT09PNkMrNy9NZzhKYmQvTU4xcC9CSDVLSVpSYXd2ZFlOUURIS1BHeG4iLCJtYWMiOiI2MjBlMGEwMGYyMTRhNjVlNzcwZGNiMWU4ZTRhOTZjZWY5OTQ3YWRjZjI5MmFmNjRjMDI2NjVkMWUyNzBjNTk4IiwidGFnIjoiIn0%3D;
 
-after decrypt it 
+after decrypt it:
+
+{
+  "iv": "3zyHZfwkMKfUS9wlK0gf4g==",
+  "value": "tZAjTxrwgaPNoD7mB8FZsfgoo+yo6dJli07fb8V1lT/4q3CzCn25gGyiGH+W63l4CRbLP+EDi8DgvIkn3kDjhEJOOO6C+7/Mg8Jbd/MN1p/BH5KIZRawvdYNQDHKPGxn",
+  "mac": "620e0a00f214a65e770dcb1e8e4a96cef9947adcf292af64c02665d1e270c598",
+  "tag": ""
+}7
+
+
 ```
