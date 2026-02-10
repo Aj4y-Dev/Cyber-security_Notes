@@ -398,6 +398,9 @@ http://bistro.thm:8000/oauthdemo/callbackforflag/?code=VRIHINF366aUPSAgtNUAkdcA8
 
 Response:
 
-
+{"access_token": "cwBIxQCIUZO0D90aPT6JaSUGRiburW", "expires_in": 36000, "token_type": "Bearer", "scope": "read write", "refresh_token": "Xtt3vM8pIxTxrjTX5z3nvq7D5IaD6G", "flag": "THM{GOT_THE_TOKEN007}"}
 ```
+
+---
+
 
