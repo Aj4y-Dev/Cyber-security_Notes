@@ -275,5 +275,28 @@ If source code is accessible:
 
 ✔ Framework names often appear in imports, configs, or comments
 
+### c) Authorization & Token Endpoints
 
+Different frameworks use recognizable endpoint patterns:
+
+|Framework|Common Endpoints|
+|---|---|
+|Django OAuth Toolkit|`/oauth/authorize/`, `/oauth/token/`|
+|Generic OAuth|`/authorize`, `/token`|
+|Custom Implementations|Non-standard paths|
+✔ Endpoint structure can fingerprint the OAuth library
+
+### d) Error Messages & Debug Output
+
+- Trigger errors intentionally (invalid redirect_uri, missing state)
+- Look for:
+    - Stack traces
+    - Library names
+    - Framework-specific error formats
+
+⚠ Verbose errors may leak:
+
+- OAuth framework
+- Backend language
+- Configuration details
 
