@@ -66,6 +66,8 @@ As a pentester or a secure coder, it is essential to understand these concepts t
 
 Answer the questions below:
 
+Which (optional) parameter can be used to prevent CSRF attacks?
+
 
 
 
