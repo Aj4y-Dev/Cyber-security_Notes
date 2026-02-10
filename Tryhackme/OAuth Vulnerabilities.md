@@ -300,3 +300,6 @@ Different frameworks use recognizable endpoint patterns:
 - Backend language
 - Configuration details
 
+---
+### OAuth Tokens & Redirect_URI Vulnerability
+
