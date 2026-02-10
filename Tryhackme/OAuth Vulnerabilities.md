@@ -64,6 +64,12 @@ As a pentester or a secure coder, it is essential to understand these concepts t
 - **Token Endpoint**
     - Exchange grant/refresh token → access token
 
+Answer the questions below:
+
+
+
+
+
 ---
 ## OAuth 2.0 Grant Types
 
@@ -112,6 +118,7 @@ OAuth 2.0 defines **grant types** that specify how a client application obtains 
 - **No user data exposure**
 
 ---
+### Quick Comparison Table:
 
 |Grant Type|User Involved|Security Level|Refresh Token|Common Use|
 |---|---|---|---|---|
