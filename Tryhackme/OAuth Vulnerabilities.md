@@ -95,13 +95,27 @@ OAuth 2.0 defines **grant types** that specify how a client application obtains 
 ### 3. Resource Owner Password Credentials Grant
 
 - Used only for **highly trusted (first-party) applications**
-    
 - User provides **username and password directly to the client**
-    
 - Client exchanges credentials for an access token
-    
 - Simple and direct flow
-    
 - ❌ Less secure (credentials shared with client)
 - ❌ Not suitable for third-party apps
 
+---
+### 4. Client Credentials Grant
+
+- Used for **server-to-server communication**
+- No user involvement
+- Client authenticates using **client ID and client secret**
+- Authorization server returns an access token
+- Ideal for **backend services, APIs, microservices**
+- **No user data exposure**
+
+---
+
+|Grant Type|User Involved|Security Level|Refresh Token|Common Use|
+|---|---|---|---|---|
+|Authorization Code|✅ Yes|⭐⭐⭐⭐|✅ Yes|Web apps|
+|Implicit|✅ Yes|⭐⭐|❌ No|SPA (legacy)|
+|Password Credentials|✅ Yes|⭐|✅ Sometimes|Trusted apps|
+|Client Credentials|❌ No|⭐⭐⭐⭐|❌ No|Server-to-server|
