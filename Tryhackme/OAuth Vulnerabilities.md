@@ -303,3 +303,36 @@ Different frameworks use recognizable endpoint patterns:
 ---
 ### OAuth Tokens & Redirect_URI Vulnerability
 
+### Role of Tokens in OAuth 2.0
+
+- Tokens act as **digital keys** to access protected resources
+- Issued by the **Authorization Server**
+- Sent to the **Client** via the `redirect_uri`
+- If tokens are intercepted → **account takeover**
+
+✔ Security of OAuth heavily depends on **redirect_uri validation**
+
+### Role of `redirect_uri`
+
+- `redirect_uri` tells the authorization server **where to send the authorization code or token**
+- Must be **pre-registered** in the OAuth provider settings
+- Server checks:
+    - Provided `redirect_uri` == one of the registered URIs
+
+✔ Proper validation prevents:
+
+- Open redirects
+- Token leakage
+- OAuth hijacking
+
+### Vulnerability: Insecure Redirect_URI
+
+If `redirect_uri` validation is weak or misconfigured:
+
+- Attacker can **control where the authorization code is sent**
+- Tokens may be redirected to **attacker-controlled domains**
+### Impact
+
+- Authorization code theft
+- Access token compromise
+- Full account takeover
