@@ -176,3 +176,31 @@ https://bistro.thm:8000/callback?code=AUTH_CODE&state=XYZ
 ✔ Authorization code is **temporary and single-use**
 
 ---
+### 4. Token Request
+
+- Bistro sends a **POST request** to the token endpoint
+- Exchanges authorization code for access token
+
+**Required parameters:**
+
+- `grant_type=authorization_code`
+- `code` → authorization code
+- `redirect_uri`
+- `client_id`
+- `client_secret`
+
+✔ This step is **server-to-server**, keeping tokens hidden from browsers
+
+---
+### 5. Token Response
+
+- Authorization server validates request
+- Returns:
+    - `access_token`
+    - `token_type` (Bearer)
+    - `expires_in`
+    - `refresh_token` (optional)
+
+✔ Access token is the **key** to protected resources
+
+---
