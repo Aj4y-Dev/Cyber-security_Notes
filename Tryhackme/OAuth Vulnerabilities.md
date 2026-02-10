@@ -68,6 +68,17 @@ As a pentester or a secure coder, it is essential to understand these concepts t
 ## OAuth 2.0 Grant Types
 
 OAuth 2.0 defines **grant types** that specify how a client application obtains an **access token** to access protected resources.
+### 1. Authorization Code Grant
 
+- **Most secure and widely used**
+- Designed for **server-side applications** (PHP, Java, .NET, etc.)
+- Flow:
+    - User authenticates on the authorization server
+    - Server returns an **authorization code**
+    - Client exchanges the code for an **access token** (server-to-server)
+- **Access token is never exposed to the browser**
+- Supports **refresh tokens**
+- **Best choice for web applications**
 
+---
 
