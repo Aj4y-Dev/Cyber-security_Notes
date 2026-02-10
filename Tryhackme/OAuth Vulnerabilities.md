@@ -414,3 +414,17 @@ Response:
 
 ✔ Without `state`, OAuth flow integrity is broken
 
+## How `state` Works (Normal Flow)
+
+1. Client generates a **random, unpredictable state value**
+2. Sends it with the authorization request
+3. Authorization server returns the **same state**
+4. Client verifies:
+
+```
+sent_state == received_state
+```
+
+✔ If they match → request is valid  
+❌ If missing/mismatched → request is rejected
+
