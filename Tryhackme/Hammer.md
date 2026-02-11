@@ -33,7 +33,8 @@ config.php             [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 41ms
 logout.php             [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 40ms]
 dashboard.php          [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 42ms]
 reset_password.php     [Status: 200, Size: 1664, Words: 484, Lines: 48, Duration: 39ms]
-javascript              [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 38ms]
-phpmyadmin              [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 37ms]
-vendor                  [Status: 301, Size: 322, Words: 20, Lines: 10, Duration: 36ms]
+javascript         [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 38ms]
+phpmyadmin         [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 37ms]
+vendor             [Status: 301, Size: 322, Words: 20, Lines: 10, Duration: 36ms]
 ```
+
