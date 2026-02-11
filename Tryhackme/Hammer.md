@@ -38,3 +38,4 @@ phpmyadmin         [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 37ms
 vendor             [Status: 301, Size: 322, Words: 20, Lines: 10, Duration: 36ms]
 ```
 
+in vendor their is a lot of file but none of them seem related
