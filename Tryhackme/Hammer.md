@@ -44,6 +44,8 @@ found some logs:
 
 ![[Pasted image 20260211170416.png]]
 
+now we can try to enter the email in the “Forgot Password” field.  i also notice that we only have 180 seconds to enter the OTP.
+
 
 also:
 
