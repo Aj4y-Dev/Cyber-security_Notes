@@ -203,8 +203,9 @@ now i can login by email: `tester@hammer.thm` , password: `password`
 
 ![[Pasted image 20260211175043.png]]
 
+then try to execute some command :
 
-
+![[Pasted image 20260211175359.png]]
 
 
 
