@@ -46,7 +46,7 @@ found some logs:
 
 now we can try to enter the email in the “Forgot Password” field.  i also notice that we only have 180 seconds to enter the OTP.
 
-i try to brutforce but their is rate limiting.
+i try to brutforce but their is rate limiting. so now we need to bypass the rate limiting.  i crafter 
 
 
 
