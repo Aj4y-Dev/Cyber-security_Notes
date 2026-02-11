@@ -369,5 +369,8 @@ http://panel.pterodactyl.htb/ => pterodactyl:PteraPanel@127.0.0.1:3306/panel
 
 it is already done : sad life
 
+api key after decoding UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY=
+
+
 
 
