@@ -221,6 +221,8 @@ this seem like a something key, so i see the request wile excuteing the ls comma
 
 as we seen that  the role is user and the token is jwt let see what the jwt token have value:
 
+![[Pasted image 20260211180419.png]]
+
 
 
 
