@@ -32,7 +32,18 @@ i found something in the source code of this:
 Now lets fuzz the directory using the different wordlists i found some things:
 
 ```
-ajdev@rootbox:~/THM/Hammer$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium- -u "http://10.48.154.110:1337/FUZZ" -fs 280
+kali@kali:~/THM/Hammer$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt -u "http://10.48.154.110:1337/hmr_FUZZ"
+
+js                 [Status: 301, Size: 322, Words: 20, Lines: 10, Duration: 37ms]
+logs               [Status: 301, Size: 324, Words: 20, Lines: 10, Duration: 43ms]
+images           [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 1154ms]
+css              [Status: 301, Size: 323, Words: 20, Lines: 10, Duration: 4053ms]
+```
+
+also:
+
+```
+kali@kali:~/THM/Hammer$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium- -u "http://10.48.154.110:1337/FUZZ" -fs 280
 
 index.php        [Status: 200, Size: 1326, Words: 351, Lines: 37, Duration: 40ms]
 config.php             [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 41ms]
