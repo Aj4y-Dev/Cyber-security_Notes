@@ -23,6 +23,12 @@ in the port 1337 their is a login page:
 
 ![[Pasted image 20260211163442.png]]
 
+i found something in the source code of this:
+
+```
+<!-- Dev Note: Directory naming convention must be hmr_DIRECTORY_NAME -->
+```
+
 Now lets fuzz the directory using the different wordlists i found some things:
 
 ```
@@ -44,4 +50,3 @@ in /phpmyadmin their is also a login page:
 
 ![[Pasted image 20260211165142.png]]
 
-i found this in
