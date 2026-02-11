@@ -44,3 +44,4 @@ in /phpmyadmin their is also a login page:
 
 ![[Pasted image 20260211165142.png]]
 
+i found this in
