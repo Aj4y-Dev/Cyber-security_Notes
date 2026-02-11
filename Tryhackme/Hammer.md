@@ -199,7 +199,11 @@ You get:
 
 If rate limiting is weak or per-request based (not global/session-based), this overwhelms it.
 
-now i can login by email: `tester@hammer.thm` , password
+now i can login by email: `tester@hammer.thm` , password: `password`
+
+![[Pasted image 20260211175043.png]]
+
+
 
 
 
