@@ -19,3 +19,7 @@ PORT     STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+in the port 1337 their is a login page:
+
+![[Pasted image 20260211163442.png]]
+
