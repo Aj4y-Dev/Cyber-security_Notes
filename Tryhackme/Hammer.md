@@ -228,6 +228,8 @@ the key that we found is the secret key of the jwt so let's manipulate the role 
 
 ![[Pasted image 20260211182334.png]]
 
-now add this 
+now add this jwt token and execute a command:
+
+
 
 
