@@ -190,8 +190,16 @@ num_threads = 50
 
 50 threads send requests in parallel.
 
+So instead of:
+1 request → wait → 1 request → wait
 
+You get:
+50 requests at the same time
 ```
+
+If rate limiting is weak or per-request based (not global/session-based), this overwhelms it.
+
+now i can login by email: `tester@hammer.thm` , password
 
 
 
