@@ -207,14 +207,13 @@ then try to execute some command :
 
 ![[Pasted image 20260211175359.png]]
 
-I can list the file but can't do cat, pwd, id, group or any other thing . I tried to curl it :
+I can list the file but can't do cat, pwd, id, group or any other thing . I tried to curl it, 
+successfully get it.
 
 ```
 kali@kali:~/THM/Hammer$ curl -s "http://10.48.154.110:1337/188ade1.key"
 56058354efb3daa97ebab00fabd7a7d7
 ```
-
-successfu
 
 
 
