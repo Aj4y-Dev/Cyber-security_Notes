@@ -3,7 +3,7 @@
 **SOP (Same-Origin Policy):** A security rule that blocks web pages from accessing resources on a different origin (protocol, domain, or port) to prevent malicious data access.
 
 ---
-### **Same-Origin Policy (SOP) 
+### **Same-Origin Policy (SOP)** 
 
 **Definition:**  
 SOP is a web security policy that controls how scripts and resources on one web page can interact with another. Access is only allowed if both pages share the same **origin**, which is determined by **protocol**, **hostname**, and **port**.
