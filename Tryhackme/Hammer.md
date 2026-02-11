@@ -207,7 +207,9 @@ then try to execute some command :
 
 ![[Pasted image 20260211175359.png]]
 
+i can list the file but cant do cat 
 
+188ade1.key
 
 
 
