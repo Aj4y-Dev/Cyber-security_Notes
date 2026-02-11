@@ -399,4 +399,4 @@ URI: pterodactyl:PteraPanel@127.0.0.1:3306/panel
 ```
 
 
-
+further research : [https://github.com/dollarboysushil/CVE-2025-49132-Pterodactyl-Panel-Unauthenticated-Remote-Code-Execution-RCE-]
