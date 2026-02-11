@@ -40,7 +40,9 @@ images           [Status: 301, Size: 326, Words: 20, Lines: 10, Duration: 1154ms
 css              [Status: 301, Size: 323, Words: 20, Lines: 10, Duration: 4053ms]
 ```
 
+found some logs:
 
+![[Pasted image 20260211170416.png]]
 
 
 also:
