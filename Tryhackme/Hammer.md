@@ -224,4 +224,8 @@ as we seen that  the role is user and the token is jwt let see what the jwt toke
 ![[Pasted image 20260211180419.png]]
 
 
-the key that we found is the secret key of the jwt so let's manipulate the role in to admin and pass it to the
+the key that we found is the secret key of the jwt so let's manipulate the role in to admin:
+
+![[Pasted image 20260211180618.png]]
+
+
