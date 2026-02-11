@@ -161,8 +161,37 @@ It sends a different `X-Forwarded-For` header each time:
 "X-Forwarded-For": f"127.0.X.Y"
 ```
 
+Many poorly configured servers use `X-Forwarded-For` to identify the client IP for rate limiting.
+
+So instead of:
+
+```
+All requests = same IP → rate limit triggered
+
+# The server sees:
+
+Request 1 → 127.0.12.34  
+Request 2 → 127.0.88.201  
+Request 3 → 127.0.5.190  
+...
+```
+
+If the backend **trusts this header without validation**, it thinks every request comes from a different IP → no per-IP limit.
+
+⚠ This works only when:
+
+- The app trusts `X-Forwarded-For`
+- There is no proper reverse proxy validation
+
+##### 2.Multi-threading (speed abuse)
+
+```
+num_threads = 50
+
+50 threads send requests in parallel.
 
 
+```
 
 
 
