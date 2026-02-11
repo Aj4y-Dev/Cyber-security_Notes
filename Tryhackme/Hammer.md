@@ -217,6 +217,10 @@ kali@kali:~/THM/Hammer$ curl -s "http://10.48.154.110:1337/188ade1.key"
 
 this seem like a something key, so i see the request wile excuteing the ls command found somthing:
 
+![[Pasted image 20260211180309.png]]
+
+as we seen that  the role is user and the token is jwt let see what the jwt token have value:
+
 
 
 
