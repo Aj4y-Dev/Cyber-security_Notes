@@ -23,3 +23,10 @@ in the port 1337 their is a login page:
 
 ![[Pasted image 20260211163442.png]]
 
+Now lets fuzz the directory using the different wordlists i found some things:
+
+```
+ajdev@rootbox:~/THM/Hammer$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium- -u "http://10.48.154.110:1337/FUZZ" -fs 280
+
+
+```
