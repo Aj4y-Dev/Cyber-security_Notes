@@ -377,10 +377,8 @@ On many Linux servers, PEAR is installed at:
 PEAR includes:
 pearcmd.php
 
-
+If reachable through LFI, the attacker can interact with it.
 ```
-
-
 
 actually it works by :
 
