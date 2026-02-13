@@ -398,9 +398,6 @@ URI: pterodactyl:PteraPanel@127.0.0.1:3306/panel
 [-] RCE Failed.
 ```
 
-
-found: [https://github.com/Ahmedf000/CVE-2025-49132_HTB_SEASON10]
-
 [https://cvefeed.io/vuln/detail/CVE-2025-49132]
 
 ```
