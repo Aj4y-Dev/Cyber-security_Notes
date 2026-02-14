@@ -421,3 +421,25 @@ Object.constructor.prototype[z] = value
 This also pollutes the global prototype.
 ```
 
+### 3.Dangerous Functions to Look For
+
+Focus on functions that:
+
+- Set properties using user-controlled paths
+- Deep merge objects
+- Copy or assign properties dynamically
+
+Common vulnerable pattern:
+
+```
+object[a][b][c] = value
+```
+
+Or when using:
+
+```
+_.set(object, userInputPath, userInputValue)
+```
+
+From **Lodash**
+
