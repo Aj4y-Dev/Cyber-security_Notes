@@ -371,11 +371,19 @@ Prototype pollution chained with:
 - **Auth logic** → privilege escalation
 
 ---
-### Exploitation - xss
+### Standard Approach
 
-![[Pasted image 20260214083523.png]]
+In JavaScript, every object inherits from **`Object.prototype`**.
 
-in my profile section their is some input section:
+Two important properties attackers target:
 
-![[Pasted image 20260214083716.png]]
+- **`__proto__`** → References the object's prototype
+    
+- **`constructor`** → Points to the function that created the object
+    
+    - `constructor.prototype` can be used to reach the global prototype
+        
 
+Attackers exploit these properties to modify the prototype chain, which affects **all objects** in the application.
+
+This attack is called **Prototype Pollution**.
