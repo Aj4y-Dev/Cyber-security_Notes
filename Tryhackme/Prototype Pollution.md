@@ -398,5 +398,26 @@ x = "__proto__"
 
 then:
 
+Object.__proto__[y] = value
+Now every object in the application gets property y = value.
+```
 
 ```
+# Advanced Case
+
+If attacker controls:
+
+Object[x][y][z] = value
+
+And sets:
+
+x = "constructor"
+y = "prototype"
+
+then:
+
+Object.constructor.prototype[z] = value
+
+This also pollutes the global prototype.
+```
+
