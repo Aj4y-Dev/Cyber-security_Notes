@@ -474,9 +474,27 @@ Normal Input
   "path": "reviews[0].content",
   "value": "<script>alert('anycontent')</script>"
 }
+
 Result:
 
-- Review is added
-    
+- Review is added    
 - No sanitization → XSS risk
+  
+Malicious Input:
+
+{
+  "path": "isAdmin",
+  "value": true
+}
+
+Result:
+
+{
+  ...
+  isAdmin: true
+}
+
+Now the attacker escalates privileges.
 ```
+
+
