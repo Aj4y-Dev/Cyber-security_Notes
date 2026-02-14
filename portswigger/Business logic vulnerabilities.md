@@ -16,19 +16,15 @@ These rules are not always business-related — so they are also called:
 - Automated scanners often miss them
 - They require **human thinking and understanding of the system**
 
-## How Business Logic Works
+### How Business Logic Works
 
 Business logic enforces rules like:
 
 - A user must log in before accessing dashboard
-    
 - A product must be paid before shipping
-    
 - A coupon must only be used once
-    
 - Quantity cannot be negative
-    
 - A user cannot escalate their role
-    
 
 If these rules are poorly implemented → logic flaw happens.
+
