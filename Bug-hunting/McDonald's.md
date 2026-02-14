@@ -134,3 +134,8 @@ https://careers.mcdonalds.com/
 /university
 ```
 
+```
+https://newsletters.mcdonalds.com/
+
+
+```
