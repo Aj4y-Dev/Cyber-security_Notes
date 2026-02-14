@@ -371,19 +371,32 @@ Prototype pollution chained with:
 - **Auth logic** → privilege escalation
 
 ---
-### Standard Approach
+### 1.Standard Approach
 
 In JavaScript, every object inherits from **`Object.prototype`**.
 
 Two important properties attackers target:
 
 - **`__proto__`** → References the object's prototype
-    
 - **`constructor`** → Points to the function that created the object
-    
     - `constructor.prototype` can be used to reach the global prototype
-        
 
 Attackers exploit these properties to modify the prototype chain, which affects **all objects** in the application.
 
 This attack is called **Prototype Pollution**.
+
+### 2.Golden Rule of Prototype Pollution
+
+Prototype pollution happens when:
+
+```
+Object[x][y] = value
+
+If an attacker controls x and sets:
+
+x = "__proto__"
+
+then:
+
+
+```
