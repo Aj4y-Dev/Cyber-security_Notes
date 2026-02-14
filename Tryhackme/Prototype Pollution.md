@@ -375,3 +375,4 @@ Prototype pollution chained with:
 
 ![[Pasted image 20260214083523.png]]
 
+in my profile section their is some input section 
