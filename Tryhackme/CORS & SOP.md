@@ -152,3 +152,31 @@ CORS is enforced by the **browser**, not the server.
 
 This is the **core logic behind CORS enforcement**.
 
+---
+### Common CORS Misconfigurations & Secure Handling
+
+### **1. Null Origin Misconfiguration**
+
+- Occurs when a server accepts requests from the `"null"` origin (e.g., `file://` or `data:` URLs).
+- Exploit: Attackers can host malicious HTML files that send requests, bypassing SOP.
+- Mitigation: Explicitly reject or carefully validate `null` origins.
+### **2. Bad Regex in Origin Checking**
+
+- Happens when origin validation uses poorly written regex, e.g., `/example.com$/` allows `badexample.com`.
+- Exploit: Attacker can register domains that match the flawed regex (`example.com.attacker.com`) and bypass restrictions.
+- Mitigation: Test regex patterns rigorously and ensure they only allow intended origins.
+### **3. Trusting Arbitrary Supplied Origin**
+
+- Server echoes back the `Origin` header in `Access-Control-Allow-Origin`.
+- Exploit: Any attacker-controlled origin can bypass SOP by sending a custom request.
+- Mitigation: Use an allowlist of trusted origins and validate incoming requests against it.
+
+---
+### **Secure Handling of CORS Requests**
+
+1. **Reject `null` origin requests** unless explicitly needed.
+2. **Check origin against an allowlist** of trusted domains.
+3. **Set `Access-Control-Allow-Origin` only for allowlisted origins**.
+4. **Reject all other origins** to prevent unauthorized access.
+
+**Note:** Using `Access-Control-Allow-Origin: *` can be safe for public, non-sensitive resources that don’t rely on cookies or authentication.
