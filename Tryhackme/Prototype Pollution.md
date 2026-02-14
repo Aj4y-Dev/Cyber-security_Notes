@@ -371,3 +371,5 @@ Prototype pollution chained with:
 - **Auth logic** → privilege escalation
 
 ---
+### Exploitation - xss
+
