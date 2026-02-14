@@ -51,4 +51,8 @@ Result → Money manipulation
 2. Avoid Implicit Assumptions
 3. Validate Server-Side State
 4. Maintain Clear Design Documentation
-5. 
+5. Write Clear and Understandable Code
+
+---
+#### Lab: Excessive trust in client-side controls
+
