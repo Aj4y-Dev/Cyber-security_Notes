@@ -60,4 +60,5 @@ so basically in this lab the unproper validate user input so i can change the pr
 
 #### Lab: High-level logic vulnerability
 
-in this lab we can add -1 item so price is also in -ve  so, first add the thing you want and -ve other thing
+in this lab we can add -1 item so price is also in -ve  so, first add the thing you want and -ve other things so the price of it is less.
+
