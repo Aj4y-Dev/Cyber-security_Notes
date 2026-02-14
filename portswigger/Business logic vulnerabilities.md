@@ -28,3 +28,27 @@ Business logic enforces rules like:
 
 If these rules are poorly implemented → logic flaw happens.
 
+#### How Business Logic Vulnerabilities Arise
+
+They often happen because developers make **wrong assumptions**, such as:
+
+1. ❌ Assuming users behave normally
+2. ❌ Assuming client-side validation is enough
+3. ❌ Assuming certain application states will never occur
+4. ❌ Not understanding how different components interact
+
+Example:
+
+- Developer assumes quantity will always be positive
+- Attacker sends: `quantity = -5`
+- System calculates refund instead of charge
+
+Result → Money manipulation
+
+#### How to Prevent Business Logic Vulnerabilities
+
+1. Never Trust User Behavior
+2. Avoid Implicit Assumptions
+3. Validate Server-Side State
+4. Maintain Clear Design Documentation
+5. 
