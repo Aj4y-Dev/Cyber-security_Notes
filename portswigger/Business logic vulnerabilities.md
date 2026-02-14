@@ -56,4 +56,5 @@ Result → Money manipulation
 ---
 #### Lab: Excessive trust in client-side controls
 
-so basically in this lab the proper 
+so basically in this lab the unproper validate user input so i can change the value of the items.
+
