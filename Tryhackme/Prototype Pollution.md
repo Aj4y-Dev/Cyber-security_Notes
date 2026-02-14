@@ -373,3 +373,5 @@ Prototype pollution chained with:
 ---
 ### Exploitation - xss
 
+![[Pasted image 20260214083523.png]]
+
