@@ -443,3 +443,40 @@ _.set(object, userInputPath, userInputValue)
 
 From **Lodash**
 
+### 4.Example Scenario
+
+Initial Object
+
+```
+let friends = [
+  {
+    id: 1,
+    name: "testuser",
+    age: 25,
+    country: "UK",
+    reviews: [],
+    albums: [{}],
+    password: "xxx"
+  }
+];
+```
+
+Application uses:
+
+```
+_.set(friend, input.path, input.value);
+```
+
+Normal Input
+
+```
+{
+  "path": "reviews[0].content",
+  "value": "<script>alert('anycontent')</script>"
+}
+Result:
+
+- Review is added
+    
+- No sanitization → XSS risk
+```
