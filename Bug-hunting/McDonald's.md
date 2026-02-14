@@ -135,7 +135,7 @@ https://careers.mcdonalds.com/
 ```
 
 ```
-https://newsletters.mcdonalds.com/
+
 
 
 ```
