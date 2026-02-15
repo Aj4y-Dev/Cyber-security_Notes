@@ -94,6 +94,8 @@ app/Http/Controllers/Location/CountryController.php :53
 ```
 user: txuraz
 host: localhost
+
+ $a = scandir("/home/rinjha/WebstormProjects/agentmgt/public/countries");
 ```
 
 ```
@@ -134,8 +136,4 @@ PORT     STATE    SERVICE
 3306/tcp filtered mysql
 
 Nmap done: 1 IP address (1 host up) scanned in 13.85 seconds
-```
-
-```
-/home/rini
 ```
