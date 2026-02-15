@@ -346,6 +346,10 @@ Host: uat.resv.buddhatech.inf
 HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
+PATCH /api/v1/departure/assign-aircraft HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
 
 ```
 
