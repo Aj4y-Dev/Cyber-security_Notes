@@ -219,6 +219,12 @@ Host: uat.resv.buddhatech.info -> This is test.
 GET /api/health HTTP/1.1
 Host: uat.resv.buddhatech.info -> {"redis":true,"database":true}
 
+GET /api/v1/email HTTP/1.1
+Host: uat.resv.buddhatech.info 
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 
 ```
