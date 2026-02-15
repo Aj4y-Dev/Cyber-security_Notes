@@ -253,6 +253,13 @@ HTTP/1.1 401 Unauthorized
 GET /api/v1/departure/departure-history/:id HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
+GET /api/v1/offload-reasons/ HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
 
@@ -261,11 +268,7 @@ Host: uat.resv.buddhatech.info
 
 
 
-endPoints:{"https://uat.resv.buddhatech.info/api/v1/departure/departure-history/{ticket_no}":"GET"}
-
-{"https://uat.resv.buddhatech.info/api/v1/offload-reasons/":"GET",
-
-"https://uat.resv.buddhatech.info/api/v1/departure/seat-parameter/flight/{flight_id}/aircraft/{aircraft_id}":"GET",
+"https://uat.resv.buddhatech.info/api/v1/departure/seat-parameter/flight/{flight_id}/aircraft/{aircraft_id}":
 
 "https://uat.resv.buddhatech.info/api/v1/departure/dcs-passengers":"GET"},"DCS 
 
