@@ -66,21 +66,5 @@ roles            [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
 
 The security vulnerability (CVE) details for PHP 8.3.27 and Laravel 11.22.0.
 
-Laravel 11.22.0 Vulnerabilities
 
-- **CVE-2024-52301 (High Severity):** Affects Laravel versions 11 prior to 11.31.0. This vulnerability allows an attacker to manipulate environment variables via a specially crafted query string if the PHP directive `register_argc_argv` is enabled.
-- **CVE-2024-29291 (Credential Leakage):** Affects Laravel Framework 11, reported April 21, 2024.
-- **CVE-2025-27515 (File Validation):** Affects Laravel versions below 11.44.0. This relates to a vulnerability in the file or image field validation mechanism. 
-
-**Recommendation:** Update to the latest version of Laravel 11 (specifically 11.31.0 or higher) to mitigate these issues, particularly CVE-2024-52301. 
-
-PHP 8.3.27 Vulnerabilities 
-
-- **CVE-2024-11235 (Use-after-free/RCE):** Affects PHP versions 8.3.* before 8.3.19. A code sequence involving the `__set` handler or `??=` operator and exceptions can lead to a use-after-free vulnerability, potentially causing remote code execution. 
-
-**Recommendation:** Update to PHP 8.3.19 or higher. 
-
-Summary
-
-While Laravel 11.22.0 and PHP 8.3.27 are relatively modern, they are affected by significant vulnerabilities discovered in late 2024 and 2025. It is highly recommended to update both the PHP version and the Laravel framework to the latest patches available to avoid RCE (Remote Code Execution) and environment manipulation attacks.
 
