@@ -315,7 +315,6 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 404 Not Found
 {"payload":null,"code":404,"success":false,"message":"Not Found"}
 
-
 GET /api/v1/fare/taxes/ HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
