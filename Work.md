@@ -206,3 +206,5 @@ Content-Length: 84819
 }
 ```
 
+![[Pasted image 20260215143103.png]]
+
