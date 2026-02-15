@@ -279,13 +279,17 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
+PATCH /api/v1/departure/dcs-open HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 
 
 ```
 
-
-{"https://uat.resv.buddhatech.info/api/v1/departure/dcs-open":"PATCH"}
 
 :{"https://uat.resv.buddhatech.info/api/v1/departure/cargo-load-offload":"POST"},
 
