@@ -90,3 +90,8 @@ app/Http/Controllers/Location/CountryController.php :53
         }
 ```
 
+```
+user: txuraz
+host: localhost
+```
+
