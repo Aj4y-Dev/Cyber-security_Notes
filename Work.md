@@ -265,6 +265,8 @@ HTTP/1.1 401 Unauthorized
 GET /api/v1/departure/seat-parameter/flight/:id/aircraft/:id HTTP/1.1
 Host: uat.resv.buddhatech.info -> HTTP/1.1 400 Bad Request
 
+---
+
 GET /api/v1/departure/dcs-passengers HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
