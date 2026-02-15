@@ -56,6 +56,10 @@ countries         [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 228ms
 areas             [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 212ms]
 sss      [Status: 500, Size: 305367, Words: 71027, Lines: 3946, Duration: 1249ms]
 permissions       [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 206ms]
-reset-password          [Status: 405, Size: 238420, Words: 43511, Lines: 2434, Duration: 697ms]
-roles                   [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
+reset-password    [Status: 405, Size: 238420, Words: 43511, Lines: 2434, Duration: 697ms]
+roles            [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
 ```
+
+
+![[Pasted image 20260215130325.png]]
+
