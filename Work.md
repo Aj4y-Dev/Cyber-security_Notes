@@ -283,9 +283,6 @@ HTTP/1.1 401 Unauthorized
 ```
 
 
-
-Save Info":{"https://uat.resv.buddhatech.info/api/v1/departure/check-in":"POST"}
-
 {"https://uat.resv.buddhatech.info/api/v1/departure/dcs-open":"PATCH"}
 
 :{"https://uat.resv.buddhatech.info/api/v1/departure/cargo-load-offload":"POST"},
