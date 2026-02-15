@@ -68,3 +68,8 @@ The security vulnerability (CVE) details for PHP 8.3.27 and Laravel 11.22.0.
 
 
 
+
+```
+/api/up -> get check working or not
+
+```
