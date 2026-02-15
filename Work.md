@@ -71,4 +71,22 @@ roles            [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
 
 ```
 SQLSTATE[HY000] [1045] Access denied for user 'txuraz'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `countries` order by `country_name` asc)
+
+app/Http/Controllers/Location/CountryController.php :53
+
+    public function countriesList()
+    {
+        $countryNamesFromDb = Country::all()->map(fn($country) => Str::replace(" ", "_", Str::lower($country->country_name)) . ".json")->flip()->toArray();
+//        $a = scandir("/home/rinjha/WebstormProjects/agentmgt/public/countries");
+        $a = scandir(public_path('countries'));
+        $files = array_flip($a);
+        $remaining = $countryNamesFromDb;
+        $remainingFiles = $files;
+        foreach ($countryNamesFromDb as $name => $key) {
+            if (array_key_exists($name, $files)) {
+                unset($remaining[$name]);
+                unset($remainingFiles[$name]);
+            }
+        }
 ```
+
