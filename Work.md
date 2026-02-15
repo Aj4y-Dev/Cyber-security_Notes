@@ -1,1 +1,7 @@
 resource[https://uat.resv.buddhatech.info/]
+
+
+```
+nmap 13.228.112.54 -p- -Pn -sV 
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-15 11:54 +0545 Stats: 0:00:52 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan Connect Scan Timing: About 37.93% done; ETC: 11:56 (0:01:25 remaining) Stats: 0:01:43 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan Connect Scan Timing: About 73.30% done; ETC: 11:56 (0:00:38 remaining) Nmap scan report for ec2-13-228-112-54.ap-southeast-1.compute.amazonaws.com (13.228.112.54) Host is up (0.072s latency). Not shown: 65522 filtered tcp ports (no-response) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0) 80/tcp open http nginx (reverse proxy) 81/tcp open http nginx (reverse proxy) 82/tcp open http nginx (reverse proxy) 443/tcp open ssl/http nginx (reverse proxy) 3306/tcp open mysql MariaDB 10.3.23 or earlier (unauthorized) 5678/tcp open http nginx (reverse proxy) 6969/tcp open http nginx (reverse proxy) 8811/tcp open http nginx (reverse proxy) 9099/tcp open http nginx (reverse proxy) 9955/tcp closed alljoyn-stm 9956/tcp closed alljoyn 63306/tcp closed unknown Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel https://www.buddhatech.info/ behind cloudflare but oh well http://13.228.112.54:8811/ origin ip
+```
