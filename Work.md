@@ -322,6 +322,17 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
+GET /api/v1/sales-agent-guaranteed-amount/1 HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
+GET /api/v1/seat-availability/ HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 
 ```
@@ -329,8 +340,7 @@ HTTP/1.1 401 Unauthorized
 
 "https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST","https://uat.resv.buddhatech.info/api/v1/flight/sector-pair/{sector_pair_id}/flight-date/{flight_date}":"GET"
 
-"https://uat.resv.buddhatech.info/api/v1/flight-booking/internal/hold":"POST","https://uat.resv.buddhatech.info/api/v1/seat-availability/":"GET"
+"https://uat.resv.buddhatech.info/api/v1/flight-booking/internal/hold":"POST",
 
-https://uat.resv.buddhatech.info/api/v1/sales-agent-guaranteed-amount/{agent_name_id}":"GET"
 
 
