@@ -291,13 +291,18 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
+POST /api/v1/departure/baggage-load-offload HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 
 
 ```
 
 
-{"https://uat.resv.buddhatech.info/api/v1/departure/baggage-load-offload":"POST"}
 
 {"https://uat.resv.buddhatech.info/api/v1/departure/departure-history/{ticket_no}":"GET"}
 
