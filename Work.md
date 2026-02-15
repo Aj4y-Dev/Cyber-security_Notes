@@ -16,3 +16,7 @@ PORT STATE SERVICE VERSION
 9955/tcp closed alljoyn-stm 9956/tcp closed alljoyn 63306/tcp closed unknown Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel https://www.buddhatech.info/ behind cloudflare but oh well http://13.228.112.54:8811/ origin ip
 ```
 
+```
+made in PHP 8.3.27 — Laravel 11.22.0
+```
+
