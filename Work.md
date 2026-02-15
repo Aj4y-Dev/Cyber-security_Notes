@@ -312,15 +312,14 @@ HTTP/1.1 401 Unauthorized
 POST /api/v1/departure/departure/assign-crew HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
+HTTP/1.1 404 Not Found
+{"payload":null,"code":404,"success":false,"message":"Not Found"}
+
 
 
 
 ```
 
-
-{"https://uat.resv.buddhatech.info/api/v1/crew":"GET","https://uat.resv.buddhatech.info/api/v1/departure/assign-crew":"POST"}
-
-"https://uat.resv.buddhatech.info/api/v1/departure/assign-crew":"POST"
 
 "https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST","https://uat.resv.buddhatech.info/api/v1/flight/sector-pair/{sector_pair_id}/flight-date/{flight_date}":"GET"
 
