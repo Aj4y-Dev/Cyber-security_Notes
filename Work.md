@@ -244,5 +244,11 @@ HTTP/1.1 200 OK
 set-cookie: sso_session=None; HttpOnly; Max-Age=7200; Path=/api/v1/sso; SameSite=lax; Secure
 {"payload":null,"message":"Logged out.","success":true,"code":200}
 
+GET /api/v1/sso/me HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 ```
