@@ -252,3 +252,8 @@ HTTP/1.1 401 Unauthorized
 
 
 ```
+
+
+
+endPoints:{"https://uat.resv.buddhatech.info/api/v1/departure/departure-history/{ticket_no}":"GET"}
+
