@@ -213,5 +213,12 @@ Content-Length: 84819
 Scope[uat.resv.buddhatech.info]
 
 ```
+GET /static/test HTTP/1.1
+Host: uat.resv.buddhatech.info -> This is test.
+
+GET /api/health HTTP/1.1
+Host: uat.resv.buddhatech.info -> {"redis":true,"database":true}
+
+
 
 ```
