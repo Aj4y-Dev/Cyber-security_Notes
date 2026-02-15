@@ -350,7 +350,7 @@ HTTP/1.1 401 Unauthorized
 ```
 
 
-"https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST","https://uat.resv.buddhatech.info/api/v1/flight/sector-pair/{sector_pair_id}/flight-date/{flight_date}":"GET"
+"https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST",
 
 
 
