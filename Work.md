@@ -124,3 +124,15 @@ Content-Length: 51
 //this dont work for now only post req allowed
 ```
 
+```
+ajdev@rootbox:~$ nmap -p 3306 --script=mysql-info 13.228.112.54
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-15 13:34 +0545
+Nmap scan report for 13.228.112.54
+Host is up (0.073s latency).
+
+PORT     STATE    SERVICE
+3306/tcp filtered mysql
+
+Nmap done: 1 IP address (1 host up) scanned in 13.85 seconds
+```
+
