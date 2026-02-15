@@ -12,3 +12,4 @@ PORT   STATE SERVICE VERSION
 Service Info: Host: localhost; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+found the subdomain name `ftp.wingdata.htb` 
