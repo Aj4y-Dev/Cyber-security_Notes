@@ -63,9 +63,6 @@ roles            [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
 
 ![[Pasted image 20260215130325.png]]
 
-
-The security vulnerability (CVE) details for PHP 8.3.27 and Laravel 11.22.0.
-
 ```
 /api/up -> get check working or not
 ```
