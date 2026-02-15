@@ -191,7 +191,7 @@ Content-Length: 84819
                             81.61331176757812,
                             30.413150465068878
                         ]
-                        in here so much things
+                        in here so much things like same
                         ,
                         [
                             81.61880493164062,
@@ -265,8 +265,6 @@ HTTP/1.1 401 Unauthorized
 GET /api/v1/departure/seat-parameter/flight/:id/aircraft/:id HTTP/1.1
 Host: uat.resv.buddhatech.info -> HTTP/1.1 400 Bad Request
 
----
-
 GET /api/v1/departure/dcs-passengers HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
@@ -315,8 +313,6 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 404 Not Found
 {"payload":null,"code":404,"success":false,"message":"Not Found"}
 
----
-
 GET /api/v1/fare/taxes/ HTTP/1.1
 Host: uat.resv.buddhatech.info
 |
@@ -353,8 +349,6 @@ HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 ```
 
-
-"https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST",
 
 
 
