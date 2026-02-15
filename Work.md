@@ -210,3 +210,4 @@ Content-Length: 84819
 
 ![[Pasted image 20260215143305.png]]
 
+Scope[uat.resv.buddhatech.info]
