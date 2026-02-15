@@ -20,3 +20,42 @@ PORT STATE SERVICE VERSION
 made in PHP 8.3.27 — Laravel 11.22.0
 ```
 
+```
+ajdev@rootbox:~$ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt -u "https://13.228.112.54/api/FUZZ" -fs 615
+
+        /'___\  /'___\           /'___\
+       /\ \__/ /\ \__/  __  __  /\ \__/
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/
+         \ \_\   \ \_\  \ \____/  \ \_\
+          \/_/    \/_/   \/___/    \/_/
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : https://13.228.112.54/api/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+ :: Filter           : Response size: 615
+________________________________________________
+
+register  [Status: 405, Size: 238408, Words: 43511, Lines: 2434, Duration: 784ms]
+logout    [Status: 405, Size: 238404, Words: 43511, Lines: 2434, Duration: 812ms]
+login                  [Status: 405, Size: 238402, Words: 43511, Lines: 2434, Duration: 791ms]
+users                   [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 326ms]
+up                      [Status: 200, Size: 2143, Words: 747, Lines: 51, Duration: 301ms]
+agents                  [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 216ms]
+forgot-password         [Status: 405, Size: 238422, Words: 43511, Lines: 2434, Duration: 424ms]
+me                      [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 191ms]
+countries               [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 228ms]
+areas                   [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 212ms]
+sss                     [Status: 500, Size: 305367, Words: 71027, Lines: 3946, Duration: 1249ms]
+permissions             [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 206ms]
+reset-password          [Status: 405, Size: 238420, Words: 43511, Lines: 2434, Duration: 697ms]
+roles                   [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
+```
