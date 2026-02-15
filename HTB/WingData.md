@@ -12,7 +12,7 @@ PORT   STATE SERVICE VERSION
 Service Info: Host: localhost; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-found the subdomain name `ftp.wingdata.htb` by just clicking the button in the `wingdata.htb` , it is a FTP server software powered by Wing FTP Server v7.4.3
+found the subdomain name `ftp.wingdata.htb` by just clicking the button in the `wingdata.htb` , it is a FTP server software powered by Wing FTP Server `v7.4.3`
 
 `CVE-2025-47812 : Wing FTP Server 7.4.3 - Unauthenticated Remote Code Execution (RCE)`
 
