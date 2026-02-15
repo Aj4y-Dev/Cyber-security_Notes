@@ -274,3 +274,8 @@ Save Info":{"https://uat.resv.buddhatech.info/api/v1/departure/check-in":"POST"}
 {"https://uat.resv.buddhatech.info/api/v1/departure/departure-history/{ticket_no}":"GET"}
 
 {"https://uat.resv.buddhatech.info/api/v1/crew":"GET","https://uat.resv.buddhatech.info/api/v1/departure/assign-crew":"POST"}
+
+"https://uat.resv.buddhatech.info/api/v1/departure/assign-crew":"POST"
+
+"https://uat.resv.buddhatech.info/api/v1/departure/assign-aircraft":"POST","https://uat.resv.buddhatech.info/api/v1/flight/sector-pair/{sector_pair_id}/flight-date/{flight_date}":"GET"
+
