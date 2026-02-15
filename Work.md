@@ -10,7 +10,8 @@ PORT STATE SERVICE VERSION
 80/tcp open http nginx (reverse proxy) 
 81/tcp open http nginx (reverse proxy) 82/tcp open http nginx (reverse proxy) 
 443/tcp open ssl/http nginx (reverse proxy) 
-3306/tcp open mysql MariaDB 10.3.23 or earlier (unauthorized) 5678/tcp open http nginx (reverse proxy) 
+3306/tcp open mysql MariaDB 10.3.23 or earlier (unauthorized) 
+5678/tcp open http nginx (reverse proxy) 
 6969/tcp open http nginx (reverse proxy) 8811/tcp open http nginx (reverse proxy) 
 9099/tcp open http nginx (reverse proxy) 
 9955/tcp closed alljoyn-stm 9956/tcp closed alljoyn 63306/tcp closed unknown Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel https://www.buddhatech.info/ behind cloudflare but oh well http://13.228.112.54:8811/ origin ip
