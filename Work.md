@@ -69,3 +69,6 @@ roles            [Status: 302, Size: 354, Words: 60, Lines: 12, Duration: 197ms]
 
 ![[Pasted image 20260215131815.png]]
 
+```
+SQLSTATE[HY000] [1045] Access denied for user 'txuraz'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `countries` order by `country_name` asc)
+```
