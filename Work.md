@@ -257,3 +257,13 @@ HTTP/1.1 401 Unauthorized
 
 endPoints:{"https://uat.resv.buddhatech.info/api/v1/departure/departure-history/{ticket_no}":"GET"}
 
+{"https://uat.resv.buddhatech.info/api/v1/offload-reasons/":"GET",
+
+"https://uat.resv.buddhatech.info/api/v1/departure/seat-parameter/flight/{flight_id}/aircraft/{aircraft_id}":"GET",
+
+"https://uat.resv.buddhatech.info/api/v1/departure/dcs-passengers":"GET"},"DCS 
+
+Save Info":{"https://uat.resv.buddhatech.info/api/v1/departure/check-in":"POST"}
+
+{"https://uat.resv.buddhatech.info/api/v1/departure/dcs-open":"PATCH"}
+
