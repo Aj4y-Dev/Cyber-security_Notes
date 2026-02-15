@@ -93,7 +93,7 @@ app/Http/Controllers/Location/CountryController.php :53
 
 ```
 user: txuraz
-host: localhost
+host: localhost (127.0.1.230.142)
 
  $a = scandir("/home/rinjha/WebstormProjects/agentmgt/public/countries");
 ```
