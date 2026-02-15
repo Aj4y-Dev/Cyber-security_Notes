@@ -316,6 +316,12 @@ HTTP/1.1 404 Not Found
 {"payload":null,"code":404,"success":false,"message":"Not Found"}
 
 
+GET /api/v1/fare/taxes/ HTTP/1.1
+Host: uat.resv.buddhatech.info
+|
+HTTP/1.1 401 Unauthorized
+{"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
+
 
 
 ```
@@ -327,5 +333,4 @@ HTTP/1.1 404 Not Found
 
 https://uat.resv.buddhatech.info/api/v1/sales-agent-guaranteed-amount/{agent_name_id}":"GET"
 
-https://uat.resv.buddhatech.info/api/v1/fare/taxes/":"GET"
 
