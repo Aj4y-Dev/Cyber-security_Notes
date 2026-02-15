@@ -262,16 +262,16 @@ Host: uat.resv.buddhatech.info
 HTTP/1.1 401 Unauthorized
 {"payload":null,"code":401,"success":false,"message":"Client error","kind":null,"do_logout":null}
 
-GET /api/v1/departure/seat-parameter/flight/:id HTTP/1.1
-Host: uat.resv.buddhatech.info
-|
+GET /api/v1/departure/seat-parameter/flight/:id/aircraft/:id HTTP/1.1
+Host: uat.resv.buddhatech.info -> HTTP/1.1 400 Bad Request
+
+
 
 
 ```
 
 
 
-"https://uat.resv.buddhatech.info/api/v1/departure/seat-parameter/flight/{flight_id}/aircraft/{aircraft_id}":
 
 "https://uat.resv.buddhatech.info/api/v1/departure/dcs-passengers":"GET"},"DCS 
 
