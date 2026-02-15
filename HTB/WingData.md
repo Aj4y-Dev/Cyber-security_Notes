@@ -12,4 +12,4 @@ PORT   STATE SERVICE VERSION
 Service Info: Host: localhost; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-found the subdomain name `ftp.wingdata.htb` 
+found the subdomain name `ftp.wingdata.htb` by just clicking the button in the `wingdata.htb` , it is a FTP server software powered by **[Wing FTP Server v7.4.3](https://www.wftpserver.com/)**
