@@ -95,3 +95,31 @@ user: txuraz
 host: localhost
 ```
 
+```
+POST /api/reset-password  HTTP/1.1
+Host: 13.228.112.54
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Ch-Ua: "Chromium";v="145", "Not:A-Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Priority: u=0, i
+Connection: keep-alive
+Content-Length: 51
+
+{
+	"user":"txuraz",
+	"password":"password123"	
+}
+
+//this dont work for now only post req allowed
+```
+
