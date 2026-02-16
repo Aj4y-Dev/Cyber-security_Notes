@@ -154,3 +154,19 @@ orderstatus       [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 298ms
 ```
 
 
+```
+https://www1.mcdonalds.com/
+
+Hello Mcdonalds Apache Test DEP Team
+```
+
+```
+GET /api/menu/topics HTTP/2
+Host: admin.me.mcd.com
+Cookie: ak_bmsc=161403DEC6282FDD6352270EA3ECD6C9~000000000000000000000000000000~YAAQ3QFAFwaz62ScAQAAou99Zx6NW5GHjS20Gyu+xZO6wAZ3uowNuzq5a9IUTprWuGqN5MnLyn8tXmPMXnzNIeVEguMOqWqGvgXyJwSU1WstaJu+5ZMcV+fkwZsWSlP6dExP7iRIgc4iOHXboqLpPRJcN0szFryjrCKd1K4JF2BWYjplqaQYe/5x3MtwfvSA1JD/hgs4yaVMOgm7HwFRjJ0zubVQlAczJ9KF3DN2YSyvdMi/hFDFYN2pxNHtOmJkKvouwlzuj/NdiPHpCxYnL6xsx2Dq0oYbFei8m7uehsOLyn2Pa4uhO4CdCUc2Zsh7WN9Rt0HyDE25L7j464VZlfC7lDqDeuU4q2yZQ2BgYwf9ABBoInj8/86ZiXDnv+0Yw19mIUpoCpI=
+
+HTTP/2 401 Unauthorized
+{"message":"Unauthenticated."}
+
+
+```
