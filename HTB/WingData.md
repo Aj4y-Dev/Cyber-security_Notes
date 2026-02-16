@@ -679,3 +679,6 @@ wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat settings.xml
 
 we know that it is working in port 5466:
 
+```
+after reverse shell
+```
