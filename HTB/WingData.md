@@ -682,5 +682,7 @@ we know that it is working in port 5466:
 ```
 after reverse shell:
 
+start in your system ./chisel server -p 8000 --reverse
+
 
 ```
