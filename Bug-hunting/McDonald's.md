@@ -153,7 +153,4 @@ button                [Status: 200, Size: 2, Words: 1, Lines: 1, Duration: 329ms
 orderstatus       [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 298ms]
 ```
 
-Woros4145@
-
-![[Pasted image 20260216225424.png]]
 
