@@ -84,6 +84,71 @@ Alt-Svc: h3=":443"; ma=86400
 let's test subdomain in it:
 
 ```
+ajdev@rootbox:~$ ffuf -u "https://FUZZ.mcd.com/" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt
+
+api              [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 87ms]
+autodiscover        [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 251ms]
+help               [Status: 403, Size: 364, Words: 13, Lines: 11, Duration: 89ms]
+survey            [Status: 403, Size: 368, Words: 13, Lines: 11, Duration: 189ms]
+ai                 [Status: 403, Size: 364, Words: 13, Lines: 11, Duration: 96ms]
+netbox           [Status: 403, Size: 368, Words: 13, Lines: 11, Duration: 93ms]
+wp                 [Status: 403, Size: 362, Words: 13, Lines: 11, Duration: 95ms]
+share               [Status: 302, Size: 179, Words: 6, Lines: 4, Duration: 301ms]
+account            [Status: 403, Size: 369, Words: 13, Lines: 11, Duration: 80ms]
+sales              [Status: 403, Size: 367, Words: 13, Lines: 11, Duration: 92ms]
+sbc                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 81ms]
+qa                  [Status: 301, Size: 180, Words: 9, Lines: 2, Duration: 238ms]
+b2b                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 86ms]
+me                 [Status: 403, Size: 364, Words: 13, Lines: 11, Duration: 93ms]
+guest              [Status: 403, Size: 367, Words: 13, Lines: 11, Duration: 95ms]
+q                  [Status: 403, Size: 361, Words: 13, Lines: 11, Duration: 29ms]
+network             [Status: 301, Size: 160, Words: 9, Lines: 2, Duration: 238ms]
+sonarqube          [Status: 403, Size: 369, Words: 13, Lines: 11, Duration: 92ms]
+securemail            [Status: 403, Size: 151, Words: 3, Lines: 8, Duration: 7ms]
+mfa                 [Status: 301, Size: 153, Words: 9, Lines: 2, Duration: 310ms]
+ftps               [Status: 403, Size: 366, Words: 13, Lines: 11, Duration: 85ms]
+care            [Status: 403, Size: 4579, Words: 656, Lines: 90, Duration: 335ms]
+astra             [Status: 200, Size: 467, Words: 58, Lines: 15, Duration: 346ms]
+tableau            [Status: 403, Size: 367, Words: 13, Lines: 11, Duration: 84ms]
+otp                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 90ms]
+scp                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 99ms]
+welcome            [Status: 403, Size: 369, Words: 13, Lines: 11, Duration: 91ms]
+mymail                [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 281ms]
+bpm                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 80ms]
+wolf         [Status: 500, Size: 26738, Words: 6936, Lines: 555, Duration: 544ms]
+iss                [Status: 403, Size: 363, Words: 13, Lines: 11, Duration: 93ms]
+pmo                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 82ms]
+crl                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 82ms]
+gas               [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 446ms]
+m3                  [Status: 301, Size: 254, Words: 9, Lines: 2, Duration: 236ms]
+planning            [Status: 301, Size: 193, Words: 9, Lines: 2, Duration: 286ms]
+resources          [Status: 403, Size: 369, Words: 13, Lines: 11, Duration: 92ms]
+reporting           [Status: 301, Size: 203, Words: 9, Lines: 2, Duration: 241ms]
+cia                [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 86ms]
+innovation       [Status: 302, Size: 546, Words: 60, Lines: 12, Duration: 2527ms]
+short              [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 94ms]
+pace               [Status: 403, Size: 366, Words: 13, Lines: 11, Duration: 84ms]
+gems                [Status: 301, Size: 254, Words: 9, Lines: 2, Duration: 236ms]
+jss                 [Status: 403, Size: 118, Words: 3, Lines: 7, Duration: 318ms]
+sherlock           [Status: 403, Size: 370, Words: 13, Lines: 11, Duration: 83ms]
+edr                [Status: 301, Size: 258, Words: 9, Lines: 2, Duration: 321ms]
+grs               [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 102ms]
+velocity            [Status: 301, Size: 204, Words: 9, Lines: 2, Duration: 247ms]
+collaborate          [Status: 403, Size: 13, Words: 2, Lines: 1, Duration: 293ms]
+dart               [Status: 403, Size: 364, Words: 13, Lines: 11, Duration: 82ms]
+deep               [Status: 403, Size: 364, Words: 13, Lines: 11, Duration: 89ms]
+peak               [Status: 403, Size: 366, Words: 13, Lines: 11, Duration: 86ms]
+spo                  [Status: 403, Size: 13, Words: 2, Lines: 1, Duration: 302ms]
+dnsa                 [Status: 403, Size: 23, Words: 1, Lines: 1, Duration: 315ms]
+gtt               [Status: 403, Size: 365, Words: 13, Lines: 11, Duration: 103ms]
+roadmap             [Status: 301, Size: 191, Words: 9, Lines: 2, Duration: 288ms]
+vad                 [Status: 302, Size: 138, Words: 3, Lines: 8, Duration: 272ms]
+byod              [Status: 200, Size: 491, Words: 66, Lines: 17, Duration: 627ms]
+gim                [Status: 403, Size: 363, Words: 13, Lines: 11, Duration: 82ms]
+gni             [Status: 200, Size: 5194, Words: 125, Lines: 18, Duration: 728ms]
+```
+
+```
 https://jobs.mcdonalds.com/ works redirect to -> career41.sapsf.com/career?company=mcdonaldsc&navBarLevel=MY_PROFILE
 
 https://dev.mcdonalds.com/us/en-us.html
@@ -189,5 +254,5 @@ Host: admin.me.mcd.com
 HTTP/2 401 Unauthorized
 {"message":"Unauthenticated."}
 
-
 ```
+
