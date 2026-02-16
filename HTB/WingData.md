@@ -656,8 +656,7 @@ wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat admins.xml
 <?xml version="1.0" ?>
 <ADMIN_ACCOUNTS Description="Wing FTP Server Admin Accounts">
     <ADMIN>
-        <Admin_Name>admin</Admin_Name>
-        <Password>a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba</Password>
+        <Admin_Name>admin</Admin_Name><Password>a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba</Password>
         <Type>0</Type>
         <Readonly>0</Readonly>
         <IsDomainAdmin>0</IsDomainAdmin>
@@ -678,4 +677,6 @@ wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat settings.xml
     <EnablePortUPnP>0</EnablePortUPnP>
 </Administrator>
 ```
+
+we know that it is working in port 5466:
 
