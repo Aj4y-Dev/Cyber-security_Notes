@@ -143,13 +143,13 @@ ajdev@rootbox:~$ ffuf -u "https://delivery.mcdonalds.com/FUZZ" -w /usr/share/sec
 api             [Status: 403, Size: 5452, Words: 627, Lines: 94, Duration: 391ms]
 en        [Status: 200, Size: 312398, Words: 19920, Lines: 1425, Duration: 651ms]
 fr       [Status: 200, Size: 312843, Words: 19957, Lines: 1425, Duration: 1276ms]
-es                      [Status: 200, Size: 312984, Words: 20007, Lines: 1425, Duration: 1015ms]
-internal                [Status: 403, Size: 5451, Words: 627, Lines: 94, Duration: 768ms]
-debug                   [Status: 403, Size: 4527, Words: 620, Lines: 94, Duration: 8ms]
-error                   [Status: 200, Size: 241988, Words: 1375, Lines: 83, Duration: 8116ms]
-orders                  [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 299ms]
-metrics                 [Status: 403, Size: 4527, Words: 620, Lines: 94, Duration: 8ms]
-button                  [Status: 200, Size: 2, Words: 1, Lines: 1, Duration: 329ms]
-orderstatus             [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 298ms]
-
+es       [Status: 200, Size: 312984, Words: 20007, Lines: 1425, Duration: 1015ms]
+internal        [Status: 403, Size: 5451, Words: 627, Lines: 94, Duration: 768ms]
+debug             [Status: 403, Size: 4527, Words: 620, Lines: 94, Duration: 8ms]
+error       [Status: 200, Size: 241988, Words: 1375, Lines: 83, Duration: 8116ms]
+orders            [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 299ms]
+metrics           [Status: 403, Size: 4527, Words: 620, Lines: 94, Duration: 8ms]
+button                [Status: 200, Size: 2, Words: 1, Lines: 1, Duration: 329ms]
+orderstatus       [Status: 200, Size: 1331, Words: 49, Lines: 1, Duration: 298ms]
 ```
+
