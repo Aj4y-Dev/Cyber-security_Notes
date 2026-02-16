@@ -651,3 +651,31 @@ bj4wPC9PcGVuU1NMTm9SZW5lZ290aWF0aW9uPgo8L1dpbmdGdHBTZXJ2ZXI+Cg==
 ```
 
 
+```
+wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat admins.xml
+<?xml version="1.0" ?>
+<ADMIN_ACCOUNTS Description="Wing FTP Server Admin Accounts">
+    <ADMIN>
+        <Admin_Name>admin</Admin_Name>
+        <Password>a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba</Password>
+        <Type>0</Type>
+        <Readonly>0</Readonly>
+        <IsDomainAdmin>0</IsDomainAdmin>
+        <DomainList></DomainList>
+        <MyDirectory></MyDirectory>
+        <EnableTwoFactor>0</EnableTwoFactor>
+        <TwoFactorCode></TwoFactorCode>
+    </ADMIN>
+</ADMIN_ACCOUNTS>
+wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat settings.xml
+<?xml version="1.0" ?>
+<Administrator Description="Wing FTP Server Administrator Options">
+    <HttpPort>5466</HttpPort>
+    <HttpSecure>0</HttpSecure>
+    <AdminLogfileEnable>1</AdminLogfileEnable>
+    <AdminLogfileFileName>Admin-%Y-%M-%D.log</AdminLogfileFileName>
+    <AdminLogfileMaxsize>0</AdminLogfileMaxsize>
+    <EnablePortUPnP>0</EnablePortUPnP>
+</Administrator>
+```
+
