@@ -97,7 +97,7 @@ https://errors.edgesuite.net/11.b187d817.1771002995.e88d8d3a
 
 https://stage.mcdonalds.com/us/en-us.html
 
-`some sussh when i go 
+some sussh when i go 
 https://digital.mcdonalds.com/ , https://preview.mcdonalds.com/, https://dna.mcdonalds.com/
 response want username and password`
 
