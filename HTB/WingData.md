@@ -699,4 +699,4 @@ Connected
 ```
 
 
-i change the admin password and add into it and pkill the process 
+i change the admin password and add into it and pkill the process but the my bad is that i kill the webserver and now i am not getting any thing so i need to restart the lab.
