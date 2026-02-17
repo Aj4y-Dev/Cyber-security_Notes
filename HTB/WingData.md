@@ -699,4 +699,4 @@ Connected
 ```
 
 
-i change the admin password and add into
+i change the admin password and add into it and pkill the process 
