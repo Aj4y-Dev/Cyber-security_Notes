@@ -677,5 +677,12 @@ wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat settings.xml
 </Administrator>
 ```
 
-!#7Blushing^*Bride5
+```
+ajdev@rootbox:~/HTB/WingData$ echo "32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca" > hash
+ajdev@rootbox:~/HTB/WingData$ hashcat -m 1400 -a 6 hash /usr/share/wordlists/rockyou.txt 'WingFTP'
+
+Approaching final keyspace - workload adjusted.
+
+32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca:!#7Blushing^*Bride5WingFTP
+```
 
