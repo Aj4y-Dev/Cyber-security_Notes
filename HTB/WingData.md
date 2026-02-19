@@ -289,3 +289,15 @@ Approaching final keyspace - workload adjusted.
 32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca:!#7Blushing^*Bride5
 ```
 
+```
+sudo -l
+
+(root) NOPASSWD: /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py *
+```
+
+Meaning:
+
+- You can run that script as **root**
+- No password
+- You control arguments
+
