@@ -677,3 +677,5 @@ wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat settings.xml
 </Administrator>
 ```
 
+!#7Blushing^*Bride5
+
