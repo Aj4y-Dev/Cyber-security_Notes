@@ -62,3 +62,14 @@ so basically in this lab the unproper validate user input so i can change the pr
 
 in this lab we can add -1 item so price is also in -ve  so, first add the thing you want and -ve other things so the price of it is less.
 
+
+
+|[Lightweight "l33t" Leather Jacket](https://0a7700b104a4ebb383cdbaa300470012.web-security-academy.net/product?productId=1)|$1337.00|1||
+|NEWCUST5|-$5.00|||
+|SIGNUP30|-$401.10|||
+|NEWCUST5|-$5.00|||
+|SIGNUP30|-$401.10|||
+|NEWCUST5|-$5.00|||
+|SIGNUP30|-$401.10|||
+|NEWCUST5|-$5.00|||
+|SIGNUP30|-$401.10||
