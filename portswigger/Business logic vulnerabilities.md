@@ -64,7 +64,7 @@ in this lab we can add -1 item so price is also in -ve  so, first add the thing 
 
 #### Lab: Flawed enforcement of business rules
 
-|[Lightweight "l33t" Leather Jacket](https://0a7700b104a4ebb383cdbaa300470012.web-security-academy.net/product?productId=1)|$1337.00|1||
+|[Lightweight "l33t" Leather Jacket]|$1337.00|1||
 |NEWCUST5|-$5.00|||
 |SIGNUP30|-$401.10|||
 |NEWCUST5|-$5.00|||
@@ -74,4 +74,5 @@ in this lab we can add -1 item so price is also in -ve  so, first add the thing 
 |NEWCUST5|-$5.00|||
 |SIGNUP30|-$401.10||
 
-in this challenge we can redeem multiple cupone so that the 
+in this challenge we can redeem multiple cupone so that the we break the buisseness logic.
+
