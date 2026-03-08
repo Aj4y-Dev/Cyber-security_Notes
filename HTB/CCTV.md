@@ -17,5 +17,11 @@ hell no i just type admin:admin i get dashboard and found v1.37.63
 
 then found the cve and other resource then:
 
-if do sql
+if do sqlmap and found username and password:
+
+after hashcat
+
+```
+$2y$10$prZGnazejKcuTv5bKNexXOgLyQaok0hq07LW7AJ/QNqZolbXKfFG.:opensesame
+```
 
