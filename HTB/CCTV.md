@@ -110,3 +110,23 @@ f040655fd2935c56b86c8163de21a8bf
 https://4xura.com/writeups-for-ctfs/htb/
 
 
+# Overview of the Attack Chain
+
+The box follows a **realistic pentest path**:
+
+
+```
+Recon → Web Exploitation → Database Dump → SSH Access
+→ Network Sniffing → Lateral Movement → RCE → Root
+```
+
+Main vulnerabilities:
+
+1. **Default credentials**
+2. **SQL Injection (CVE-2024-51482)**
+3. **Weak password cracking**
+4. **tcpdump capability abuse**
+5. **Internal credential sniffing**
+6. **Password reuse**
+7. **MotionEye RCE (CVE-2025-60787)**
+
