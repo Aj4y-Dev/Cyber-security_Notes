@@ -55,3 +55,7 @@ sa_mark@cctv:~$ cat user.txt
 ```
 
 
+the pdf have info :
+
+![[Pasted image 20260308161542.png]]
+
