@@ -13,3 +13,5 @@ PORT   STATE SERVICE REASON  VERSION
 Service Info: Host: default; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+hell no i just type admin:admin i get dashboard and found v1.37.63 
+
