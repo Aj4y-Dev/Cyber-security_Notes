@@ -59,3 +59,6 @@ the pdf have info :
 
 ![[Pasted image 20260308161542.png]]
 
+and then :
+  
+From previous LinPEAS output, localhost port 8765 is open. Forward it: 
