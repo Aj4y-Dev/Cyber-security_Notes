@@ -15,5 +15,7 @@ Service Info: Host: default; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 hell no i just type admin:admin i get dashboard and found v1.37.63 
 
-then found the cve and other resource then 
+then found the cve and other resource then:
+
+if do sql
 
