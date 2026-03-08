@@ -33,8 +33,18 @@ capturing all traffic :
 ```
 tcpdump -i any -nn 
 
-port 5000 is hit fre
+port 5000 is hit frequently so :
+
+tcpdump -i any -nn -A tcp port 5000
+
+E..g.!@.@..(.......
+.>.. 'Cs.. .....X......
+u&%.....USERNAME=sa_mark;PASSWORD=X1l9fx1ZjS7RZb;CMD=status
+10:11:16.616594 vethf19addd P   IP 172.25.0.10.5000 > 172.25.0.11.35646: Flags [.], ack 52, win 509, options [nop,nop,TS val 784641 ecr 1965434325], length 0
+E..4..@.@.
 ```
+
+
 
 
 
