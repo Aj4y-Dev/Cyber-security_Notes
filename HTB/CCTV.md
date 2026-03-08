@@ -35,7 +35,7 @@ tcpdump -i any -nn
 
 port 5000 is hit frequently so :
 
-tcpdump -i any -nn -A tcp port 5000
+mark@cctv:~$ tcpdump -i any -nn -A tcp port 5000
 
 E..g.!@.@..(.......
 .>.. 'Cs.. .....X......
@@ -48,7 +48,10 @@ E..4..@.@.
 then login into it:
 
 ```
-
+sa_mark@cctv:~$ ls
+'SecureVision Staff Announcement.pdf'   user.txt
+sa_mark@cctv:~$ cat user.txt
+3622bd6d84732dfc96801149725b5714
 ```
 
 
