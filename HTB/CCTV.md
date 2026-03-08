@@ -62,3 +62,14 @@ the pdf have info :
 and then :
   
 From previous LinPEAS output, localhost port 8765 is open. Forward it: 
+
+```
+ssh -L 8765:127.0.0.1:8765 mark@cctv.htb
+```
+
+It exposes the MotionEye CCTV management app, and the hint suggests we can reuse the sa_mark password:
+
+```
+admin / X1l9fx1ZjS7RZb
+```
+
