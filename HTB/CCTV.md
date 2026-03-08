@@ -25,13 +25,17 @@ after hashcat
 $2y$10$prZGnazejKcuTv5bKNexXOgLyQaok0hq07LW7AJ/QNqZolbXKfFG.:opensesame
 ```
 
-# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.  
-# Licens: CC BY-NC-SA 4.0  
-# Author: Axura  
-# URL: https://4xura.com/writeups-for-ctfs/htb/htb-writeup-cctv/  
-# Source: Axura's Blog  
   
 CCTV stack uses containerized services communicating internally.
+
+capturing all traffic :
+
+```
+tcpdump -i any -nn 
+
+port 5000 is hit fre
+```
+
 
 
 
