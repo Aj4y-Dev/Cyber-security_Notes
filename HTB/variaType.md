@@ -18,4 +18,11 @@ found subdomain:
 portal.variatype.htb
 ```
 
-found some
+Reference: `VT-VALID-2.1.4` 
+
+found some CVE:
+
+```
+https://www.exploit-db.com/exploits/49757
+
+```
