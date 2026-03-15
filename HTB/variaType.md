@@ -12,6 +12,13 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+i find .git exposed:
+
+```
+ajdev@rootbox:~$ curl -s http://portal.variatype.htb/.git/HEAD
+ref: refs/heads/master
+```
+
 found subdomain:
 
 ```
