@@ -480,7 +480,8 @@ cat /home/steve/user.txt
 c2336e410cf8086c08af84f8f73cea3b
 ```
 
-
+  
+ssh-keygen -t ed25519 -f /tmp/steve_key -N ""
 
 
 
