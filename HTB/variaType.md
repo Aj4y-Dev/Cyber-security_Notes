@@ -18,3 +18,4 @@ found subdomain:
 portal.variatype.htb
 ```
 
+found some
