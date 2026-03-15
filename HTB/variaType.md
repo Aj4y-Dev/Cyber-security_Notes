@@ -18,7 +18,9 @@ found subdomain:
 portal.variatype.htb
 ```
 
-	found some **CVE-2025-66034** 
+found some **CVE-2025-66034** 
+
+
 
 
 Reference: `VT-VALID-2.1.4` 
