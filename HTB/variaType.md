@@ -646,3 +646,11 @@ root@variatype:~# cat root.txt
 0a622b52a58766beac5e8dc513ca0a3f
 ```
 
+## You just completed the full VariaType chain:
+
+1.  **Git Leak** → recovered `gitbot:G1tB0t_Acc3ss_2025!` from deleted commit
+2.  **LFI** → read server configs and source code via `download.php`
+3.  **CVE-2025-66034** → fontTools varLib XML injection → arbitrary file write → PHP webshell
+4.  **CVE-2024-25081** → FontForge ZIP filename command injection → shell as `steve`
+5.  **CVE-2025-47273** → setuptools PackageIndex path traversal → write SSH key to `/root/.ssh/authorized_keys` → root!
+
