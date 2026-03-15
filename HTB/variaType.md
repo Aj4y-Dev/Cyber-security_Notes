@@ -259,31 +259,31 @@ ajdev@rootbox:~/HTB$ python3 << 'EOF'
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 
-fb = FontBuilder(1000, isTTF=True)
-fb.setupGlyphOrder([".notdef"])
-fb.setupCharacterMap({})
+def make_font(path, family, weight):
+    fb = FontBuilder(1000, isTTF=True)
+    fb.setupGlyphOrder([".notdef"])
+    fb.setupCharacterMap({})
+    pen = TTGlyphPen(None)
+    pen.moveTo((0, 0))
+    pen.lineTo((500, 0))
+    pen.lineTo((500, 700))
+    pen.lineTo((0, 700))
+    pen.closePath()
+    fb.setupGlyf({".notdef": pen.glyph()})
+    fb.setupHorizontalMetrics({".notdef": (500, 0)})
+    fb.setupHorizontalHeader(ascent=800, descent=-200)
+    fb.setupNameTable({"familyName": family, "styleName": "Regular"})
+    fb.setupOS2(weightClass=weight)
+    fb.setupPost()
+    fb.setupHead(unitsPerEm=1000)
+    fb.font.save(path)
+    print(f"Created {path}")
 
-pen = TTGlyphPen(None)
-pen.moveTo((0, 0))
-pen.lineTo((500, 0))
-pen.lineTo((500, 700))
-pen.lineTo((0, 700))
-pen.closePath()
-
-fb.setupGlyf({".notdef": pen.glyph()})
-fb.setupHorizontalMetrics({".notdef": (500, 0)})
-fb.setupHorizontalHeader(ascent=800, descent=-200)
-fb.setupNameTable({"familyName": "Test", "styleName": "Regular"})
-fb.setupOS2()
-fb.setupPost()
-fb.setupHead(unitsPerEm=1000)
-fb.font.save("dummy.ttf")
-print("done!")
+make_font("light.ttf", "Test", 100)
+make_font("bold.ttf", "Test", 900)
 EOF
-
-file dummy.ttf
-done!
-dummy.ttf: TrueType Font data, 10 tables, 1st "OS/2", 4 names, Macintosh, type 1 string, TestRegular
+Created light.ttf
+Created bold.ttf
 ```
 
 ```
