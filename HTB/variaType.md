@@ -45,7 +45,6 @@ index 615e621..b328305 100644
 +$USERS = [
 +    'gitbot' => 'G1tB0t_Acc3ss_2025!'
 +];
-ajdev@rootbox:~/repo$
 ```
 
 found subdomain:
