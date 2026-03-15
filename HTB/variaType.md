@@ -17,6 +17,12 @@ i find .git exposed:
 ```
 ajdev@rootbox:~$ curl -s http://portal.variatype.htb/.git/HEAD
 ref: refs/heads/master
+
+then:
+
+~$ pip3 install git-dumper --break-system-packages
+
+
 ```
 
 found subdomain:
