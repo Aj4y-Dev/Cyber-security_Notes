@@ -480,6 +480,18 @@ cat /home/steve/user.txt
 c2336e410cf8086c08af84f8f73cea3b
 ```
 
+now privllage excllation:
+
+```
+steve@variatype:~$ sudo -l
+Matching Defaults entries for steve on variatype:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, use_pty
+
+User steve may run the following commands on variatype:
+    (root) NOPASSWD: /usr/bin/python3 /opt/font-tools/install_validator.py *
+steve@variatype:~$
+```
+
 
 
 
