@@ -22,7 +22,30 @@ then:
 
 ~$ pip3 install git-dumper --break-system-packages
 
-
+ajdev@rootbox:~/repo$ ls
+auth.php
+ajdev@rootbox:~/repo$ ls -la
+total 16
+drwxrwxr-x  3 ajdev ajdev 4096 Mar 15 14:31 .
+drwxr-x--- 42 ajdev ajdev 4096 Mar 15 14:31 ..
+-rw-rw-r--  1 ajdev ajdev   36 Mar 15 14:31 auth.php
+drwxrwxr-x  7 ajdev ajdev 4096 Mar 15 14:31 .git
+ajdev@rootbox:~/repo$ git log --oneline --all
+753b5f5 (HEAD -> master) fix: add gitbot user for automated validation pipeline
+5030e79 feat: initial portal implementation
+ajdev@rootbox:~/repo$ git diff HEAD~1 HEAD
+diff --git a/auth.php b/auth.php
+index 615e621..b328305 100644
+--- a/auth.php
++++ b/auth.php
+@@ -1,3 +1,5 @@
+ <?php
+ session_start();
+-$USERS = [];
++$USERS = [
++    'gitbot' => 'G1tB0t_Acc3ss_2025!'
++];
+ajdev@rootbox:~/repo$
 ```
 
 found subdomain:
