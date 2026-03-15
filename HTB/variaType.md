@@ -12,3 +12,9 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+found subdomain:
+
+```
+portal.variatype.htb
+```
+
