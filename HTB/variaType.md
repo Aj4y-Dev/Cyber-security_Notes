@@ -382,3 +382,14 @@ bash: no job control in this shell
 www-data@variatype:~/portal.variatype.htb/public/files$ 
 ```
 
+```
+www-data@variatype:/opt$ ls
+ls
+font-tools
+process_client_submissions.bak
+variatype
+www-data@variatype:/opt$ file process*
+file process*
+process_client_submissions.bak: Bourne-Again shell script, ASCII text executable
+www-data@variatype:/opt$
+```
