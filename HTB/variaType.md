@@ -492,6 +492,10 @@ User steve may run the following commands on variatype:
 steve@variatype:~$
 ```
 
+### CVE-2025-47273 — pip PackageIndex Path Traversal → Root
+
+**How it works:** Steve can run `pip` with sudo. CVE-2025-47273 is a path traversal in pip's `--index-url` or `--extra-index-url` parameter that allows writing files to arbitrary locations — including `/root/.ssh/authorized_keys`.
+
 
 
 
