@@ -391,8 +391,19 @@ variatype
 www-data@variatype:/opt$ file process*
 file process*
 process_client_submissions.bak: Bourne-Again shell script, ASCII text executable
-www-data@variatype:/opt$
+www-data@variatype:~/portal.variatype.htb/public/files$ ls -la
+ls -la
+total 20
+drwxrwsr-x 2 www-data  www-data 4096 Mar 15 05:21 .
+drwxrwxr-x 4 root      www-data 4096 Mar  9 08:29 ..
+-rw-r--r-- 1 variatype www-data  908 Mar 15 05:21 glyph-check.php
+-rw-r--r-- 1 variatype www-data  592 Mar 15 05:21 variabype_FyfLLZuOXNQ.ttf
+-rw-r--r-- 1 variatype www-data  592 Mar 15 05:18 variabype_KEJ90bfgbVs.ttf
+www-data@variatype:~/portal.variatype.htb/public/files$ ls -ld .
+ls -ld .
+drwxrwsr-x 2 www-data www-data 4096 Mar 15 05:21 .
 ```
 
+#CVE-2024-25081
 
-/portal.variatype.htb/public/files
+
