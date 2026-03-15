@@ -53,7 +53,11 @@ found subdomain:
 portal.variatype.htb
 ```
 
-found some **CVE-2025-66034** 
+login with that and redirect to:
+
+```
+http://portal.variatype.htb/dashboard.php
+```
 
 
 
