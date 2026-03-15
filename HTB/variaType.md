@@ -582,4 +582,10 @@ if __name__ == "__main__":
 ```
 
 
+The dangerous part sits in one line:
+
+```
+downloaded_path = index.download(plugin_url, PLUGIN_DIR)
+```
+
 
