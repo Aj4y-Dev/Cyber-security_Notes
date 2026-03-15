@@ -644,6 +644,5 @@ root@variatype:~# ls
 root.txt
 root@variatype:~# cat root.txt
 0a622b52a58766beac5e8dc513ca0a3f
-root@variatype:~#
 ```
 
