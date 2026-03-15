@@ -393,3 +393,6 @@ file process*
 process_client_submissions.bak: Bourne-Again shell script, ASCII text executable
 www-data@variatype:/opt$
 ```
+
+
+/portal.variatype.htb/public/files
