@@ -648,7 +648,6 @@ class Handler(BaseHTTPRequestHandler):
 HTTPServer(("0.0.0.0", 80), Handler).serve_forever()
 EOF
 
-cd ~/HTB
 sudo python3 server.py
 ```
 
