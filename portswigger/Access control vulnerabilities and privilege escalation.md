@@ -82,7 +82,9 @@ but i try other thing doesn't work now i inspect the cookie:
 Admin: false
 ```
 
-then i manipulate it and set to true. now i can access to the admin panel and delete carlose
+then i manipulate it and set to true. now i can access to the admin panel and delete carlos.
+
+
 
 
 
