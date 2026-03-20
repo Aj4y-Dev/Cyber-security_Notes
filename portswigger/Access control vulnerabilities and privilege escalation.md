@@ -22,6 +22,11 @@ ACCESS CONTROL TYPES:
 Key Difference:
 - Vertical → privilege escalation (role-based)
 - Horizontal → data access (user-based)
+- Context -> Can I:
+
+- Skip steps?
+- Repeat actions?
+- Do things out of order?
 
 - “Am I trying to become admin?” → **Vertical**
 - “Am I trying to access someone else’s data?” → **Horizontal**
