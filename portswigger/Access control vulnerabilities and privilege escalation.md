@@ -76,7 +76,13 @@ when i do login into it some suspicious url is seen:
 https://0a15007b03966acf818d756d00510053.web-security-academy.net/my-account?id=wiener
 ```
 
-but i try other thing doesn't work now i inspect
+but i try other thing doesn't work now i inspect the cookie:
+
+```
+Admin: false
+```
+
+then i manipulate it and set to true. now i can access to the admin panel and delete carlose
 
 
 
