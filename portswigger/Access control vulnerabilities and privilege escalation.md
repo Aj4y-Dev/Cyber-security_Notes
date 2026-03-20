@@ -68,6 +68,8 @@ topLinksTag.appendChild(pTag);
 
 this mean when the isAdmin is true then the it create a link of /admin-d43y8o and the admin can access to it but it is not protected. anyone can access it they know about the correct path, and delete a user carlos.
 
+#### Lab: User role controlled by request parameter
+
 
 
 
