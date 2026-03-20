@@ -32,7 +32,9 @@ Key Difference:
 - “Am I trying to access someone else’s data?” → **Horizontal**
 - "It is about "when/how action is performed"" -> context
 
-### Lab: Unprotected admin functionality
+## Vertical privilege escalation LABS
+
+#### Lab: Unprotected admin functionality
 
 in robots.txt :
 
@@ -46,6 +48,7 @@ Meaning:
 ```
 
 then i can access to /administrator-panel and delete carlos.
+
 
 
 
