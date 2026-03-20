@@ -32,5 +32,9 @@ Key Difference:
 - “Am I trying to access someone else’s data?” → **Horizontal**
 - "It is about "when/how action is performed"" -> context
 
+### Lab: Unprotected admin functionality
+
+
+
 
 
