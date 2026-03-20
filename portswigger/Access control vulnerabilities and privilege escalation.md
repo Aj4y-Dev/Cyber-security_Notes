@@ -84,6 +84,7 @@ Admin: false
 
 then i manipulate it and set to true. now i can access to the admin panel and delete carlos.
 
+#### Lab: User role can be modified in user profile
 
 
 
