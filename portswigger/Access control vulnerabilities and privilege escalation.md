@@ -66,8 +66,7 @@ topLinksTag.appendChild(pTag);
 }
 ```
 
-
-
+this mean when the isAdmin is true then the it create a link of "/admin-d43y8o" 
 
 
 
