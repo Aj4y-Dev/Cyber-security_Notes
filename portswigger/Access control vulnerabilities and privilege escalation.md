@@ -53,7 +53,20 @@ then i can access to /administrator-panel and delete carlos.
 
 i found script in the html code :
 
-``
+```
+var isAdmin = false; 
+if (isAdmin) { 
+var topLinksTag = document.getElementsByClassName("top-links")[0]; 
+var adminPanelTag = document.createElement('a'); adminPanelTag.setAttribute('href', '/admin-d43y8o'); 
+adminPanelTag.innerText = 'Admin panel'; 
+topLinksTag.append(adminPanelTag); 
+var pTag = document.createElement('p'); 
+pTag.innerText = '|'; 
+topLinksTag.appendChild(pTag); 
+}
+```
+
+
 
 
 
