@@ -30,4 +30,7 @@ Key Difference:
 
 - “Am I trying to become admin?” → **Vertical**
 - “Am I trying to access someone else’s data?” → **Horizontal**
+- "It is about "when/how action is performed"" -> context
+
+
 
