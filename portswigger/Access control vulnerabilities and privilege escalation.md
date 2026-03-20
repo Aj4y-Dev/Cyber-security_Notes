@@ -15,6 +15,10 @@ ACCESS CONTROL TYPES:
 - Attack: Accessing another user's resources
 - Example bug: Changing user ID (IDOR)
 
+3. Context-Dependent Access Control
+- Restricts actions based on application state
+- Ensures correct sequence of operations
+
 Key Difference:
 - Vertical → privilege escalation (role-based)
 - Horizontal → data access (user-based)
