@@ -51,6 +51,9 @@ then i can access to /administrator-panel and delete carlos.
 
 #### Lab: Unprotected admin functionality with unpredictable URL
 
+i found script in the html code :
+
+``
 
 
 
