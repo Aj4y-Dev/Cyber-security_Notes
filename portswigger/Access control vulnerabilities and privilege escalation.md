@@ -34,7 +34,12 @@ Key Difference:
 
 ### Lab: Unprotected admin functionality
 
+in robots.txt
 
+```
+User-agent: *
+Disallow: /administrator-panel
+```
 
 
 
