@@ -34,12 +34,20 @@ Key Difference:
 
 ### Lab: Unprotected admin functionality
 
-in robots.txt
+in robots.txt :
 
 ```
 User-agent: *
 Disallow: /administrator-panel
+
+Meaning:
+- All bots should avoid this path
+- But humans can still access it
 ```
+
+then i can access to /administrator-panel and delete carlos.
+
+
 
 
 
