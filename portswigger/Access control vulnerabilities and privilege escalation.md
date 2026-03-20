@@ -19,3 +19,6 @@ Key Difference:
 - Vertical → privilege escalation (role-based)
 - Horizontal → data access (user-based)
 
+- “Am I trying to become admin?” → **Vertical**
+- “Am I trying to access someone else’s data?” → **Horizontal**
+
