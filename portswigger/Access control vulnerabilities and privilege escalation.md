@@ -110,6 +110,10 @@ Response:
 
 now i get the access to admin panel and delete the user carlos.
 
+#### Lab: URL-based access control can be circumvented
+
+
+
 
 
 
