@@ -139,7 +139,7 @@ so i use this concept to bypass the restricted area.
 
 #### Lab: Method-based access control can be circumvented
 
-first analysis how the system works. Then i want to update the same by using the unauthorized user, to do it first i try by post request but it show unauthorized then i change request method. It wo
+first analysis how the system works. Then i want to update the same by using the unauthorized user, to do it first i try by post request but it show unauthorized then i change request method. It works because the GET is not protected properly, Backend still processes parameters.
 
 ```
 GET /admin-roles?username=wiener&action=upgrade HTTP/2
