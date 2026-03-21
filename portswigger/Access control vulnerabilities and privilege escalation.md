@@ -139,6 +139,7 @@ so i use this concept to bypass the restricted area.
 
 #### Lab: Method-based access control can be circumvented
 
+first analysis how the system works. Then i want to update the same by using the 
 
 ```
 GET /admin-roles?username=wiener&action=upgrade HTTP/2
