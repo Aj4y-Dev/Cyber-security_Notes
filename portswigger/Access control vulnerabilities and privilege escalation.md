@@ -137,6 +137,8 @@ Priority: u=0, i
 
 so i use this concept to bypass the restricted area.
 
+#### Lab: Method-based access control can be circumvented
+
 
 
 
