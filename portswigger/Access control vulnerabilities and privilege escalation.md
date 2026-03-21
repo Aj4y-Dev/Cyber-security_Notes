@@ -135,7 +135,9 @@ Accept-Encoding: gzip, deflate, br
 Priority: u=0, i
 ```
 
-so i use this concept to 
+so i use this concept to bypass the restricted area.
+
+
 
 
 
