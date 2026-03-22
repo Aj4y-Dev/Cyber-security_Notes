@@ -125,3 +125,4 @@ ben@kobold:/usr/local/lib/node_modules/@mcpjam/inspector$ cat /home/ben/user.txt
 <e_modules/@mcpjam/inspector$ cat /home/ben/user.txt
 8ca2833835371c3d977200a6d0c01404
 ```
+
