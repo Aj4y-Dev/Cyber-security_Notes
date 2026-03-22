@@ -92,3 +92,4 @@ SF:0rel=\"modu");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+then subdomain enumeration i got mcp.kobold
