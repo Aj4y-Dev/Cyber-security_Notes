@@ -165,3 +165,7 @@ docker run -v /:/hostfs --rm --user root --entrypoint sh privatebin/nginx-fpm-al
 eb99819216e6d4cd094060651f909b1f
 ```
 
+##### What Did It — `--user root`
+
+The container was running as a non-root user by default. Forcing `--user root` made it run as root inside the container, giving full access to the mounted host filesystem.
+
