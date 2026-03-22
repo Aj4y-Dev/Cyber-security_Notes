@@ -135,5 +135,22 @@ uid=1001(ben) gid=1001(ben) groups=1001(ben),37(operator)
 ben@kobold:~$ groups
 groups
 ben operator
-
+ben@kobold:~$ find / -group operator 2>/dev/null
+find / -group operator 2>/dev/null
+/privatebin-data
+/privatebin-data/certs
+/privatebin-data/certs/key.pem
+/privatebin-data/certs/cert.pem
+/privatebin-data/data
+/privatebin-data/data/purge_limiter.php
+/privatebin-data/data/bd
+/privatebin-data/data/bd/b5
+/privatebin-data/data/.htaccess
+/privatebin-data/data/e3
+/privatebin-data/data/traffic_limiter.php
+/privatebin-data/data/salt.php
+ben@kobold:~$ ls -la /var/run/docker.sock
+ls -la /var/run/docker.sock
+srw-rw---- 1 root docker 0 Mar 22 06:30 /var/run/docker.sock
+ben@kobold:~$
 ```
