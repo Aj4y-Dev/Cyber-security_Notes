@@ -126,3 +126,14 @@ ben@kobold:/usr/local/lib/node_modules/@mcpjam/inspector$ cat /home/ben/user.txt
 8ca2833835371c3d977200a6d0c01404
 ```
 
+privllage excllation:
+
+```
+ben@kobold:~$ id
+id
+uid=1001(ben) gid=1001(ben) groups=1001(ben),37(operator)
+ben@kobold:~$ groups
+groups
+ben operator
+
+```
