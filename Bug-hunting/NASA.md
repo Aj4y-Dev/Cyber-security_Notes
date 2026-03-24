@@ -103,7 +103,14 @@ ajdev@rootbox:~/nassa$ curl -v "https://api.mmt.earthdatacloud.nasa.gov/login?ta
 * Connection #0 to host api.mmt.earthdatacloud.nasa.gov left intact
 ```
 
-
+```
+s://dispserviceapi-725472350.auto.earthdatacloud.nasa.gov/get_frame_id \
+-H "Content-Type: application/json" \
+-d '{
+  "wkt": "POLYGON((-120 34, -120 36, -118 36, -118 34, -120 34))"
+}'
+{"frame_ids":["16940","16941","16942","36540","36541","36542"],"wkt":"POLYGON((-120 34, -120 36, -118 36, -118 34, -120 34))"}
+```
 
 
 
