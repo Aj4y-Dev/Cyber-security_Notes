@@ -159,4 +159,14 @@ ajdev@rootbox:~$ curl -v "https://api.somthing.com/login?target=%2F%2Fevil.com" 
 
 ajdev@rootbox:~$ echo "%257B%2522target%2522%253A%2522https%253A%252F%252Fevil.com%2522%257D" | python3 -c "import sys,urllib.parse; print(urllib.parse.unquote(urllib.parse.unquote(sys.stdin.read())))"
 {"target":"https://evil.com"}
+
+
+
+
+## Request for Confirmation
+I was unable to complete the full flow without test credentials. 
+Could the security team confirm whether the `target` value from `state` is used for post-auth redirection, 
+and if so, whether it is validated against an allowlist?
+
+
 ```
