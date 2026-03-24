@@ -148,25 +148,3 @@ ajdev@rootbox:~$ curl -X POST "https://dispserviceapi-725472350.aucurl -X POST "
 
 ```
 
-
-
-
-
-
-```
-ajdev@rootbox:~/nassa$ python3 - << 'EOF'
-import json
-coords = [[i, i] for i in range(20000)]
-geo = {"type": "LineString", "coordinates": coords}
-open("big.geojson","w").write(json.dumps(geo))
-EOF
-ajdev@rootbox:~/nassa$ time curl -X POST https://asfsearchvertex-3131310626.auto.earthdatacloud.nasa.gov/services/utils/files_to_wkt \
--F "files=@big.geojson"
-{"parsed wkt":"LINESTRING (0.0000000000000000 0.0000000000000000, 1.0000000000000000 1.0000000000000000, 2.0000000000000000 2.0000000000000000, 3.0000000000000000 3.0000000000000000, 4.0000000000000000 4.0000000000000000, 5.0000000000000000 
-same random workd
-19990.0000000000000000 19990.0000000000000000, 19991.0000000000000000 19991.0000000000000000, 19992.0000000000000000 19992.0000000000000000, 19993.0000000000000000 19993.0000000000000000, 19994.0000000000000000 19994.0000000000000000, 19995.0000000000000000 19995.0000000000000000, 19996.0000000000000000 19996.0000000000000000, 19997.0000000000000000 19997.0000000000000000, 19998.0000000000000000 19998.0000000000000000, 19999.0000000000000000 19999.0000000000000000)","wkt":{"unwrapped":"LINESTRING (0 0, -161 90)","wrapped":"LINESTRING (0 0, -161 90)"},"repairs":[{"type":"'type': 'CLAMP'","report":"'report': 'Clamped 1 value(s) to +/-90 latitude'"},{"type":"'type': 'GEOMETRY_SIMPLIFICATION'","report":"'report': 'Shape Simplified: shape of 20000 simplified to {coords_length} with proximity threshold of {threshold}'"}]}
-real	0m3.748s
-user	0m0.039s
-sys	0m0.014s
-ajdev@rootbox:~/nassa$
-```
