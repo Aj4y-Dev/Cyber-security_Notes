@@ -168,8 +168,6 @@ ajdev@rootbox:~$ echo "%257B%2522target%2522%253A%2522https%253A%252F%252Fevil.c
 {"target":"https://evil.com"}
 
 
-
-
 ## Request for Confirmation
 I was unable to complete the full flow without test credentials. 
 Could the security team confirm whether the `target` value from `state` is used for post-auth redirection, 
