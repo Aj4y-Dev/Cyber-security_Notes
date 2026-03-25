@@ -41,6 +41,8 @@ Register a FREE Earthdata account:
 https://urs.earthdata.nasa.gov/users/new
  
  but the site is not open ??
+ 
+ We are in the process of migrating all NASA Earth science data sites into Earthdata from now until end of 2026. Not all NASA Earth science data and resources will appear here until then. Thank you for your patience as we make this transition.
 
 
 ajdev@rootbox:~/nassa$ curl -v "https://api.mmt.earthdatacloud.nasa.gov/login?target=https://evil.com"
