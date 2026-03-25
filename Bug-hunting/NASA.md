@@ -37,6 +37,11 @@ ajdev@rootbox:~/nassa$ echo "%257B%2522target%2522%253A%2522https%253A%252F%252F
 
 Resource: https://github.com/nasa/mmt/blob/DRAFT-MMT/app/controllers/application_controller.rb
 
+Register a FREE Earthdata account:
+https://urs.earthdata.nasa.gov/users/new
+ 
+ but the site is not open ??
+
 
 ajdev@rootbox:~/nassa$ curl -v "https://api.mmt.earthdatacloud.nasa.gov/login?target=https://evil.com"
 * Host api.mmt.earthdatacloud.nasa.gov:443 was resolved.
