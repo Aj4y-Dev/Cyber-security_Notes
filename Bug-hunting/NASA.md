@@ -320,3 +320,54 @@ ajdev@rootbox:~$ curl -X POST "https://hitide.profile.podaac.earthdatacloud.nasa
 ajdev@rootbox:~$ curl -X POST "https://hitide.profile.podaac.earthdatacloud.nasa.gov/hitide/api/cmr/graphql" -H "Content-Type: application/json" --http2 -d '{"query":"{subscriptions(params:{}){count}}"}'
 {"data":{"subscriptions":{"count":0}}}
 ```
+
+```
+POST /hitide/api/cmr/graphql HTTP/2
+Host: hitide.profile.podaac.earthdatacloud.nasa.gov
+Accept: */*
+Access-Control-Request-Method: POST
+Content-Type: application/json
+Access-Control-Request-Headers: content-type
+Origin: https://hitide.podaac.earthdatacloud.nasa.gov
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+Sec-Fetch-Dest: empty
+Referer: https://hitide.podaac.earthdatacloud.nasa.gov/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Priority: u=1, i
+Content-Length: 72
+
+{"query": "{__schema{mutationType{name fields{name description}}}}"}
+```
+
+```
+HTTP/2 200 OK
+Content-Type: application/json; charset=utf-8
+Server: CloudFront
+Date: Thu, 26 Mar 2026 12:34:33 GMT
+Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Dns-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Xss-Protection: 0
+Access-Control-Allow-Origin: https://hitide.podaac.earthdatacloud.nasa.gov
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type
+X-Request-Id: 1zfIF6vIljveLX-cSe_aUSedZzbz45LkNlltJa0TW-JecAcsI3uOPQ==
+X-Cache: Miss from cloudfront
+Via: 1.1 3583c52a4f3fc89edf67d0227071f338.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR82-P2
+X-Amz-Cf-Id: 1zfIF6vIljveLX-cSe_aUSedZzbz45LkNlltJa0TW-JecAcsI3uOPQ==
+
+{"data":{"__schema":{"mutationType":{"name":"Mutation","fields":[{"name":"createAcl","description":"Create a new Acl."},{"name":"updateAcl","description":"Update an existing Acl."},{"name":"deleteAcl","description":"Delete an existing Acl."},{"name":"createAssociation","description":"Create a new Association."},{"name":"deleteAssociation","description":"Delete an existing Association."},{"name":"restoreCollectionRevision","description":"Restores a collection to a previous revision."},{"name":"deleteCollection","description":"Deletes a collection."},{"name":"restoreCitationRevision","description":null},{"name":"deleteCitation","description":null},{"name":"ingestDraft","description":"Ingest a draft."},{"name":"deleteDraft","description":"Delete a draft."},{"name":"publishDraft","description":"Publish a draft."},{"name":"createGroup","description":"Create a new group."},{"name":"deleteGroup","description":"Delete a group."},{"name":"updateGroup","description":"Update a group."},{"name":"createOrderOption","description":"Create a new order option."},{"name":"updateOrderOption","description":"Update an existing order option."},{"name":"deleteOrderOption","description":"Delete an existing order option."},{"name":"restoreServiceRevision","description":"Restore a service revision."},{"name":"deleteService","description":"Delete a service."},{"name":"createSubscription","description":"Create a new subscription."},{"name":"updateSubscription","description":"Update an existing subscription."},{"name":"deleteSubscription","description":"Delete an existing subscription."},{"name":"restoreToolRevision","description":"Restore a tool revision."},{"name":"deleteTool","description":"Delete a tool."},{"name":"publishGeneratedVariables","description":"Publish generated variables."},{"name":"restoreVariableRevision","description":"Restore a variable revision."},{"name":"deleteVariable","description":"Delete a variable."},{"name":"restoreVisualizationRevision","description":null},{"name":"deleteVisualization","description":null}]}}}}
+
+```
