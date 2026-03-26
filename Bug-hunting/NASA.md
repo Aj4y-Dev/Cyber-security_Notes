@@ -247,4 +247,7 @@ it redirect to :
 
 ![[Pasted image 20260326072417.png]]
 
-and then login it by the account of 
+and then login it by the account of EOSDIS Earthdata:
+
+![[Pasted image 20260326074205.png]]
+
