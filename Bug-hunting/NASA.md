@@ -300,4 +300,16 @@ as proof.
 {"query": "{__schema{mutationType{name fields{name description}}}}"}
 
 {"query": "{__schema{types{name}}}"}
+
+
+ajdev@rootbox:~$ curl -X POST "https://hitide.profile.podaac.earthdatacloud.nasa.gov/hitide/api/cmr/graphql" -H "Content-Type: application/json" --http2 -d '{"query":"{__type(name:\"DraftConceptType\"){enumValues{name}}}"}'
+{"data":{"__type":{"enumValues":[{"name":"Citation"},{"name":"Collection"},{"name":"Service"},{"name":"Tool"},{"name":"Variable"},{"name":"Visualization"}]}}}
+
+ajdev@rootbox:~$ curl -X POST "https://hitide.profile.podaac.earthdatacloud.nasa.gov/hitide/api/cmr/graphql" \
+-H "Content-Type: application/json" \
+--http2 \
+-d '{"query":"{drafts(params:{conceptType:Collection}){count}}"}'
+{"data":{"drafts":{"count":0}}}
+
+
 ```
