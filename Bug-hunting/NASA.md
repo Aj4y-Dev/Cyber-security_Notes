@@ -295,5 +295,9 @@ as proof.
 
 
 ```
+{"query": "{__schema{queryType{name}mutationType{name}types{name kind description fields{name description type{name kind ofType{name kind}}}}}}"}
 
+{"query": "{__schema{mutationType{name fields{name description}}}}"}
+
+{"query": "{__schema{types{name}}}"}
 ```
