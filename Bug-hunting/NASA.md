@@ -244,3 +244,12 @@ it redirect to :
 
 ![[Pasted image 20260326072417.png]]
 
+
+
+```
+ajdev@rootbox:~$ curl -v "https://api.mmt.uat.earthdatacloud.nasa.gov/login?target=https://bugcrowd.com" 2>&1 | grep -i "location"
+< location: https://uat.urs.earthdata.nasa.gov/oauth/authorize?response_type=code&client_id=zFb4tV63ET-V6-oRnDKmJg&redirect_uri=https%3A%2F%2Fapi.mmt.uat.earthdatacloud.nasa.gov%2Furs_callback&state=%257B%2522target%2522%253A%2522https%253A%252F%252Fbugcrowd.com%2522%257D
+
+
+
+```
