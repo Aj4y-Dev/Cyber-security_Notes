@@ -235,3 +235,12 @@ ajdev@rootbox:~$ curl -s -I https://www.jpl.nasa.gov/newsletter-signup/ | grep -
 devbahadur
 Sanjayrai4145@
 ```
+
+
+
+whn i go to https://api.mmt.uat.earthdatacloud.nasa.gov/login?target=https://bugcrowd.com 
+
+it redirect to :
+
+![[Pasted image 20260326072417.png]]
+
