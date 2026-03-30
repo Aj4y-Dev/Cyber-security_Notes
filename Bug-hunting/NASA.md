@@ -413,8 +413,19 @@ This allows:
   
 1. IDOR (Insecure Direct Object Reference)
    
-User Enumeration:
+2. User Enumeration:
 
 Sequential IDs: 10087,10088,10090
+Missing IDs return: 0
+
+3. Information Disclosure
+
+Extracted data includes:
+
+- Full Name
+- Organization (NASA / USGS)
+- Email address
   
+  
+
 ```
