@@ -426,6 +426,25 @@ Extracted data includes:
 - Organization (NASA / USGS)
 - Email address
   
-  
+Sample Response
+
+{
+  "title": "James (Jim) Smith",
+  "items": [
+    "NASA GSFC<br>USA<br><a href=\"mailto:james.a.smith@nasa.gov\">Email</a>"
+  ]
+}
+
+
+Proof of Concept:
+
+?programid=1&itemid=10088
+
+itemid=10088 → Valid user
+itemid=10090 → Different user
+itemid=10087 → Another user
+itemid=10000 → No data
+
 
 ```
+
