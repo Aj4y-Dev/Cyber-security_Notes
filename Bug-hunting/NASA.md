@@ -515,6 +515,8 @@ You can already:
 
 ```
 
+https://cce.nasa.gov/slideOverProfile/library/AjxDat_Obj.js
+
 AJAXDatObj = {
 
 	getData: function(theURL, alertMess){
@@ -624,4 +626,682 @@ AJAXDatObj = {
 	}
 
 }
+
+https://cce.nasa.gov/slideOverProfile/library/Uni_Slidein_Obj.js
+
+UI_Create = {
+
+	container_pars: {hold:'', top:'', bot:''},
+
+	linkSlideIn: function(hold, topHeight, bottomHeight){
+
+		UI_Create.container_pars['hold'] = hold;
+		UI_Create.container_pars['top'] = topHeight;
+		UI_Create.container_pars['bot'] = bottomHeight;
+
+		url_string = window.location.href;
+
+        var url = new URL(url_string);
+        var thisItemID = url.searchParams.get("projID");
+        var thisItemType = url.searchParams.get("projType");
+        var thisProgID = url.searchParams.get("progID");
+
+        if(thisItemID != null){ 
+          window.setTimeout(trigSlide, 800);
+        }
+
+        function trigSlide(){
+          UI_Create.init(thisItemID, thisItemType, thisProgID)
+        }
+
+
+	},
+
+	slideInHold: function(hold, topHeight, bottomHeight){
+
+
+		UI_Create.container_pars['hold'] = hold;
+		UI_Create.container_pars['top'] = topHeight;
+		UI_Create.container_pars['bot'] = bottomHeight;
+
+		$('.'+hold).children().wrapAll( "<div id='slidein_Holder' class='slidein_HolderStyle'></div>");
+
+		$('.itemLink').on('click', function(e){
+
+            e.stopImmediatePropagation();
+ 
+            thisItemID = this.getAttribute('data-itemID');
+            thisItemType = this.getAttribute('data-itemType');
+            thisItemProgram = this.getAttribute('data-itemprogramid');
+
+
+            UI_Create.init(thisItemID, thisItemType, thisItemProgram);
+ 
+            return false;
+ 
+        });
+
+	},
+
+
+	init: function(uid, type, prog){
+
+	        if(window.location.hostname.indexOf('-dev.gsfc') > 0){	
+			var cgihost = 'https://cce-dev.gsfc.nasa.gov';
+		}else{
+			var cgihost = 'https://cce.nasa.gov';
+		}
+
+		switch (type){
+			case 'member':
+				url = cgihost+"/cgi-bin/profile_slides/member_unislideover.pl?programid="+prog+"&itemid="+uid;
+				break;
+
+			case 'project':
+			
+				url = cgihost+"/cgi-bin/profile_slides/project_unislideover.pl?programid="+prog+"&itemid="+uid;
+				break;
+
+			case 'product':
+				url = cgihost+"/cgi-bin/profile_slides/product_unislideover.pl?programid="+prog+"&itemid="+uid;
+				break;
+		}
+
+		
+
+		scrollTopVal = $(window).scrollTop();
+		measTop = UI_Create.container_pars.top;
+
+
+		if(scrollTopVal <= measTop){
+			topVal = 0;
+		}else{
+
+			topVal = scrollTopVal - measTop;
+		}
+
+		 
+		uid = uid+'_'+Math.floor(Math.random() * 101);
+		w = this.slideIn(uid, url, topVal, type, prog);
+		return w;
+
+	},
+
+	slideContainerCreate: function(uid, stv, type, prog){
+
+		copuID = uid;
+
+		$('<div/>', {class: 'contAbs', id: 'ppDisCont_'+uid}).appendTo('#'+UI_Create.container_pars.hold);
+		$('#ppDisCont_'+uid).css({'top': stv, 'height': '100vh', 'z-index':500, 'left': 0})
+
+		$('<div/>', {class: 'ppDisTopStyle', id: 'ppDisContTop_'+uid}).appendTo('#ppDisCont_'+uid);
+    	$('<div/>', {class: 'ppDisTopTopStyle', id: 'ppDisContTopTop_'+uid}).appendTo('#ppDisContTop_'+uid);
+    	$('<div/>', {class: 'ppDisCloseStyle', id: 'ppDisCLoseHold_'+uid, title:'Close Window'}).appendTo('#ppDisContTopTop_'+uid);
+    	$('<div/>', {class: 'ppDisCopyHoldStyle', id: 'ppDisCopyHold_'+uid, title:'Copy URL'}).appendTo('#ppDisContTopTop_'+uid);
+    	$('#ppDisCopyHold_'+uid).css({'background-image': "url('https://cce-dev.gsfc.nasa.gov/slideOverProfile/assets/graphics/interface/copyIcon.png')", 'background-repeat':'no-repeat', 'background-position':'4px 4px'});
+    	$('<div/>', {class: 'ppDisTopTitleStyle', id: 'ppDisContTopTitle_'+uid}).appendTo('#ppDisContTopTop_'+uid);
+	    $('#ppDisContTopTitle_'+uid).html(type.toUpperCase());
+    	$('#ppDisCLoseHold_'+uid).css({'background-image': "url('https://cce-dev.gsfc.nasa.gov/slideOverProfile/assets/graphics/interface/slideClose.png')", 'background-repeat':'no-repeat', 'background-position':'4px 4px'});
+    	
+    	$('#ppDisCopyHold_'+uid).on('click', function(){
+
+    		url_strin = window.location.href;
+
+    		// url_str = url_strin.replace(/#/g,"")
+                var anchLoc = url_strin.indexOf('#');
+                if(anchLoc != -1){
+    		   url_str = url_strin.substring(0, url_strin.indexOf('#'));
+                } else {
+    		   url_str = url_strin;
+                }
+
+    		url_string_split = url_str.split('?');
+	        url_string = url_string_split[0];
+    		proj_id_split = uid.split('_');
+    		proj_id = proj_id_split[0];
+    		copyURL = url_string+"?projType="+type+"&projID="+proj_id+"&progID="+prog;
+
+			UI_Create.getSelectedCheckboxes(copyURL, uid);
+
+    	})
+
+    	$('#ppDisCLoseHold_'+uid).on('click', function(){
+
+			$('body').css('overflow-y', 'auto')
+			
+			$('#ppDisContentHold_'+uid).animate({
+		        	opacity: 0
+		        },300, function(){
+
+				$('#ppDisCont_'+uid).animate({
+		        	width: '0px',
+		        	opacity: 0
+		        },200, function(){
+
+		        	$('#ppDisCont_'+uid).remove();
+
+		        })
+
+			})	
+		})
+
+
+		return 'ppDisCont_'+uid
+
+	},
+
+	getSelectedCheckboxes: function (val, uid) {
+
+	  		var dummy = document.createElement("input");
+	  		document.body.appendChild(dummy);
+	  		dummy.setAttribute("id", "dummy_id");
+	  		document.getElementById("dummy_id").value=val;   
+	  		dummy.select();
+	  		try {
+
+	    		var successful = document.execCommand('copy');
+	    		var msg = successful ? 'successful' : 'unsuccessful';
+
+	    		$('#ppDisCopyHold_'+uid).css('background-color', '#efefef')
+	    		setInterval(function(){$('#ppDisCopyHold_'+uid).css('background-color', '#d7d7d7')  }, 1000);
+
+	  		} catch (err) {
+
+	  			$('#copyMsg_'+uid).html('failed')
+	    		console.log('Oops, unable to copy');
+
+	    		$('#ppDisCopyHold_'+uid).css('background-color', '#efefef')
+	    		setInterval(function(){$('#ppDisCopyHold_'+uid).css('background-color', '#ff0000')  }, 1000);
+	 		 }
+
+	  		document.body.removeChild(dummy);
+		},
+
+	contentCompose: function(contentHold, type, uid, url){
+
+		returnDat = AJAXDatObj.getData(url, 'failed');
+
+		retDat = returnDat.stuff;
+
+		console.log(retDat)
+
+		
+	
+		$('<div/>', {class: 'ppDisContentHoldStyle', id: 'ppDisContentHold_'+uid}).appendTo('#'+contentHold);
+
+
+		var contHeight = $('#'+UI_Create.container_pars.hold).outerHeight();
+		var contTop = $('#ppDisContentHold_'+uid).position();
+
+		var calcHeight = (contHeight - contTop.top)-10;
+
+		$('#ppDisContentHold_'+uid).css('height', calcHeight+'px');
+
+
+
+
+		d = document.getElementById('ppDisContentHold_'+uid);
+
+		scrollTopVal = $(window).scrollTop();
+		measTop = UI_Create.container_pars.top;
+		
+
+		if(scrollTopVal <= measTop){
+
+			botVal =UI_Create.container_pars.top + UI_Create.container_pars.bot;
+
+		}else{
+
+			botVal =  UI_Create.container_pars.bot;
+		}
+
+
+		$('#ppDisContentHold_'+uid).css({'height': 'calc(100vh - '+botVal+'px)'})
+
+		switch (type){
+			case 'member':
+			//	colStyle = [['col-md-3', 'col-md-9']];
+				colStyle = [['col-md-12'],['col-md-12']];
+				break;
+			case 'project':
+				//colStyle = [['col-md-12'],['col-md-8', 'col-md-4']];
+				colStyle = [['col-md-12'],['col-md-12']];
+				break;
+			case 'product':
+				//colStyle = [['col-md-12'],['col-md-8', 'col-md-4']];
+				colStyle = [['col-md-12'],['col-md-12']];
+				break;
+		}
+
+		rows =retDat.length;
+
+		
+
+		for(var a=0;a<rows;a++){
+
+
+			cols = retDat[a].row.length;
+
+			
+			$('<div/>', {class: 'rowHolderStyle', id: 'row_'+a+'_'+uid}).appendTo('#ppDisContentHold_'+uid);
+
+			for(var b=0;b<cols;b++){
+				
+				$('<div/>', {class: 'colHolderStyle', id: 'col_'+a+'_'+b+'_'+uid}).appendTo('#row_'+a+'_'+uid);
+
+				$('#col_'+a+'_'+b+'_'+uid).addClass(colStyle[a][b]);
+
+				sectLen = retDat[a].row[b].column.length
+
+				for(var c=0;c<sectLen;c++){
+
+					$('<div/>', {class: 'panelStyle', id:'panel_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#col_'+a+'_'+b+'_'+uid);
+
+
+					ct = retDat[a].row[b].column[c].panelCat;
+
+					UI_Create.panelCatFilter(ct, a, b, c, uid, type);
+
+				}
+
+			}
+
+		}
+
+	},
+
+	panelCatFilter: function(panelCat, a, b, c, uid, type){
+
+		console.log(panelCat)
+
+		switch (panelCat){
+
+			case 'woLabPanel':
+				$('<div/>', {class: 'uniSlidTitleStyle', id: 'contentTitle_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+				$('#contentTitle_'+uid).html(retDat[a].row[b].column[c].content.data);
+				break;
+
+			case 'wLabPanel':
+				$('<div/>', {class: 'titleStyle', id:'headerTitle_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+				$('<div/>', {class: 'contentStyle', id: 'content_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+
+				$('#headerTitle_'+a+'_'+b+'_'+c+'_'+uid).html(retDat[a].row[b].column[c].content.title);
+
+				contType = retDat[a].row[b].column[c].content.contentType;
+				charFlag = retDat[a].row[b].column[c].content.charLenFlag;
+
+				UI_Create.contentTypeFilter(contType, charFlag, a, b, c, uid, type, null);
+
+				break;
+
+			case 'tabPanel':
+
+				$('<div/>', {class: 'tabHoldStyle', id: 'tabHold_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+
+				$('<div/>', {class: 'contentStyle', id: 'content_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+				
+				var tabLen = retDat[a].row[b].column[c].content.data.length;
+
+				for(var d=0;d<tabLen;d++){
+
+					$('<div/>', {class: 'uniSlidInContMenuItemStyle', id: 'tabButt_'+a+'_'+b+'_'+c+'_'+d+'_'+uid, ind: d}).appendTo('#tabHold_'+a+'_'+b+'_'+c+'_'+uid);
+
+					var dat = retDat[a].row[b].column[c].content.data[d];
+
+					$('#tabButt_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).data('tabDat', dat);
+
+					$('#tabButt_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[d].label);
+
+					$('#tabButt_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).on('click', function(e){
+
+						$('#content_'+a+'_'+b+'_'+c+'_'+uid).empty();
+
+						$(this).siblings().removeClass('tabSelected')
+						$(this).addClass('tabSelected');
+
+						tabData = $(this).data('tabDat');
+
+						tabIndex = this.getAttribute('ind');
+					
+						contType = tabData.contentType;
+
+						UI_Create.contentTypeFilter(contType, null, a, b, c, uid, type, tabIndex, tabData);
+
+
+					})
+
+				}
+
+				$('#tabButt_'+a+'_'+b+'_'+c+'_'+0+'_'+uid).trigger('click');
+
+				break;
+
+		}
+
+	},
+
+	contentTypeFilter: function(contType, charFlag, a, b, c, uid, type, tabIndex, tabData){
+
+		switch(contType){
+
+			case 'string':
+
+				if(charFlag == 1){
+
+					ml_text = UI_Create.moreLess(retDat[a].row[b].column[c].content.data);
+
+					
+					$('#content_'+a+'_'+b+'_'+c+'_'+uid).html(ml_text);
+
+					var moretext = "more";
+					var lesstext = "less";
+
+					$(".morelink").click(function(){
+						if($(this).hasClass("less")) {
+						$(this).removeClass("less");
+						$(this).html(moretext);
+						} else {
+						$(this).addClass("less");
+						$(this).html(lesstext);
+						}
+						$(this).parent().prev().toggle();
+						$(this).prev().toggle();
+						return false;
+						});
+
+				}else if (charFlag == 0){
+
+						$('#content_'+a+'_'+b+'_'+c+'_'+uid).html(retDat[a].row[b].column[c].content.data);//[tabIndex].sect_content.data
+				}
+
+				break;
+		
+			case 'list':
+
+				for(var d=0;d<retDat[a].row[b].column[c].content.data.length;d++){
+					$('<div/>', {class: 'contentStyle', id: 'content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+					$('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[d]);
+				}
+
+				break;
+
+			case 'h_list':
+
+
+
+				if(tabIndex == null){
+					tabIndex = 0;
+					datLen = retDat[a].row[b].column[c].content.data[tabIndex].sect_content.length;
+
+				for(var d=0;d<datLen;d++){
+
+					$('<div/>', {class: 'listHeadStyle', id: 'content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+					$('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].title);
+
+					itemsLen = retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].items.length;
+					itemType = retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].itemType;
+
+					if(itemType == 'line'){
+						listClass = 'listItemStyle'
+					}else if(itemType == 'pill'){
+						listClass = 'contentIndentStyle'
+					}
+
+					for(var e=0;e<itemsLen;e++){
+						$('<div/>', {class: listClass, id: 'content_'+a+'_'+b+'_'+c+'_'+d+'_'+e+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+						$('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+e+'_'+uid).html(retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].items[e]);
+
+					}
+				}
+
+				}else{
+
+					datLen = tabData.sect_content.length;
+
+
+					if(tabData.itemFlags != undefined){
+
+
+						
+						keyflags = tabData.itemFlags[0];
+						keyflags_arr = Object.values(keyflags);
+
+						var sum = keyflags_arr.reduce(function(a,b){
+							return a + b;
+						}, 0)
+
+						if(sum > 0){
+
+
+
+							$('<div/>', {class: 'key_hold', id: 'key_hold_'+a+'_'+b+'_'+c+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+
+
+							if(tabData.itemFlags[0]['stm'] > 0){
+
+								$('<div/>', {class: 'key_item assoc_dot', id: 'key_item_'+a+'_'+b+'_'+c+'_'+uid+'_stm'}).appendTo('#key_hold_'+a+'_'+b+'_'+c+'_'+uid);
+								$('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_stm').html('Science Team Member')
+								$('<div/>', {class: 'dot_key sciteam_flag', id: 'sciteam_flag_'+a+'_'+b+'_'+c+'_'+uid}).prependTo('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_stm');
+								
+							}
+
+							
+							if(tabData.itemFlags[0]['sh'] > 0){
+
+								$('<div/>', {class: 'key_item assoc_dot', id: 'key_item_'+a+'_'+b+'_'+c+'_'+uid+'_sh'}).appendTo('#key_hold_'+a+'_'+b+'_'+c+'_'+uid);
+								$('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_sh').html('Stakeholder')
+								$('<div/>', {class: 'dot_key stake_flag', id: 'stakehold_flag_'+a+'_'+b+'_'+c+'_'+uid}).prependTo('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_sh');
+								
+							}
+
+							
+							if(tabData.itemFlags[0]['fi'] > 0){
+
+								$('<div/>', {class: 'key_item assoc_dot', id: 'key_item_'+a+'_'+b+'_'+c+'_'+uid+'_fi'}).appendTo('#key_hold_'+a+'_'+b+'_'+c+'_'+uid);
+								$('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_fi').html('Future Investigator')
+								$('<div/>', {class: 'dot_key futinv_flag', id: 'futinv_flag_'+a+'_'+b+'_'+c+'_'+uid}).prependTo('#key_item_'+a+'_'+b+'_'+c+'_'+uid+'_fi');
+
+							}
+
+						}
+
+					}
+
+
+
+					for(var d=0;d<datLen;d++){
+
+						$('<div/>', {class: 'listHeadStyle', id: 'content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+						$('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(tabData.sect_content[d].title);
+
+						
+
+						itemsLen = tabData.sect_content[d].items.length;
+						itemType = tabData.sect_content[d].itemType;
+						itemTitle = tabData.sect_content[d].title;
+
+						console.log(tabData.label)
+
+						if(itemType == 'line' && itemTitle == 'Abstract'){
+							listClass = 'listItemStyle listItemDis '
+						}else if(itemType == 'line' && tabData.label == 'Participants' ){
+							listClass = 'listItemStyle assoc_dot '
+						}else if(itemType == 'line'){
+							listClass = 'listItemStyle  '
+						}else if(itemType == 'pill'){
+							listClass = 'contentIndentStyle'
+						}
+
+						for(var e=0;e<itemsLen;e++){
+
+							
+
+
+							$('<div/>', {class: listClass, id: 'content_'+a+'_'+b+'_'+c+'_'+d+'_'+e+'_'+uid}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+							$('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+e+'_'+uid).html(tabData.sect_content[d].items[e]);
+
+							// console.log($('#content_'+a+'_'+b+'_'+c+'_'+d+'_'+e+'_'+uid).html(tabData.sect_content[d].items[e]))
+
+
+						}
+					}
+				}
+
+				break;
+
+			case 'link_list':
+
+				if(tabIndex == null){
+
+					tabIndex = 0;
+
+					datLen = retDat[a].row[b].column[c].content.data[tabIndex].sect_content.length;
+
+					for(var d=0;d<datLen;d++){
+
+						$('<a/>', {id: 'link_'+a+'_'+b+'_'+c+'_'+d+'_'+uid, href:'#', class:'itemLink', itemid: retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].link_itemID, itemtype:retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].link_itemType, itemprogramid:retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].link_progID}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+
+						$('<div/>',{class: 'linkListHoldStyle', id: 'contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#link_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+						$('<div/>',{class: 'contentH_TitleHStyle', id: 'contentH_TitleH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+						$('<div/>',{class: 'contentH_StatusHStyle', id: 'contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+
+						$('#contentH_TitleH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].title);
+
+						if(type == 'member'){
+							$('#contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].role);
+						}else{
+							$('#contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(retDat[a].row[b].column[c].content.data[tabIndex].sect_content[d].status);
+						}
+					}
+					
+				
+				}else{
+
+					datLen = tabData.sect_content.length;
+
+					for(var d=0;d<datLen;d++){
+
+						$('<a/>', {id: 'link_'+a+'_'+b+'_'+c+'_'+d+'_'+uid, href:'#', class:'itemLink', itemid: tabData.sect_content[d].link_itemID, itemtype:tabData.sect_content[d].link_itemType, itemprogramid:tabData.sect_content[d].link_progID}).appendTo('#content_'+a+'_'+b+'_'+c+'_'+uid);
+
+						$('<div/>',{class: 'linkListHoldStyle', id: 'contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#link_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+						$('<div/>',{class: 'contentH_TitleHStyle', id: 'contentH_TitleH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+						$('<div/>',{class: 'contentH_StatusHStyle', id: 'contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid}).appendTo('#contentHold_'+a+'_'+b+'_'+c+'_'+d+'_'+uid);
+
+						$('#contentH_TitleH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(tabData.sect_content[d].title);
+
+						if(type == 'member'){
+							$('#contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(tabData.sect_content[d].role);
+						}else{
+							$('#contentH_StatusH_'+a+'_'+b+'_'+c+'_'+d+'_'+uid).html(tabData.sect_content[d].status);
+						}
+					}
+
+				}
+
+				break;
+
+			case 'map':
+							
+				$('<div/>', {class: 'mapHolder', id: 'mapHold_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+				mapHold = 'mapHold_'+uid;
+
+				$('<div/>', {class: 'datTitleStyle', id:'datTitle_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+				$('<div/>', {class: 'dcEventListStyle', id:'dcEventList_'+uid}).appendTo('#panel_'+a+'_'+b+'_'+c+'_'+uid);
+
+				if(type == "project"){
+
+					if(retDat[a].row[b].column[c].content.map_flag == 1){
+						loadProjProfMap(mapHold, uid, "project", null, null, null);
+					}
+					
+				}else if(type == "product"){
+
+					globFlag = retDat[a].row[b].column[c].content.global_flag;
+					bbFlag = retDat[a].row[b].column[c].content.bb_flag;
+					bbCoords = retDat[a].row[b].column[c].content.bbCoordinates;
+					dcFlag = retDat[a].row[b].column[c].content.dc_flag;
+
+					if(retDat[a].row[b].column[c].content.map_flag == 1){
+						loadProjProfMap(mapHold, uid, "product", globFlag, bbFlag, bbCoords);
+					}
+				}
+
+				break;
+		
+			}
+
+			UI_Create.linkFunction();
+		
+	},
+
+	moreLess: function(text){
+
+		var showChar = 1300;
+		var ellipsestext = "...";
+		var moretext = "more";
+		var lesstext = "less";
+		var content = text;
+
+		if(content.length > showChar) {
+
+			var c = content.substr(0, showChar);
+			var h = content.substr(showChar-1, content.length - showChar);
+
+			var ml_text = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="#" class="morelink">'+moretext+'</a></span>';
+
+		}
+
+		return ml_text
+
+	}, 
+
+	slideIn: function(uid, url, stv, type, prog){
+
+
+
+
+		$('body').css('overflow-y', 'hidden');
+
+		slideContainer = this.slideContainerCreate(uid, stv, type, prog);
+
+		$('#'+slideContainer).css('top', stv)
+
+		$('#'+slideContainer).animate({
+	    	width: '100%',
+	    	opacity: 1
+
+	    },300, function(){
+
+			UI_Create.contentCompose(slideContainer, type, uid, url);
+
+	       	UI_Create.linkFunction();
+								
+	})
+
+	},
+
+	linkFunction: function(){
+
+		$('.itemLink').on('click', function(e){
+
+			e.stopImmediatePropagation();
+
+		    thisItemID = this.getAttribute('itemID');
+		    thisItemType = this.getAttribute('itemType');
+		    thisItemProgram = this.getAttribute('itemprogramid');
+
+			UI_Create.init(thisItemID, thisItemType, thisItemProgram);
+		   
+
+		    return false;
+
+		});
+
+
+	}
+
+
+
+
+}//END OF UI_CREATE
 ```
