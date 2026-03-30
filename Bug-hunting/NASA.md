@@ -456,12 +456,15 @@ This is where real pentesting starts: WAF Bypass
 1. No-space bypass
    
 10088/**/AND/**/1=1
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
+
 10088%09AND%091=1
 10088%0aAND%0a1=1
 
 2. Inline comment trick
    
 10088'/**/AND/**/1=1-- 
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
 
 3. Encoded payload
    
