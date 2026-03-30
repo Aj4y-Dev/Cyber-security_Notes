@@ -478,11 +478,22 @@ itemid=10088+1
 
 itemid=10088-1
 itemid=10088*1
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
+
 
 4. Try breaking logic without keywords
    
 itemid=10088'
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
+
 itemid=10088''
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: application/json; charset=ISO-8859-1
+Content-Length: 162
+
+<html><body><h2>Error!</h2><p>This application has encountered an error.  Contact <a   href="mailto:support@cce.nasa.gov">website support</a> for assistance.</a>
+
 itemid=10088'''
 
 
