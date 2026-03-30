@@ -479,4 +479,18 @@ itemid=10088'
 itemid=10088''
 itemid=10088'''
 
+
+IDOR + Bulk Data Extraction
+
+Strong P3 Path
+
+You can already:
+
+- Enumerate users (`itemid`)
+- Extract:
+    - Names
+    - Emails
+    - Organizations
+      
+
 ```
