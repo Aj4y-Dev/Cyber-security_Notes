@@ -401,5 +401,20 @@ NASA CCE API Enumeration
 Domain: https://cce.nasa.gov
 Endpoint: /cgi-bin/profile_slides/member_unislideover.pl
 
-Full Request Example: 
+Full Request Example: GET /cgi-bin/profile_slides/member_unislideover.pl?programid=1&itemid=10088
+
+The application exposes user profile data via a predictable numeric parameter (itemid) without authentication.
+
+This allows:
+
+- Unauthorized access to user data
+- Enumeration of multiple users
+- Extraction of sensitive information (emails, affiliations)
+  
+1. IDOR (Insecure Direct Object Reference)
+   
+User Enumeration:
+
+Sequential IDs: 10087,10088,10090
+  
 ```
