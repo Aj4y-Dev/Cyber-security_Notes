@@ -393,3 +393,13 @@ ajdev@rootbox:~$ curl -X POST "https://hitide.profile.podaac.earthdatacloud.nasa
 -d '{"query":"mutation { createSubscription(params:{name:\"test\", query:\"test\", type:\"email\"}){__typename} }"}'
 {"errors":[{"message":"#/Type: email is not a valid enum value","locations":[{"line":1,"column":12}],"path":["createSubscription"],"extensions":{"code":"CMR_ERROR","stacktrace":["GraphQLError: #/Type: email is not a valid enum value","    at _n (/var/task/index.js:4920:10099)","    at Hd.parseIngest (/var/task/index.js:4920:18275)","    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","    at async Object.M2e [as subscriptionSourceIngest] (/var/task/index.js:5024:29576)","    at async Object.createSubscription (/var/task/index.js:644:36821)","    at async r (/var/task/index.js:5024:39778)"]}}],"data":{"createSubscription":null}}
 ```
+
+
+NASA CCE API Enumeration
+
+```
+Domain: https://cce.nasa.gov
+Endpoint: /cgi-bin/profile_slides/member_unislideover.pl
+
+Full Request Example: 
+```
