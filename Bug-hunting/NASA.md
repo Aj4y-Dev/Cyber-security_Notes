@@ -511,3 +511,117 @@ You can already:
       
 
 ```
+
+
+```
+
+AJAXDatObj = {
+
+	getData: function(theURL, alertMess){
+
+		
+
+		var self = this;
+		
+		$.ajax({
+			url: theURL,
+			dataType: 'json',
+			async     :  false,
+			success: function(data){
+
+				self.dat = data;
+
+				
+
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(alertMess+':  '+textStatus, errorThrown);
+			}
+   		});
+
+   		return self.dat;
+
+	},
+
+	getData_concatVal: function(theURL, alertMess, concatVal){
+
+		var self = this;
+		
+		$.ajax({
+			url: theURL+concatVal,
+			dataType: 'json',
+			async     :  false,
+			success: function(data){
+
+				self.dat = data;
+
+				
+
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(alertMess+':  '+textStatus, errorThrown);
+			}
+   		});
+
+	},
+
+
+	sendData: function(theURL, theDat, alertMess, prodListGetURL, prodListAlert, prodListHolder, prodListHolderIDArr, succInd){
+
+		var self = this;
+
+		pdid = "";
+
+		snyc = $.ajax({
+			type: 'POST',
+			url: theURL,
+			contentType: 'application/json',
+			dataType: 'json',
+			async:  false,
+			data: JSON.stringify(theDat),
+
+			success: function(data){
+
+				pdid = data.product_id
+				Feedbacks.saveIndAniFunc(data.status, succInd);
+
+				CreateHTMLCombo.init(prodListGetURL, prodListAlert, prodListHolder, prodListHolderIDArr);
+				 
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(alertMess+':  '+jqXHR.status+' '+errorThrown+' '+jqXHR.responseText);
+			}
+   		});
+			return pdid
+	},
+
+
+	sendMessage: function(theURL, alertMess, prodListGetURL, prodListAlert, prodListHolder, prodListHolderIDArr){
+
+		var self = this;
+
+
+		
+		$.ajax({
+			url: theURL,
+			dataType: 'json',
+			async     :  false,
+			success: function(status){
+
+				//console.log(status);
+
+				CreateHTMLCombo.init(prodListGetURL, prodListAlert, prodListHolder, prodListHolderIDArr);
+				
+
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(alertMess+':  '+textStatus, errorThrown);
+			}
+   		});
+
+
+
+	}
+
+}
+```
