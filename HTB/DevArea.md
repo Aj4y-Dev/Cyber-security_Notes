@@ -299,3 +299,4 @@ python3 setuid(0) → root shell
 cat /root/root.txt 
 ```
 
+World-writable `/bin/bash` + sudo NOPASSWD on a script that calls it = replace bash with a malicious payload, run it as root, gain full system access.
