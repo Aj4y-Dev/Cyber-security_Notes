@@ -235,3 +235,19 @@ b26907b13d0b9feb29192f3178938a05
 ```
 
 
+now privllage excllation:
+
+```
+dev_ryan@devarea:~$ sudo -l
+sudo -l
+Matching Defaults entries for dev_ryan on devarea:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    use_pty
+
+User dev_ryan may run the following commands on devarea:
+    (root) NOPASSWD: /opt/syswatch/syswatch.sh, !/opt/syswatch/syswatch.sh
+        web-stop, !/opt/syswatch/syswatch.sh web-restart
+
+
+```
