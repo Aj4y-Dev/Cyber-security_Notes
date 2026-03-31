@@ -87,3 +87,35 @@ SF:");
 Service Info: Host: _; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+```
+# login in ftp by anonymous
+
+ajdev@rootbox:~$ ftp anonymous@10.129.21.35
+Connected to 10.129.21.35.
+220 (vsFTPd 3.0.5)
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering Extended Passive Mode (|||44433|)
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 Sep 22  2025 pub
+226 Directory send OK.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> ls -la
+229 Entering Extended Passive Mode (|||43577|)
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 Sep 22  2025 .
+drwxr-xr-x    3 ftp      ftp          4096 Sep 22  2025 ..
+-rw-r--r--    1 ftp      ftp       6445030 Sep 22  2025 employee-service.jar
+226 Directory send OK.
+ftp> get employee-service.jar
+local: employee-service.jar remote: employee-service.jar
+229 Entering Extended Passive Mode (|||46717|)
+150 Opening BINARY mode data connection for employee-service.jar (6445030 bytes).
+100% |************************************************************************************************************************************************************************************|  6293 KiB  398.89 KiB/s    00:00 ETA
+226 Transfer complete.
+6445030 bytes received in 00:15 (394.04 KiB/s)
+```
+
