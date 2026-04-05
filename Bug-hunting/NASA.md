@@ -614,4 +614,31 @@ ZTF10DD
 "rate": "80.1"      ← moving at 80 arc-seconds/minute (extremely fast)
 "neoScore": 100     ← 100% probability it's a NEO
 "vInf": "9.6"       ← approach velocity 9.6 km/s
+
+
+ajdev@rootbox:~/nassa$ for method in POST PUT DELETE PATCH OPTIONS HEAD TRACE; do
+  code=$(curl -s -o /dev/null -w "%{http_code}" -X $method \
+  "https://ssd-api.jpl.nasa.gov/scout.api?tdes=ZTF10DD")
+  echo "$method → $code"
+done
+POST → 200
+PUT → 405
+DELETE → 405
+PATCH → 405
+OPTIONS → 405
+HEAD → 405
+TRACE → 405
+ajdev@rootbox:~/nassa$ curl -s -I \
+  -H "Origin: https://attacker.com" \
+  -H "Access-Control-Request-Method: GET" \
+  "https://ssd-api.jpl.nasa.gov/scout.api" | grep -i "access-control"
+ajdev@rootbox:~/nassa$ curl -s -I "https://ssd-api.jpl.nasa.gov/scout.api"
+HTTP/2 405
+date: Sun, 05 Apr 2026 02:07:14 GMT
+content-type: application/json
+server: nginx
+set-cookie: AWSALBAPP-0=_remove_; Expires=Sun, 12 Apr 2026 02:07:14 GMT; Path=/
+set-cookie: AWSALBAPP-1=_remove_; Expires=Sun, 12 Apr 2026 02:07:14 GMT; Path=/
+set-cookie: AWSALBAPP-2=_remove_; Expires=Sun, 12 Apr 2026 02:07:14 GMT; Path=/
+set-cookie: AWSALBAPP-3=_remove_; Expires=Sun, 12 Apr 2026 02:07:14 GMT; Path=/
 ```
