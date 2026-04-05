@@ -808,3 +808,17 @@ Status: 200
 Status: 200
 {'caDist': '0.92', 'rmsN': '0.65', 'Vmag': '15.2', 'elong': '129', 'dec': '-40', 'rating': 0, 'phaScore': 0, 'rate': '78.3', 'tEphem': '2026-04-05 02:15', 'unc': '1200', 'moid': '0.001', 'signature': {'source': 'NASA/JPL Scout API', 'version': '1.3'}, 'uncP1': '1300', 'neoScore': 100, 'tisserandScore': 54, 'ieoScore': 0, 'neo1kmScore': 0, 'nObs': 4, 'ra': '15:36', 'H': '24.8', 'geocentricScore': 2, 'arc': '0.95', 'lastRun': '2026-04-04 17:45', 'objectName': 'ZTF10DD', 'vInf': '9.6'}
 ```
+
+```
+ajdev@rootbox:~/nassa$ python3 test.py
+obs 439 {"geocentricScore":0,"uncP1":"0.79","rmsN":"2.58","objectName":"ZTF10DC","tisserandScore":100,"rate":"12.4","unc":"0.14","nObs":6,"neoScore":100,"signature":{"version":"1.3","source":"NASA/JPL Scout A
+orbit 202 {"moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html","code":"400","message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'"
+summary 202 {"code":"400","message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html"
+ephem 202 {"code":"400","message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html"
+debug 202 {"code":"400","message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html"
+config 202 {"message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'","code":"400","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html"
+internal 202 {"code":"400","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/scout.html","message":"invalid value specified for query parameter 'file': file selection parameter must be 3-characters in length or 'list'"
+ajdev@rootbox:~/nassa$ curl "https://ssd-api.jpl.nasa.gov/scout.api?tdes=ZTF10DC&file=list"
+{"objectName":"ZTF10DC","lastRun":"2026-04-04 19:25","vInf":"44.6","arc":"13.25","H":"20.5","geocentricScore":0,"nObs":6,"ra":"08:24","neo1kmScore":0,"tisserandScore":100,"ieoScore":0,"neoScore":100,"signature":{"source":"NASA/JPL Scout API","version":"1.3"},"uncP1":"0.79","tEphem":"2026-04-05 02:15","unc":"0.14","moid":"0.005","elong":"112","dec":"+01","rating":0,"rate":"12.4","phaScore":100,"caDist":"27","rmsN":"2.58","Vmag":"18.6","file":{"mpc":{"name":"Observation File (MPC-format)","size":486}}}
+```
+
