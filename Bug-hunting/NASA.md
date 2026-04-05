@@ -609,5 +609,9 @@ ajdev@rootbox:~/nassa$ curl "https://ssd-api.jpl.nasa.gov/scout.api?tdes=ZTF10DD
 ```
 ZTF10DD
 
-
+"caDist": "0.92"    ← 0.92 Lunar Distances (very close!)
+"moid": "0.001"     ← 0.001 AU minimum orbit distance
+"rate": "80.1"      ← moving at 80 arc-seconds/minute (extremely fast)
+"neoScore": 100     ← 100% probability it's a NEO
+"vInf": "9.6"       ← approach velocity 9.6 km/s
 ```
