@@ -606,3 +606,8 @@ ajdev@rootbox:~/nassa$ curl "https://ssd-api.jpl.nasa.gov/scout.api?tdes=ZTF10DD
 {"arc":"0.95","vInf":"9.6","lastRun":"2026-04-04 17:45","objectName":"ZTF10DD","geocentricScore":2,"H":"24.8","neo1kmScore":0,"ra":"15:35","nObs":4,"ieoScore":0,"tisserandScore":54,"neoScore":100,"unc":"1200","moid":"0.001","tEphem":"2026-04-05 02:00","uncP1":"1300","signature":{"version":"1.3","source":"NASA/JPL Scout API"},"Vmag":"15.2","caDist":"0.92","rmsN":"0.65","rating":0,"rate":"80.1","phaScore":0,"elong":"129","dec":"-40"}
 ```
 
+```
+ZTF10DD
+
+
+```
