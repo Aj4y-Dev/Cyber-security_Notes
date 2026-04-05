@@ -514,6 +514,39 @@ You can already:
 
 
 ```
+ajdev@rootbox:~/nassa$ curl "https://ssd-api.jpl.nasa.gov/scout.api" | python3 -m json.tool | grep objectName
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 10452    0 10452    0     0   7755      0 --:--:--  0:00:01 --:--:--  7759
+            "objectName": "A11z2Ek",
+            "objectName": "A11zrA3",
+            "objectName": "A11ztfv",
+            "objectName": "C1CWP45",
+            "objectName": "C1DW8J5",
+            "objectName": "C1DX145",
+            "objectName": "C1E21V5",
+            "objectName": "C1E4UV5",
+            "objectName": "C1E87L5",
+            "objectName": "C1E8ZG5",
+            "objectName": "C1E9A15",
+            "objectName": "C1E9H35",
+            "objectName": "C1ECHV5",
+            "objectName": "C1EDJ35",
+            "objectName": "C1EG4F5",
+            "objectName": "C1EGNW5",
+            "objectName": "C1EHWQ5",
+            "objectName": "C1EHWT5",
+            "objectName": "C1EJK35",
+            "objectName": "CEFL3M2",
+            "objectName": "CEFXDG2",
+            "objectName": "JJDS467",
+            "objectName": "RdSH491",
+            "objectName": "Sar2887",
+            "objectName": "ZTF10Ct",
+            "objectName": "ZTF10Cw",
+            "objectName": "ZTF10DC",
+            "objectName": "ZTF10DD",
+            
 
 
 ```
