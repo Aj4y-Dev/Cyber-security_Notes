@@ -822,3 +822,31 @@ ajdev@rootbox:~/nassa$ curl "https://ssd-api.jpl.nasa.gov/scout.api?tdes=ZTF10DC
 {"objectName":"ZTF10DC","lastRun":"2026-04-04 19:25","vInf":"44.6","arc":"13.25","H":"20.5","geocentricScore":0,"nObs":6,"ra":"08:24","neo1kmScore":0,"tisserandScore":100,"ieoScore":0,"neoScore":100,"signature":{"source":"NASA/JPL Scout API","version":"1.3"},"uncP1":"0.79","tEphem":"2026-04-05 02:15","unc":"0.14","moid":"0.005","elong":"112","dec":"+01","rating":0,"rate":"12.4","phaScore":100,"caDist":"27","rmsN":"2.58","Vmag":"18.6","file":{"mpc":{"name":"Observation File (MPC-format)","size":486}}}
 ```
 
+
+
+```
+[ssd-api.jpl.nasa.gov/scout.api](http://ssd-api.jpl.nasa.gov/scout.api)? //not seen vlunerable  
+[ssd-api.jpl.nasa.gov/sentry.api](http://ssd-api.jpl.nasa.gov/sentry.api)?  
+[ssd-api.jpl.nasa.gov/sbdb_query.api](http://ssd-api.jpl.nasa.gov/sbdb_query.api)?  
+[ssd.jpl.nasa.gov/api/obs_location.api](http://ssd.jpl.nasa.gov/api/obs_location.api)?  
+[ssd.jpl.nasa.gov/api/horizons_file.api](http://ssd.jpl.nasa.gov/api/horizons_file.api)  
+[ssd.jpl.nasa.gov/sbwobs.api?info=all&sb-defs=all&www=1](http://ssd.jpl.nasa.gov/sbwobs.api?info=all&sb-defs=all&www=1)  
+[ssd-api.jpl.nasa.gov/sb_ident.api](http://ssd-api.jpl.nasa.gov/sb_ident.api)?  
+[ssd-api.jpl.nasa.gov/fireball.api?www=1&vel-comp=true](http://ssd-api.jpl.nasa.gov/fireball.api?www=1&vel-comp=true)  
+[ssd-api.jpl.nasa.gov//cad.api?diameter=1&dist-max=0.05&fullname=1&nea-comet=1&rating=1&total-only=1&www=1](http://ssd-api.jpl.nasa.gov//cad.api?diameter=1&dist-max=0.05&fullname=1&nea-comet=1&rating=1&total-only=1&www=1)
+
+Resource:
+
+[https://ssd-api.jpl.nasa.gov/doc/scout.html](https://ssd-api.jpl.nasa.gov/doc/scout.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sentry.html](https://ssd-api.jpl.nasa.gov/doc/sentry.html)  
+[https://ssd-api.jpl.nasa.gov/doc/horizons.html](https://ssd-api.jpl.nasa.gov/doc/horizons.html)  
+[https://ssd-api.jpl.nasa.gov/doc/jd_cal.html](https://ssd-api.jpl.nasa.gov/doc/jd_cal.html)  
+[https://ssd-api.jpl.nasa.gov/doc/periodic_orbits.html](https://ssd-api.jpl.nasa.gov/doc/periodic_orbits.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sb_ident.html](https://ssd-api.jpl.nasa.gov/doc/sb_ident.html)  
+[https://ssd-api.jpl.nasa.gov/doc/mdesign.html](https://ssd-api.jpl.nasa.gov/doc/mdesign.html)  
+[https://ssd-api.jpl.nasa.gov/doc/mdesign.html](https://ssd-api.jpl.nasa.gov/doc/mdesign.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sb_radar.html](https://ssd-api.jpl.nasa.gov/doc/sb_radar.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sb_sat.html](https://ssd-api.jpl.nasa.gov/doc/sb_sat.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sbdb.html](https://ssd-api.jpl.nasa.gov/doc/sbdb.html)  
+[https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html](https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html)
+```
