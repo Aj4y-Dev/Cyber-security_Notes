@@ -854,3 +854,27 @@ Resource:
 ```
 curl -s "https://54.189.208.253/sentry.api" -k -H "Host: ssd-api.jpl.nasa.gov"
 ```
+
+
+```
+"_api_7my6t_77"
+"/api/contacts"
+"/api/countries"
+"/api/dashboards"
+"apidom-file-cache"
+"/api/enums"
+"/api/facilities"
+"/api/feedback"
+"/api/file/"
+"apiInstance"
+"/api/keepAlive"
+"apiKeyAuth"
+"/api/organizations"
+"/api/presigned"
+"/api/programs"
+"/api/projects/"
+"/api/projects/enums"
+"/api/stateTerritories"
+"/api/technologyOutcomes"
+"/api/technologySuggestions"
+```
