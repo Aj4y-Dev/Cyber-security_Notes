@@ -906,5 +906,15 @@ https://www.whitehouse.gov/wp-content/uploads/2018/06/a11.pdf
 ". See http://momentjs.com/timezone/docs/#/data-loading/."
 `; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"
 
+"_unauthenticated_1v1gu_57"
+"Unauthorized Exception: "
+"UnlockAuthIcon"
+"UnlockAuthOperationIcon"
+"User interface and content navigation keystrokes"
+"Use the following keystrokes for more efficient navigation in the CKEditor 5 user interface."
+"Using My TechPort"
+"Using the TechPort API"
+"Using the TechPort Application Programming Interface (API)"
+
 
 ```
