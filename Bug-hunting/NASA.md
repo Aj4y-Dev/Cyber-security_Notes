@@ -1134,6 +1134,15 @@ GET  /api/projects/{projectId}.xml              ← XML format
 GET  /api/resources                              ← resource listing
 GET  /api/organizations                          ← org data
 GET  /api/taxonomy                               ← taxonomy tree
-
-
 ```
+
+|Test|Method|What You're Looking For|
+|---|---|---|
+|**IDOR**|`GET /api/projects/1` through `/api/projects/99999`|Missing authorization on sequential IDs|
+|**Verb tampering**|`POST/PUT/DELETE /api/projects/{id}`|Write access without auth|
+|**Mass assignment**|`PUT` with extra fields in body|Unexpected field acceptance|
+|**XML injection**|Malformed XML in `.xml` endpoints|Parser errors / XXE|
+|**Parameter pollution**|Duplicate params, array injection|Unexpected behavior|
+|**Error disclosure**|Invalid input, stack traces|Internal path/framework info|
+|**Rate limiting**|Rapid requests to `/api/projects`|DoS potential|
+|**Insecure Direct Object Reference**|Admin/internal project IDs|Data that shouldn't be public|
