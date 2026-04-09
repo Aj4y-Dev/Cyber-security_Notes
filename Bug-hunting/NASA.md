@@ -879,4 +879,16 @@ curl -s "https://54.189.208.253/sentry.api" -k -H "Host: ssd-api.jpl.nasa.gov"
 "/api/technologySuggestions"
 "findLastKey"
 "FLEX_FIELDS_API"
+
+
+"https://export.api3.fusioncharts.com/"
+"https://export.api3.fusioncharts.com/api/v1.0/logs"
+"https://github.com/zloirock/core-js"
+"https://github.com/zloirock/core-js/blob/v3.36.1/LICENSE"
+"https://github.com/zloirock/core-js/blob/v3.49.0/LICENSE"
+
+https://pl53eu7mmc.execute-api.us-gov-west-1.amazonaws.com/trex/predict
+https://nces.ed.gov/ipeds/datacenter/InstitutionByName.aspx
+
+
 ```
