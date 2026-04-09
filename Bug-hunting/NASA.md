@@ -850,3 +850,7 @@ Resource:
 [https://ssd-api.jpl.nasa.gov/doc/sbdb.html](https://ssd-api.jpl.nasa.gov/doc/sbdb.html)  
 [https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html](https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html)
 ```
+
+```
+curl -s "https://54.189.208.253/sentry.api" -k -H "Host: ssd-api.jpl.nasa.gov"
+```
