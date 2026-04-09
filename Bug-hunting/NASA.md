@@ -1123,3 +1123,17 @@ _workflowStatusContainer_1r8ui_78
 xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx
 zeroOrAutoZIndexOrTransformedOrOpacity
 ```
+
+
+```
+Base URL:  https://techport.nasa.gov/api/
+
+GET  /api/projects?updatedSince={YYYY-MM-DD}    ← returns project ID list
+GET  /api/projects/{projectId}                   ← returns full project data
+GET  /api/projects/{projectId}.xml              ← XML format
+GET  /api/resources                              ← resource listing
+GET  /api/organizations                          ← org data
+GET  /api/taxonomy                               ← taxonomy tree
+
+
+```
