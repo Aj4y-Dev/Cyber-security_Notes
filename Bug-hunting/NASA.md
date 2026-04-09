@@ -893,4 +893,9 @@ https://nces.ed.gov/ipeds/datacenter/InstitutionByName.aspx
 
 https://www.whitehouse.gov/wp-content/uploads/2018/06/a11.pdf
 
+"Please describe the NASA-funding technology. What does it do and how does it work?"
+"Please indicate a valid Swagger or OpenAPI version field. Supported version fields are "
+"Please see https://github.com/highlightjs/highlight.js/issues/2534"
+"Please see https://github.com/highlightjs/highlight.js/issues/2559"
+"Please see https://github.com/highlightjs/highlight.js/pull/2844"
 ```
