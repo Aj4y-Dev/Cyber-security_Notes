@@ -711,3 +711,31 @@ ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>
 }
 ```
 
+```
+## Report: Information Disclosure via Express Dev Mode
+
+**Target**: https://sciencecareers.apps.nasa.gov/  
+**Classification**: CWE-209 (Sensitive Info in Error Messages)  
+**Severity**: Medium (technical) / Informational (per NASA VDP policy)  
+
+### Finding Summary
+Application returns verbose stack traces containing server filesystem path:
+`C:\inetpub\wwwroot\ScienceCareerPath\`
+
+### Responsible Testing Performed
+✅ Confirmed: Path disclosure via malformed JSON request  
+✅ Tested: Path traversal attempts (`../../.env`) → blocked (404)  
+✅ Tested: Command injection payloads → no reflection/execution  
+✅ Tested: Non-existent API endpoints → proper 404 handling  
+
+### Impact Assessment
+- Direct impact: Low (reconnaissance data only)  
+- Potential impact: Medium *if* chained with other vulnerabilities (LFI, SSRF, etc.)  
+- Current exploitability: Not demonstrated; defensive controls appear effective  
+
+### Remediation Recommendation
+Set `NODE_ENV=production` and implement generic error handling to eliminate the root cause, regardless of current exploitability.
+
+### Researcher Statement
+Testing was limited to non-destructive verification per responsible disclosure principles. No attempts were made to access unauthorized data or escalate beyond minimal confirmation.
+```
