@@ -98,7 +98,3 @@ You don't have permission to access this resource.
 ```
 
 
-```
-https://sciencecareers.apps.nasa.gov
-
-```
