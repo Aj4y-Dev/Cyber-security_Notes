@@ -18,7 +18,8 @@ PORT   STATE SERVICE VERSION
 ```
 
 ```
-
+https://github.com/advisories/GHSA-wgpv-6j63-x5ph
+https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3gcm-f6qx-ff7p
 ```
 
 ```
