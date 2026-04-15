@@ -244,12 +244,291 @@ ajdev@rootbox:~/nassa$ nuclei -target https://sciencecareers.apps.nasa.gov/ \
 
 
 ```
-# IF the app makes HTTP requests based on user input:
-POST /api/fetch HTTP/1.1
-Content-Type: application/json
-
-{"url":"file:///C:/inetpub/wwwroot/ScienceCareerPath/config.js"}
-
-# OR Azure metadata endpoint:
-{"url":"http://169.254.169.254/metadata/identity/oauth2/token"}
+ajdev@rootbox:~/nassa$ curl https://sciencecareers.apps.nasa.gov/ | grep -oP '(?:src|href)="[^"]*\.js[^"]*"'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1001  100  1001    0     0    572      0  0:00:01  0:00:01 --:--:--   572
+href="/js/lazy.d55d0d21.js"
+href="/js/chunk-vendors.a4ccefc8.js"
+href="/js/index.045fcf2e.js"
+src="/js/chunk-vendors.a4ccefc8.js"
+src="/js/index.045fcf2e.js"
+ajdev@rootbox:~/nassa$ curl https://sciencecareers.apps.nasa.gov/js/index.045fcf2e.js | python3 -m json.tool 2>/dev/null
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  502k  100  502k    0     0  51855      0  0:00:09  0:00:09 --:--:-- 76853
+ajdev@rootbox:~/nassa$ curl https://sciencecareers.apps.nasa.gov/js/index.045fcf2e.js > index.js
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  502k  100  502k    0     0  85574      0  0:00:06  0:00:06 --:--:--  117k
+ajdev@rootbox:~/nassa$ cat index.js | grep -oP '["'"'"'`](/api/[^"'"'"'`\s]+)["'"'"'`]'
+ajdev@rootbox:~/nassa$ cat index.js | grep -oP 'https?://[a-zA-Z0-9./_-]+'
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+https://www.youtube.com/embed/H6kHoCSCZBI
+https://science.nasa.gov/
+https://www.nasa.gov/offices/odeo/no-fear-act
+https://www.nasa.gov/FOIA
+https://www.nasa.gov/about/highlights/HP_Privacy.html
+https://oig.nasa.gov/
+https://www.nasa.gov/budgets-plans-and-reports/
+https://osc.gov/
+https://www.nasa.gov/budgets-plans-and-reports/agency-financial-reports/
+https://www.nasa.gov/about/contact/index.html
+https://www.nasa.gov/general/accessibility/
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/1999/xlink
+http://localhost
+ajdev@rootbox:~/nassa$ cat index.js | grep -iE '(api_key|apikey|secret|token|password|auth|bearer|key=)["\s:=][^"&\s]{8,}'
+ajdev@rootbox:~/nassa$ curl https://sciencecareers.apps.nasa.gov/js/chunk-vendors.a4ccefc8.js > vendors.js
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1548k  100 1548k    0     0   150k      0  0:00:10  0:00:10 --:--:--  254k
+ajdev@rootbox:~/nassa$ cat vendors.js | grep -oP '"version"\s*:\s*"[^"]+"' | sort -u
+"version":"0.21.4"
+"version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"
+ajdev@rootbox:~/nassa$ npm audit --json 2>/dev/null
+{
+  "error": {
+    "code": "ENOLOCK",
+    "summary": "This command requires an existing lockfile.",
+    "detail": "Try creating one first with: npm i --package-lock-only\nOriginal error: loadVirtual requires existing shrinkwrap file"
+  }
+}
+ajdev@rootbox:~/nassa$ cat index.js | grep -oP 'path\s*:\s*["'"'"'][^"'"'"']+["'"'"']'
+path:"/"
+path:"/overview"
+path:"/home"
+path:"/position/:trackId/:careerLevelId/:positionLoc/:positionloctypeid?"
+path:"/location/:id"
+path:"/discipline/:id"
+path:"/center/:id"
+path:"/diagram/:id"
+path:"/careerlevel/:id"
+path:"/science-program-management"
+path:"/supervisory-roles"
+path:"/supervisory-roles-applied-physics-lab"
+path:"/supervisory-roles-jet-propulsion-lab"
+path:"/supervisory-roles-NASA-centers"
+path:"/supervisory-roles-HQ"
+path:"/research-analysis-application"
+path:"/mission"
+path:"/technology-development"
+path:"/themes/:id?"
+path:"details"
+path:"/activities/:id?"
+path:"details"
+path:"/MSN"
+path:"/SUP"
+path:"/RAA"
+path:"/SPM"
+path:"/TD"
+path:"/:catchAll(.*)"
+path:"/404/:resource"
+path:"/network-error"
+ajdev@rootbox:~/nassa$ cat index.js | grep -oP '(?:path|name)\s*:\s*["\047][^"\047]+["\047]'
+name:"TrackMission"
+name:"TrackSupervisory"
+name:"TrackResearch"
+name:"TrackTech"
+name:"ripple"
+name:"Legend"
+name:"ripple"
+name:"show"
+name:"show"
+name:"show"
+name:"show"
+name:"ripple"
+name:"Help"
+name:"Center"
+name:"Map"
+name:"MenuBar"
+name:"Footer"
+name:"ripple"
+name:"tracklevels"
+name:"ripple"
+name:"ripple"
+name:"Help"
+name:"App"
+name:"application-name"
+name:"description"
+name:"Home"
+name:"TrackScience"
+name:"TrackSupervisory"
+name:"TrackTech"
+name:"TrackResearch"
+name:"TrackMission"
+name:"Overview"
+name:"Roadmap"
+name:"Home"
+name:"ripple"
+name:"ripple"
+name:"linkified"
+name:"linkified"
+name:"Position"
+name:"Location"
+name:"ripple"
+name:"ripple"
+name:"Center"
+name:"Discipline"
+name:"Location"
+name:"ripple"
+name:"Discipline"
+name:"Center"
+name:"TrackResearch"
+name:"TrackMission"
+name:"TrackTech"
+name:"TrackSupervisory"
+name:"TrackScience"
+name:"SupervisoryAPL"
+name:"SupervisoryCenters"
+name:"SupervisoryCenters"
+name:"SupervisoryHQ"
+name:"TrackTech"
+name:"ripple"
+name:"Theme"
+name:"Themes"
+name:"ThemeOutcomeTasks"
+name:"Theme"
+name:"ripple"
+name:"Activity"
+name:"Activities"
+name:"show"
+name:"show"
+name:"Activity"
+name:"ripple"
+name:"Home"
+path:"/"
+name:"Overview"
+path:"/overview"
+path:"/home"
+name:"Position"
+path:"/position/:trackId/:careerLevelId/:positionLoc/:positionloctypeid?"
+name:"Location"
+path:"/location/:id"
+name:"Discipline"
+path:"/discipline/:id"
+name:"Center"
+path:"/center/:id"
+name:"Diagram"
+path:"/diagram/:id"
+name:"CareerLevel"
+path:"/careerlevel/:id"
+path:"/science-program-management"
+name:"TrackScience"
+path:"/supervisory-roles"
+name:"TrackSupervisory"
+path:"/supervisory-roles-applied-physics-lab"
+name:"TrackSupervisoryAppliedPhysicsLab"
+path:"/supervisory-roles-jet-propulsion-lab"
+name:"TrackSupervisoryJetPropulsionLab"
+path:"/supervisory-roles-NASA-centers"
+name:"TrackSupervisoryNASACenters"
+path:"/supervisory-roles-HQ"
+name:"TrackSupervisoryHQ"
+path:"/research-analysis-application"
+name:"TrackResearch"
+path:"/mission"
+name:"TrackMission"
+path:"/technology-development"
+name:"TrackTech"
+path:"/themes/:id?"
+name:"Themes"
+path:"details"
+name:"Theme"
+path:"/activities/:id?"
+name:"Activities"
+path:"details"
+name:"Activity"
+name:"MSN"
+path:"/MSN"
+name:"TrackMission"
+name:"SUP"
+path:"/SUP"
+name:"TrackSupervisory"
+name:"RAA"
+path:"/RAA"
+name:"TrackResearch"
+name:"SPM"
+path:"/SPM"
+name:"TrackScience"
+name:"TD"
+path:"/TD"
+name:"TrackTech"
+path:"/:catchAll(.*)"
+name:"NotFound"
+path:"/404/:resource"
+name:"404Resource"
+path:"/network-error"
+name:"NetworkError"
+name:"404Resource"
+name:"404Resource"
+name:"NetworkError"
+name:"404Resource"
+name:"404Resource"
+name:"NetworkError"
+name:"Position"
+name:"ButtonTrackToActivity"
+name:"Home"
+name:"Position"
+name:"TrackMission"
+name:"TrackResearch"
+name:"TrackSupervisory"
+name:"TrackScience"
+name:"TrackTech"
+name:"ripple"
+name:"linkified"
+name:"CareerLevel"
+ajdev@rootbox:~/nassa$ curl -s https://sciencecareers.apps.nasa.gov/ | grep -i "datalayer\|gtm\|ga4\|gtag"
+ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>&1 | head -30
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host sciencecareers.apps.nasa.gov:443 was resolved.
+* IPv6: (none)
+* IPv4: 32.195.161.92, 54.147.109.148
+*   Trying 32.195.161.92:443...
+* Connected to sciencecareers.apps.nasa.gov (32.195.161.92) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [104 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [3817 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
 ```
