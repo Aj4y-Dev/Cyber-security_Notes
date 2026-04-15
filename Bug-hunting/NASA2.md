@@ -138,7 +138,6 @@ ajdev@rootbox:~/nassa$ grep -Eoi "(\/(api|v1|v2|internal|admin|auth|debug|handle
 
 /auth-policy+xml
 /v1/apps/
-/admin
 /admin/access-requests
 /admin/access-role
 /admin/access-roles
@@ -159,12 +158,10 @@ ajdev@rootbox:~/nassa$ grep -Eoi "(\/(api|v1|v2|internal|admin|auth|debug|handle
 /admin/platform-summary-capability
 /admin/manage/service
 /api/drop-target-monitor
-/api/drag-source-monitor
-/api/drag-source-monitor
 /api/use-drag)
 /api.dip-dev.amesaero.nasa.gov/nasa/provider-metrics-service
 /admin/user
 /admin/manage/access-request
-/admin
-/admin
+
+
 ```
