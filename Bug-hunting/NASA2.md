@@ -712,30 +712,21 @@ ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>
 ```
 
 ```
-## Report: Information Disclosure via Express Dev Mode
+curl -s -X GET \
+  -H "Content-Type: application/json" \
+  -d "t" \
+  https://test.com/ \
+  -w "\nHTTP Status: %{http_code}\n"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token t in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:158:10)<br> &nbsp; &nbsp;at parse (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:83:15)<br> &nbsp; &nbsp;at C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:224:16)<br> &nbsp; &nbsp;at done (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1400:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
+</body>
+</html>
 
-**Target**: https://sciencecareers.apps.nasa.gov/  
-**Classification**: CWE-209 (Sensitive Info in Error Messages)  
-**Severity**: Medium (technical) / Informational (per NASA VDP policy)  
-
-### Finding Summary
-Application returns verbose stack traces containing server filesystem path:
-`C:\inetpub\wwwroot\ScienceCareerPath\`
-
-### Responsible Testing Performed
-✅ Confirmed: Path disclosure via malformed JSON request  
-✅ Tested: Path traversal attempts (`../../.env`) → blocked (404)  
-✅ Tested: Command injection payloads → no reflection/execution  
-✅ Tested: Non-existent API endpoints → proper 404 handling  
-
-### Impact Assessment
-- Direct impact: Low (reconnaissance data only)  
-- Potential impact: Medium *if* chained with other vulnerabilities (LFI, SSRF, etc.)  
-- Current exploitability: Not demonstrated; defensive controls appear effective  
-
-### Remediation Recommendation
-Set `NODE_ENV=production` and implement generic error handling to eliminate the root cause, regardless of current exploitability.
-
-### Researcher Statement
-Testing was limited to non-destructive verification per responsible disclosure principles. No attempts were made to access unauthorized data or escalate beyond minimal confirmation.
+HTTP Status: 400
 ```
