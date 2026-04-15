@@ -109,5 +109,16 @@ https://y2930e691h.execute-api.us-east-1.amazonaws.com/dev
 
 https://api.dip-dev.amesaero.nasa.gov/nasa/provider-metrics-service
 
+AUTH_AWS_COGNITO_USER_POOL_WEB_CLIENT_ID:"5lhh8qal42d9i475jhvu4rjoqp"
+AUTH_AWS_COGNITO_USER_POOL_ADMIN_GROUP:"administrators"
+AUTH_AWS_COGNITO_USER_POOL_WEB_CLIENT_ID:"5lhh8qal42d9i475jhvu4rjoqp"
+AUTH_AWS_COGNITO_USER_POOL_ADMIN_GROUP:"administrators"
+AUTH_AWS_COGNITO_USER_POOL_WEB_CLIENT_ID:"5lhh8qal42d9i475jhvu4rjoqp"
+AUTH_AWS_COGNITO_USER_POOL_ADMIN_GROUP:"administrators"
+AUTH_AWS_COGNITO_USER_POOL_WEB_CLIENT_ID:"5lhh8qal42d9i475jhvu4rjoqp"
+AUTH_AWS_COGNITO_USER_POOL_ADMIN_GROUP:"administrators"
+AUTH_AWS_COGNITO_USER_POOL_WEB_CLIENT_ID:"5lhh8qal42d9i475jhvu4rjoqp"
+AUTH_AWS_COGNITO_USER_POOL_ADMIN_GROUP:"administrators"
+
 
 ```
