@@ -12,9 +12,9 @@ https://partnerships.gsfc.nasa.gov/
 
 https://my.nasa.gov/
 https://reportapp.prosams.nasa.gov/
-[https://syndeia.test-clu1.oce.appdat.jsc.nasa.gov/web/](https://syndeia.test-clu1.oce.appdat.jsc.nasa.gov/web/)  
-[https://scdi.smce.nasa.gov/index.html](https://scdi.smce.nasa.gov/index.html)  
-[https://appeears.earthdatacloud.nasa.gov/](https://appeears.earthdatacloud.nasa.gov/)  
+https://syndeia.test-clu1.oce.appdat.jsc.nasa.gov/ 
+https://scdi.smce.nasa.gov/ 
+[https://appeears.earthdatacloud.nasa.gov/
 [https://partnerships.gsfc.nasa.gov/](https://partnerships.gsfc.nasa.gov/)  
 [https://opendap.uat.earthdata.nasa.gov/](https://opendap.uat.earthdata.nasa.gov/)  
 [https://science.gsfc.nasa.gov/](https://science.gsfc.nasa.gov/)  
