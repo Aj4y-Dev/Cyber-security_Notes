@@ -1,14 +1,9 @@
 ```
-[https://smap.jpl.nasa.gov/](https://smap.jpl.nasa.gov/) [#not](https://mail.google.com/mail/u/0/#m_7999792488617785523_not)  
-[https://ccmc.gsfc.nasa.gov/tools/](https://ccmc.gsfc.nasa.gov/tools/) [#april](https://mail.google.com/mail/u/0/#m_7999792488617785523_april) 16
-
-/ror/results/run_diff.php?run_id_1=SWMF_test'--&run_id_2=test  
-/ror/results/run_diff.php?run_id_1=SWMF_test&run_id_2=../../../etc/passwd  
-/ror/api/run_output_metadata.php?runnumber=../../../etc/passwd
-
-[https://lance4.modaps.eosdis.nasa.gov/](https://lance4.modaps.eosdis.nasa.gov/)  
-[https://lis.gsfc.nasa.gov/](https://lis.gsfc.nasa.gov/)  
-[https://adapt-public.aetc.appdat.jsc.nasa.gov/](https://adapt-public.aetc.appdat.jsc.nasa.gov/)  
+https://smap.jpl.nasa.gov/
+https://ccmc.gsfc.nasa.gov/tools/
+https://lance4.modaps.eosdis.nasa.gov/  
+https://lis.gsfc.nasa.gov/
+[https://adapt-public.aetc.appdat.jsc.nasa.gov/
 [https://modaps.modaps.eosdis.nasa.gov/](https://modaps.modaps.eosdis.nasa.gov/)  
 [https://swodlr.podaac.uat.earthdatacloud.nasa.gov/](https://swodlr.podaac.uat.earthdatacloud.nasa.gov/)  
 [https://earth.gsfc.nasa.gov/](https://earth.gsfc.nasa.gov/)  
