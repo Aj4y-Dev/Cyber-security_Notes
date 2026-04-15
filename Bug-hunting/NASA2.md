@@ -214,4 +214,14 @@ ajdev@rootbox:~$ curl -s -X GET \
 </html>
 
 HTTP Status: 400
+
+# Attacker now knows the exact web root path.
+# If ANY LFI vulnerability exists elsewhere:
+https://sciencecareers.apps.nasa.gov/download?file=../../../../../../inetpub/wwwroot/ScienceCareerPath/.env
+
+# Could leak:
+- Database credentials
+- API keys
+- AWS access tokens
+- Internal service endpoints
 ```
