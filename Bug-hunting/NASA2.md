@@ -724,9 +724,10 @@ curl -s -X GET \
 <title>Error</title>
 </head>
 <body>
-<pre>SyntaxError: Unexpected token t in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:158:10)<br> &nbsp; &nbsp;at parse (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:83:15)<br> &nbsp; &nbsp;at C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:224:16)<br> &nbsp; &nbsp;at done (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1400:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
+<pre>SyntaxError: Unexpected token t in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (C:\inetpub\wwwroot\filename\node_modules\body-parser\lib\types\json.js:158:10)<br> &nbsp; &nbsp;at parse (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:83:15)<br> &nbsp; &nbsp;at C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:224:16)<br> &nbsp; &nbsp;at done (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1400:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
 </body>
 </html>
 
 HTTP Status: 400
+
 ```
