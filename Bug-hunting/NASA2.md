@@ -558,4 +558,33 @@ ajdev@rootbox:~/nassa$ cat index.js | grep -oP '"/[a-zA-Z0-9/_-]{3,30}"' | grep 
 "/supervisory-roles-HQ"
 "/supervisory-roles-NASA-centers"
 "/technology-development"
+ajdev@rootbox:~/nassa$ curl https://sciencecareers.apps.nasa.gov/js/lazy.d55d0d21.js > lazy.js
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 38480  100 38480    0     0  22192      0  0:00:01  0:00:01 --:--:-- 22191
+ajdev@rootbox:~/nassa$ cat lazy.js | grep -oP 'https?://[a-zA-Z0-9./_-]+'
+ajdev@rootbox:~/nassa$ cat lazy.js | grep -iE '(api_key|apikey|secret|token|baseURL|VUE_APP)'
+ajdev@rootbox:~/nassa$ cat lazy.js | grep -oP 'path\s*:\s*["'"'"'][^"'"'"']+["'"'"']'
+ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>&1 | tail -20
+> Host: sciencecareers.apps.nasa.gov
+> User-Agent: curl/8.5.0
+> Accept: */*
+>
+{ [5 bytes data]
+< HTTP/2 405
+< server: awselb/2.0
+< date: Wed, 15 Apr 2026 13:44:43 GMT
+< content-type: text/html
+< content-length: 122
+<
+{ [122 bytes data]
+100   122  100   122    0     0     78      0  0:00:01  0:00:01 --:--:--    78
+* Connection #0 to host sciencecareers.apps.nasa.gov left intact
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+</body>
+</html>
 ```
+
