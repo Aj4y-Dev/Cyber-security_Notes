@@ -14,12 +14,12 @@ https://my.nasa.gov/
 https://reportapp.prosams.nasa.gov/
 https://syndeia.test-clu1.oce.appdat.jsc.nasa.gov/ 
 https://scdi.smce.nasa.gov/ 
-[https://appeears.earthdatacloud.nasa.gov/
-[https://partnerships.gsfc.nasa.gov/](https://partnerships.gsfc.nasa.gov/)  
-[https://opendap.uat.earthdata.nasa.gov/](https://opendap.uat.earthdata.nasa.gov/)  
-[https://science.gsfc.nasa.gov/](https://science.gsfc.nasa.gov/)  
-[https://nisar.asf.earthdatacloud.nasa.gov/](https://nisar.asf.earthdatacloud.nasa.gov/) [#imp](https://mail.google.com/mail/u/0/#m_7999792488617785523_imp)  
-[http://worldwind.arc.nasa.gov/](http://worldwind.arc.nasa.gov/)  
+https://appeears.earthdatacloud.nasa.gov/
+https://partnerships.gsfc.nasa.gov/
+https://opendap.uat.earthdata.nasa.gov/
+https://science.gsfc.nasa.gov/
+https://nisar.asf.earthdatacloud.nasa.gov/
+http://worldwind.arc.nasa.gov/  
 [https://robotics.nasa.gov/](https://robotics.nasa.gov/)  
 [https://science.gsfc.nasa.gov/606.1/SEDVME.html](https://science.gsfc.nasa.gov/606.1/SEDVME.html)  
 [https://winmd.appdat.jsc.nasa.gov/](https://winmd.appdat.jsc.nasa.gov/)  
