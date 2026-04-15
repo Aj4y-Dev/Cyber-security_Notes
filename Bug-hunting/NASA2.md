@@ -63,3 +63,12 @@ icons             [Status: 301, Size: 358, Words: 20, Lines: 10, Duration: 297ms
 local             [Status: 301, Size: 358, Words: 20, Lines: 10, Duration: 380ms]
 server-status     [Status: 403, Size: 300, Words: 20, Lines: 10, Duration: 360ms]
 ```
+
+
+```
+GET /cgi-bin/malo_select_model.py HTTP/1.1
+GET /cgi-bin/malo_select_date.py HTTP/1.1
+404 Not Found The requested URL was not found on this server.
+
+
+```
