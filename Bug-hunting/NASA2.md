@@ -215,13 +215,29 @@ ajdev@rootbox:~$ curl -s -X GET \
 
 HTTP Status: 400
 
-# Attacker now knows the exact web root path.
-# If ANY LFI vulnerability exists elsewhere:
-https://sciencecareers.apps.nasa.gov/download?file=../../../../../../inetpub/wwwroot/ScienceCareerPath/.env
+ajdev@rootbox:~/nassa$ nuclei -target https://sciencecareers.apps.nasa.gov/ \
+  -severity medium,high,critical \
+  -jsonl \
+  -o detailed-findings.jsonl
 
-# Could leak:
-- Database credentials
-- API keys
-- AWS access tokens
-- Internal service endpoints
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.7.1
+
+		projectdiscovery.io
+
+[WRN] Found 1 templates with runtime error (use -validate flag for further examination)
+[INF] Current nuclei version: v3.7.1 (latest)
+[INF] Current nuclei-templates version: v10.4.1 (latest)
+[INF] New templates added in latest release: 76
+[INF] Templates loaded for current scan: 5992
+[INF] Executing 5991 signed templates from projectdiscovery/nuclei-templates
+[WRN] Loading 1 unsigned templates for scan. Use with caution.
+[INF] Targets loaded for current scan: 1
+[INF] Templates clustered: 351 (Reduced 297 Requests)
+[INF] Using Interactsh Server: oast.fun
+{"template":"http/misconfiguration/node-express-dev-env.yaml","template-url":"https://cloud.projectdiscovery.io/public/node-express-dev-env","template-id":"node-express-dev-env","template-path":"/home/ajdev/nuclei-templates/http/misconfiguration/node-express-dev-env.yaml","info":{"name":"Node.js Express NODE_ENV Development Mode","author":["flx"],"tags":["nodejs","express","misconfig","devops","cicd","trace","vuln"],"description":"The Node.js application runs in development mode, which can expose sensitive information, such as source code and secrets, depending on the application.\n","reference":["https://www.invicti.com/web-vulnerability-scanner/vulnerabilities/express-development-mode-is-enabled/","https://www.synopsys.com/blogs/software-security/nodejs-mean-stack-vulnerabilities.html"],"severity":"medium","metadata":{"verified":true,"max-request":2,"shodan-query":"X-Powered-By: Express"}},"type":"http","host":"sciencecareers.apps.nasa.gov","port":"443","scheme":"https","url":"https://sciencecareers.apps.nasa.gov/","path":"/","matched-at":"https://sciencecareers.apps.nasa.gov/","request":"GET / HTTP/1.1\r\nHost: sciencecareers.apps.nasa.gov\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0\r\nContent-Length: 1\r\nConnection: close\r\nContent-Type: application/json\r\nAccept-Encoding: gzip\r\n\r\nt","response":"HTTP/1.1 400 Bad Request\r\nConnection: close\r\nContent-Length: 1143\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Wed, 15 Apr 2026 12:23:47 GMT\r\nStrict-Transport-Security: max-age=31536000\r\nX-Content-Type-Options: nosniff\r\nX-Powered-By: Express\r\nX-Powered-By: ARR/3.0\r\n\r\n\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n\u003cmeta charset=\"utf-8\"\u003e\n\u003ctitle\u003eError\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n\u003cpre\u003eSyntaxError: Unexpected token t in JSON at position 0\u003cbr\u003e \u0026nbsp; \u0026nbsp;at JSON.parse (\u0026lt;anonymous\u0026gt;)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at createStrictSyntaxError (C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\body-parser\\lib\\types\\json.js:158:10)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at parse (C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\body-parser\\lib\\types\\json.js:83:15)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\body-parser\\lib\\read.js:121:18\u003cbr\u003e \u0026nbsp; \u0026nbsp;at invokeCallback (C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\raw-body\\index.js:224:16)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at done (C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\raw-body\\index.js:213:7)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at IncomingMessage.onEnd (C:\\inetpub\\wwwroot\\ScienceCareerPath\\node_modules\\raw-body\\index.js:273:7)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at IncomingMessage.emit (node:events:517:28)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at endReadableNT (node:internal/streams/readable:1400:12)\u003cbr\u003e \u0026nbsp; \u0026nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\u003c/pre\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n","ip":"54.147.109.148","timestamp":"2026-04-15T18:08:47.881691743+05:45","curl-command":"curl -X 'GET' -d 't' -H 'Connection: close' -H 'Content-Type: application/json' -H 'Host: sciencecareers.apps.nasa.gov' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0' 'https://sciencecareers.apps.nasa.gov/'","matcher-status":true}
+[INF] Scan completed in 7m. 1 matches found.
 ```
