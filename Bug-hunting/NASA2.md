@@ -715,7 +715,7 @@ ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>
 curl -s -X GET \
   -H "Content-Type: application/json" \
   -d "t" \
-  https://test.com/ \
+  https://subdomain.test.com/ \
   -w "\nHTTP Status: %{http_code}\n"
 <!DOCTYPE html>
 <html lang="en">
