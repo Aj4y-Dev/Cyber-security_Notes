@@ -17,9 +17,19 @@ PORT   STATE SERVICE VERSION
 |_  Supported Methods: GET HEAD POST OPTIONS
 ```
 
+```
+
+```
 
 ```
 ben: r04D!!_R4ge
+```
+
+
+```
+ssh tunnel
+
+ssh -N -f -L 3001:127.0.0.1:3001 ben@<TARGET_IP>
 ```
 
 ```
