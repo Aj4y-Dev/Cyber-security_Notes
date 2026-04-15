@@ -38,15 +38,15 @@ https://technology.nasa.gov/
 https://geo.iss.czdt.smce.nasa.gov/
 https://geopotential.sciencecloud.nasa.gov/ [#ubuntu]  
 
-[https://etd.gsfc.nasa.gov/capabilities/core-flight-system/](https://etd.gsfc.nasa.gov/capabilities/core-flight-system/)  
-[https://sciencecareers.apps.nasa.gov/#/](https://sciencecareers.apps.nasa.gov/#/) [#nodeExpress] windows  
-[https://nek.ksc.nasa.gov/#!/Home/Facilities](https://nek.ksc.nasa.gov/#!/Home/Facilities)  
-[http://hdrl.gsfc.nasa.gov/](http://hdrl.gsfc.nasa.gov/)  
-[https://nasa-communities.org/clubs/ames-radio/](https://nasa-communities.org/clubs/ames-radio/)  
-[https://oceandata.sci.gsfc.nasa.gov/](https://oceandata.sci.gsfc.nasa.gov/)  
-[https://disc.gsfc.nasa.gov/information?page=1&keywords=acdisc](https://disc.gsfc.nasa.gov/information?page=1&keywords=acdisc)  
-[https://etd.gsfc.nasa.gov/](https://etd.gsfc.nasa.gov/)  
-[https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
+https://etd.gsfc.nasa.gov/ 
+https://sciencecareers.apps.nasa.gov/ [#nodeExpress] windows  
+https://nek.ksc.nasa.gov/ 
+http://hdrl.gsfc.nasa.gov/
+https://nasa-communities.org/ 
+https://oceandata.sci.gsfc.nasa.gov/ 
+https://disc.gsfc.nasa.gov/ 
+https://etd.gsfc.nasa.gov/
+[https://heliophysicsdata.gsfc.nasa.gov/
 ```
 
 
