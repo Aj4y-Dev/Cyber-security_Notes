@@ -32,12 +32,12 @@ https://aeronauticsprojects.arc.nasa.gov/
 https://software.nasa.gov/
 https://partnerships.gsfc.nasa.gov/
 https://carbon.nasa.gov/
-https://public.ksc.nasa.gov/cct/](https://public.ksc.nasa.gov/cct/)  
-[https://opsci.smce.nasa.gov/](https://opsci.smce.nasa.gov/)  
-[https://technology.nasa.gov/](https://technology.nasa.gov/)  
-[https://geo.iss.czdt.smce.nasa.gov/?mission=CoastalZone](https://geo.iss.czdt.smce.nasa.gov/?mission=CoastalZone)
+https://public.ksc.nasa.gov/  
+https://opsci.smce.nasa.gov/
+https://technology.nasa.gov/  
+https://geo.iss.czdt.smce.nasa.gov/
+https://geopotential.sciencecloud.nasa.gov/ [#ubuntu]  
 
-[https://geopotential.sciencecloud.nasa.gov/](https://geopotential.sciencecloud.nasa.gov/) [#ubuntu](https://mail.google.com/mail/u/0/#m_7999792488617785523_ubuntu)  
 [https://etd.gsfc.nasa.gov/capabilities/core-flight-system/](https://etd.gsfc.nasa.gov/capabilities/core-flight-system/)  
 [https://sciencecareers.apps.nasa.gov/#/](https://sciencecareers.apps.nasa.gov/#/) [#nodeExpress] windows  
 [https://nek.ksc.nasa.gov/#!/Home/Facilities](https://nek.ksc.nasa.gov/#!/Home/Facilities)  
