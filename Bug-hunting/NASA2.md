@@ -532,3 +532,30 @@ ajdev@rootbox:~/nassa$ curl -X TRACE https://sciencecareers.apps.nasa.gov/ -v 2>
 * TLSv1.2 (IN), TLS handshake, Finished (20):
 { [16 bytes data]
 ```
+
+```
+ajdev@rootbox:~/nassa$ cat index.js | grep -oP '"/[a-zA-Z0-9/_-]{3,30}"' | grep -v 'svg\|xlink\|xmlns' | sort -u
+"/activities/"
+"/all"
+"/careerlevel/"
+"/details"
+"/diagram/"
+"/discipline/"
+"/handler/sciencecareerpath"
+"/home"
+"/location/"
+"/mission"
+"/MSN"
+"/network-error"
+"/overview"
+"/RAA"
+"/research-analysis-application"
+"/sankey"
+"/science-program-management"
+"/SPM"
+"/SUP"
+"/supervisory-roles"
+"/supervisory-roles-HQ"
+"/supervisory-roles-NASA-centers"
+"/technology-development"
+```
