@@ -70,6 +70,9 @@ GET /cgi-bin/malo_select_model.py HTTP/1.1
 GET /cgi-bin/malo_select_date.py HTTP/1.1
 GET /cgi-bin/malo_download.py HTTP/1.1
 GET /cgi-bin/malo_get_file.py HTTP/1.1
+GET /cgi-bin/malo_list.py HTTP/1.1
+
+
 404 Not Found The requested URL was not found on this server.
 
 
