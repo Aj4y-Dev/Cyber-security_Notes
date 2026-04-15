@@ -76,8 +76,11 @@ GET /cgi-bin/malo_list.py HTTP/1.1
 404 Not Found The requested URL was not found on this server.
 
 GET /cgi-bin/.htaccess HTTP/1.1
-403 Forbidden You don't have permission to access this resource.
+403 Forbidden You don't have permission to access this resource
 
+/robots.txt not found 
+
+GET /imls/vgep/ HTTP/1.1
 
 
 ```
