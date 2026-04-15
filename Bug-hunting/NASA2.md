@@ -97,6 +97,22 @@ You don't have permission to access this resource.
  /imls/vgep/nto/mpiom07/nto_mpiom07_20190521_0000.agr res file
 ```
 
+```
+GET /cgi-bin/malo_select_file.py?model=nto_mpiom07&start_date=2019-05-21&stop_date=2025-08-04&format=url_list&submit=Get+list&product=%252e%252e%252fetc&type=%252e%252e%252fetc&origin=%252e%252e%252fetc HTTP/1.1 res is 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML LANG="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</HEAD
+<BODY>
+<PRE>
+</PRE>
+<B>No files</B> were found. Please change your search criteria.
+</BODY>
+</HTML>
+```
+
 
 ```
 https://www.dip-dev.amesaero.nasa.gov
