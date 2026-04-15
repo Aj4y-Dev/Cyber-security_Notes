@@ -729,5 +729,13 @@ curl -s -X GET \
 </html>
 
 HTTP Status: 400
+```
 
 ```
+/                 [Status: 200, Size: 1001, Words: 50, Lines: 1, Duration: 408ms]
+.                 [Status: 200, Size: 1001, Words: 50, Lines: 1, Duration: 408ms]
+?                 [Status: 200, Size: 1001, Words: 50, Lines: 1, Duration: 408ms]
+\                 [Status: 200, Size: 1001, Words: 50, Lines: 1, Duration: 399ms]
+#                 [Status: 200, Size: 1001, Words: 50, Lines: 1, Duration: 409ms]
+```
+
