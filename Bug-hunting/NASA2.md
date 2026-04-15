@@ -20,9 +20,9 @@ https://opendap.uat.earthdata.nasa.gov/
 https://science.gsfc.nasa.gov/
 https://nisar.asf.earthdatacloud.nasa.gov/
 http://worldwind.arc.nasa.gov/  
-[https://robotics.nasa.gov/](https://robotics.nasa.gov/)  
-[https://science.gsfc.nasa.gov/606.1/SEDVME.html](https://science.gsfc.nasa.gov/606.1/SEDVME.html)  
-[https://winmd.appdat.jsc.nasa.gov/](https://winmd.appdat.jsc.nasa.gov/)  
+https://robotics.nasa.gov/
+https://science.gsfc.nasa.gov/ 
+https://winmd.appdat.jsc.nasa.gov/
 [https://istcolloq.gsfc.nasa.gov/](https://istcolloq.gsfc.nasa.gov/)  
 [https://plus.nasa.gov/](https://plus.nasa.gov/)  
 [https://glam1.gsfc.nasa.gov/](https://glam1.gsfc.nasa.gov/)  
