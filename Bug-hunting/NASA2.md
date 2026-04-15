@@ -53,3 +53,11 @@
 [https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
 ```
 
+
+```
+cgi-bin           [Status: 301, Size: 360, Words: 20, Lines: 10, Duration: 382ms]
+javascript        [Status: 301, Size: 363, Words: 20, Lines: 10, Duration: 362ms]
+icons             [Status: 301, Size: 358, Words: 20, Lines: 10, Duration: 297ms]
+local             [Status: 301, Size: 358, Words: 20, Lines: 10, Duration: 380ms]
+server-status     [Status: 403, Size: 300, Words: 20, Lines: 10, Duration: 360ms]
+```
