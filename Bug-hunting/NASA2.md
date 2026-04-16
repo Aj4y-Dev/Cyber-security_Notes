@@ -738,6 +738,12 @@ https://etd.gsfc.nasa.gov/wp-admin/maint/repair.php
 /wp-json/wp/v2/pages
 /wp-json/wp/v2/media
 
+
+
+[CVE-2024-2473] [http] [medium] https://plus.nasa.gov/wp-admin/?action=postpass
+[CVE-2024-2473] [http] [medium] https://opsci.smce.nasa.gov/wp-admin/?action=postpass
+[CVE-2024-2473] [http] [medium] https://robotics.nasa.gov/wp-admin/?action=postpass
+[CVE-2024-2473] [http] [medium] https://public.ksc.nasa.gov/wp-admin/?action=postpass
 ```
 
 
