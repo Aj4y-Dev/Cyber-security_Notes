@@ -9,7 +9,6 @@ https://swodlr.podaac.uat.earthdatacloud.nasa.gov/
 https://earth.gsfc.nasa.gov/
 https://sdac.virtualsolar.org/
 https://partnerships.gsfc.nasa.gov/ 
-
 https://my.nasa.gov/
 https://reportapp.prosams.nasa.gov/
 https://syndeia.test-clu1.oce.appdat.jsc.nasa.gov/ 
