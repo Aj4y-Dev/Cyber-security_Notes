@@ -738,4 +738,6 @@ https://etd.gsfc.nasa.gov/wp-admin/maint/repair.php
 /wp-json/wp/v2/users
 /wp-json/wp/v2/pages
 /wp-json/wp/v2/media
+
+	[CVE-2023-5089] [http] [medium] https://partnerships.gsfc.nasa.gov/?gf_page=randomstring ["https://partnerships.gsfc.nasa.gov/code102/?redirect_to=https%3A%2F%2Fpartnerships.gsfc.nasa.gov%2F%3Fgf_page%3Drandomstring&reauth=1"]
 ```
