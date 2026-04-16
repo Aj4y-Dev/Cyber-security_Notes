@@ -42,7 +42,6 @@ https://etd.gsfc.nasa.gov/
 https://sciencecareers.apps.nasa.gov/ [#nodeExpress] windows  
 https://nek.ksc.nasa.gov/ 
 http://hdrl.gsfc.nasa.gov/
-https://nasa-communities.org/ 
 https://oceandata.sci.gsfc.nasa.gov/ 
 https://disc.gsfc.nasa.gov/ 
 https://etd.gsfc.nasa.gov/
