@@ -733,7 +733,7 @@ https://vulners.com/openvas/OPENVAS:1361412562310114542
 
 ```
 https://etd.gsfc.nasa.gov/wp-admin/maint/repair.php
-https://opsci.smce.nasa.gov # user
+https://opsci.smce.nasa.gov/wp-json/wp/v2/users # user
 
 /wp-json/wp/v2/users
 /wp-json/wp/v2/pages
