@@ -797,4 +797,6 @@ Contact: ajaytamang4145@gmail.com
 
 VDP Authorization:  
 This testing was conducted under the NASA Vulnerability Disclosure Policy (VDP) as part of authorized security research. The researcher is a registered participant in the NASA VDP and has complied with all scope, testing, and reporting guidelines. No systems were accessed beyond the scope permitted by the VDP.
+
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
 ```
