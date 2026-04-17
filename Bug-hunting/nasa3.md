@@ -49,7 +49,7 @@ Wordpress_Prod_Admin
 https://opsci.smce.nasa.gov/wp-json/wp/v2/users # user
 
 https://etd.gsfc.nasa.gov/wp-admin/maint/repair.php
-
+https://etd.gsfc.nasa.gov/wp-admin/setup-config.php?step=1
 gsfc_admin: admin name
 
 /wp-json/wp/v2/users
