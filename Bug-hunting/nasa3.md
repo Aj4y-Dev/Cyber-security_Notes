@@ -43,5 +43,11 @@ https://wallops-prf.gsfc.nasa.gov/
 ```
 [CVE-2024-2473] [http] [medium] https://public.ksc.nasa.gov/publichealth/wp-admin/?action=postpass
 
+https://etd.gsfc.nasa.gov/wp-admin/maint/repair.php
+https://opsci.smce.nasa.gov/wp-json/wp/v2/users # user
+
+/wp-json/wp/v2/users
+/wp-json/wp/v2/pages
+/wp-json/wp/v2/media
 
 ```
