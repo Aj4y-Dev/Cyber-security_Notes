@@ -58,6 +58,8 @@ gsfc_admin: admin name
 /wp-json/wp/v2/posts
 /wp-json/wp/v2/tags
 
+/xml
+
 [google-api-key] [http] [info] https://oh.larc.nasa.gov/oh/ ["AIzaSyCk3pgpD7C1PCH-_bgi31F_0VOj8g9Ora0"]
 
 [CVE-2025-8848] [http] [medium] https://chat.development.luna.nasa.gov/login/
