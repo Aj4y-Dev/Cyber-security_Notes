@@ -32,7 +32,7 @@ https://simplex.giss.nasa.gov/
 https://volga.arc.nasa.gov/
 https://epic.gsfc.nasa.gov/
 https://acd-ext.gsfc.nasa.gov/
-https://wiki.czdt.smce.nasa.gov/
+https://wiki.czdt.smce.nasa.gov/ # debian
 https://www.giss.nasa.gov/edu/icp/
 https://gitc-a.earthdata.nasa.gov/
 https://earth.gsfc.nasa.gov/cryo/data
