@@ -58,6 +58,7 @@ https://opsci.smce.nasa.gov/wp-json/wp/v2/users # user
 /wp-json/wp/v2/pages
 /wp-json/wp/v2/media
 /wp-json/wp/v2/posts
+/wp-json/wp/v2/tags
 
 [google-api-key] [http] [info] https://oh.larc.nasa.gov/oh/ ["AIzaSyCk3pgpD7C1PCH-_bgi31F_0VOj8g9Ora0"]
 
