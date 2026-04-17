@@ -58,4 +58,8 @@ https://opsci.smce.nasa.gov/wp-json/wp/v2/users # user
 /wp-json/wp/v2/pages
 /wp-json/wp/v2/media
 
+[google-api-key] [http] [info] https://oh.larc.nasa.gov/oh/ ["AIzaSyCk3pgpD7C1PCH-_bgi31F_0VOj8g9Ora0"]
+
+[CVE-2025-8848] [http] [medium] https://chat.development.luna.nasa.gov/login/
+
 ```
