@@ -40,3 +40,8 @@ https://wallops-prf.gsfc.nasa.gov/
 3100
 ```
 
+```
+[CVE-2024-2473] [http] [medium] https://public.ksc.nasa.gov/publichealth/wp-admin/?action=postpass
+
+
+```
