@@ -26,3 +26,16 @@ getting file \Service_State.log of size 468 as Service_State.log (0.5 KiloBytes/
 getting file \TaskMonitor.log of size 1170 as TaskMonitor.log (1.6 KiloBytes/sec) (average 3.1 KiloBytes/sec)
 ```
 
+`IdentitySync_Trace_20260219.log` contains a plaintext LDAP bind dump:
+
+```
+ConnectionContext Dump: {
+  Domain: "logging.htb",
+  Server: "DC01",
+  SSL: "False",
+  BindUser: "LOGGING\svc_recovery",
+  BindPass: "Em3rg3ncyPa$$2025"
+}
+```
+
+
