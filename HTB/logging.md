@@ -16,3 +16,13 @@ network enumeration:
 5985/tcp  open   http           Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 ```
 
+
+```
+ajdev@rootbox:~$ smbclient //logging.htb/Logs -U 'logging.htb\wallace.everette%Welcome2026@' \
+  -c 'prompt OFF; mget *'
+getting file \Audit_Heartbeat.log of size 1294 as Audit_Heartbeat.log (1.0 KiloBytes/sec) (average 1.0 KiloBytes/sec)
+getting file \IdentitySync_Trace_20260219.log of size 8488 as IdentitySync_Trace_20260219.log (11.4 KiloBytes/sec) (average 4.9 KiloBytes/sec)
+getting file \Service_State.log of size 468 as Service_State.log (0.5 KiloBytes/sec) (average 3.5 KiloBytes/sec)
+getting file \TaskMonitor.log of size 1170 as TaskMonitor.log (1.6 KiloBytes/sec) (average 3.1 KiloBytes/sec)
+```
+
