@@ -91,5 +91,10 @@ https://vulners.com/openvas/OPENVAS:1361412562310114542
 ```
 /handler/sciencecareerpath/sankey
 /handler/sciencecareerpath/all
+
+
+FUZZ:
+
+
 ```
 
