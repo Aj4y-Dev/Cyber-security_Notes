@@ -99,5 +99,42 @@ css
 js
 img
 fonts
+
+>> 3. All Relative Route / Handler Paths
+[+] /404/:resource
+[+] /activities/
+[+] /activities/:id?
+[+] /all
+[+] /careerlevel/
+[+] /careerlevel/:id
+[+] /center/:id
+[+] /details
+[+] /diagram/
+[+] /diagram/:id
+[+] /discipline/
+[+] /discipline/:id
+[+] /handler/sciencecareerpath
+[+] /home
+[+] /location/
+[+] /location/:id
+[+] /mission
+[+] /MSN
+[+] /network-error
+[+] /overview
+[+] /position/:trackId/:careerLevelId/:positionLoc/:positionloctypeid?
+[+] /RAA
+[+] /research-analysis-application
+[+] /sankey
+[+] /science-program-management
+[+] /SPM
+[+] /SUP
+[+] /supervisory-roles
+[+] /supervisory-roles-applied-physics-lab
+[+] /supervisory-roles-HQ
+[+] /supervisory-roles-jet-propulsion-lab
+[+] /supervisory-roles-NASA-centers
+[+] /TD
+[+] /technology-development
+[+] /themes/:id?
 ```
 
