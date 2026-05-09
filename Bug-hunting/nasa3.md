@@ -95,6 +95,9 @@ https://vulners.com/openvas/OPENVAS:1361412562310114542
 
 FUZZ:
 
-
+css
+js
+img
+fonts
 ```
 
