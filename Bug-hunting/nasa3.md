@@ -65,3 +65,31 @@ gsfc_admin: admin name
 [CVE-2025-8848] [http] [medium] https://chat.development.luna.nasa.gov/login/
 
 ```
+
+```
+ajdev@rootbox:~$ curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -d 't' \
+  https://sciencecareers.apps.nasa.gov/ \
+  -w "\nHTTP Status: %{http_code}\n"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token t in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:158:10)<br> &nbsp; &nbsp;at parse (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\types\json.js:83:15)<br> &nbsp; &nbsp;at C:\inetpub\wwwroot\ScienceCareerPath\node_modules\body-parser\lib\read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:224:16)<br> &nbsp; &nbsp;at done (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\inetpub\wwwroot\ScienceCareerPath\node_modules\raw-body\index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1400:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
+</body>
+</html>
+
+HTTP Status: 400
+
+https://vulners.com/openvas/OPENVAS:1361412562310114542
+```
+
+```
+/handler/sciencecareerpath/sankey
+/handler/sciencecareerpath/all
+```
+
