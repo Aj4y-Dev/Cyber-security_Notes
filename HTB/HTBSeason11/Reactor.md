@@ -165,7 +165,9 @@ node        2359  0.0  0.2  18012 10736 ?        S    01:24   0:00 python3 -c im
 node        2360  0.0  0.1   8664  5592 pts/0    Ss   01:24   0:00 /bin/bash
 engineer    2463  0.0  0.0   6544  2280 pts/0    S+   01:35   0:00 grep --color=auto node
 
-node is running as root 
+node is running as root ,
+--inspect=127.0.0.1:9229 means:
+	debug mode is enabled and accessible only locally
 ```
 
 ```
