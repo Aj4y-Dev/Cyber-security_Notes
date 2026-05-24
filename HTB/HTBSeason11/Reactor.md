@@ -168,10 +168,16 @@ engineer    2463  0.0  0.0   6544  2280 pts/0    S+   01:35   0:00 grep --color=
 node is running as root ,
 --inspect=127.0.0.1:9229 means:
 	debug mode is enabled and accessible only locally
+	
+port forwarding was required Because it was bound to: 127.0.0.1:9229
 ```
 
 ```
 ssh -L 9229:127.0.0.1:9229 engineer@reactor.htb
+
+localhost:9229 → root Node inspector
+
+nspector actually gives us to access `http://127.0.0.1:9229/json
 
 ajdev@rootbox:~$ curl http://127.0.0.1:9229/json
 [ {
