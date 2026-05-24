@@ -73,4 +73,3 @@ SF:n:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
 SF:\r\nConnection:\x20close\r\n\r\n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
-
