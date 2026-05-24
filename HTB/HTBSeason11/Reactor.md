@@ -149,4 +149,7 @@ sqlite> SELECT * FROM users;
 ```
 engineer
 39d97110eafe2a9a68639812cd271e8e:reactor1
+
+engineer@reactor:~$ cat user.txt
+b74e52abf8ee535c4759b2d7d77d4d5d
 ```
