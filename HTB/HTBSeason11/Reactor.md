@@ -145,3 +145,8 @@ sqlite> SELECT * FROM users;
 1|admin|a203b22191d744a4e70ada5c101b17b8|administrator|admin@reactor.htb
 2|engineer|39d97110eafe2a9a68639812cd271e8e|operator|engineer@reactor.htb
 ```
+
+```
+engineer
+39d97110eafe2a9a68639812cd271e8e:reactor1
+```
