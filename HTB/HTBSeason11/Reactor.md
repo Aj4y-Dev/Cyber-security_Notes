@@ -222,3 +222,5 @@ asyncio.run(run())
 {"id":1,"result":{"result":{"type":"string","value":"7cfd093b1b71f021ece44852dbecf545\n"}}}
 ```
 
+we use that WebSocket URL to send JavaScript execution requests to Node.js, and that JavaScript is what ultimately runs system commands.
+
