@@ -177,7 +177,7 @@ ssh -L 9229:127.0.0.1:9229 engineer@reactor.htb
 
 localhost:9229 → root Node inspector
 
-nspector actually gives us to access `http://127.0.0.1:9229/json
+nspector actually gives us to access http://127.0.0.1:9229/json
 
 ajdev@rootbox:~$ curl http://127.0.0.1:9229/json
 [ {
@@ -192,6 +192,7 @@ ajdev@rootbox:~$ curl http://127.0.0.1:9229/json
   "webSocketDebuggerUrl": "ws://127.0.0.1:9229/51b7a786-9dfd-452a-b174-e9041eb35ee7"
 } ]
 ```
+
 
 ```
 (venv) ajdev@rootbox:~/HTB/Seasion11$ cat root.py
