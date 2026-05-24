@@ -137,3 +137,11 @@ ALERT_WEBHOOK=https://alerts.internal.reactor.htb/webhook
 NODE_ENV=production
 ```
 
+```
+node@reactor:/opt/reactor-app$ sqlite3 reactor.db
+SQLite version 3.45.1 2024-01-30 16:01:20
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM users;
+1|admin|a203b22191d744a4e70ada5c101b17b8|administrator|admin@reactor.htb
+2|engineer|39d97110eafe2a9a68639812cd271e8e|operator|engineer@reactor.htb
+```
