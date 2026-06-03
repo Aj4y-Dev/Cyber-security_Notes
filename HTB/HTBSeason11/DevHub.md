@@ -111,7 +111,11 @@ Accept-Encoding: gzip, deflate, br
 }
 
 got the reverse shell
+```
+```
 
+
+Enumeration as mcp-dev
 
 mcp-dev@devhub:/opt/mcpjam/node_modules$ ps aux | grep -i jupyter
 analyst     1062  0.0  2.4 181500 96240 ?        Ss   00:27   0:04 /home/analyst/jupyter-env/bin/python3 /home/analyst/jupyter-env/bin/jupyter-lab --ip=127.0.0.1 --port=8888 --no-browser --notebook-dir=/home/analyst/notebooks --ServerApp.token=a7f3b2c9d8e1f4a5b6c7d8e9f0a1b2c3d4e5f6a7 --ServerApp.password= --ServerApp.allow_origin= --ServerApp.disable_check_xsrf=False
