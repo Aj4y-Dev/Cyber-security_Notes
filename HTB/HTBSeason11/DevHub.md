@@ -83,6 +83,10 @@ devhub.htb:6274/#settings found the version of the system
 
 MCPJam Version: v1.4.2 found CVE-2026-23744
 
+```
+https://github.com/MCPJam/inspector/security/advisories/GHSA-232v-j27c-5pp6
 
+i found that their is vlunerbility that the 
+```
 
 
