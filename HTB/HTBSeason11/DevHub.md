@@ -112,8 +112,6 @@ Accept-Encoding: gzip, deflate, br
 
 got the reverse shell
 
-
-
 Enumeration as mcp-dev
 
 ss -tlnp       # revealed ports 8888 and 5000 only on localhost
