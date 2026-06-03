@@ -86,7 +86,9 @@ MCPJam Version: v1.4.2 found CVE-2026-23744
 ```
 https://github.com/MCPJam/inspector/security/advisories/GHSA-232v-j27c-5pp6
 
-i found that their is vlunerbility that the 
+i found that their is vlunerbility that the /api/mcp/connect is vlunerable to remote code execution (RCE) attack can be triggered by sending a simple HTTP request to the target host running MCPJam inspector
+
+
 ```
 
 
