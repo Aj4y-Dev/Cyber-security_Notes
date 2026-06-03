@@ -110,6 +110,9 @@ Accept-Encoding: gzip, deflate, br
   "serverId": "ping-test"
 }
 
+got the reverse shell
+
+
 
 ```
 
