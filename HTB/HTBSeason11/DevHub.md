@@ -79,8 +79,10 @@ SF:d\x20Request\r\nConnection:\x20close\r\n\r\n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-devhub.htb:6274/#settings found the version of the sy
+devhub.htb:6274/#settings found the version of the system
 
-MCPJam Version: v1.4.2
+MCPJam Version: v1.4.2 found CVE-2026-23744
+
+
 
 
