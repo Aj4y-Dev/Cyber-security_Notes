@@ -25,11 +25,10 @@ PORT    STATE SERVICE  VERSION
 |_Not valid after:  2026-11-30T14:07:27
 ```
 
-found FreePBX 16.0.40.7 CVE https://www.exploit-db.com/exploits/52031 
+found CVE-2025-57819
 
 
 ```
-ajdev@rootbox:~/HTB/Seasion11/Connected$ curl -I http://connected.htb/admin/ajax.php?module=api&command=generatedocs
-[1] 17209
+
 ```
 
