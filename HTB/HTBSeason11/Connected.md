@@ -94,5 +94,11 @@ cat root.txt
 751663b5d566d8d540b11e4d3375e885
 ```
 
+A system service called **incron** watches a folder for file changes and automatically runs commands **as root** when triggered.
 
+The commands it runs are called **hooks** — scripts stored in a FreePBX module directory
+
+Those hook scripts were writable by the asterisk user
+
+A signature file (`module.sig`) that verifies hook integrity was **also writable by `asterisk
 
