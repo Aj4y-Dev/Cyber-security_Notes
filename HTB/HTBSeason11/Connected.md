@@ -100,5 +100,10 @@ The commands it runs are called **hooks** — scripts stored in a FreePBX module
 
 Those hook scripts were writable by the asterisk user
 
-A signature file (`module.sig`) that verifies hook integrity was **also writable by `asterisk
+A signature file (module.sig) that verifies hook integrity was also writable by asterisk
 
+Why It Was Exploitable
+
+"We'll only run a hook if its hash matches what's recorded in `module.sig`"
+
+But both the hook file **and** `module.sig` were writable by the attacker — so you could change the hook **and** update the record to match. The lock and the key were both accessible.
