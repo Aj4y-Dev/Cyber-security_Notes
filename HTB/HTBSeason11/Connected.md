@@ -67,6 +67,6 @@ curl -iG "http://connected.htb/this-is-an-ioc-not-actually-watchTowr-9svoopf4m4.
 cat user.txt
 e452a36df6e7044492ae066a485612b5
 
-
+cat /etc/incron.d/*
 ```
 
