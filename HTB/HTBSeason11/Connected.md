@@ -25,7 +25,7 @@ PORT    STATE SERVICE  VERSION
 |_Not valid after:  2026-11-30T14:07:27
 ```
 
-found CVE https://www.exploit-db.com/exploits/52031 
+found FreePBX 16.0.40.7 CVE https://www.exploit-db.com/exploits/52031 
 
 
 ```
