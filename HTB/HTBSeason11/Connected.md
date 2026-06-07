@@ -29,6 +29,8 @@ found CVE-2025-57819
 
 
 ```
+https://github.com/watchtowrlabs/watchTowr-vs-FreePBX-CVE-2025-57819/blob/main/README.md
+
 
 ```
 
