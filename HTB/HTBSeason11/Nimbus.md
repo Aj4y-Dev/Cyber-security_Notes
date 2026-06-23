@@ -94,6 +94,9 @@ AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJGMEQCIBhV9zPmK3wQjL4nT8vR2
 AWS_DEFAULT_REGION="us-east-1"
 ```
 
+the credential is temporary so i need to re-request .
+
+
 
 
 
