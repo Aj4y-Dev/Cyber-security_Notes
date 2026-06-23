@@ -33,7 +33,21 @@ then test first:
 
 url=http://0251.0376.0251.0376/latest/meta-data/?a=test.yaml
 
-Response is
+Response:
+
+<h3>Raw response</h3><pre>ami-id
+hostname
+iam/
+instance-id
+instance-type
+local-hostname
+local-ipv4
+placement/
+security-groups
+</pre>
+<h3>Parsed</h3><pre>ami-id hostname iam/ instance-id instance-type local-hostname local-ipv4 placement/ security-groups</pre>
+
+
 ```
 
 
