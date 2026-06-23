@@ -12,3 +12,12 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+
+```
+http://nimbus.htb/api/v1/health
+
+{"services":{"queue":{"endpoint":"http://aws.nimbus.htb","status":"ok"},"scheduler":{"endpoint":"http://aws.nimbus.htb","status":"ok"},"storage":{"endpoint":"http://aws.nimbus.htb","status":"ok"}},"status":"healthy","version":"1.4.2"}
+```
+
+
+
