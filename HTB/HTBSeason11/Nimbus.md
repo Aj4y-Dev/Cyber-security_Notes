@@ -53,7 +53,13 @@ url=http://0251.0376.0251.0376/latest/meta-data/iam/security-credentials/?a=test
 
 Response:
 
-	
+<div class="panel">
+<div class="meta">Fetched: <code>http://0251.0376.0251.0376/latest/meta-data/iam/security-credentials/?a=test.yaml</code> · HTTP 200</div>
+<h3>Raw response</h3><pre>nimbus-web-role</pre>
+<h3>Parsed</h3><pre>nimbus-web-role</pre>
+</div>
+
+
 ```
 
 
