@@ -104,6 +104,23 @@ ajdev@rootbox:~/HTB/Seasion11/Nimbus$ aws --endpoint-url http://aws.nimbus.htb s
         "http://floci:4566/847219365028/nimbus-jobs"
     ]
 }
+
+ajdev@rootbox:~/HTB/Seasion11/Nimbus$ aws --endpoint-url http://aws.nimbus.htb sqs get-queue-attributes \
+  --queue-url http://floci:4566/847219365028/nimbus-jobs \
+  --attribute-names All
+{
+    "Attributes": {
+        "DelaySeconds": "0",
+        "MessageRetentionPeriod": "345600",
+        "MaximumMessageSize": "262144",
+        "VisibilityTimeout": "30",
+        "QueueArn": "arn:aws:sqs:us-east-1:847219365028:nimbus-jobs",
+        "CreatedTimestamp": "1782177988",
+        "LastModifiedTimestamp": "1782177988",
+        "ApproximateNumberOfMessages": "0",
+        "ApproximateNumberOfMessagesNotVisible": "0"
+    }
+}
 ```
 
 
