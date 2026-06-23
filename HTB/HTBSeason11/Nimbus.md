@@ -20,6 +20,9 @@ http://nimbus.htb/api/v1/health
 
 
 also also know the nimbus v1.4.2
+Hint: Your SSH key needs to be approved by a DevOps lead. Ping marcus on Slack.
+
+
 ```
 
 
