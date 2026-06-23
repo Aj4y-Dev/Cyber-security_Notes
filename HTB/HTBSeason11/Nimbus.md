@@ -26,7 +26,8 @@ Hint: Your SSH key needs to be approved by a DevOps lead. Ping marcus on Slack.
 ```
 first test the endpoint /jobs/preview where the url is passed i test the ssrf
 
-we knew the app was running on AWS EC2 so, in public AWS documentation the IMDS IP (169.254.169.254) 
+we knew the app was running on AWS EC2 so, in public AWS documentation the IMDS IP (169.254.169.254) is local address that AWS hardcodes on every EC2 instance.
+169.254.169.254 is the standard IMDS (Instance Metadata Service) endpoint on every AWS EC2 instance. It's only reachable from within the instance itself — that's why SSRF is needed to reach it from outside.
 
 i test 169.254.169.254 which is blacklist so i 
 Encode the IMDS IP in octal: 169.254.169.254 into 0251.0376.0251.0376
