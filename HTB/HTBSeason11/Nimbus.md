@@ -94,7 +94,17 @@ AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJGMEQCIBhV9zPmK3wQjL4nT8vR2
 AWS_DEFAULT_REGION="us-east-1"
 ```
 
-the credential is temporary so i need to re-request .
+
+Use the stolen creds against that local endpoint:
+
+```
+ajdev@rootbox:~/HTB/Seasion11/Nimbus$ aws --endpoint-url http://aws.nimbus.htb sqs list-queues
+{
+    "QueueUrls": [
+        "http://floci:4566/847219365028/nimbus-jobs"
+    ]
+}
+```
 
 
 
