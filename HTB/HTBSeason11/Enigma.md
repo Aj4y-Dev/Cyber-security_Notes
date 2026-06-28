@@ -48,5 +48,5 @@ PORT      STATE SERVICE  VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-
+in port 2049 NFS 
 
