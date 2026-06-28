@@ -85,9 +85,13 @@ URL:http://mail001.enigma.htb
 Username:kevin
 Password:Enigma2024!
 Please change your password upon first login.
+
 For support contact: it@enigma.htb
 This document contains confidential internal information intended solely for the recipient.
+
 Unauthorized access, disclosure, or distribution is strictly prohibited.
 Generated automatically by Enigma Corp Identity Management System.
 ```
+
+
 
