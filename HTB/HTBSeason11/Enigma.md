@@ -48,5 +48,16 @@ PORT      STATE SERVICE  VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-in port 2049 NFS 
+in port 2049 NFS mean Network File System, lets you mount a remote directory over the network and access it like a local folder. Designed for internal networks (Linux/Unix environments).
 
+```
+ajdev@rootbox:~$ showmount -e 10.129.33.28
+Export list for 10.129.33.28:
+/srv/nfs/onboarding *
+```
+
+`*` wildcard = no authentication, anyone on the network can mount
+
+```
+
+```
